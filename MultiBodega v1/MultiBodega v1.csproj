@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{386033CE-F85B-41A0-A207-E49980A6A2CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MultiBodega_v1</RootNamespace>
+    <AssemblyName>MultiBodega v1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.AxShockwaveFlashObjects.13.0.4002\lib\net40\AxShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.4002\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4002\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.4002\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.4002\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.commons.7.2.5\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.2.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.2.5\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.32.1\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ShockwaveFlashObjects.13.0.4002\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b2e6337a5d77bfbc, processorArchitecture=MSIL">
+      <HintPath>..\packages\starkbank-ecdsa.1.3.3\lib\net452\StarkbankEcdsa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bodega\Bodega_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega\Bodega_1.Designer.cs">
+      <DependentUpon>Bodega_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega\Bodega_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega\Bodega_2.Designer.cs">
+      <DependentUpon>Bodega_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega\Bodega_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega\Bodega_3.Designer.cs">
+      <DependentUpon>Bodega_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega\Bodega_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega\Bodega_4.Designer.cs">
+      <DependentUpon>Bodega_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\FrmBodegaBotonera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\FrmBodegaBotonera.Designer.cs">
+      <DependentUpon>FrmBodegaBotonera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\FrmReporteBodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\FrmReporteBodegas.Designer.cs">
+      <DependentUpon>FrmReporteBodegas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\FrmPantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\FrmPantallaPrincipal.Designer.cs">
+      <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\Requisas\Botonera_Requisas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\Requisas\Botonera_Requisas.Designer.cs">
+      <DependentUpon>Botonera_Requisas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\FrmCompras.Designer.cs">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FrmContCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\FrmContCompras.Designer.cs">
+      <DependentUpon>FrmContCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FrmCostosImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\FrmCostosImport.Designer.cs">
+      <DependentUpon>FrmCostosImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FrmPrecioVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\FrmPrecioVenta.Designer.cs">
+      <DependentUpon>FrmPrecioVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuración\FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuración\FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarBaseForanea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarBaseForanea.Designer.cs">
+      <DependentUpon>FrmListarBaseForanea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarPuntodeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarPuntodeVenta.Designer.cs">
+      <DependentUpon>FrmListarPuntodeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarTecnicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarTecnicos.Designer.cs">
+      <DependentUpon>FrmListarTecnicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarBaseForanea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarBaseForanea.Designer.cs">
+      <DependentUpon>FrmRegistrarBaseForanea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarProveedores.Designer.cs">
+      <DependentUpon>FrmRegistrarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarPuntodeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarPuntodeVenta.Designer.cs">
+      <DependentUpon>FrmRegistrarPuntodeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmRegistrarTecnico.Designer.cs">
+      <DependentUpon>FrmRegistrarTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContUsuarios.Designer.cs">
+      <DependentUpon>FrmContUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FrmDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FrmDevoluciones.Designer.cs">
+      <DependentUpon>FrmDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listar\FrmListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar\FrmListar.Designer.cs">
+      <DependentUpon>FrmListar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\FrmRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\FrmRegistrar.Designer.cs">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmContReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmContReportes.Designer.cs">
+      <DependentUpon>FrmContReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmBajosMinimos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmBajosMinimos.Designer.cs">
+      <DependentUpon>FrmBajosMinimos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmReporteDetalladoSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmReporteDetalladoSalidas.Designer.cs">
+      <DependentUpon>FrmReporteDetalladoSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\AjusteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\AjusteInventario.Designer.cs">
+      <DependentUpon>AjusteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FrmBaseDatosProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FrmBaseDatosProductos.Designer.cs">
+      <DependentUpon>FrmBaseDatosProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Registro\FrmListarProveedor.Designer.cs">
+      <DependentUpon>FrmListarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega1.Designer.cs">
+      <DependentUpon>Bodega1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega2.Designer.cs">
+      <DependentUpon>Bodega2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega3.Designer.cs">
+      <DependentUpon>Bodega3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\Botonera_APP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\Botonera_APP.Designer.cs">
+      <DependentUpon>Botonera_APP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botonera\Inventario_Botonera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Botonera\Inventario_Botonera.Designer.cs">
+      <DependentUpon>Inventario_Botonera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FrmIngresarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FrmIngresarProducto.Designer.cs">
+      <DependentUpon>FrmIngresarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FrmAgregarProductoExistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FrmAgregarProductoExistente.Designer.cs">
+      <DependentUpon>FrmAgregarProductoExistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FrmInventarioGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FrmInventarioGeneral.Designer.cs">
+      <DependentUpon>FrmInventarioGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\Bodega4.Designer.cs">
+      <DependentUpon>Bodega4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmReporteDetalladoEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Bodegas\FrmReporteDetalladoEntradas.Designer.cs">
+      <DependentUpon>FrmReporteDetalladoEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisas\FrmBuscarEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisas\FrmBuscarEntrada.Designer.cs">
+      <DependentUpon>FrmBuscarEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisas\FrmBuscarSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisas\FrmBuscarSalida.Designer.cs">
+      <DependentUpon>FrmBuscarSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisas\FrmComprobanteEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisas\FrmComprobanteEntrega.Designer.cs">
+      <DependentUpon>FrmComprobanteEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisas\FrmRequisaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisas\FrmRequisaEntrada.Designer.cs">
+      <DependentUpon>FrmRequisaEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisas\FrmRequisaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisas\FrmRequisaSalida.Designer.cs">
+      <DependentUpon>FrmRequisaSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarCodigodeBarra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarCodigodeBarra.Designer.cs">
+      <DependentUpon>GenerarCodigodeBarra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginBodega.Designer.cs">
+      <DependentUpon>LoginBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bodega\Bodega_1.resx">
+      <DependentUpon>Bodega_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega\Bodega_2.resx">
+      <DependentUpon>Bodega_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega\Bodega_3.resx">
+      <DependentUpon>Bodega_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega\Bodega_4.resx">
+      <DependentUpon>Bodega_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\FrmBodegaBotonera.resx">
+      <DependentUpon>FrmBodegaBotonera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\FrmReporteBodegas.resx">
+      <DependentUpon>FrmReporteBodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\FrmPantallaPrincipal.resx">
+      <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\Requisas\Botonera_Requisas.resx">
+      <DependentUpon>Botonera_Requisas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\FrmCompras.resx">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\FrmContCompras.resx">
+      <DependentUpon>FrmContCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\FrmCostosImport.resx">
+      <DependentUpon>FrmCostosImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\FrmPrecioVenta.resx">
+      <DependentUpon>FrmPrecioVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuración\FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmListarBaseForanea.resx">
+      <DependentUpon>FrmListarBaseForanea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmListarPuntodeVenta.resx">
+      <DependentUpon>FrmListarPuntodeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmListarTecnicos.resx">
+      <DependentUpon>FrmListarTecnicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmRegistrarBaseForanea.resx">
+      <DependentUpon>FrmRegistrarBaseForanea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmRegistrarProveedores.resx">
+      <DependentUpon>FrmRegistrarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmRegistrarPuntodeVenta.resx">
+      <DependentUpon>FrmRegistrarPuntodeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmRegistrarTecnico.resx">
+      <DependentUpon>FrmRegistrarTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContUsuarios.resx">
+      <DependentUpon>FrmContUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FrmDevoluciones.resx">
+      <DependentUpon>FrmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar\FrmListar.resx">
+      <DependentUpon>FrmListar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\FrmRegistrar.resx">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmContReportes.resx">
+      <DependentUpon>FrmContReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\FrmBajosMinimos.resx">
+      <DependentUpon>FrmBajosMinimos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\FrmReporteDetalladoSalidas.resx">
+      <DependentUpon>FrmReporteDetalladoSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\AjusteInventario.resx">
+      <DependentUpon>AjusteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FrmBaseDatosProductos.resx">
+      <DependentUpon>FrmBaseDatosProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Registro\FrmListarProveedor.resx">
+      <DependentUpon>FrmListarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\Bodega1.resx">
+      <DependentUpon>Bodega1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\Bodega2.resx">
+      <DependentUpon>Bodega2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\Bodega3.resx">
+      <DependentUpon>Bodega3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\Botonera_APP.resx">
+      <DependentUpon>Botonera_APP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botonera\Inventario_Botonera.resx">
+      <DependentUpon>Inventario_Botonera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FrmIngresarProducto.resx">
+      <DependentUpon>FrmIngresarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FrmAgregarProductoExistente.resx">
+      <DependentUpon>FrmAgregarProductoExistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FrmInventarioGeneral.resx">
+      <DependentUpon>FrmInventarioGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\Bodega4.resx">
+      <DependentUpon>Bodega4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Bodegas\FrmReporteDetalladoEntradas.resx">
+      <DependentUpon>FrmReporteDetalladoEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisas\FrmBuscarEntrada.resx">
+      <DependentUpon>FrmBuscarEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisas\FrmBuscarSalida.resx">
+      <DependentUpon>FrmBuscarSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisas\FrmComprobanteEntrega.resx">
+      <DependentUpon>FrmComprobanteEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisas\FrmRequisaEntrada.resx">
+      <DependentUpon>FrmRequisaEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisas\FrmRequisaSalida.resx">
+      <DependentUpon>FrmRequisaSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarCodigodeBarra.resx">
+      <DependentUpon>GenerarCodigodeBarra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginBodega.resx">
+      <DependentUpon>LoginBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDataGrid.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDatosGenerales.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.B1EntradaEquiposBL.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.BajosMinimos.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Compras.Compras.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Compras.Compras_Encabezado.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Compras.CostosImp.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Compras.PrecioVenta.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ComprobanteEntrega.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Devoluciones+DevolucionesDataGrid.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Devoluciones+DevolucionesInfo.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.EntradaEquipo.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.InventarioBodegas+Bodega_1.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.InventarioBodegas+Bodega_2.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.InventarioBodegas+Bodega_3.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.InventarioBodegas+Bodega_4.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Proveedores.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Registrar.Registro+RegistrarBaseForanea.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Registrar.Registro+RegistrarPuntodeVenta.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Registrar.Registro+RegistrarTecnicos.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteBodegas+ReporteBodega1.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteBodegas+ReporteBodega2.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteBodegas+ReporteBodega3.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteBodegas+ReporteBodega4.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteDetalladoEntradas+Encabezado.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteDetalladoEntradas+InfoDataGrid.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteDetalladoSalidas+EncabezadofrmSalida.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.ReporteDetalladoSalidas+InfoDataGridSalida.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Requisa+RequisaEntrada.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Requisa+RequisaSalida.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Roles.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Usuario.datasource" />
+    <None Include="Properties\DataSources\BL.Bodega.Usuarios.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Bodega\BL.Bodega.csproj">
+      <Project>{fcd1af5c-d785-4996-9bee-b82ffb0bc6de}</Project>
+      <Name>BL.Bodega</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo catelsa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
