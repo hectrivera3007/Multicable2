@@ -78,7 +78,7 @@ namespace MultiBodega_v1
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(906, 234);
+            label3.Location = new System.Drawing.Point(894, 234);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(103, 16);
@@ -89,7 +89,7 @@ namespace MultiBodega_v1
             // 
             lblStockMin.AutoSize = true;
             lblStockMin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblStockMin.Location = new System.Drawing.Point(906, 181);
+            lblStockMin.Location = new System.Drawing.Point(894, 181);
             lblStockMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblStockMin.Name = "lblStockMin";
             lblStockMin.Size = new System.Drawing.Size(98, 16);
@@ -100,7 +100,7 @@ namespace MultiBodega_v1
             // 
             codigoProdLabel.AutoSize = true;
             codigoProdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            codigoProdLabel.Location = new System.Drawing.Point(38, 125);
+            codigoProdLabel.Location = new System.Drawing.Point(26, 125);
             codigoProdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoProdLabel.Name = "codigoProdLabel";
             codigoProdLabel.Size = new System.Drawing.Size(121, 16);
@@ -111,7 +111,7 @@ namespace MultiBodega_v1
             // 
             bodegaIDLabel.AutoSize = true;
             bodegaIDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bodegaIDLabel.Location = new System.Drawing.Point(753, 125);
+            bodegaIDLabel.Location = new System.Drawing.Point(741, 125);
             bodegaIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             bodegaIDLabel.Name = "bodegaIDLabel";
             bodegaIDLabel.Size = new System.Drawing.Size(63, 16);
@@ -122,7 +122,7 @@ namespace MultiBodega_v1
             // 
             descripcionLabel.AutoSize = true;
             descripcionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descripcionLabel.Location = new System.Drawing.Point(399, 125);
+            descripcionLabel.Location = new System.Drawing.Point(387, 125);
             descripcionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descripcionLabel.Name = "descripcionLabel";
             descripcionLabel.Size = new System.Drawing.Size(89, 16);
@@ -133,7 +133,7 @@ namespace MultiBodega_v1
             // 
             fechaIngresoLabel.AutoSize = true;
             fechaIngresoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaIngresoLabel.Location = new System.Drawing.Point(284, 125);
+            fechaIngresoLabel.Location = new System.Drawing.Point(272, 125);
             fechaIngresoLabel.Name = "fechaIngresoLabel";
             fechaIngresoLabel.Size = new System.Drawing.Size(103, 16);
             fechaIngresoLabel.TabIndex = 63;
@@ -144,7 +144,7 @@ namespace MultiBodega_v1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(396, 80);
+            this.label1.Location = new System.Drawing.Point(379, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 32);
@@ -154,7 +154,7 @@ namespace MultiBodega_v1
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(402, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
@@ -166,7 +166,7 @@ namespace MultiBodega_v1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 150);
+            this.label2.Location = new System.Drawing.Point(107, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 16);
             this.label2.TabIndex = 63;
@@ -175,7 +175,7 @@ namespace MultiBodega_v1
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox2.Location = new System.Drawing.Point(909, 254);
+            this.textBox2.Location = new System.Drawing.Point(897, 254);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -187,7 +187,7 @@ namespace MultiBodega_v1
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Location = new System.Drawing.Point(909, 201);
+            this.textBox1.Location = new System.Drawing.Point(897, 201);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -199,7 +199,7 @@ namespace MultiBodega_v1
             // TxtProd
             // 
             this.TxtProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtProd.Location = new System.Drawing.Point(134, 145);
+            this.TxtProd.Location = new System.Drawing.Point(122, 145);
             this.TxtProd.Margin = new System.Windows.Forms.Padding(4);
             this.TxtProd.Name = "TxtProd";
             this.TxtProd.Size = new System.Drawing.Size(143, 23);
@@ -213,7 +213,7 @@ namespace MultiBodega_v1
             "MPN",
             "MPF",
             "MPC"});
-            this.CmbxProd.Location = new System.Drawing.Point(41, 145);
+            this.CmbxProd.Location = new System.Drawing.Point(29, 145);
             this.CmbxProd.Margin = new System.Windows.Forms.Padding(4);
             this.CmbxProd.Name = "CmbxProd";
             this.CmbxProd.Size = new System.Drawing.Size(76, 25);
@@ -223,7 +223,7 @@ namespace MultiBodega_v1
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Descripcion", true));
             this.descripcionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcionTextBox.Location = new System.Drawing.Point(402, 145);
+            this.descripcionTextBox.Location = new System.Drawing.Point(390, 145);
             this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(346, 23);
@@ -243,7 +243,7 @@ namespace MultiBodega_v1
             "Bodega 2(27 CALLE)",
             "Bodega 3(CAMA NACIONAL)",
             "Bodega 4(OFICINA)"});
-            this.bodegaIDComboBox.Location = new System.Drawing.Point(756, 145);
+            this.bodegaIDComboBox.Location = new System.Drawing.Point(744, 145);
             this.bodegaIDComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.bodegaIDComboBox.Name = "bodegaIDComboBox";
             this.bodegaIDComboBox.Size = new System.Drawing.Size(136, 25);
@@ -256,7 +256,7 @@ namespace MultiBodega_v1
             this.fechaIngresoDateTimePicker.CustomFormat = "24/04/2023";
             this.fechaIngresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productoBindingSource, "FechaIngreso", true));
             this.fechaIngresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaIngresoDateTimePicker.Location = new System.Drawing.Point(285, 145);
+            this.fechaIngresoDateTimePicker.Location = new System.Drawing.Point(273, 145);
             this.fechaIngresoDateTimePicker.Name = "fechaIngresoDateTimePicker";
             this.fechaIngresoDateTimePicker.Size = new System.Drawing.Size(102, 23);
             this.fechaIngresoDateTimePicker.TabIndex = 2;
@@ -266,7 +266,7 @@ namespace MultiBodega_v1
             // 
             this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
-            this.nuevoTextBox.Location = new System.Drawing.Point(909, 284);
+            this.nuevoTextBox.Location = new System.Drawing.Point(897, 284);
             this.nuevoTextBox.Name = "nuevoTextBox";
             this.nuevoTextBox.Size = new System.Drawing.Size(105, 28);
             this.nuevoTextBox.TabIndex = 7;
@@ -279,7 +279,7 @@ namespace MultiBodega_v1
             // 
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
-            this.BtnSalir.Location = new System.Drawing.Point(909, 420);
+            this.BtnSalir.Location = new System.Drawing.Point(897, 420);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(105, 28);
             this.BtnSalir.TabIndex = 11;
@@ -292,7 +292,7 @@ namespace MultiBodega_v1
             // 
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
-            this.BtnEliminar.Location = new System.Drawing.Point(909, 386);
+            this.BtnEliminar.Location = new System.Drawing.Point(897, 386);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(105, 28);
             this.BtnEliminar.TabIndex = 10;
@@ -305,7 +305,7 @@ namespace MultiBodega_v1
             // 
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
-            this.BtnGuardar.Location = new System.Drawing.Point(909, 318);
+            this.BtnGuardar.Location = new System.Drawing.Point(897, 318);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(105, 28);
             this.BtnGuardar.TabIndex = 8;
@@ -319,7 +319,7 @@ namespace MultiBodega_v1
             // 
             this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
-            this.BtnModificar.Location = new System.Drawing.Point(909, 352);
+            this.BtnModificar.Location = new System.Drawing.Point(897, 352);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(105, 28);
             this.BtnModificar.TabIndex = 9;
@@ -341,7 +341,7 @@ namespace MultiBodega_v1
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(41, 181);
+            this.productoDataGridView.Location = new System.Drawing.Point(29, 181);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.Size = new System.Drawing.Size(851, 267);
             this.productoDataGridView.TabIndex = 63;
@@ -397,7 +397,7 @@ namespace MultiBodega_v1
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(880, 472);
+            this.BtnRegresar.Location = new System.Drawing.Point(866, 472);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 64;
@@ -410,7 +410,7 @@ namespace MultiBodega_v1
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Location = new System.Drawing.Point(958, 143);
+            this.button3.Location = new System.Drawing.Point(946, 143);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(36, 30);
@@ -420,7 +420,7 @@ namespace MultiBodega_v1
             // button4
             // 
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(914, 143);
+            this.button4.Location = new System.Drawing.Point(902, 143);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 30);

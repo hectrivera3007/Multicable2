@@ -380,7 +380,6 @@ namespace MultiBodega_v1.Configuración
             this.tableAdapterManager.InventarioBodega4TableAdapter = null;
             this.tableAdapterManager.PermisosTableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;

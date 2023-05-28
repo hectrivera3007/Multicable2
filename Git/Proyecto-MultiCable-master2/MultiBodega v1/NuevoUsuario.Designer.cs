@@ -391,7 +391,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager.InventarioBodega3TableAdapter = null;
             this.tableAdapterManager.InventarioBodega4TableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;

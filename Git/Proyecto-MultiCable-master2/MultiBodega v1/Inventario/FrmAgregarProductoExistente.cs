@@ -33,5 +33,10 @@ namespace MultiBodega_v1
         {
 
         }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

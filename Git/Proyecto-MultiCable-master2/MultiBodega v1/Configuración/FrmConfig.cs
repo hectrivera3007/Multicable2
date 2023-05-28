@@ -62,20 +62,8 @@ namespace MultiBodega_v1.Configuración
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            //bool checkState = Ck_Marcar_Todos.Checked;
-            //var checkColumn = permisosDataGridView.Columns["concedido"] as DataGridViewCheckBoxColumn;
-            //foreach (DataGridViewRow row in permisosDataGridView.Rows)
-            //{
-            //    DataGridViewCheckBoxCell checkCell = row.Cells[0] as DataGridViewCheckBoxCell;
-            //    checkCell.Value = true;
-            //}
-            //MarcarDesmarcarCheckBoxs(, checkState);
             
         }
+
     }
 }

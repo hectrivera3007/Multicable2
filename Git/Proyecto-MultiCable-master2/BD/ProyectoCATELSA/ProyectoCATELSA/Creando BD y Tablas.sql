@@ -3,13 +3,15 @@ Create DATABASE "CATELSA-MULTICABLE"
 
 USE [CATELSA-MULTICABLE]
 
-select * from Rol
+select * from Proveedores
 
 --Truncate table Rol
 
---Delete from Rol
+Delete from Proveedores where IDProveedor
 
---ALTER TABLE Rol NOCHECK CONSTRAINT RolID Identity(1,1)
+ALTER TABLE proveedores ALTER COLUMN proveedorID IDENTITY(1,1);
+
+DBCC CHECKIDENT ('Proveedores', RESEED, 0)
 
 
 
@@ -358,7 +360,7 @@ Ajuste de Inventario		Comprobante de Entrega						Listar Base Foránea		Reporte d
 
 */
 
-SELECT * FROM Permisos;
+SELECT * FROM Proveedores;
 
 /*Creación de la tabla de Usuario_Permisos*/
 Create Table Usuario_Permisos

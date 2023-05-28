@@ -49,7 +49,7 @@ namespace MultiBodega_v1.Botonera
             this.BtnNuevoProducto.ForeColor = System.Drawing.Color.Navy;
             this.BtnNuevoProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevoProducto.Image")));
             this.BtnNuevoProducto.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnNuevoProducto.Location = new System.Drawing.Point(47, 131);
+            this.BtnNuevoProducto.Location = new System.Drawing.Point(38, 131);
             this.BtnNuevoProducto.Margin = new System.Windows.Forms.Padding(5);
             this.BtnNuevoProducto.Name = "BtnNuevoProducto";
             this.BtnNuevoProducto.Size = new System.Drawing.Size(141, 116);
@@ -70,7 +70,7 @@ namespace MultiBodega_v1.Botonera
             this.BtnModificarProd.ForeColor = System.Drawing.Color.Navy;
             this.BtnModificarProd.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarProd.Image")));
             this.BtnModificarProd.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnModificarProd.Location = new System.Drawing.Point(191, 131);
+            this.BtnModificarProd.Location = new System.Drawing.Point(182, 131);
             this.BtnModificarProd.Margin = new System.Windows.Forms.Padding(5);
             this.BtnModificarProd.Name = "BtnModificarProd";
             this.BtnModificarProd.Size = new System.Drawing.Size(141, 116);
@@ -90,7 +90,7 @@ namespace MultiBodega_v1.Botonera
             this.BtnInventarioFinal.ForeColor = System.Drawing.Color.Navy;
             this.BtnInventarioFinal.Image = ((System.Drawing.Image)(resources.GetObject("BtnInventarioFinal.Image")));
             this.BtnInventarioFinal.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnInventarioFinal.Location = new System.Drawing.Point(335, 131);
+            this.BtnInventarioFinal.Location = new System.Drawing.Point(326, 131);
             this.BtnInventarioFinal.Margin = new System.Windows.Forms.Padding(5);
             this.BtnInventarioFinal.Name = "BtnInventarioFinal";
             this.BtnInventarioFinal.Size = new System.Drawing.Size(141, 116);
@@ -123,7 +123,7 @@ namespace MultiBodega_v1.Botonera
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
-            this.pictureBox1.Location = new System.Drawing.Point(191, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(197, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +139,7 @@ namespace MultiBodega_v1.Botonera
             this.BtnAjusteInventario.ForeColor = System.Drawing.Color.Navy;
             this.BtnAjusteInventario.Image = ((System.Drawing.Image)(resources.GetObject("BtnAjusteInventario.Image")));
             this.BtnAjusteInventario.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnAjusteInventario.Location = new System.Drawing.Point(479, 131);
+            this.BtnAjusteInventario.Location = new System.Drawing.Point(470, 131);
             this.BtnAjusteInventario.Margin = new System.Windows.Forms.Padding(5);
             this.BtnAjusteInventario.Name = "BtnAjusteInventario";
             this.BtnAjusteInventario.Size = new System.Drawing.Size(141, 116);
