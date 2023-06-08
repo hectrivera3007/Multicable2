@@ -32,24 +32,25 @@ namespace MultiBodega_v1.Inventario
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarProveedor));
             this.proveedoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personaContactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais_Zona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numTelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoElectronicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedores1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BtnLimpiar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BuscarProveedor = new System.Windows.Forms.TextBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedores1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,116 +60,129 @@ namespace MultiBodega_v1.Inventario
             this.proveedoresDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.proveedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.proveedoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.proveedoresDataGridView.DataSource = this.proveedoresBindingSource;
-            this.proveedoresDataGridView.Location = new System.Drawing.Point(11, 149);
+            this.iDProveedorDataGridViewTextBoxColumn,
+            this.nombreProveedorDataGridViewTextBoxColumn,
+            this.rTNDataGridViewTextBoxColumn,
+            this.personaContactoDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.Pais_Zona,
+            this.tipoProveedorDataGridViewTextBoxColumn,
+            this.numTelefonoDataGridViewTextBoxColumn,
+            this.correoElectronicoDataGridViewTextBoxColumn,
+            this.notasDataGridViewTextBoxColumn});
+            this.proveedoresDataGridView.DataSource = this.proveedores1BindingSource;
+            this.proveedoresDataGridView.Location = new System.Drawing.Point(0, 149);
             this.proveedoresDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.proveedoresDataGridView.Name = "proveedoresDataGridView";
-            this.proveedoresDataGridView.Size = new System.Drawing.Size(992, 383);
+            this.proveedoresDataGridView.Size = new System.Drawing.Size(1023, 387);
             this.proveedoresDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
+            // iDProveedorDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdProveedor";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
+            this.iDProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDProveedorDataGridViewTextBoxColumn.Width = 40;
             // 
-            // dataGridViewTextBoxColumn2
+            // nombreProveedorDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombreProveedor";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Proveedor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 300;
+            this.nombreProveedorDataGridViewTextBoxColumn.DataPropertyName = "NombreProveedor";
+            this.nombreProveedorDataGridViewTextBoxColumn.HeaderText = "Nombre Proveedor";
+            this.nombreProveedorDataGridViewTextBoxColumn.Name = "nombreProveedorDataGridViewTextBoxColumn";
+            this.nombreProveedorDataGridViewTextBoxColumn.Width = 200;
             // 
-            // dataGridViewTextBoxColumn3
+            // rTNDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "RTN";
-            this.dataGridViewTextBoxColumn3.HeaderText = "RTN";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.rTNDataGridViewTextBoxColumn.DataPropertyName = "RTN";
+            this.rTNDataGridViewTextBoxColumn.HeaderText = "RTN";
+            this.rTNDataGridViewTextBoxColumn.MinimumWidth = 14;
+            this.rTNDataGridViewTextBoxColumn.Name = "rTNDataGridViewTextBoxColumn";
+            this.rTNDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn5
+            // personaContactoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Dirección";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 300;
+            this.personaContactoDataGridViewTextBoxColumn.DataPropertyName = "PersonaContacto";
+            this.personaContactoDataGridViewTextBoxColumn.HeaderText = "Persona Contacto";
+            this.personaContactoDataGridViewTextBoxColumn.Name = "personaContactoDataGridViewTextBoxColumn";
+            this.personaContactoDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn6
+            // direccionDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Pais_Zona";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Pais_Zona";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Visible = false;
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.Width = 200;
             // 
-            // dataGridViewTextBoxColumn7
+            // Pais_Zona
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Num_Telefono";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.Pais_Zona.DataPropertyName = "Pais_Zona";
+            this.Pais_Zona.HeaderText = "Pais/Zona";
+            this.Pais_Zona.Name = "Pais_Zona";
             // 
-            // dataGridViewTextBoxColumn8
+            // tipoProveedorDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "CorreoElectronico";
-            this.dataGridViewTextBoxColumn8.HeaderText = "E-mail";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.tipoProveedorDataGridViewTextBoxColumn.DataPropertyName = "Tipo_Proveedor";
+            this.tipoProveedorDataGridViewTextBoxColumn.HeaderText = "Tipo de Proveedor";
+            this.tipoProveedorDataGridViewTextBoxColumn.Name = "tipoProveedorDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn9
+            // numTelefonoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Notas";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Notas";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Visible = false;
+            this.numTelefonoDataGridViewTextBoxColumn.DataPropertyName = "Num_Telefono";
+            this.numTelefonoDataGridViewTextBoxColumn.HeaderText = "Número de Teléfono";
+            this.numTelefonoDataGridViewTextBoxColumn.Name = "numTelefonoDataGridViewTextBoxColumn";
+            this.numTelefonoDataGridViewTextBoxColumn.Width = 150;
             // 
-            // proveedoresBindingSource
+            // correoElectronicoDataGridViewTextBoxColumn
             // 
-            this.proveedoresBindingSource.DataSource = typeof(BL.Bodega.Proveedores);
+            this.correoElectronicoDataGridViewTextBoxColumn.DataPropertyName = "CorreoElectronico";
+            this.correoElectronicoDataGridViewTextBoxColumn.HeaderText = "Correo Electronico";
+            this.correoElectronicoDataGridViewTextBoxColumn.Name = "correoElectronicoDataGridViewTextBoxColumn";
             // 
-            // button2
+            // notasDataGridViewTextBoxColumn
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(967, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 30);
-            this.button2.TabIndex = 47;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.notasDataGridViewTextBoxColumn.DataPropertyName = "Notas";
+            this.notasDataGridViewTextBoxColumn.HeaderText = "Notas";
+            this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
+            this.notasDataGridViewTextBoxColumn.Width = 200;
             // 
-            // button1
+            // proveedores1BindingSource
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(926, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 30);
-            this.button1.TabIndex = 46;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.proveedores1BindingSource.DataMember = "Proveedores1";
+            // 
+            // _CATELSA_MULTICABLEDataSet
+            // 
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
+            this.BtnLimpiar.Location = new System.Drawing.Point(967, 111);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(36, 30);
+            this.BtnLimpiar.TabIndex = 47;
+            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(680, 121);
+            this.label2.Location = new System.Drawing.Point(731, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 45;
-            this.label2.Text = "Buscar:";
+            this.label2.Text = "Filtrar Proveedor";
             // 
-            // textBox1
+            // BuscarProveedor
             // 
-            this.textBox1.Location = new System.Drawing.Point(734, 117);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 23);
-            this.textBox1.TabIndex = 0;
+            this.BuscarProveedor.Location = new System.Drawing.Point(734, 117);
+            this.BuscarProveedor.Margin = new System.Windows.Forms.Padding(4);
+            this.BuscarProveedor.Name = "BuscarProveedor";
+            this.BuscarProveedor.Size = new System.Drawing.Size(226, 23);
+            this.BuscarProveedor.TabIndex = 0;
+            this.BuscarProveedor.TextChanged += new System.EventHandler(this.BuscarProveedor_TextChanged);
             // 
             // BtnRegresar
             // 
@@ -192,7 +206,7 @@ namespace MultiBodega_v1.Inventario
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(350, 78);
+            this.label1.Location = new System.Drawing.Point(353, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 32);
@@ -202,7 +216,7 @@ namespace MultiBodega_v1.Inventario
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(381, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(384, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(255, 71);
@@ -210,29 +224,35 @@ namespace MultiBodega_v1.Inventario
             this.pictureBox2.TabIndex = 67;
             this.pictureBox2.TabStop = false;
             // 
+            // proveedores1TableAdapter
+            // 
+            // 
+            // tableAdapterManager
+            // 
+            // 
             // FrmListarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1013, 619);
+            this.ClientSize = new System.Drawing.Size(1023, 615);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnRegresar);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BuscarProveedor);
             this.Controls.Add(this.proveedoresDataGridView);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmListarProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Proveedores";
             this.Load += new System.EventHandler(this.FrmListarProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedores1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,23 +260,23 @@ namespace MultiBodega_v1.Inventario
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource proveedoresBindingSource;
         private System.Windows.Forms.DataGridView proveedoresDataGridView;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.TextBox BuscarProveedor;
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.BindingSource proveedores1BindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rTNDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personaContactoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pais_Zona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numTelefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoElectronicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notasDataGridViewTextBoxColumn;
     }
 }

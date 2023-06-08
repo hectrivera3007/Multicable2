@@ -31,32 +31,35 @@ namespace MultiBodega_v1
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.Txtbuscar = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numTelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmarContrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.listaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
-            this.Buscarbtn = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.bD_CATELSA_MULTICABLE = new MultiBodega_v1.BD_CATELSA_MULTICABLE();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,126 +80,61 @@ namespace MultiBodega_v1
             this.Txtbuscar.Name = "Txtbuscar";
             this.Txtbuscar.Size = new System.Drawing.Size(453, 23);
             this.Txtbuscar.TabIndex = 0;
+            this.Txtbuscar.TextChanged += new System.EventHandler(this.Txtbuscar_TextChanged);
             // 
             // dGV1
             // 
             this.dGV1.AutoGenerateColumns = false;
             this.dGV1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dGV1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dGV1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGV1.ColumnHeadersHeight = 40;
             this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.codigoDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.nombreUsuarioDataGridViewTextBoxColumn,
-            this.numTelefonoDataGridViewTextBoxColumn,
-            this.contrasenaDataGridViewTextBoxColumn,
-            this.confirmarContrasenaDataGridViewTextBoxColumn,
+            this.Column1,
             this.dataGridViewTextBoxColumn1,
-            this.activoDataGridViewCheckBoxColumn});
-            this.dGV1.DataSource = this.listaUsuarioBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewCheckBoxColumn1});
+            this.dGV1.DataSource = this.usuarioBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGV1.EnableHeadersVisualStyles = false;
             this.dGV1.Location = new System.Drawing.Point(51, 163);
             this.dGV1.Margin = new System.Windows.Forms.Padding(4);
             this.dGV1.Name = "dGV1";
             this.dGV1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGV1.RowHeadersWidth = 40;
             this.dGV1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dGV1.Size = new System.Drawing.Size(822, 362);
             this.dGV1.TabIndex = 1;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // nombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "NombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
-            this.nombreUsuarioDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // numTelefonoDataGridViewTextBoxColumn
-            // 
-            this.numTelefonoDataGridViewTextBoxColumn.DataPropertyName = "NumTelefono";
-            this.numTelefonoDataGridViewTextBoxColumn.HeaderText = "Número de Teléfono";
-            this.numTelefonoDataGridViewTextBoxColumn.Name = "numTelefonoDataGridViewTextBoxColumn";
-            this.numTelefonoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // contrasenaDataGridViewTextBoxColumn
-            // 
-            this.contrasenaDataGridViewTextBoxColumn.DataPropertyName = "Contrasena";
-            this.contrasenaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contrasenaDataGridViewTextBoxColumn.Name = "contrasenaDataGridViewTextBoxColumn";
-            // 
-            // confirmarContrasenaDataGridViewTextBoxColumn
-            // 
-            this.confirmarContrasenaDataGridViewTextBoxColumn.DataPropertyName = "ConfirmarContrasena";
-            this.confirmarContrasenaDataGridViewTextBoxColumn.HeaderText = "Confirmar Contraseña";
-            this.confirmarContrasenaDataGridViewTextBoxColumn.Name = "confirmarContrasenaDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RolID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Rol";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            // 
-            // listaUsuarioBindingSource
-            // 
-            this.listaUsuarioBindingSource.DataSource = typeof(BL.Bodega.Usuario);
             // 
             // label2
             // 
@@ -238,19 +176,6 @@ namespace MultiBodega_v1
             this.BtnRegresar.UseVisualStyleBackColor = true;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
-            // Buscarbtn
-            // 
-            this.Buscarbtn.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbtn.Image")));
-            this.Buscarbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbtn.Location = new System.Drawing.Point(511, 130);
-            this.Buscarbtn.Name = "Buscarbtn";
-            this.Buscarbtn.Size = new System.Drawing.Size(82, 25);
-            this.Buscarbtn.TabIndex = 72;
-            this.Buscarbtn.Text = "Buscar";
-            this.Buscarbtn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.Buscarbtn.UseVisualStyleBackColor = true;
-            this.Buscarbtn.Click += new System.EventHandler(this.Buscarbtn_Click);
-            // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,6 +189,113 @@ namespace MultiBodega_v1
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // bD_CATELSA_MULTICABLE
+            // 
+            this.bD_CATELSA_MULTICABLE.DataSetName = "BD_CATELSA_MULTICABLE";
+            this.bD_CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
+            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
+            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
+            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
+            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
+            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 35;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NombreUsuario";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NombreUsuario";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 175;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NumTelefono";
+            this.dataGridViewTextBoxColumn4.HeaderText = "NumTelefono";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 175;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contrasena";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ConfirmarContrasena";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ConfirmarContrasena";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 175;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RolID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RolID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "BodegaID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "BodegaID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -271,7 +303,6 @@ namespace MultiBodega_v1
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(919, 574);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.Buscarbtn);
             this.Controls.Add(label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -279,7 +310,7 @@ namespace MultiBodega_v1
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.dGV1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -288,8 +319,9 @@ namespace MultiBodega_v1
             this.Text = "Usuarios del Sistema";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,17 +334,30 @@ namespace MultiBodega_v1
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button Buscarbtn;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.BindingSource listaUsuarioBindingSource;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numTelefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contrasenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmarContrasenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bodegaIDDataGridViewTextBoxColumn;
+        private BD_CATELSA_MULTICABLE bD_CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }

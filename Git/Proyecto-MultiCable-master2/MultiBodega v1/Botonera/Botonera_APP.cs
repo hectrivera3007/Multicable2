@@ -41,7 +41,7 @@ namespace MultiBodega_v1.Botonera
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             DialogResult opcion;
-            opcion = MessageBox.Show("¿Cerrar CATELSA LOGISTIC?", "Aviso del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            opcion = MessageBox.Show("¿Cerrar CATELSA LOGISTIC?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (opcion == DialogResult.Yes)
             {
                 Application.Exit();

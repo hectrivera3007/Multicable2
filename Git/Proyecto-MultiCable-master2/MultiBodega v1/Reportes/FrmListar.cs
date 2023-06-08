@@ -1,6 +1,7 @@
 ﻿using MultiBodega_v1.Formularios_de_Registro;
 using MultiBodega_v1.Inventario;
 using MultiBodega_v1.Registro;
+using MultiBodega_v1.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace MultiBodega_v1.Listar
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmRegistrar VolverAtras = new FrmRegistrar();
+            FrmContReportes VolverAtras = new FrmContReportes();
             VolverAtras.Show();
         }
     }

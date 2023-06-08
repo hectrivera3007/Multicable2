@@ -112,10 +112,10 @@ namespace MultiBodega_v1
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.permisosDataGridView = new System.Windows.Forms.DataGridView();
-            this._CATELSA_MULTICABLEDataSet = new MultiBodega_v1._CATELSA_MULTICABLEDataSet();
+            
             this.permisosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.permisosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.PermisosTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager();
+            
+            
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePermisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.concedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -123,7 +123,7 @@ namespace MultiBodega_v1
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.permisosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -800,41 +800,21 @@ namespace MultiBodega_v1
             // 
             // _CATELSA_MULTICABLEDataSet
             // 
-            this._CATELSA_MULTICABLEDataSet.DataSetName = "_CATELSA_MULTICABLEDataSet";
-            this._CATELSA_MULTICABLEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
+            
             // 
             // permisosBindingSource
             // 
             this.permisosBindingSource.DataMember = "Permisos";
-            this.permisosBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
+            
             // 
             // permisosTableAdapter
             // 
-            this.permisosTableAdapter.ClearBeforeFill = true;
+            
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BajosMinimosTableAdapter = null;
-            this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
-            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
-            this.tableAdapterManager.DevolucionesTableAdapter = null;
-            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
-            this.tableAdapterManager.PermisosTableAdapter = this.permisosTableAdapter;
-            this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
-            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
-            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
-            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
-            this.tableAdapterManager.RolTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
+            
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -889,7 +869,7 @@ namespace MultiBodega_v1
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.permisosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -980,10 +960,10 @@ namespace MultiBodega_v1
         private System.Windows.Forms.ToolStripMenuItem BuscarSalidaToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView permisosDataGridView;
-        private _CATELSA_MULTICABLEDataSet _CATELSA_MULTICABLEDataSet;
+        
         private System.Windows.Forms.BindingSource permisosBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.PermisosTableAdapter permisosTableAdapter;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePermisoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn concedidoDataGridViewCheckBoxColumn;

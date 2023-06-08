@@ -10,9 +10,6 @@ namespace MultiBodega_v1
 {
     static class Program
     {
-
-        public static Usuarios UsuarioSistema;
-
         /// <summary>
         /// Punto de entrada principal para la aplicación
         /// </summary>
@@ -22,6 +19,7 @@ namespace MultiBodega_v1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPantallaPrincipal());
+            
         }
     }
 }

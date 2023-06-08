@@ -64,10 +64,7 @@ namespace MultiBodega_v1
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
-            this._CATELSA_MULTICABLEDataSet = new MultiBodega_v1._CATELSA_MULTICABLEDataSet();
             this.requisaEntradaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.requisaEntradaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.RequisaEntradaTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager();
             this.requisaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +82,6 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisa_RequisaEntradaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -451,44 +447,15 @@ namespace MultiBodega_v1
             // 
             // _CATELSA_MULTICABLEDataSet
             // 
-            this._CATELSA_MULTICABLEDataSet.DataSetName = "_CATELSA_MULTICABLEDataSet";
-            this._CATELSA_MULTICABLEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // requisaEntradaBindingSource
             // 
-            this.requisaEntradaBindingSource.DataMember = "RequisaEntrada";
-            this.requisaEntradaBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
             // 
             // requisaEntradaTableAdapter
             // 
-            this.requisaEntradaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BajosMinimosTableAdapter = null;
-            this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
-            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
-            this.tableAdapterManager.DevolucionesTableAdapter = null;
-            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
-            this.tableAdapterManager.PermisosTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
-            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
-            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = this.requisaEntradaTableAdapter;
-            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
-            this.tableAdapterManager.Rol_PermisosTableAdapter = null;
-            this.tableAdapterManager.RolTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Usuario_PermisosTableAdapter = null;
-            this.tableAdapterManager.Usuario1TableAdapter = null;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
             // requisaIDDataGridViewTextBoxColumn
             // 
@@ -596,7 +563,6 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisa_RequisaEntradaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -631,10 +597,7 @@ namespace MultiBodega_v1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button8;
-        private _CATELSA_MULTICABLEDataSet _CATELSA_MULTICABLEDataSet;
         private System.Windows.Forms.BindingSource requisaEntradaBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.RequisaEntradaTableAdapter requisaEntradaTableAdapter;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn requisaIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numOrdenDataGridViewTextBoxColumn;

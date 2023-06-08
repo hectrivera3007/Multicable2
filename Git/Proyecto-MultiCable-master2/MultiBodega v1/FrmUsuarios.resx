@@ -129,7 +129,13 @@
   <metadata name="dGV1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="listaUsuarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="usuarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>213, 17</value>
+  </metadata>
+  <metadata name="bD_CATELSA_MULTICABLE.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1074,24 +1080,6 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="Buscarbtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Buscarbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfnAxYPCwFq6F1pAAAC
-        BklEQVQ4T5XUS0hVQRzH8ZulEZaIYA+Q232RCqIRcTdBq1y6ahHUQtrowna6zEVrg6QEHyC6qMWFnrto
-        0a4QwaBWRRAERpmLoIXhM7+/ufMf5xyugn/4cM6Z+c//zDlz5mQsCoVCplgsxhpwHhfRjXOoQ8jRmJoR
-        J+EUbuIZvuAXfuITZtGLeoQxiUjNrBOvsIn/+/iLR2iFG5fNZn01whrRgUXEg9ewDM1ww7eZClrgxofw
-        DY3QI8aF5nANinZcx2tsw/Lu5fP5mgWVvA4l/cMwEu/Ja8YMrOAPdGFvgbg4isewpCfQCrsimkHqPWu1
-        l2D5I0gUPIuPvlOz7IMbHIeuS6WSFR2FFdS71KRC4gV8hzpXkXyEKNTu3YC9y7c4gZCk+AZ1/sEluIHp
-        sHb0Ywca8wbHEZL0ot9DnUoaQBhsYdeVSkXHSShfZsrl8l6uTjDmO0XfYhvSi2GuQN+lcrdwC64vLngZ
-        K7CiL9AeLYJoH1/FB1jeAk4jscq6OMLxLuKP9ivGMYg7mMdvWL/oxtr74cbhBCfxEAft4zQ98gQ0tlrQ
-        Zulp+YfwGbaKMe3nd9CnYm16KhV1M3WRy+XioqL/4G1M4SWe4wG0RfVD0GZ4Ciuqm99HQ7WiDxoS/KIc
-        g9sJKWcQF9Xm8FNMxT6fSy2aqf4D2mHTaPQlDhcMjDWhp3osZnYBhZIaAfaCWuEAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="button7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1106,10 +1094,16 @@
         DTq2pMXLACpMPMiIcdVJSPCXhXJJBAwMAAvZ6894SytwAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="usuarioTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>390, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>555, 17</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>47</value>
+    <value>43</value>
   </metadata>
 </root>

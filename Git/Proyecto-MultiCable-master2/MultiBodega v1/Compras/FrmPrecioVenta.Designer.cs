@@ -33,7 +33,6 @@ namespace MultiBodega_v1.Compras
             System.Windows.Forms.Label label11;
             System.Windows.Forms.Label label9;
             System.Windows.Forms.Label label8;
-            System.Windows.Forms.Label label7;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label4;
@@ -64,11 +63,9 @@ namespace MultiBodega_v1.Compras
             this.BtnPdescuentoD = new System.Windows.Forms.Button();
             this.BtnPdescuentoL = new System.Windows.Forms.Button();
             this.P3DOLAR = new System.Windows.Forms.TextBox();
-            this.P4DOLAR = new System.Windows.Forms.TextBox();
             this.P1DOLAR = new System.Windows.Forms.TextBox();
             this.P2DOLAR = new System.Windows.Forms.TextBox();
             this.P3LPS = new System.Windows.Forms.TextBox();
-            this.P4LPS = new System.Windows.Forms.TextBox();
             this.P1LPS = new System.Windows.Forms.TextBox();
             this.P2LPS = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -76,7 +73,6 @@ namespace MultiBodega_v1.Compras
             label11 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -96,7 +92,7 @@ namespace MultiBodega_v1.Compras
             // 
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            label10.Location = new System.Drawing.Point(68, 299);
+            label10.Location = new System.Drawing.Point(155, 299);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(16, 17);
             label10.TabIndex = 175;
@@ -106,7 +102,7 @@ namespace MultiBodega_v1.Compras
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            label11.Location = new System.Drawing.Point(68, 268);
+            label11.Location = new System.Drawing.Point(155, 268);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(14, 17);
             label11.TabIndex = 174;
@@ -132,27 +128,16 @@ namespace MultiBodega_v1.Compras
             label8.TabIndex = 168;
             label8.Text = "L";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Century Gothic", 10F);
-            label7.Location = new System.Drawing.Point(255, 243);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(160, 19);
-            label7.TabIndex = 167;
-            label7.Text = "Precio 40% Descuento";
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            label6.Location = new System.Drawing.Point(85, 243);
+            label6.Location = new System.Drawing.Point(172, 243);
             label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(160, 19);
             label6.TabIndex = 166;
-            label6.Text = "Precio 30% Descuento";
+            label6.Text = "Precio 20% Descuento";
             // 
             // label5
             // 
@@ -163,7 +148,7 @@ namespace MultiBodega_v1.Compras
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(160, 19);
             label5.TabIndex = 165;
-            label5.Text = "Precio 20% Descuento";
+            label5.Text = "Precio 15% Descuento";
             // 
             // label4
             // 
@@ -364,7 +349,7 @@ namespace MultiBodega_v1.Compras
             this.costo_Total_Unitario_LPSTextBox.Name = "costo_Total_Unitario_LPSTextBox";
             this.costo_Total_Unitario_LPSTextBox.Size = new System.Drawing.Size(160, 23);
             this.costo_Total_Unitario_LPSTextBox.TabIndex = 1;
-            this.costo_Total_Unitario_LPSTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.costo_Total_Unitario_LPSTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnPD
             // 
@@ -385,7 +370,7 @@ namespace MultiBodega_v1.Compras
             this.costo_Total_Unitario_DolaresTextBox.Name = "costo_Total_Unitario_DolaresTextBox";
             this.costo_Total_Unitario_DolaresTextBox.Size = new System.Drawing.Size(167, 23);
             this.costo_Total_Unitario_DolaresTextBox.TabIndex = 2;
-            this.costo_Total_Unitario_DolaresTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.costo_Total_Unitario_DolaresTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // margen_UtilidadTextBox
             // 
@@ -397,9 +382,9 @@ namespace MultiBodega_v1.Compras
             // 
             // precioVentaDolaresTextBox
             // 
-            this.precioVentaDolaresTextBox.BackColor = System.Drawing.Color.Black;
+            this.precioVentaDolaresTextBox.BackColor = System.Drawing.Color.White;
             this.precioVentaDolaresTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioVentaDolaresTextBox.ForeColor = System.Drawing.Color.White;
+            this.precioVentaDolaresTextBox.ForeColor = System.Drawing.Color.Black;
             this.precioVentaDolaresTextBox.Location = new System.Drawing.Point(249, 269);
             this.precioVentaDolaresTextBox.Name = "precioVentaDolaresTextBox";
             this.precioVentaDolaresTextBox.ReadOnly = true;
@@ -409,9 +394,9 @@ namespace MultiBodega_v1.Compras
             // 
             // precioVentaLempirasTextBox
             // 
-            this.precioVentaLempirasTextBox.BackColor = System.Drawing.Color.Black;
+            this.precioVentaLempirasTextBox.BackColor = System.Drawing.Color.White;
             this.precioVentaLempirasTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioVentaLempirasTextBox.ForeColor = System.Drawing.Color.White;
+            this.precioVentaLempirasTextBox.ForeColor = System.Drawing.Color.Black;
             this.precioVentaLempirasTextBox.Location = new System.Drawing.Point(79, 269);
             this.precioVentaLempirasTextBox.Name = "precioVentaLempirasTextBox";
             this.precioVentaLempirasTextBox.ReadOnly = true;
@@ -430,20 +415,18 @@ namespace MultiBodega_v1.Compras
             this.Page2.Controls.Add(label10);
             this.Page2.Controls.Add(label11);
             this.Page2.Controls.Add(this.P3DOLAR);
-            this.Page2.Controls.Add(this.P4DOLAR);
             this.Page2.Controls.Add(label9);
             this.Page2.Controls.Add(this.P1DOLAR);
             this.Page2.Controls.Add(this.P2DOLAR);
             this.Page2.Controls.Add(label8);
-            this.Page2.Controls.Add(label7);
             this.Page2.Controls.Add(label6);
             this.Page2.Controls.Add(label5);
             this.Page2.Controls.Add(label4);
             this.Page2.Controls.Add(this.P3LPS);
-            this.Page2.Controls.Add(this.P4LPS);
             this.Page2.Controls.Add(this.P1LPS);
             this.Page2.Controls.Add(this.P2LPS);
             this.Page2.Controls.Add(this.groupBox1);
+            this.Page2.ForeColor = System.Drawing.Color.Black;
             this.Page2.Location = new System.Drawing.Point(4, 26);
             this.Page2.Name = "Page2";
             this.Page2.Padding = new System.Windows.Forms.Padding(3);
@@ -504,92 +487,76 @@ namespace MultiBodega_v1.Compras
             // 
             // P3DOLAR
             // 
-            this.P3DOLAR.BackColor = System.Drawing.Color.Black;
+            this.P3DOLAR.BackColor = System.Drawing.Color.White;
             this.P3DOLAR.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P3DOLAR.ForeColor = System.Drawing.Color.White;
-            this.P3DOLAR.Location = new System.Drawing.Point(88, 296);
+            this.P3DOLAR.ForeColor = System.Drawing.Color.Black;
+            this.P3DOLAR.Location = new System.Drawing.Point(175, 296);
             this.P3DOLAR.Margin = new System.Windows.Forms.Padding(4);
             this.P3DOLAR.Name = "P3DOLAR";
+            this.P3DOLAR.ReadOnly = true;
             this.P3DOLAR.Size = new System.Drawing.Size(160, 23);
             this.P3DOLAR.TabIndex = 7;
             this.P3DOLAR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // P4DOLAR
-            // 
-            this.P4DOLAR.BackColor = System.Drawing.Color.Black;
-            this.P4DOLAR.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P4DOLAR.ForeColor = System.Drawing.Color.White;
-            this.P4DOLAR.Location = new System.Drawing.Point(258, 296);
-            this.P4DOLAR.Name = "P4DOLAR";
-            this.P4DOLAR.Size = new System.Drawing.Size(167, 23);
-            this.P4DOLAR.TabIndex = 8;
-            this.P4DOLAR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // P1DOLAR
             // 
-            this.P1DOLAR.BackColor = System.Drawing.Color.Black;
+            this.P1DOLAR.BackColor = System.Drawing.Color.White;
             this.P1DOLAR.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P1DOLAR.ForeColor = System.Drawing.Color.White;
+            this.P1DOLAR.ForeColor = System.Drawing.Color.Black;
             this.P1DOLAR.Location = new System.Drawing.Point(88, 215);
             this.P1DOLAR.Margin = new System.Windows.Forms.Padding(4);
             this.P1DOLAR.Name = "P1DOLAR";
+            this.P1DOLAR.ReadOnly = true;
             this.P1DOLAR.Size = new System.Drawing.Size(160, 23);
             this.P1DOLAR.TabIndex = 3;
             this.P1DOLAR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // P2DOLAR
             // 
-            this.P2DOLAR.BackColor = System.Drawing.Color.Black;
+            this.P2DOLAR.BackColor = System.Drawing.Color.White;
             this.P2DOLAR.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P2DOLAR.ForeColor = System.Drawing.Color.White;
+            this.P2DOLAR.ForeColor = System.Drawing.Color.Black;
             this.P2DOLAR.Location = new System.Drawing.Point(258, 215);
             this.P2DOLAR.Name = "P2DOLAR";
+            this.P2DOLAR.ReadOnly = true;
             this.P2DOLAR.Size = new System.Drawing.Size(167, 23);
             this.P2DOLAR.TabIndex = 4;
             this.P2DOLAR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // P3LPS
             // 
-            this.P3LPS.BackColor = System.Drawing.Color.Black;
+            this.P3LPS.BackColor = System.Drawing.Color.White;
             this.P3LPS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P3LPS.ForeColor = System.Drawing.Color.White;
-            this.P3LPS.Location = new System.Drawing.Point(88, 265);
+            this.P3LPS.ForeColor = System.Drawing.Color.Black;
+            this.P3LPS.Location = new System.Drawing.Point(175, 265);
             this.P3LPS.Margin = new System.Windows.Forms.Padding(4);
             this.P3LPS.Name = "P3LPS";
+            this.P3LPS.ReadOnly = true;
             this.P3LPS.Size = new System.Drawing.Size(160, 23);
             this.P3LPS.TabIndex = 5;
             this.P3LPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // P4LPS
-            // 
-            this.P4LPS.BackColor = System.Drawing.Color.Black;
-            this.P4LPS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P4LPS.ForeColor = System.Drawing.Color.White;
-            this.P4LPS.Location = new System.Drawing.Point(258, 265);
-            this.P4LPS.Name = "P4LPS";
-            this.P4LPS.Size = new System.Drawing.Size(167, 23);
-            this.P4LPS.TabIndex = 6;
-            this.P4LPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // P1LPS
             // 
-            this.P1LPS.BackColor = System.Drawing.Color.Black;
+            this.P1LPS.BackColor = System.Drawing.Color.White;
             this.P1LPS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P1LPS.ForeColor = System.Drawing.Color.White;
+            this.P1LPS.ForeColor = System.Drawing.Color.Black;
             this.P1LPS.Location = new System.Drawing.Point(88, 184);
             this.P1LPS.Margin = new System.Windows.Forms.Padding(4);
             this.P1LPS.Name = "P1LPS";
+            this.P1LPS.ReadOnly = true;
             this.P1LPS.Size = new System.Drawing.Size(160, 23);
             this.P1LPS.TabIndex = 1;
             this.P1LPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // P2LPS
             // 
-            this.P2LPS.BackColor = System.Drawing.Color.Black;
+            this.P2LPS.BackColor = System.Drawing.Color.White;
             this.P2LPS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P2LPS.ForeColor = System.Drawing.Color.White;
+            this.P2LPS.ForeColor = System.Drawing.Color.Black;
             this.P2LPS.Location = new System.Drawing.Point(258, 184);
             this.P2LPS.Name = "P2LPS";
+            this.P2LPS.ReadOnly = true;
             this.P2LPS.Size = new System.Drawing.Size(167, 23);
             this.P2LPS.TabIndex = 2;
             this.P2LPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -612,6 +579,7 @@ namespace MultiBodega_v1.Compras
             this.ClientSize = new System.Drawing.Size(503, 454);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -642,11 +610,9 @@ namespace MultiBodega_v1.Compras
         private System.Windows.Forms.Button BtnPdescuentoD;
         private System.Windows.Forms.Button BtnPdescuentoL;
         private System.Windows.Forms.TextBox P3DOLAR;
-        private System.Windows.Forms.TextBox P4DOLAR;
         private System.Windows.Forms.TextBox P1DOLAR;
         private System.Windows.Forms.TextBox P2DOLAR;
         private System.Windows.Forms.TextBox P3LPS;
-        private System.Windows.Forms.TextBox P4LPS;
         private System.Windows.Forms.TextBox P1LPS;
         private System.Windows.Forms.TextBox P2LPS;
         private System.Windows.Forms.GroupBox groupBox1;

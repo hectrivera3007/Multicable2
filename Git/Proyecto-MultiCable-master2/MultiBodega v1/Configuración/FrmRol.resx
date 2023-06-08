@@ -123,6 +123,24 @@
   <metadata name="rolNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="activoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="rolBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>213, 17</value>
+  </metadata>
+  <metadata name="bD_CATELSA_MULTICABLE.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="btnSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rolTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>358, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>497, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnRegresar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -142,32 +160,6 @@
         dpoAEiNS3jtqC9eYx92z2iQF5rJIqAeIKrD1YaLFO/DziBhI0IVpvjuQsIxNiq/lGdnHy9pPY1fmTGlc
         40Z0Qg2VIldstVrCJqbUrYTYCZp+wKilt2jx85zd5TKdbO/cETVKf7c1dC8d5JdViSD8Bb+bVHmU72YE
         AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnEliminar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfnAxwFDig3B1TyAAAB
-        Y0lEQVQ4T63USy5EQRTG8ZZgxMDIGMFemJl6LADBXDDCBggSFuI1Yswi2IAd+H4393bSt2+nu2/6S/5J
-        Pc6pOlV16nQGaCWchPfwG/5KtI2ZYzNU82EvvIWPcBP2w1aJ9m34DC9hN/Bp1EK4Dl/hNKyG6VDXTFgP
-        Z4EtH749sstVENVmaFqoLguz5XMZ5kJXjmm3jaI3niz6HXaKXuRyX4NjjhJZXSJ1fGssG/BiwnZnbbUW
-        PNSRjjTwcm2iqyTK+/CsI7cONEpNBQazQ2DDttJh+NGQsHKs0mLw4k/hcQDm2LCtZA1rTX7BiR+5ehQG
-        bcX3IRSPIm08ue/UVny7aSMZJaXkbBMln4ugWCwZIFXD9/GNxlX19baLXql6cRglUjZsHbWvOJASZMJu
-        ju87NS1szJ2dB7Z8+spXJbuoGu5UtHdBSskxaPtiVYF1zL7ImuShjoM0kFsSFtrGzBWVpVedzj9gf1U/
-        spIToQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAgregar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAA7DgAAOw4AXEryjgAAAAHdElNRQfnAxYPDDKaeaq4AAAB
-        YElEQVQ4T73Uyy5EQRSF4TZgImHCE7iMMWCEB3F/JKTFhDnGDHkAEiYSj2N9UtU5Tl9cOqzkT8o+u7a9
-        qnZ15781GxbDRlgPCyX2Y82Hw3ATnsJrwVrMNznf0lqw6TmchZ2wGbbCbugG3+TIHSkJD+E2KDIV2poM
-        it8FuathoFjwXxVbEiiaCDatlHXVcpB7HeYE2joKL0FnTenopGDdlE7ZP/j4qyE3pztn1rapyEWhXVDu
-        edDljECVcXCDDp1YsxnT4bJgXePV/l6wV42ezJixqHad12nQlUJvBWsx9uUQ2/aq0VMt6CNJtunXBcex
-        vB/6LI97KVfh06WQ52QEqu0qRVg8LuumtoNR6xsbMpy69AIMbRVrzgvVJsmRq7uBg03Np6fTQU9PTGeK
-        3YehT69KgkFl3/mYs/rj4ALEfNPZl8WqWHAuNj0GYwFrMd+G2hwlN2ccmj+wfbf5h+p03gF2vU9CPsx/
-        iQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1082,30 +1074,6 @@
         giAIgiAIgiAIgiBkwxYKgiAIgiAIgiAIgiAIWURd/3/+Iqp56qcEpwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="btnSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="rolBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>240, 17</value>
-  </metadata>
-  <metadata name="btnSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="rolBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>240, 17</value>
-  </metadata>
-  <metadata name="_CATELSA_MULTICABLEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="_CATELSA_MULTICABLEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="rolTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>385, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>524, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>41</value>
   </metadata>

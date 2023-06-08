@@ -25,8 +25,6 @@ namespace MultiBodega_v1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Permisos' Puede moverla o quitarla según sea necesario.
-            this.permisosTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Permisos);
             var login = new LoginBodega();
             login.ShowDialog();
         }

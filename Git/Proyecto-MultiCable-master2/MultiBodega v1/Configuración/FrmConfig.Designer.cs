@@ -112,23 +112,20 @@ namespace MultiBodega_v1.Configuración
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.nombreUsuarioComboBox = new System.Windows.Forms.ComboBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._CATELSA_MULTICABLEDataSet = new MultiBodega_v1._CATELSA_MULTICABLEDataSet();
             this.Ck_Marcar_Todos = new System.Windows.Forms.CheckBox();
             this.rolNameComboBox = new System.Windows.Forms.ComboBox();
+            this.bD_CATELSA_MULTICABLE = new MultiBodega_v1.BD_CATELSA_MULTICABLE();
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rolTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.RolTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager();
-            this.usuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.UsuarioTableAdapter();
-            this.permisosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.permisosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.PermisosTableAdapter();
+            this.rolTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
             nombreUsuarioLabel = new System.Windows.Forms.Label();
             rolIDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreUsuarioLabel
@@ -243,6 +240,7 @@ namespace MultiBodega_v1.Configuración
             treeNode91.Name = "comprobanteentrega";
             treeNode91.Text = "Comprobante de Entrega";
             treeNode92.Name = "Nodo5";
+            treeNode92.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
             treeNode92.Text = "Requisas";
             treeNode93.Name = "Nodo11";
             treeNode93.Text = "Bodega 1";
@@ -253,6 +251,7 @@ namespace MultiBodega_v1.Configuración
             treeNode96.Name = "Nodo14";
             treeNode96.Text = "Bodega 4";
             treeNode97.Name = "Nodo10";
+            treeNode97.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
             treeNode97.Text = "Bodegas";
             treeNode98.Name = "Nodo16";
             treeNode98.Text = "Compras";
@@ -261,6 +260,7 @@ namespace MultiBodega_v1.Configuración
             treeNode100.Name = "Nodo18";
             treeNode100.Text = "Calcular Precio de Venta";
             treeNode101.Name = "Nodo15";
+            treeNode101.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode101.Text = "Compras";
             treeNode102.Name = "Nodo39";
             treeNode102.Text = "Registrar Base Foránea";
@@ -279,6 +279,7 @@ namespace MultiBodega_v1.Configuración
             treeNode109.Name = "Nodo46";
             treeNode109.Text = "Listar Técnico";
             treeNode110.Name = "Nodo23";
+            treeNode110.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode110.Text = "Registro";
             treeNode111.Name = "Nodo27";
             treeNode111.Text = "Reporte Bodega 1";
@@ -295,10 +296,12 @@ namespace MultiBodega_v1.Configuración
             treeNode117.Name = "Nodo33";
             treeNode117.Text = "Reporte Detallado de Salidas";
             treeNode118.Name = "Nodo24";
+            treeNode118.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode118.Text = "Reportes";
             treeNode119.Name = "Nodo26";
             treeNode119.Text = "Crear Nuevo Usuario";
             treeNode120.Name = "Nodo25";
+            treeNode120.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode120.Text = "Usuarios";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode86,
@@ -316,23 +319,13 @@ namespace MultiBodega_v1.Configuración
             // nombreUsuarioComboBox
             // 
             this.nombreUsuarioComboBox.DataSource = this.usuarioBindingSource;
-            this.nombreUsuarioComboBox.DisplayMember = "NombreUsuario";
+            this.nombreUsuarioComboBox.DisplayMember = "ID";
             this.nombreUsuarioComboBox.FormattingEnabled = true;
             this.nombreUsuarioComboBox.Location = new System.Drawing.Point(200, 167);
             this.nombreUsuarioComboBox.Name = "nombreUsuarioComboBox";
             this.nombreUsuarioComboBox.Size = new System.Drawing.Size(185, 25);
             this.nombreUsuarioComboBox.TabIndex = 132;
             this.nombreUsuarioComboBox.ValueMember = "NombreUsuario";
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
-            // 
-            // _CATELSA_MULTICABLEDataSet
-            // 
-            this._CATELSA_MULTICABLEDataSet.DataSetName = "_CATELSA_MULTICABLEDataSet";
-            this._CATELSA_MULTICABLEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Ck_Marcar_Todos
             // 
@@ -348,18 +341,24 @@ namespace MultiBodega_v1.Configuración
             // 
             // rolNameComboBox
             // 
-            this.rolNameComboBox.DataSource = this.usuarioBindingSource;
+            this.rolNameComboBox.DataSource = this.rolBindingSource;
             this.rolNameComboBox.DisplayMember = "RolName";
             this.rolNameComboBox.FormattingEnabled = true;
             this.rolNameComboBox.Location = new System.Drawing.Point(433, 167);
             this.rolNameComboBox.Name = "rolNameComboBox";
             this.rolNameComboBox.Size = new System.Drawing.Size(183, 25);
             this.rolNameComboBox.TabIndex = 135;
+            this.rolNameComboBox.ValueMember = "RolID";
+            // 
+            // bD_CATELSA_MULTICABLE
+            // 
+            this.bD_CATELSA_MULTICABLE.DataSetName = "BD_CATELSA_MULTICABLE";
+            this.bD_CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rolBindingSource
             // 
             this.rolBindingSource.DataMember = "Rol";
-            this.rolBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
+            this.rolBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
             // 
             // rolTableAdapter
             // 
@@ -378,37 +377,37 @@ namespace MultiBodega_v1.Configuración
             this.tableAdapterManager.InventarioBodega2TableAdapter = null;
             this.tableAdapterManager.InventarioBodega3TableAdapter = null;
             this.tableAdapterManager.InventarioBodega4TableAdapter = null;
-            this.tableAdapterManager.PermisosTableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
             this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = this.rolTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
             // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // permisosBindingSource
-            // 
-            this.permisosBindingSource.DataMember = "Permisos";
-            this.permisosBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
-            // 
-            // permisosTableAdapter
-            // 
-            this.permisosTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(677, 591);
+            this.ClientSize = new System.Drawing.Size(694, 749);
             this.Controls.Add(this.rolNameComboBox);
             this.Controls.Add(this.Ck_Marcar_Todos);
             this.Controls.Add(rolIDLabel);
@@ -428,10 +427,9 @@ namespace MultiBodega_v1.Configuración
             this.Text = "  Permisos";
             this.Load += new System.EventHandler(this.FrmConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,13 +445,11 @@ namespace MultiBodega_v1.Configuración
         private System.Windows.Forms.ComboBox nombreUsuarioComboBox;
         private System.Windows.Forms.CheckBox Ck_Marcar_Todos;
         private System.Windows.Forms.ComboBox rolNameComboBox;
-        private _CATELSA_MULTICABLEDataSet _CATELSA_MULTICABLEDataSet;
+        private BD_CATELSA_MULTICABLE bD_CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource rolBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.RolTableAdapter rolTableAdapter;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter;
+        private BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private System.Windows.Forms.BindingSource permisosBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.PermisosTableAdapter permisosTableAdapter;
     }
 }

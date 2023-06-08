@@ -60,6 +60,7 @@ namespace MultiBodega_v1.Reportes
 
         private void BtnListar_Click(object sender, EventArgs e)
         {
+            this.Close();
             var Listar = new FrmListar();
             Listar.Show();
         }

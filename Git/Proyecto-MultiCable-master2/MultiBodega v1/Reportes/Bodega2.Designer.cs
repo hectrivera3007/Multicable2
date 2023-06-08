@@ -231,14 +231,14 @@ namespace MultiBodega_v1.Bodegas
 
         #endregion
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.BindingSource reporteBodegas_ReporteBodega2BindingSource;
         private System.Windows.Forms.DataGridView reporteBodegas_ReporteBodega2DataGridView;
         private System.Windows.Forms.Label label3;

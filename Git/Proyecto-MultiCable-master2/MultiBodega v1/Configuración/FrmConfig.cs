@@ -45,18 +45,17 @@ namespace MultiBodega_v1.Configuración
         {
             this.Validate();
             this.rolBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLEDataSet);
+            this.tableAdapterManager.UpdateAll(this.bD_CATELSA_MULTICABLE);
 
         }
 
         private void FrmConfig_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Permisos' Puede moverla o quitarla según sea necesario.
-            this.permisosTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Permisos);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Usuario);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Rol' Puede moverla o quitarla según sea necesario.
-            this.rolTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Rol);
+            // TODO: esta línea de código carga datos en la tabla 'bD_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.bD_CATELSA_MULTICABLE.Usuario);
+            // TODO: esta línea de código carga datos en la tabla 'bD_CATELSA_MULTICABLE.Rol' Puede moverla o quitarla según sea necesario.
+            this.rolTableAdapter.Fill(this.bD_CATELSA_MULTICABLE.Rol);
+            
 
         }
 
@@ -65,5 +64,12 @@ namespace MultiBodega_v1.Configuración
             
         }
 
+        private void rolBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.rolBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bD_CATELSA_MULTICABLE);
+
+        }
     }
 }

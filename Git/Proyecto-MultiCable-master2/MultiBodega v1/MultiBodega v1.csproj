@@ -244,6 +244,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_CATELSA_MULTICABLE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Bodegas\Bodega_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -558,14 +563,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_CATELSA_MULTICABLEDataSet.cs">
-      <DependentUpon>_CATELSA_MULTICABLEDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_CATELSA_MULTICABLEDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_CATELSA_MULTICABLEDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Bodegas\Bodega_1.resx">
       <DependentUpon>Bodega_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -732,6 +729,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD_CATELSA_MULTICABLE.xsc">
+      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
+    </None>
+    <None Include="BD_CATELSA_MULTICABLE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_CATELSA_MULTICABLE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_CATELSA_MULTICABLE.xss">
+      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDataGrid.datasource" />
     <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDatosGenerales.datasource" />
@@ -778,17 +786,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_CATELSA_MULTICABLEDataSet.xsc">
-      <DependentUpon>_CATELSA_MULTICABLEDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_CATELSA_MULTICABLEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_CATELSA_MULTICABLEDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_CATELSA_MULTICABLEDataSet.xss">
-      <DependentUpon>_CATELSA_MULTICABLEDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -815,7 +812,16 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Verificar_.png" />
     <None Include="Resources\esconder.png" />
+    <None Include="Resources\Guardar_20x20.png" />
+    <None Include="Resources\Cerrar.png" />
+    <None Include="Resources\cancel_77947_20x20.png" />
+    <None Include="Resources\eliminar.png" />
+    <None Include="Resources\Agregar.png" />
+    <None Include="Resources\Agregar_20x20.png" />
+    <None Include="Resources\actualizar.png" />
+    <None Include="Resources\lista-de-verificacion.png" />
     <Content Include="Resources\mostrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

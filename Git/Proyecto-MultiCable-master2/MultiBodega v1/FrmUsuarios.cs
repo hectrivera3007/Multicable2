@@ -18,7 +18,7 @@ namespace MultiBodega_v1
         {
             InitializeComponent();
             _usuarios = new Usuarios();
-            listaUsuarioBindingSource.DataSource = _usuarios.ObtenerUsuarios();
+            
         }
         #region "Mis Metodos"
 
@@ -61,7 +61,10 @@ namespace MultiBodega_v1
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            //this.Listado("%");
+            // TODO: esta línea de código carga datos en la tabla 'bD_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.bD_CATELSA_MULTICABLE.Usuario);
+
+
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -71,7 +74,6 @@ namespace MultiBodega_v1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //this.Listado("%" + Txtbuscar.Text.Trim() + "%");       
         }
 
         private void NuevoTextBox_Click(object sender, EventArgs e)
@@ -89,6 +91,11 @@ namespace MultiBodega_v1
         private void Buscarbtn_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

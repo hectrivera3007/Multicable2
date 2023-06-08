@@ -38,19 +38,8 @@ namespace MultiBodega_v1
             System.Windows.Forms.Label rolIDLabel;
             System.Windows.Forms.Label nombreLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoUsuario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.ckConfirmarContra = new System.Windows.Forms.CheckBox();
+            this.ckContraseña = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.confirmarContrasenaTextBox = new System.Windows.Forms.TextBox();
@@ -58,30 +47,30 @@ namespace MultiBodega_v1
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.nombreUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.numTelefonoTextBox = new System.Windows.Forms.TextBox();
-            this._CATELSA_MULTICABLEDataSet = new MultiBodega_v1._CATELSA_MULTICABLEDataSet();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.dGV1 = new System.Windows.Forms.DataGridView();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.UsuarioTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager();
-            this.rolTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.RolTableAdapter();
-            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.BodegaTableAdapter();
-            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rolIDComboBox = new System.Windows.Forms.ComboBox();
             this.bodegaIDComboBox = new System.Windows.Forms.ComboBox();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numTelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmarContrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.RolName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Expr1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bD_CATELSA_MULTICABLE = new MultiBodega_v1.BD_CATELSA_MULTICABLE();
+            this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rolNameComboBox = new System.Windows.Forms.ComboBox();
+            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.rolTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter();
+            this.bodegaTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
             confirmarContrasenaLabel = new System.Windows.Forms.Label();
             contrasenaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -89,11 +78,11 @@ namespace MultiBodega_v1
             numTelefonoLabel = new System.Windows.Forms.Label();
             rolIDLabel = new System.Windows.Forms.Label();
             nombreLabel1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,7 +134,7 @@ namespace MultiBodega_v1
             numTelefonoLabel.Name = "numTelefonoLabel";
             numTelefonoLabel.Size = new System.Drawing.Size(142, 16);
             numTelefonoLabel.TabIndex = 98;
-            numTelefonoLabel.Text = "Número de Telefono:";
+            numTelefonoLabel.Text = "Número de Teléfono:";
             // 
             // rolIDLabel
             // 
@@ -167,27 +156,35 @@ namespace MultiBodega_v1
             nombreLabel1.TabIndex = 103;
             nombreLabel1.Text = "Bodega Asignada:";
             // 
-            // checkBox1
+            // ckConfirmarContra
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
-            this.checkBox1.Location = new System.Drawing.Point(569, 189);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 23);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            this.ckConfirmarContra.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckConfirmarContra.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ckConfirmarContra.FlatAppearance.BorderSize = 0;
+            this.ckConfirmarContra.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ckConfirmarContra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckConfirmarContra.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
+            this.ckConfirmarContra.Location = new System.Drawing.Point(569, 189);
+            this.ckConfirmarContra.Name = "ckConfirmarContra";
+            this.ckConfirmarContra.Size = new System.Drawing.Size(32, 23);
+            this.ckConfirmarContra.TabIndex = 28;
+            this.ckConfirmarContra.UseVisualStyleBackColor = true;
+            this.ckConfirmarContra.CheckedChanged += new System.EventHandler(this.ckConfirmarContra_CheckedChanged);
             // 
-            // checkBox2
+            // ckContraseña
             // 
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
-            this.checkBox2.Location = new System.Drawing.Point(289, 187);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(50, 23);
-            this.checkBox2.TabIndex = 29;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
+            this.ckContraseña.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckContraseña.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ckContraseña.FlatAppearance.BorderSize = 0;
+            this.ckContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ckContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckContraseña.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
+            this.ckContraseña.Location = new System.Drawing.Point(289, 187);
+            this.ckContraseña.Name = "ckContraseña";
+            this.ckContraseña.Size = new System.Drawing.Size(32, 23);
+            this.ckContraseña.TabIndex = 29;
+            this.ckContraseña.UseVisualStyleBackColor = true;
+            this.ckContraseña.CheckedChanged += new System.EventHandler(this.ckContraseña_CheckedChanged);
             // 
             // label1
             // 
@@ -216,7 +213,6 @@ namespace MultiBodega_v1
             // 
             this.confirmarContrasenaTextBox.Location = new System.Drawing.Point(342, 187);
             this.confirmarContrasenaTextBox.Name = "confirmarContrasenaTextBox";
-            this.confirmarContrasenaTextBox.PasswordChar = 'D';
             this.confirmarContrasenaTextBox.Size = new System.Drawing.Size(222, 23);
             this.confirmarContrasenaTextBox.TabIndex = 5;
             this.confirmarContrasenaTextBox.UseSystemPasswordChar = true;
@@ -246,14 +242,10 @@ namespace MultiBodega_v1
             // numTelefonoTextBox
             // 
             this.numTelefonoTextBox.Location = new System.Drawing.Point(641, 140);
+            this.numTelefonoTextBox.MaxLength = 8;
             this.numTelefonoTextBox.Name = "numTelefonoTextBox";
             this.numTelefonoTextBox.Size = new System.Drawing.Size(235, 23);
             this.numTelefonoTextBox.TabIndex = 3;
-            // 
-            // _CATELSA_MULTICABLEDataSet
-            // 
-            this._CATELSA_MULTICABLEDataSet.DataSetName = "_CATELSA_MULTICABLEDataSet";
-            this._CATELSA_MULTICABLEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BtnModificar
             // 
@@ -261,7 +253,7 @@ namespace MultiBodega_v1
             this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
             this.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnModificar.Location = new System.Drawing.Point(749, 231);
+            this.BtnModificar.Location = new System.Drawing.Point(658, 231);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(105, 28);
             this.BtnModificar.TabIndex = 10;
@@ -302,7 +294,7 @@ namespace MultiBodega_v1
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnGuardar.Location = new System.Drawing.Point(862, 231);
+            this.BtnGuardar.Location = new System.Drawing.Point(771, 231);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(105, 28);
@@ -312,66 +304,131 @@ namespace MultiBodega_v1
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // dGV1
+            // bodegaIDComboBox
             // 
-            this.dGV1.AllowUserToOrderColumns = true;
-            this.dGV1.AutoGenerateColumns = false;
-            this.dGV1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dGV1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dGV1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dGV1.ColumnHeadersHeight = 40;
-            this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.nombreUsuarioDataGridViewTextBoxColumn,
-            this.numTelefonoDataGridViewTextBoxColumn,
-            this.contrasenaDataGridViewTextBoxColumn,
-            this.confirmarContrasenaDataGridViewTextBoxColumn,
-            this.activoDataGridViewCheckBoxColumn,
-            this.RolName,
-            this.Expr1});
-            this.dGV1.DataSource = this.usuarioBindingSource;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dGV1.EnableHeadersVisualStyles = false;
-            this.dGV1.Location = new System.Drawing.Point(41, 282);
-            this.dGV1.Margin = new System.Windows.Forms.Padding(4);
-            this.dGV1.Name = "dGV1";
-            this.dGV1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dGV1.RowHeadersWidth = 40;
-            this.dGV1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dGV1.Size = new System.Drawing.Size(926, 237);
-            this.dGV1.TabIndex = 103;
+            this.bodegaIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.bodegaBindingSource, "Nombre", true));
+            this.bodegaIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bodegaBindingSource, "Nombre", true));
+            this.bodegaIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bodegaBindingSource, "Nombre", true));
+            this.bodegaIDComboBox.FormattingEnabled = true;
+            this.bodegaIDComboBox.Location = new System.Drawing.Point(342, 234);
+            this.bodegaIDComboBox.Name = "bodegaIDComboBox";
+            this.bodegaIDComboBox.Size = new System.Drawing.Size(222, 25);
+            this.bodegaIDComboBox.TabIndex = 7;
+            // 
+            // bodegaBindingSource
+            // 
+            this.bodegaBindingSource.DataMember = "Bodega";
+            this.bodegaBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
+            // 
+            // bD_CATELSA_MULTICABLE
+            // 
+            this.bD_CATELSA_MULTICABLE.DataSetName = "BD_CATELSA_MULTICABLE";
+            this.bD_CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioDataGridView
+            // 
+            this.usuarioDataGridView.AutoGenerateColumns = false;
+            this.usuarioDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.rolIDDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewCheckBoxColumn1});
+            this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
+            this.usuarioDataGridView.Location = new System.Drawing.Point(-5, 295);
+            this.usuarioDataGridView.Name = "usuarioDataGridView";
+            this.usuarioDataGridView.Size = new System.Drawing.Size(1059, 220);
+            this.usuarioDataGridView.TabIndex = 104;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NombreUsuario";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre de Usuario";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NumTelefono";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Número de Teléfono";
+            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contraseña";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ConfirmarContrasena";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Confirmar Contraseña";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // rolIDDataGridViewTextBoxColumn
+            // 
+            this.rolIDDataGridViewTextBoxColumn.DataPropertyName = "RolID";
+            this.rolIDDataGridViewTextBoxColumn.HeaderText = "RolID";
+            this.rolIDDataGridViewTextBoxColumn.Name = "rolIDDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "BodegaID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Bodega";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
+            this.usuarioBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
+            // 
+            // rolNameComboBox
+            // 
+            this.rolNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.rolNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.rolBindingSource, "RolName", true));
+            this.rolNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.rolBindingSource, "RolName", true));
+            this.rolNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rolBindingSource, "RolID", true));
+            this.rolNameComboBox.FormattingEnabled = true;
+            this.rolNameComboBox.Location = new System.Drawing.Point(41, 234);
+            this.rolNameComboBox.Name = "rolNameComboBox";
+            this.rolNameComboBox.Size = new System.Drawing.Size(242, 25);
+            this.rolNameComboBox.TabIndex = 105;
+            // 
+            // rolBindingSource
+            // 
+            this.rolBindingSource.DataMember = "Rol";
+            this.rolBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
             // 
             // usuarioTableAdapter
             // 
@@ -390,136 +447,27 @@ namespace MultiBodega_v1
             this.tableAdapterManager.InventarioBodega2TableAdapter = null;
             this.tableAdapterManager.InventarioBodega3TableAdapter = null;
             this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
             this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
-            this.tableAdapterManager.RolTableAdapter = this.rolTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
             // rolTableAdapter
             // 
             this.rolTableAdapter.ClearBeforeFill = true;
             // 
-            // bodegaBindingSource
-            // 
-            this.bodegaBindingSource.DataMember = "Bodega";
-            this.bodegaBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
-            // 
             // bodegaTableAdapter
             // 
             this.bodegaTableAdapter.ClearBeforeFill = true;
-            // 
-            // rolBindingSource
-            // 
-            this.rolBindingSource.DataMember = "Rol";
-            this.rolBindingSource.DataSource = this._CATELSA_MULTICABLEDataSet;
-            // 
-            // rolIDComboBox
-            // 
-            this.rolIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rolBindingSource, "RolID", true));
-            this.rolIDComboBox.DataSource = this.rolBindingSource;
-            this.rolIDComboBox.DisplayMember = "RolName";
-            this.rolIDComboBox.FormattingEnabled = true;
-            this.rolIDComboBox.Location = new System.Drawing.Point(41, 234);
-            this.rolIDComboBox.Name = "rolIDComboBox";
-            this.rolIDComboBox.Size = new System.Drawing.Size(242, 25);
-            this.rolIDComboBox.TabIndex = 6;
-            this.rolIDComboBox.ValueMember = "RolID";
-            // 
-            // bodegaIDComboBox
-            // 
-            this.bodegaIDComboBox.DataSource = this.bodegaBindingSource;
-            this.bodegaIDComboBox.DisplayMember = "Nombre";
-            this.bodegaIDComboBox.FormattingEnabled = true;
-            this.bodegaIDComboBox.Location = new System.Drawing.Point(342, 234);
-            this.bodegaIDComboBox.Name = "bodegaIDComboBox";
-            this.bodegaIDComboBox.Size = new System.Drawing.Size(222, 25);
-            this.bodegaIDComboBox.TabIndex = 7;
-            this.bodegaIDComboBox.ValueMember = "BodegaID";
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.iDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // nombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "NombreUsuario";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.nombreUsuarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
-            this.nombreUsuarioDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // numTelefonoDataGridViewTextBoxColumn
-            // 
-            this.numTelefonoDataGridViewTextBoxColumn.DataPropertyName = "NumTelefono";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.numTelefonoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.numTelefonoDataGridViewTextBoxColumn.HeaderText = "Número de Teléfono";
-            this.numTelefonoDataGridViewTextBoxColumn.MaxInputLength = 8;
-            this.numTelefonoDataGridViewTextBoxColumn.Name = "numTelefonoDataGridViewTextBoxColumn";
-            this.numTelefonoDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // contrasenaDataGridViewTextBoxColumn
-            // 
-            this.contrasenaDataGridViewTextBoxColumn.DataPropertyName = "Contrasena";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.contrasenaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.contrasenaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contrasenaDataGridViewTextBoxColumn.Name = "contrasenaDataGridViewTextBoxColumn";
-            this.contrasenaDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // confirmarContrasenaDataGridViewTextBoxColumn
-            // 
-            this.confirmarContrasenaDataGridViewTextBoxColumn.DataPropertyName = "ConfirmarContrasena";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.confirmarContrasenaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.confirmarContrasenaDataGridViewTextBoxColumn.HeaderText = "Confirmar Contraseña";
-            this.confirmarContrasenaDataGridViewTextBoxColumn.Name = "confirmarContrasenaDataGridViewTextBoxColumn";
-            this.confirmarContrasenaDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            this.activoDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // RolName
-            // 
-            this.RolName.DataPropertyName = "RolName";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.RolName.DefaultCellStyle = dataGridViewCellStyle8;
-            this.RolName.HeaderText = "Rol";
-            this.RolName.Name = "RolName";
-            // 
-            // Expr1
-            // 
-            this.Expr1.DataPropertyName = "Expr1";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Expr1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Expr1.HeaderText = "Bodega";
-            this.Expr1.Name = "Expr1";
-            this.Expr1.Width = 175;
             // 
             // NuevoUsuario
             // 
@@ -527,12 +475,12 @@ namespace MultiBodega_v1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.CancelButton = this.BtnModificar;
-            this.ClientSize = new System.Drawing.Size(1008, 580);
-            this.Controls.Add(this.checkBox2);
+            this.ClientSize = new System.Drawing.Size(1051, 606);
+            this.Controls.Add(this.rolNameComboBox);
+            this.Controls.Add(this.usuarioDataGridView);
+            this.Controls.Add(this.ckContraseña);
             this.Controls.Add(this.bodegaIDComboBox);
-            this.Controls.Add(this.rolIDComboBox);
             this.Controls.Add(nombreLabel1);
-            this.Controls.Add(this.dGV1);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(confirmarContrasenaLabel);
             this.Controls.Add(this.confirmarContrasenaTextBox);
@@ -549,9 +497,10 @@ namespace MultiBodega_v1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.BtnRegresar);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckConfirmarContra);
             this.Controls.Add(this.BtnGuardar);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -559,11 +508,11 @@ namespace MultiBodega_v1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Nuevo Usuario";
             this.Load += new System.EventHandler(this.NuevoUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -572,8 +521,8 @@ namespace MultiBodega_v1
 
         #endregion
         private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox ckConfirmarContra;
+        private System.Windows.Forms.CheckBox ckContraseña;
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Label label1;
@@ -584,17 +533,9 @@ namespace MultiBodega_v1
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox nombreUsuarioTextBox;
         private System.Windows.Forms.TextBox numTelefonoTextBox;
-        private System.Windows.Forms.DataGridView dGV1;
-        private _CATELSA_MULTICABLEDataSet _CATELSA_MULTICABLEDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.RolTableAdapter rolTableAdapter;
-        private System.Windows.Forms.BindingSource bodegaBindingSource;
-        private _CATELSA_MULTICABLEDataSetTableAdapters.BodegaTableAdapter bodegaTableAdapter;
-        private System.Windows.Forms.BindingSource rolBindingSource;
-        private System.Windows.Forms.ComboBox rolIDComboBox;
         private System.Windows.Forms.ComboBox bodegaIDComboBox;
+        private System.Windows.Forms.DataGridView usuarioDataGridView;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuarioDataGridViewTextBoxColumn;
@@ -602,7 +543,25 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn contrasenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmarContrasenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RolName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Expr1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bodegaIDDataGridViewTextBoxColumn;
+        private BD_CATELSA_MULTICABLE bD_CATELSA_MULTICABLE;
+        private BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter;
+        private BD_CATELSA_MULTICABLETableAdapters.BodegaTableAdapter bodegaTableAdapter;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.ComboBox rolNameComboBox;
+        private System.Windows.Forms.BindingSource bodegaBindingSource;
+        private System.Windows.Forms.BindingSource rolBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }

@@ -6,3 +6,16 @@ BEGIN
     INSERT INTO Compras (NumOrden, Fecha) VALUES (@NumOrden, GETDATE())
     SELECT @NumOrden AS Numero_Orden_Generado
 END
+
+
+CREATE PROCEDURE BuscarProveedorPorNombre
+    @NombreProveedor nvarchar(50)
+AS
+BEGIN
+    SELECT *
+    FROM Proveedores
+    WHERE NombreProveedor = @NombreProveedor
+END
+
+exec BuscarProveedorPorNombre CaribeComp;
+
