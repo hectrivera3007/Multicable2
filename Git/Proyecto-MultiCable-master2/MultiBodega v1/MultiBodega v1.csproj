@@ -273,6 +273,11 @@
     <Compile Include="Bodegas\Bodega_4.Designer.cs">
       <DependentUpon>Bodega_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="CATELSA-MULTICABLE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CATELSA-MULTICABLE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Configuración\FrmContenedorConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -740,6 +745,17 @@
     <None Include="BD_CATELSA_MULTICABLE.xss">
       <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
     </None>
+    <None Include="CATELSA-MULTICABLE.xsc">
+      <DependentUpon>CATELSA-MULTICABLE.xsd</DependentUpon>
+    </None>
+    <None Include="CATELSA-MULTICABLE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CATELSA-MULTICABLE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CATELSA-MULTICABLE.xss">
+      <DependentUpon>CATELSA-MULTICABLE.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDataGrid.datasource" />
     <None Include="Properties\DataSources\BL.Bodega.AjusteInventario+AjusteDatosGenerales.datasource" />
@@ -822,6 +838,10 @@
     <None Include="Resources\Agregar_20x20.png" />
     <None Include="Resources\actualizar.png" />
     <None Include="Resources\lista-de-verificacion.png" />
+    <None Include="Resources\Guardar 32x32.png" />
+    <None Include="Resources\actualizar1.png" />
+    <None Include="Resources\eliminar1.png" />
+    <None Include="Resources\agregar %282%29.png" />
     <Content Include="Resources\mostrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

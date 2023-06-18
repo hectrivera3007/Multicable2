@@ -10,6 +10,8 @@ namespace MultiBodega_v1
 {
     static class Program
     {
+
+        
         /// <summary>
         /// Punto de entrada principal para la aplicación
         /// </summary>

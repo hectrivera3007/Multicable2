@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,26 +19,15 @@ namespace MultiBodega_v1
             InitializeComponent();
         }
 
-        private void Button6_Click(object sender, EventArgs e)
+        private void FrmIngresarProducto_Load(object sender, EventArgs e)
         {
-            var codigobarra = new GenerarCodigodeBarra();
-            codigobarra.Show();
-        }
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Productos' Puede moverla o quitarla según sea necesario.
+            this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Productos);
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
+            this.bodegaTableAdapter.Fill(this._CATELSA_MULTICABLE.Bodega);
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.TipoMaterial' Puede moverla o quitarla según sea necesario.
+            this.tipoMaterialTableAdapter.Fill(this._CATELSA_MULTICABLE.TipoMaterial);
 
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            //MOSTRAR MODAL DE CONFIRMACIÓN DE CREAR NUEVO REGISTRO
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            //MOSTRAR MODAL DE CONFIRMACION DE GUARDAR REGISTRO
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            //MOSTRAR MODAL DE ADVERTENCIA DE ELIMINACIÓN DE REGISTRO
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,11 +51,31 @@ namespace MultiBodega_v1
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            string Codigo = TxtCodigoGen.Text;
+            if (string.IsNullOrWhiteSpace(Codigo))
+            {
+                MessageBox.Show("La casilla para el código del producto no puede estar vacía," +
+                "ni contener valores duplicados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            DateTime Fecha = DtFechaIngreso.Value;
+            string FechaString = Fecha.ToString();
             DialogResult opcion;
             opcion = MessageBox.Show("¿Está listo para guardar este registro?", "Aviso del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (opcion == DialogResult.Yes)
             {
-                
+                this.productosTableAdapter.Guardar(DtFechaIngreso.Value.ToString(),CmbNombreTipo.SelectedValue.ToString(),TxtCodigoGen.Text,TxtDescripcion.Text,
+                bodegaIDComboBox.SelectedIndex,activoCheckBox.Checked);
+                this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Productos);
+                DtFechaIngreso.Value=DateTime.Now;
+                CmbNombreTipo.SelectedValue = -1;
+                TxtCodigoGen.Clear();
+                TxtDescripcion.Clear();
+                bodegaIDComboBox.SelectedIndex = -1;
+                activoCheckBox.Checked = true;
             }
         }
 
@@ -87,6 +97,17 @@ namespace MultiBodega_v1
             {
                 
             }
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            //Limpiando los Textbox
+            DtFechaIngreso.Value = DateTime.Now;
+            CmbNombreTipo.SelectedValue = -1;
+            TxtCodigoGen.Text = " ";
+            TxtDescripcion.Clear();
+            bodegaIDComboBox.SelectedIndex = -1;
+            activoCheckBox.Checked = true;
         }
     }
 }

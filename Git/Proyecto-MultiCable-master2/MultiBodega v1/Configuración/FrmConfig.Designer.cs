@@ -33,106 +33,106 @@ namespace MultiBodega_v1.Configuración
             System.Windows.Forms.Label nombreUsuarioLabel;
             System.Windows.Forms.Label rolIDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Devoluciones");
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Ingresar Producto");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Agregar Producto");
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Inventario General");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Ajuste de Inventario");
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Inventario", new System.Windows.Forms.TreeNode[] {
-            treeNode81,
-            treeNode82,
-            treeNode83,
-            treeNode84,
-            treeNode85});
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Requisa de Entrada");
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Requisa de Salida");
-            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Buscar Entrada");
-            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Buscar Salida");
-            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Comprobante de Entrega");
-            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Requisas", new System.Windows.Forms.TreeNode[] {
-            treeNode87,
-            treeNode88,
-            treeNode89,
-            treeNode90,
-            treeNode91});
-            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Bodega 1");
-            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Bodega 2");
-            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Bodega 3");
-            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Bodega 4");
-            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Bodegas", new System.Windows.Forms.TreeNode[] {
-            treeNode93,
-            treeNode94,
-            treeNode95,
-            treeNode96});
-            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Compras");
-            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Costos de Importación");
-            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Calcular Precio de Venta");
-            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Compras", new System.Windows.Forms.TreeNode[] {
-            treeNode98,
-            treeNode99,
-            treeNode100});
-            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Registrar Base Foránea");
-            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Registrar Proveedor");
-            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Registrar Punto de Venta ");
-            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Registrar Técnico");
-            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Listar Base Fóranea");
-            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Listar Proveedor");
-            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Listar Punto de Venta");
-            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Listar Técnico");
-            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Registro", new System.Windows.Forms.TreeNode[] {
-            treeNode102,
-            treeNode103,
-            treeNode104,
-            treeNode105,
-            treeNode106,
-            treeNode107,
-            treeNode108,
-            treeNode109});
-            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Reporte Bodega 1");
-            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Reporte Bodega 2");
-            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("Reporte Bodega 3");
-            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("Reporte Bodega 4");
-            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("Reporte de Bajos Mínimos");
-            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("Reporte Detallado de Entradas");
-            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("Reporte Detallado de Salidas");
-            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
-            treeNode111,
-            treeNode112,
-            treeNode113,
-            treeNode114,
-            treeNode115,
-            treeNode116,
-            treeNode117});
-            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("Crear Nuevo Usuario");
-            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
-            treeNode119});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Devoluciones");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Ingresar Producto");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Agregar Producto");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Inventario General");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Ajuste de Inventario");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Inventario", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Requisa de Entrada");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Requisa de Salida");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Buscar Entrada");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Buscar Salida");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Comprobante de Entrega");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Requisas", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bodega 1");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Bodega 2");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Bodega 3");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Bodega 4");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Bodegas", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Compras");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Costos de Importación");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Calcular Precio de Venta");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Compras", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Registrar Base Foránea");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Registrar Proveedor");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Registrar Punto de Venta ");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Registrar Técnico");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Listar Base Fóranea");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Listar Proveedor");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Listar Punto de Venta");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Listar Técnico");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Registro", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27,
+            treeNode28,
+            treeNode29});
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Reporte Bodega 1");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Reporte Bodega 2");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Reporte Bodega 3");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Reporte Bodega 4");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Reporte de Bajos Mínimos");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Reporte Detallado de Entradas");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Reporte Detallado de Salidas");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34,
+            treeNode35,
+            treeNode36,
+            treeNode37});
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Crear Nuevo Usuario");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
+            treeNode39});
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.nombreUsuarioComboBox = new System.Windows.Forms.ComboBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.Ck_Marcar_Todos = new System.Windows.Forms.CheckBox();
             this.rolNameComboBox = new System.Windows.Forms.ComboBox();
-            this.bD_CATELSA_MULTICABLE = new MultiBodega_v1.BD_CATELSA_MULTICABLE();
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rolTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
+            this.usuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.rolTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RolTableAdapter();
             nombreUsuarioLabel = new System.Windows.Forms.Label();
             rolIDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreUsuarioLabel
             // 
             nombreUsuarioLabel.AutoSize = true;
             nombreUsuarioLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            nombreUsuarioLabel.Location = new System.Drawing.Point(61, 170);
+            nombreUsuarioLabel.Location = new System.Drawing.Point(95, 170);
             nombreUsuarioLabel.Name = "nombreUsuarioLabel";
             nombreUsuarioLabel.Size = new System.Drawing.Size(137, 19);
             nombreUsuarioLabel.TabIndex = 131;
@@ -142,7 +142,7 @@ namespace MultiBodega_v1.Configuración
             // 
             rolIDLabel.AutoSize = true;
             rolIDLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            rolIDLabel.Location = new System.Drawing.Point(395, 169);
+            rolIDLabel.Location = new System.Drawing.Point(429, 169);
             rolIDLabel.Name = "rolIDLabel";
             rolIDLabel.Size = new System.Drawing.Size(36, 19);
             rolIDLabel.TabIndex = 132;
@@ -157,7 +157,7 @@ namespace MultiBodega_v1.Configuración
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(480, 531);
+            this.BtnRegresar.Location = new System.Drawing.Point(514, 476);
             this.BtnRegresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 55);
@@ -171,7 +171,7 @@ namespace MultiBodega_v1.Configuración
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(239, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(267, 69);
@@ -184,7 +184,7 @@ namespace MultiBodega_v1.Configuración
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(184, 86);
+            this.label5.Location = new System.Drawing.Point(218, 86);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(309, 32);
@@ -197,14 +197,13 @@ namespace MultiBodega_v1.Configuración
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(62, 547);
+            this.BtnGuardar.Location = new System.Drawing.Point(96, 492);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(105, 28);
             this.BtnGuardar.TabIndex = 123;
             this.BtnGuardar.Text = "&Guardar";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // treeView1
             // 
@@ -213,125 +212,135 @@ namespace MultiBodega_v1.Configuración
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.Indent = 20;
             this.treeView1.ItemHeight = 20;
-            this.treeView1.Location = new System.Drawing.Point(62, 227);
+            this.treeView1.Location = new System.Drawing.Point(96, 227);
             this.treeView1.Name = "treeView1";
-            treeNode81.Name = "devoluciones";
-            treeNode81.Text = "Devoluciones";
-            treeNode82.Name = "ingresarproducto";
-            treeNode82.Text = "Ingresar Producto";
-            treeNode83.Name = "agregarproducto";
-            treeNode83.Text = "Agregar Producto";
-            treeNode84.Name = "inventariogeneral";
-            treeNode84.Text = "Inventario General";
-            treeNode85.Name = "ajusteinventario";
-            treeNode85.Text = "Ajuste de Inventario";
-            treeNode86.BackColor = System.Drawing.Color.Gainsboro;
-            treeNode86.Name = "Nodo0";
-            treeNode86.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode86.Text = "Inventario";
-            treeNode87.Name = "requisaentrada";
-            treeNode87.Text = "Requisa de Entrada";
-            treeNode88.Name = "requisasalida";
-            treeNode88.Text = "Requisa de Salida";
-            treeNode89.Name = "buscarentrada";
-            treeNode89.Text = "Buscar Entrada";
-            treeNode90.Name = "buscarsalida";
-            treeNode90.Text = "Buscar Salida";
-            treeNode91.Name = "comprobanteentrega";
-            treeNode91.Text = "Comprobante de Entrega";
-            treeNode92.Name = "Nodo5";
-            treeNode92.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode92.Text = "Requisas";
-            treeNode93.Name = "Nodo11";
-            treeNode93.Text = "Bodega 1";
-            treeNode94.Name = "Nodo12";
-            treeNode94.Text = "Bodega 2";
-            treeNode95.Name = "Nodo13";
-            treeNode95.Text = "Bodega 3";
-            treeNode96.Name = "Nodo14";
-            treeNode96.Text = "Bodega 4";
-            treeNode97.Name = "Nodo10";
-            treeNode97.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode97.Text = "Bodegas";
-            treeNode98.Name = "Nodo16";
-            treeNode98.Text = "Compras";
-            treeNode99.Name = "Nodo17";
-            treeNode99.Text = "Costos de Importación";
-            treeNode100.Name = "Nodo18";
-            treeNode100.Text = "Calcular Precio de Venta";
-            treeNode101.Name = "Nodo15";
-            treeNode101.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode101.Text = "Compras";
-            treeNode102.Name = "Nodo39";
-            treeNode102.Text = "Registrar Base Foránea";
-            treeNode103.Name = "Nodo40";
-            treeNode103.Text = "Registrar Proveedor";
-            treeNode104.Name = "Nodo41";
-            treeNode104.Text = "Registrar Punto de Venta ";
-            treeNode105.Name = "Nodo42";
-            treeNode105.Text = "Registrar Técnico";
-            treeNode106.Name = "Nodo43";
-            treeNode106.Text = "Listar Base Fóranea";
-            treeNode107.Name = "Nodo44";
-            treeNode107.Text = "Listar Proveedor";
-            treeNode108.Name = "Nodo45";
-            treeNode108.Text = "Listar Punto de Venta";
-            treeNode109.Name = "Nodo46";
-            treeNode109.Text = "Listar Técnico";
-            treeNode110.Name = "Nodo23";
-            treeNode110.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode110.Text = "Registro";
-            treeNode111.Name = "Nodo27";
-            treeNode111.Text = "Reporte Bodega 1";
-            treeNode112.Name = "Nodo28";
-            treeNode112.Text = "Reporte Bodega 2";
-            treeNode113.Name = "Nodo29";
-            treeNode113.Text = "Reporte Bodega 3";
-            treeNode114.Name = "Nodo30";
-            treeNode114.Text = "Reporte Bodega 4";
-            treeNode115.Name = "Nodo31";
-            treeNode115.Text = "Reporte de Bajos Mínimos";
-            treeNode116.Name = "Nodo32";
-            treeNode116.Text = "Reporte Detallado de Entradas";
-            treeNode117.Name = "Nodo33";
-            treeNode117.Text = "Reporte Detallado de Salidas";
-            treeNode118.Name = "Nodo24";
-            treeNode118.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode118.Text = "Reportes";
-            treeNode119.Name = "Nodo26";
-            treeNode119.Text = "Crear Nuevo Usuario";
-            treeNode120.Name = "Nodo25";
-            treeNode120.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode120.Text = "Usuarios";
+            treeNode1.Name = "devoluciones";
+            treeNode1.Text = "Devoluciones";
+            treeNode2.Name = "ingresarproducto";
+            treeNode2.Text = "Ingresar Producto";
+            treeNode3.Name = "agregarproducto";
+            treeNode3.Text = "Agregar Producto";
+            treeNode4.Name = "inventariogeneral";
+            treeNode4.Text = "Inventario General";
+            treeNode5.Name = "ajusteinventario";
+            treeNode5.Text = "Ajuste de Inventario";
+            treeNode6.BackColor = System.Drawing.Color.Gainsboro;
+            treeNode6.Name = "Nodo0";
+            treeNode6.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode6.Text = "Inventario";
+            treeNode7.Name = "requisaentrada";
+            treeNode7.Text = "Requisa de Entrada";
+            treeNode8.Name = "requisasalida";
+            treeNode8.Text = "Requisa de Salida";
+            treeNode9.Name = "buscarentrada";
+            treeNode9.Text = "Buscar Entrada";
+            treeNode10.Name = "buscarsalida";
+            treeNode10.Text = "Buscar Salida";
+            treeNode11.Name = "comprobanteentrega";
+            treeNode11.Text = "Comprobante de Entrega";
+            treeNode12.Name = "Nodo5";
+            treeNode12.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode12.Text = "Requisas";
+            treeNode13.Name = "Nodo11";
+            treeNode13.Text = "Bodega 1";
+            treeNode14.Name = "Nodo12";
+            treeNode14.Text = "Bodega 2";
+            treeNode15.Name = "Nodo13";
+            treeNode15.Text = "Bodega 3";
+            treeNode16.Name = "Nodo14";
+            treeNode16.Text = "Bodega 4";
+            treeNode17.Name = "Nodo10";
+            treeNode17.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode17.Text = "Bodegas";
+            treeNode18.Name = "Nodo16";
+            treeNode18.Text = "Compras";
+            treeNode19.Name = "Nodo17";
+            treeNode19.Text = "Costos de Importación";
+            treeNode20.Name = "Nodo18";
+            treeNode20.Text = "Calcular Precio de Venta";
+            treeNode21.Name = "Nodo15";
+            treeNode21.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode21.Text = "Compras";
+            treeNode22.Name = "Nodo39";
+            treeNode22.Text = "Registrar Base Foránea";
+            treeNode23.Name = "Nodo40";
+            treeNode23.Text = "Registrar Proveedor";
+            treeNode24.Name = "Nodo41";
+            treeNode24.Text = "Registrar Punto de Venta ";
+            treeNode25.Name = "Nodo42";
+            treeNode25.Text = "Registrar Técnico";
+            treeNode26.Name = "Nodo43";
+            treeNode26.Text = "Listar Base Fóranea";
+            treeNode27.Name = "Nodo44";
+            treeNode27.Text = "Listar Proveedor";
+            treeNode28.Name = "Nodo45";
+            treeNode28.Text = "Listar Punto de Venta";
+            treeNode29.Name = "Nodo46";
+            treeNode29.Text = "Listar Técnico";
+            treeNode30.Name = "Nodo23";
+            treeNode30.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode30.Text = "Registro";
+            treeNode31.Name = "Nodo27";
+            treeNode31.Text = "Reporte Bodega 1";
+            treeNode32.Name = "Nodo28";
+            treeNode32.Text = "Reporte Bodega 2";
+            treeNode33.Name = "Nodo29";
+            treeNode33.Text = "Reporte Bodega 3";
+            treeNode34.Name = "Nodo30";
+            treeNode34.Text = "Reporte Bodega 4";
+            treeNode35.Name = "Nodo31";
+            treeNode35.Text = "Reporte de Bajos Mínimos";
+            treeNode36.Name = "Nodo32";
+            treeNode36.Text = "Reporte Detallado de Entradas";
+            treeNode37.Name = "Nodo33";
+            treeNode37.Text = "Reporte Detallado de Salidas";
+            treeNode38.Name = "Nodo24";
+            treeNode38.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode38.Text = "Reportes";
+            treeNode39.Name = "Nodo26";
+            treeNode39.Text = "Crear Nuevo Usuario";
+            treeNode40.Name = "Nodo25";
+            treeNode40.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode40.Text = "Usuarios";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode86,
-            treeNode92,
-            treeNode97,
-            treeNode101,
-            treeNode110,
-            treeNode118,
-            treeNode120});
+            treeNode6,
+            treeNode12,
+            treeNode17,
+            treeNode21,
+            treeNode30,
+            treeNode38,
+            treeNode40});
             this.treeView1.RightToLeftLayout = true;
             this.treeView1.ShowNodeToolTips = true;
-            this.treeView1.Size = new System.Drawing.Size(554, 297);
+            this.treeView1.Size = new System.Drawing.Size(554, 242);
             this.treeView1.TabIndex = 130;
             // 
             // nombreUsuarioComboBox
             // 
             this.nombreUsuarioComboBox.DataSource = this.usuarioBindingSource;
-            this.nombreUsuarioComboBox.DisplayMember = "ID";
+            this.nombreUsuarioComboBox.DisplayMember = "NombreUsuario";
             this.nombreUsuarioComboBox.FormattingEnabled = true;
-            this.nombreUsuarioComboBox.Location = new System.Drawing.Point(200, 167);
+            this.nombreUsuarioComboBox.Location = new System.Drawing.Point(234, 167);
             this.nombreUsuarioComboBox.Name = "nombreUsuarioComboBox";
             this.nombreUsuarioComboBox.Size = new System.Drawing.Size(185, 25);
             this.nombreUsuarioComboBox.TabIndex = 132;
             this.nombreUsuarioComboBox.ValueMember = "NombreUsuario";
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Ck_Marcar_Todos
             // 
             this.Ck_Marcar_Todos.AutoSize = true;
             this.Ck_Marcar_Todos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ck_Marcar_Todos.Location = new System.Drawing.Point(64, 204);
+            this.Ck_Marcar_Todos.Location = new System.Drawing.Point(98, 204);
             this.Ck_Marcar_Todos.Name = "Ck_Marcar_Todos";
             this.Ck_Marcar_Todos.Size = new System.Drawing.Size(193, 20);
             this.Ck_Marcar_Todos.TabIndex = 134;
@@ -344,25 +353,20 @@ namespace MultiBodega_v1.Configuración
             this.rolNameComboBox.DataSource = this.rolBindingSource;
             this.rolNameComboBox.DisplayMember = "RolName";
             this.rolNameComboBox.FormattingEnabled = true;
-            this.rolNameComboBox.Location = new System.Drawing.Point(433, 167);
+            this.rolNameComboBox.Location = new System.Drawing.Point(467, 167);
             this.rolNameComboBox.Name = "rolNameComboBox";
             this.rolNameComboBox.Size = new System.Drawing.Size(183, 25);
             this.rolNameComboBox.TabIndex = 135;
-            this.rolNameComboBox.ValueMember = "RolID";
-            // 
-            // bD_CATELSA_MULTICABLE
-            // 
-            this.bD_CATELSA_MULTICABLE.DataSetName = "BD_CATELSA_MULTICABLE";
-            this.bD_CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.rolNameComboBox.ValueMember = "RolName";
             // 
             // rolBindingSource
             // 
             this.rolBindingSource.DataMember = "Rol";
-            this.rolBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
+            this.rolBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
-            // rolTableAdapter
+            // usuarioTableAdapter
             // 
-            this.rolTableAdapter.ClearBeforeFill = true;
+            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -380,7 +384,6 @@ namespace MultiBodega_v1.Configuración
             this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
             this.tableAdapterManager.PermisosComprasTableAdapter = null;
             this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
             this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
@@ -388,17 +391,13 @@ namespace MultiBodega_v1.Configuración
             this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = this.rolTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.TipoMaterialTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
-            // usuarioBindingSource
+            // rolTableAdapter
             // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
+            this.rolTableAdapter.ClearBeforeFill = true;
             // 
             // FrmConfig
             // 
@@ -407,7 +406,7 @@ namespace MultiBodega_v1.Configuración
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(694, 749);
+            this.ClientSize = new System.Drawing.Size(744, 533);
             this.Controls.Add(this.rolNameComboBox);
             this.Controls.Add(this.Ck_Marcar_Todos);
             this.Controls.Add(rolIDLabel);
@@ -419,6 +418,7 @@ namespace MultiBodega_v1.Configuración
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnRegresar);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -427,9 +427,9 @@ namespace MultiBodega_v1.Configuración
             this.Text = "  Permisos";
             this.Load += new System.EventHandler(this.FrmConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,11 +445,11 @@ namespace MultiBodega_v1.Configuración
         private System.Windows.Forms.ComboBox nombreUsuarioComboBox;
         private System.Windows.Forms.CheckBox Ck_Marcar_Todos;
         private System.Windows.Forms.ComboBox rolNameComboBox;
-        private BD_CATELSA_MULTICABLE bD_CATELSA_MULTICABLE;
-        private System.Windows.Forms.BindingSource rolBindingSource;
-        private BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter;
-        private BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
-        private BD_CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private _CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter;
+        private System.Windows.Forms.BindingSource rolBindingSource;
     }
 }

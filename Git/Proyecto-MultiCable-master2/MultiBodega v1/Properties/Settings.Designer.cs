@@ -33,5 +33,27 @@ namespace MultiBodega_v1.Properties {
                 return ((string)(this["CATELSA_MULTICABLE_Connection"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KKJ19FD\\SQLEXPRESS;Initial Catalog=MULTICABLE;Integrated Secu" +
+            "rity=True")]
+        public string MULTICABLEConnectionString {
+            get {
+                return ((string)(this["MULTICABLEConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\CATELSA;Initial Catalog=CATELSA-MULTICABLE;Integrated Secur" +
+            "ity=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string CATELSA_MULTICABLEConnectionString {
+            get {
+                return ((string)(this["CATELSA_MULTICABLEConnectionString"]));
+            }
+        }
     }
 }

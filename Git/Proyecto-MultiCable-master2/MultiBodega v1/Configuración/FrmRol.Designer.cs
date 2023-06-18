@@ -35,30 +35,32 @@ namespace MultiBodega_v1
             System.Windows.Forms.Label activoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRol));
             this.iDTextBox = new System.Windows.Forms.TextBox();
-            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bD_CATELSA_MULTICABLE = new MultiBodega_v1.BD_CATELSA_MULTICABLE();
             this.rolNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rolDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.rolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.rolBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.rolTableAdapter = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rolTableAdapter1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RolTableAdapter();
+            this.tableAdapterManager1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.RolID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             iDLabel = new System.Windows.Forms.Label();
             rolNameLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +96,6 @@ namespace MultiBodega_v1
             // 
             // iDTextBox
             // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rolBindingSource, "RolID", true));
             this.iDTextBox.Enabled = false;
             this.iDTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -104,16 +105,6 @@ namespace MultiBodega_v1
             this.iDTextBox.ReadOnly = true;
             this.iDTextBox.Size = new System.Drawing.Size(80, 21);
             this.iDTextBox.TabIndex = 3;
-            // 
-            // rolBindingSource
-            // 
-            this.rolBindingSource.DataMember = "Rol";
-            this.rolBindingSource.DataSource = this.bD_CATELSA_MULTICABLE;
-            // 
-            // bD_CATELSA_MULTICABLE
-            // 
-            this.bD_CATELSA_MULTICABLE.DataSetName = "BD_CATELSA_MULTICABLE";
-            this.bD_CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rolNameTextBox
             // 
@@ -143,85 +134,40 @@ namespace MultiBodega_v1
             this.rolDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rolDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
-            this.rolIDDataGridViewTextBoxColumn,
+            this.RolID,
             this.rolNameDataGridViewTextBoxColumn,
             this.activoDataGridViewCheckBoxColumn});
             this.rolDataGridView.DataSource = this.rolBindingSource;
             this.rolDataGridView.Location = new System.Drawing.Point(-3, 197);
             this.rolDataGridView.Name = "rolDataGridView";
-            this.rolDataGridView.Size = new System.Drawing.Size(518, 212);
+            this.rolDataGridView.Size = new System.Drawing.Size(543, 212);
             this.rolDataGridView.TabIndex = 108;
             this.rolDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rolDataGridView_CellContentClick);
-            this.rolDataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.rolDataGridView_CellPainting);
             // 
-            // btnSeleccionar
+            // rolBindingSource
             // 
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Width = 35;
+            this.rolBindingSource.DataMember = "Rol";
+            this.rolBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
-            // rolIDDataGridViewTextBoxColumn
+            // _CATELSA_MULTICABLE
             // 
-            this.rolIDDataGridViewTextBoxColumn.DataPropertyName = "RolID";
-            this.rolIDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.rolIDDataGridViewTextBoxColumn.Name = "rolIDDataGridViewTextBoxColumn";
-            this.rolIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rolIDDataGridViewTextBoxColumn.Width = 35;
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rolNameDataGridViewTextBoxColumn
+            // rolBindingSource1
             // 
-            this.rolNameDataGridViewTextBoxColumn.DataPropertyName = "RolName";
-            this.rolNameDataGridViewTextBoxColumn.HeaderText = "Nombre de Rol";
-            this.rolNameDataGridViewTextBoxColumn.Name = "rolNameDataGridViewTextBoxColumn";
-            this.rolNameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.rolBindingSource1.DataSource = this._CATELSA_MULTICABLE;
+            this.rolBindingSource1.Position = 0;
             // 
             // activoCheckBox
             // 
             this.activoCheckBox.Checked = true;
             this.activoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.rolBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(288, 168);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(20, 24);
             this.activoCheckBox.TabIndex = 109;
             this.activoCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // rolTableAdapter
-            // 
-            this.rolTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BajosMinimosTableAdapter = null;
-            this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
-            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
-            this.tableAdapterManager.DevolucionesTableAdapter = null;
-            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
-            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
-            this.tableAdapterManager.PermisosComprasTableAdapter = null;
-            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.ProveedoresTableAdapter = null;
-            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
-            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
-            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
-            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
-            this.tableAdapterManager.RolTableAdapter = this.rolTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
             // BtnActualizar
             // 
@@ -301,13 +247,71 @@ namespace MultiBodega_v1
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
             // 
+            // rolTableAdapter1
+            // 
+            this.rolTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager1.BodegaTableAdapter = null;
+            this.tableAdapterManager1.ComprasTableAdapter = null;
+            this.tableAdapterManager1.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager1.DevolucionesTableAdapter = null;
+            this.tableAdapterManager1.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager1.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager1.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager1.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager1.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager1.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager1.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager1.ProveedoresTableAdapter = null;
+            this.tableAdapterManager1.RegistrarBaseForaneaTableAdapter = null;
+            this.tableAdapterManager1.RegistrarPuntodeVentaTableAdapter = null;
+            this.tableAdapterManager1.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager1.RequisaEntradaTableAdapter = null;
+            this.tableAdapterManager1.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager1.RolTableAdapter = this.rolTableAdapter1;
+            this.tableAdapterManager1.TipoMaterialTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UsuarioTableAdapter = null;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Width = 35;
+            // 
+            // RolID
+            // 
+            this.RolID.DataPropertyName = "RolID";
+            this.RolID.HeaderText = "RolID";
+            this.RolID.Name = "RolID";
+            this.RolID.ReadOnly = true;
+            this.RolID.Width = 40;
+            // 
+            // rolNameDataGridViewTextBoxColumn
+            // 
+            this.rolNameDataGridViewTextBoxColumn.DataPropertyName = "RolName";
+            this.rolNameDataGridViewTextBoxColumn.HeaderText = "RolName";
+            this.rolNameDataGridViewTextBoxColumn.Name = "rolNameDataGridViewTextBoxColumn";
+            this.rolNameDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
             // FrmRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(512, 474);
+            this.ClientSize = new System.Drawing.Size(535, 482);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(activoLabel);
@@ -331,9 +335,10 @@ namespace MultiBodega_v1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Nuevo Rol";
             this.Load += new System.EventHandler(this.FrmRol_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,15 +357,17 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridView rolDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreRol;
-        private BD_CATELSA_MULTICABLE bD_CATELSA_MULTICABLE;
-        private System.Windows.Forms.BindingSource rolBindingSource;
-        private BD_CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter;
-        private BD_CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource rolBindingSource1;
+        private _CATELSA_MULTICABLETableAdapters.RolTableAdapter rolTableAdapter1;
+        private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource rolBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn rolIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RolID;
         private System.Windows.Forms.DataGridViewTextBoxColumn rolNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
     }

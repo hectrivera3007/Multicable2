@@ -21,5 +21,14 @@ namespace MultiBodega_v1.Inventario
         {
             textBox1.Text = "";
         }
+
+        private void FrmBaseDatosProductos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bD_CATELSA_MULTICABLE.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.bD_CATELSA_MULTICABLE.Producto);
+            // TODO: esta línea de código carga datos en la tabla 'bD_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
+            
+
+        }
     }
 }

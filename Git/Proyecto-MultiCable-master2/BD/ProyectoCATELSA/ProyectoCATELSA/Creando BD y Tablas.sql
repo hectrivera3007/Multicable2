@@ -1,32 +1,65 @@
 /*Creación de la Base de Datos*/
---Create DATABASE "CATELSA-MULTICABLE"
---USE [CATELSA-MULTICABLE]
+CREATE DATABASE "CATELSA-MULTICABLE"
+USE [CATELSA-MULTICABLE]
+
+--ALTER LOGIN [DESKTOP-KKJ19FD\Héctor Rivera] WITH DEFAULT_DATABASE = [master];
+
+UPDATE Productos SET Codigo = CONCAT(NombreTipo, '-', REPLICATE('0', 4 - LEN(IDProducto)), IDProducto);
+
+Select * FROM TipoMaterial
+INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPI','00001')
+INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPF','00002')
+INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPC','00003')
+INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPN','00004')
+SELECT * FROM PRODUCTOS
 
 --ALTER TABLE Usuario WITH NOCHECK CHECK CONSTRAINT FK;
-DBCC CHECKIDENT ('Usuario', RESEED, 0);
+
+DROP DATABASE [CATELSA-MULTICABLE]
+--DBCC CHECKIDENT ('Usuario', RESEED, 0);
 
 --Creación de la tabla Roles
 Create Table Rol
 (
 	RolID int IDENTITY(1,1) not null,
-	RolName varchar(50) UNIQUE,
-	Activo bit not null DEFAULT 1
+	RolName varchar(50)UNIQUE,
+	Activo bit DEFAULT 1
 	Primary Key (RolID),
 );
 
 
-ALTER TABLE Rol ADD CONSTRAINT UQ_Rol_RolName UNIQUE(RolName);
+ALTER TABLE Rol
+ADD CONSTRAINT FK_Usuario_Rol
+FOREIGN KEY (ID)
+REFERENCES Usuario(ID);
 
 
+Delete From Usuario Where Activo=1
 
 /*Creación de la tabla de Bodega*/
 Create Table Bodega
 (
-	BodegaID int IDENTITY(1,1) not null,
+	BodegaID int IDENTITY(1,1),
 	Nombre varchar(50),
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(BodegaID)
 );
+
+Select * FROM Usuario
+Delete Usuario where Activo=NULL
+--ALTER TABLE Bodega
+--DROP CONSTRAINT FK__Usuario__RolID__2B3F6F97;
+
+
+--ALTER TABLE Bodega NOCHECK CONSTRAINT DF__Bodega__Activo__3F115E1A;
+
+DROP TABLE Bodega
+
+--INSERT INTO BODEGA
+--VALUES('Bodega Oficina', 1)
+
+
+--Select * FROM Bodega
 
 --Creación de la tabla de Usuario
 Create Table Usuario
@@ -37,13 +70,33 @@ Create Table Usuario
 	NumTelefono varchar(50),
 	Contrasena varchar(50),
 	ConfirmarContrasena varchar(50),
-	RolID int not null,
-	BodegaID int not null,
-	Activo bit not null DEFAULT 1
+	RolID int,
+	BodegaID int,
+	Activo bit DEFAULT 1
 	Primary Key(ID),
 	Foreign Key (RolID) references Rol(RolID),
-	Foreign Key(BodegaID) references Bodega(BodegaID)
+	Foreign Key (BodegaID) references Bodega(BodegaID)
 );
+
+SELECT * FROM usuario WHERE Nombre LIKE '%' + Nombre + '%'
+SELECT * FROM Usuario WHERE Nombre LIKE '%' + Nombre + '%'
+
+
+ALTER TABLE Usuario
+ADD CONSTRAINT FK_Usuario_Bodega
+FOREIGN KEY (BodegaID)
+REFERENCES Bodega(BodegaID);
+
+
+
+insert into Bodega Values('Bodega CATELSA ABAJO', 1)
+insert into Bodega Values('Bodega CAMA NACIONAL', 1)
+insert into Bodega Values('Bodega OFICINA', 1)
+insert into Bodega Values('Bodega 27 CALLE', 1)
+
+
+Select * From Bodega
+Delete From Usuario Where ID=1
 
 /*Creación de la tabla de RegistrarTecnicos*/
 Create Table RegistrarTecnicos
@@ -52,12 +105,12 @@ Create Table RegistrarTecnicos
 	FechaRegistro DateTime,
 	Nombres varchar(50),
 	Apellidos varchar(50),
-	DNI varchar(50) UNIQUE,
+	DNI varchar(50),
 	Direccion varchar(50),
-	Num_Telefono varchar(50) UNIQUE,
+	Num_Telefono varchar(50),
 	Notas varchar(100),
-	RequisaID integer not null,
-	Activo bit not null DEFAULT 1,
+	RequisaID int,
+	Activo bit DEFAULT 1,
 	Primary Key (IDSolicitante),
 );
 
@@ -70,7 +123,7 @@ Create Table RequisaSalida
 	Descripcion varchar(50),
 	Tecnico varchar(50),
 	IDsolicitante int,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(RequisaID),
 	Foreign Key (IDSolicitante) references RegistrarTecnicos(IDSolicitante)
 );
@@ -81,15 +134,15 @@ Create Table Proveedores
 (
 	IDProveedor int IDENTITY(1,1) NOT NULL,
 	NombreProveedor varchar(50),
-	RTN int UNIQUE,
+	RTN int,
 	PersonaContacto varchar(50),
 	Direccion varchar(50),
 	Pais_Zona varchar(50),
     Tipo_Proveedor varchar(50),
 	Num_Telefono varchar(50) UNIQUE,
-	CorreoElectronico varchar(50) UNIQUE,
+	CorreoElectronico varchar(50),
 	Notas varchar(150),
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDProveedor)
 );
 
@@ -104,9 +157,9 @@ Create Table RequisaEntrada
 	PrecioCompra Decimal,
 	PrecioVenta Decimal,
 	Subtotal Decimal,
-	Activo bit not null DEFAULT 1,
-	IDProveedor int not null,
-	BodegaID int not null,
+	Activo bit DEFAULT 1,
+	IDProveedor int,
+	BodegaID int,
 	Primary Key(RequisaID),
 	Foreign Key (BodegaID) references Bodega(BodegaID),
 	Foreign Key (IDProveedor) references Proveedores(IDProveedor)
@@ -122,9 +175,9 @@ Create Table RegistrarBaseForanea
 	Nombre varchar(50),
 	Lugar_Zona varchar(50),
 	Direccion varchar(50),
-	Num_Telefono varchar(50) UNIQUE,
+	Num_Telefono varchar(50),
     Notas varchar(50),
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDSolicitante)
 );
 
@@ -137,9 +190,9 @@ Create Table RegistrarPuntodeVenta
 	Nombre varchar(50),
 	Lugar_Zona varchar(50),
 	Dirección varchar(50),
-	Num_Telefono varchar(50) UNIQUE,
+	Num_Telefono varchar(50),
 	Notas varchar(150),
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDSolicitante)
 );
 
@@ -148,35 +201,35 @@ Create Table RegistrarPuntodeVenta
 /*Creación de la tabla de InventarioBodega1*/
 Create Table InventarioBodega1
 (
-	IDInventarioBodega1 int IDENTITY(1,1) not null,
-    Fecha DateTime,
-    Codigo int,
-    Descripción varchar(150),
-    Entrada int,
-    Salida int,
-    Existencia int,
-    Observacion varchar(150),
-	BodegaID int,
-	Activo bit not null DEFAULT 1,
-	Primary Key(IDInventarioBodega1),
-	Foreign Key(BodegaID) references Bodega(BodegaID)
+	IDInventarioBodega1 int IDENTITY(1,1) not null
+    ,Fecha DateTime
+    ,Codigo int
+    ,Descripción varchar(150)
+    ,Entrada int
+    ,Salida int
+    ,Existencia int
+    ,Observacion varchar(150)
+	,BodegaID int
+	,Activo bit DEFAULT 1
+	,Primary Key(IDInventarioBodega1)
+	,Foreign Key(BodegaID) references Bodega(BodegaID)
 );
 
 /*Creación de la tabla de InventarioBodega2*/
 Create Table InventarioBodega2
 (
-	IDInventarioBodega2 int IDENTITY(1,1) not null,
-    Fecha DateTime,
-    Codigo int,
-    Descripción varchar(150),
-    Entrada int,
-    Salida int,
-    Existencia int,
-    Observacion varchar(150),
-	BodegaID int,
-	Activo bit not null DEFAULT 1,
-	Primary Key(IDInventarioBodega2),
-	Foreign Key(BodegaID) references Bodega(BodegaID)
+	IDInventarioBodega2 int IDENTITY(1,1) not null
+    ,Fecha DateTime
+    ,Codigo int
+    ,Descripción varchar(150)
+    ,Entrada int
+    ,Salida int
+    ,Existencia int
+    ,Observacion varchar(150)
+	,BodegaID int
+	,Activo bit DEFAULT 1
+	,Primary Key(IDInventarioBodega2)
+	,Foreign Key(BodegaID) references Bodega(BodegaID)
 );
 
 /*Creación de la tabla de InventarioBodega3*/
@@ -191,7 +244,7 @@ Create Table InventarioBodega3
     Existencia int,
     Observacion varchar(150),
 	BodegaID int,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDInventarioBodega3),
 	Foreign Key(BodegaID) references Bodega(BodegaID)
 );
@@ -208,24 +261,48 @@ Create Table InventarioBodega4
     Existencia int,
     Observacion varchar(150),
 	BodegaID int,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDInventarioBodega4),
 	Foreign Key(BodegaID) references Bodega(BodegaID)
 );
+--Drop Table Producto
+
 
 /*Creación de la tabla de Producto*/
 Create Table Producto
 (
 	IDProducto int IDENTITY(1,1) NOT NULL,
 	FechaIngreso DateTime,
-	CodigoProd int,
+	CodigoProd varchar(50),
+	CodigoGen varchar(50),
 	Descripcion varchar(100),
-	Numero_Documento varchar(50),
 	BodegaID int,
-	Activo bit not null DEFAULT 1,
+	NombreTipo varchar(50),
+	Activo bit DEFAULT 1,
 	Primary Key(IDProducto),
 	Foreign Key(BodegaID) references Bodega(BodegaID)
 );
+
+Create Table TipoMaterial
+(
+	IDTipo int IDENTITY(1,1) NOT NULL,
+	NombreTipo varchar(50)
+	PRIMARY KEY(IDTipo)
+);
+
+--INSERT INTO TipoMaterial (NombreTipo)
+--Values('MPI')
+--INSERT INTO TipoMaterial (NombreTipo)
+--Values('MPN')
+--INSERT INTO TipoMaterial (NombreTipo)
+--Values('MPF')
+--INSERT INTO TipoMaterial (NombreTipo)
+--Values('MPC')
+
+--SELECT * FROM TipoMaterial
+--Delete From Producto
+--SELECT * FROM bODEGA;
+--ALTER TABLE Producto DROP CONSTRAINT BodegaID;
 
 /*Creación de la tabla de BajosMinimos*/
 Create Table BajosMinimos
@@ -237,8 +314,8 @@ Create Table BajosMinimos
 	Medida varchar(50),
 	Ideal int,
 	Diferencia int,
-	Activo bit not null DEFAULT 1,
-	BodegaID int not null,
+	Activo bit DEFAULT 1,
+	BodegaID int,
 	Primary Key(IDBajosMinimos),
 	Foreign Key(BodegaID) references Bodega(BodegaID)
 );
@@ -255,7 +332,7 @@ Create Table AjusteInventario
 	TipodeAjuste varchar(50),
 	Cantidad decimal,
 	Cantidad_Ajustada decimal,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(ID),
 	Foreign Key (BodegaID) references Bodega(BodegaID)
 );
@@ -271,8 +348,8 @@ Create Table Devoluciones
 	Entregado int,
 	Devuelto int,
 	RequisaID int,
+	Activo bit DEFAULT 1,
 	Primary Key(ID),
-	Activo bit not null DEFAULT 1,
 	Foreign Key (RequisaID) references RequisaSalida(RequisaID)
 );
 
@@ -295,7 +372,7 @@ Create Table Compras
 	CostoTotalCompraLempiras decimal,
 	CostoTotalCompraDolares decimal,
 	IDProveedor int,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(IDCompra),
 	Foreign Key(IDProveedor) references Proveedores(IDProveedor)
 );
@@ -312,24 +389,23 @@ Create Table ComprobanteEntrega
 	Metros decimal,
 	Observacion varchar(150),
 	IDProducto int,
-	Activo bit not null DEFAULT 1,
+	Activo bit DEFAULT 1,
 	Primary Key(ID),
 	Foreign Key (IDProducto) references Producto(IDProducto)
 );
 
 
-ALTER TABLE Usuario ADD FOREIGN KEY (RolID) REFERENCES Rol (RolID); 
+--ALTER TABLE Usuario ADD FOREIGN KEY (RolID) REFERENCES Rol (RolID); 
 
---MIRE AMIX, ASÍ ES MI IDEA DE HACERLO
 /*Creación de la tabla de PermisosAdministrador*/
 Create Table PermisosAdministrador
 (
 	ID int IDENTITY(1,1) NOT NULL,
 	NombrePermiso varchar(100),
 	Concedido bit,
-	UsuarioID int not null,
-	Activo bit not null DEFAULT 1,
-	RolID int not null,
+	UsuarioID int,
+	Activo bit DEFAULT 1,
+	RolID int,
 	Primary Key(ID),
 	Foreign Key (UsuarioID) references Usuario(ID),
 	Foreign Key (RolID) references Rol(RolID)
@@ -341,9 +417,9 @@ Create Table PermisosCompras
 	ID int IDENTITY(1,1) NOT NULL,
 	NombrePermiso varchar(100),
 	Concedido bit,
-	UsuarioID int not null,
-	Activo bit not null DEFAULT 1,
-	RolID int not null,
+	UsuarioID int,
+	Activo bit DEFAULT 1,
+	RolID int,
 	Primary Key(ID),
 	Foreign Key (UsuarioID) references Usuario(ID),
 	Foreign Key (RolID) references Rol(RolID)
@@ -355,10 +431,10 @@ Create Table PermisosEncargadoBodega
 	ID int IDENTITY(1,1) NOT NULL,
 	NombrePermiso varchar(100),
 	Concedido bit,
-	UsuarioID int not null,
-	Activo bit not null DEFAULT 1,
-	RolID int not null,
-	BodegaID int not null,
+	UsuarioID int,
+	Activo bit DEFAULT 1,
+	RolID int,
+	BodegaID int,
 	Primary Key(ID),
 	Foreign Key (UsuarioID) references Usuario(ID),
 	Foreign Key (RolID) references Rol(RolID),
@@ -403,42 +479,22 @@ Create Table PermisosEncargadoBodega
 --Update Permisos 
 --set Concedido = 0
 
-Delete From Bodega Where RolID=4
+--Delete From Usuario Where RolID=4
 
-SELECT * FROM Bodega;
+--SELECT * FROM Bodega;
 
-UPDATE Rol
-SET  Activo=0
-WHERE Activo=1
-
-/*Creación de la tabla de Usuario_Permisos
-Create Table Usuario_Permisos
-(
-	Usuario_PermisosID int IDENTITY(1,1) NOT NULL,
-	NombrePermiso varchar(100),
-	Valor bit,
-	ID int
-	Primary Key(Usuario_PermisosID),
-	Foreign Key(ID) references Usuario(ID)
-);
-
-/*Creación de la tabla de Permisos*/
-Create Table Rol_Permisos
-(
-	IdRol int IDENTITY(1,1) NOT NULL,
-	Permiso varchar(100),
-	Valor bit,
-	Usuario_PermisosID int not null,
-	RolID int
-	Primary Key(IdRol),
-	Foreign Key (Usuario_PermisosID) references Usuario_Permisos(Usuario_PermisosID),
-	Foreign Key(RolID) references Rol(RolID)
-);*/
+--UPDATE Rol
+--SET  Activo=0
+--WHERE Activo=1
 
 
-UPDATE Rol
-SET
-RolName=RolName, Activo=1
-WHERE
-RolID=RolID;
-Select * From Rol;
+
+--Select * from Rol
+--UPDATE Usuario
+--SET
+--RolID = Rol.RolName, Activo=1
+--WHERE
+--RolID=RolID;
+
+--insert into Rol values('Administracion', 1)
+--Delete From Bodega;
