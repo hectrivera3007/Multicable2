@@ -2,20 +2,6 @@
 CREATE DATABASE "CATELSA-MULTICABLE"
 USE [CATELSA-MULTICABLE]
 
---ALTER LOGIN [DESKTOP-KKJ19FD\Héctor Rivera] WITH DEFAULT_DATABASE = [master];
-
-UPDATE Productos SET Codigo = CONCAT(NombreTipo, '-', REPLICATE('0', 4 - LEN(IDProducto)), IDProducto);
-
-Select * FROM TipoMaterial
-INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPI','00001')
-INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPF','00002')
-INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPC','00003')
-INSERT INTO TipoMaterial(NombreTipo, Numeracion) VALUES('MPN','00004')
-SELECT * FROM PRODUCTOS
-
---ALTER TABLE Usuario WITH NOCHECK CHECK CONSTRAINT FK;
-
-DROP DATABASE [CATELSA-MULTICABLE]
 --DBCC CHECKIDENT ('Usuario', RESEED, 0);
 
 --Creación de la tabla Roles
@@ -27,14 +13,15 @@ Create Table Rol
 	Primary Key (RolID),
 );
 
+--UPDATE Usuario SET Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena,
+--ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, BodegaID = @BodegaID, Activo = @Activo
+--WHERE (ID = @Original_ID)
 
-ALTER TABLE Rol
-ADD CONSTRAINT FK_Usuario_Rol
-FOREIGN KEY (ID)
-REFERENCES Usuario(ID);
+Select Max(ID)+1 FROM Usuario
 
+select * from Vista_Usuarios
 
-Delete From Usuario Where Activo=1
+Select * From Usuario
 
 /*Creación de la tabla de Bodega*/
 Create Table Bodega
@@ -44,22 +31,6 @@ Create Table Bodega
 	Activo bit DEFAULT 1,
 	Primary Key(BodegaID)
 );
-
-Select * FROM Usuario
-Delete Usuario where Activo=NULL
---ALTER TABLE Bodega
---DROP CONSTRAINT FK__Usuario__RolID__2B3F6F97;
-
-
---ALTER TABLE Bodega NOCHECK CONSTRAINT DF__Bodega__Activo__3F115E1A;
-
-DROP TABLE Bodega
-
---INSERT INTO BODEGA
---VALUES('Bodega Oficina', 1)
-
-
---Select * FROM Bodega
 
 --Creación de la tabla de Usuario
 Create Table Usuario
@@ -77,26 +48,6 @@ Create Table Usuario
 	Foreign Key (RolID) references Rol(RolID),
 	Foreign Key (BodegaID) references Bodega(BodegaID)
 );
-
-SELECT * FROM usuario WHERE Nombre LIKE '%' + Nombre + '%'
-SELECT * FROM Usuario WHERE Nombre LIKE '%' + Nombre + '%'
-
-
-ALTER TABLE Usuario
-ADD CONSTRAINT FK_Usuario_Bodega
-FOREIGN KEY (BodegaID)
-REFERENCES Bodega(BodegaID);
-
-
-
-insert into Bodega Values('Bodega CATELSA ABAJO', 1)
-insert into Bodega Values('Bodega CAMA NACIONAL', 1)
-insert into Bodega Values('Bodega OFICINA', 1)
-insert into Bodega Values('Bodega 27 CALLE', 1)
-
-
-Select * From Bodega
-Delete From Usuario Where ID=1
 
 /*Creación de la tabla de RegistrarTecnicos*/
 Create Table RegistrarTecnicos
@@ -290,19 +241,8 @@ Create Table TipoMaterial
 	PRIMARY KEY(IDTipo)
 );
 
---INSERT INTO TipoMaterial (NombreTipo)
---Values('MPI')
---INSERT INTO TipoMaterial (NombreTipo)
---Values('MPN')
---INSERT INTO TipoMaterial (NombreTipo)
---Values('MPF')
---INSERT INTO TipoMaterial (NombreTipo)
---Values('MPC')
 
---SELECT * FROM TipoMaterial
---Delete From Producto
---SELECT * FROM bODEGA;
---ALTER TABLE Producto DROP CONSTRAINT BodegaID;
+
 
 /*Creación de la tabla de BajosMinimos*/
 Create Table BajosMinimos
@@ -394,9 +334,6 @@ Create Table ComprobanteEntrega
 	Foreign Key (IDProducto) references Producto(IDProducto)
 );
 
-
---ALTER TABLE Usuario ADD FOREIGN KEY (RolID) REFERENCES Rol (RolID); 
-
 /*Creación de la tabla de PermisosAdministrador*/
 Create Table PermisosAdministrador
 (
@@ -440,61 +377,3 @@ Create Table PermisosEncargadoBodega
 	Foreign Key (RolID) references Rol(RolID),
 	Foreign Key (BodegaID) references Bodega(BodegaID)
 );
-
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Ingresar Producto', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Agregar Producto Existente', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Devoluciones', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Inventario General', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Ajuste de Inventario', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Requisa de Entrada', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Requisa de Salida', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Buscar Entrada', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Buscar Salida', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Comprobante de Entrega', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Bodega 1', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Bodega 2', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Bodega 3', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Bodega 4', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Compras', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Costos de Importacion', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Calcular Precio de Venta', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Registrar Base Foranea', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Registrar Punto de Venta', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Registrar Proveedor', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Registrar Tecnico', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Listar Proveedor', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Listar Punto de Venta', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Listar Tecnico', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Listar Base Foranea', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Bodega 1', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Bodega 2', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Bodega 3', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Bodega 4', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte de Bajos Minimos', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Detallado de Entradas', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Reporte Detallado de Salidas', 1, 1)
---insert into Permisos (NombrePermiso, Concedido, UsuarioID) values ('Crear Nuevo Usuario', 1, 1)
-
-
---Update Permisos 
---set Concedido = 0
-
---Delete From Usuario Where RolID=4
-
---SELECT * FROM Bodega;
-
---UPDATE Rol
---SET  Activo=0
---WHERE Activo=1
-
-
-
---Select * from Rol
---UPDATE Usuario
---SET
---RolID = Rol.RolName, Activo=1
---WHERE
---RolID=RolID;
-
---insert into Rol values('Administracion', 1)
---Delete From Bodega;

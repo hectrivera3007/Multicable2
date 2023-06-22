@@ -1,68 +1,24 @@
-﻿using BL.Bodega;
-using MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters;
-using MultiBodega_v1.Botonera;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace MultiBodega_v1
 {
-    public partial class NuevoUsuario : Form
+    public partial class ModificarUsuario : Form
     {
-        //static string ConexionString = @"Data Source=(localdb)\CATELSA;Initial Catalog = CATELSA - MULTICABLE; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False";
-        //SqlConnection conexion =new SqlConnection(ConexionString);
-        SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
-
-        //conexión = new SqlConnection("cadena_de_conexión");
-
-
-        public NuevoUsuario()
+        public ModificarUsuario()
         {
             InitializeComponent();
         }
 
-        private void BtnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmContUsuarios Volver = new FrmContUsuarios();
-            Volver.Show();
-        }
-        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (activoCheckBox.Checked)
-            {
-                activoCheckBox.ForeColor = Color.Green;
-            }
-            else
-            {
-                activoCheckBox.ForeColor = Color.Black;
-            }
-        }        
-
-        private void NuevoUsuario_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Vista_Usuarios' Puede moverla o quitarla según sea necesario.
-            this.vista_UsuariosTableAdapter.Fill(this._CATELSA_MULTICABLE.Vista_Usuarios);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
-            this.bodegaTableAdapter.Fill(this._CATELSA_MULTICABLE.Bodega);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Rol' Puede moverla o quitarla según sea necesario.
-            this.rolTableAdapter.Fill(this._CATELSA_MULTICABLE.Rol);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.Usuario);
-
-        }
-
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
             string nom_Usuario = nombreUsuarioTextBox.Text;
             if (string.IsNullOrWhiteSpace(nom_Usuario))
             {
@@ -93,37 +49,23 @@ namespace MultiBodega_v1
             }
         }
 
-        private void ckContraseña_CheckedChanged(object sender, EventArgs e)
+        private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-
-            if (ckContraseña.Checked)
-            {
-                // Reemplaza la imagen de mostrar con la de ocultar desde los recursos del proyecto
-                contrasenaTextBox.UseSystemPasswordChar = false;
-                ckContraseña.Image = Properties.Resources.esconder;
-            }
-            else
-            {
-                // Restaura la imagen de mostrar desde los recursos del proyecto
-                contrasenaTextBox.UseSystemPasswordChar = true;
-                ckContraseña.Image = Properties.Resources.mostrar;
-            }
+            this.Validate();
+            this.usuarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLE);
 
         }
-        private void ckConfirmarContra_CheckedChanged(object sender, EventArgs e)
+
+        private void ModificarUsuario_Load(object sender, EventArgs e)
         {
-            if (ckConfirmarContra.Checked)
-            {
-                // Reemplazamos la imagen de mostrar con la de ocultar desde los recursos del proyecto
-                confirmarContrasenaTextBox.UseSystemPasswordChar = false;
-                ckConfirmarContra.Image = Properties.Resources.esconder;
-            }
-            else
-            {
-                // Restauramos la imagen de mostrar desde los recursos del proyecto
-                confirmarContrasenaTextBox.UseSystemPasswordChar = true;
-                ckConfirmarContra.Image = Properties.Resources.mostrar;
-            }
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
+            this.bodegaTableAdapter.Fill(this._CATELSA_MULTICABLE.Bodega);
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Rol' Puede moverla o quitarla según sea necesario.
+            this.rolTableAdapter.Fill(this._CATELSA_MULTICABLE.Rol);
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.Usuario);
+
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -131,12 +73,11 @@ namespace MultiBodega_v1
             this.usuarioTableAdapter.ActualizaRegistro(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
             @contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex,
             @bodegaIDComboBox.SelectedIndex, @activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
-            
+            this.usuarioTableAdapter.Fill(_CATELSA_MULTICABLE.Usuario);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Le preguntamos al usuario si en verdad quiere eliminar el registro.
             DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
                                     "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -157,9 +98,6 @@ namespace MultiBodega_v1
             bodegaIDComboBox.SelectedIndex = -1;
             activoCheckBox.Checked = false;
         }
-
-
-        
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {

@@ -57,11 +57,13 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnMod = new System.Windows.Forms.Button();
-            this.proveedores1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.rTNTextBox1 = new System.Windows.Forms.TextBox();
-            
             this.iDProveedorTextBox = new System.Windows.Forms.TextBox();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.proveedoresTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             tipo_ProveedorLabel = new System.Windows.Forms.Label();
             correoElectronicoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -73,8 +75,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             rTNLabel = new System.Windows.Forms.Label();
             iDProveedorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedores1BindingSource)).BeginInit();
-            
+            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             this.SuspendLayout();
             // 
             // tipo_ProveedorLabel
@@ -140,7 +142,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             num_TelefonoLabel.Name = "num_TelefonoLabel";
             num_TelefonoLabel.Size = new System.Drawing.Size(142, 16);
             num_TelefonoLabel.TabIndex = 79;
-            num_TelefonoLabel.Text = "Número de Telefono:";
+            num_TelefonoLabel.Text = "Número de Teléfono:";
             // 
             // pais_ZonaLabel
             // 
@@ -199,6 +201,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // tipo_ProveedorComboBox
             // 
+            this.tipo_ProveedorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tipo_ProveedorComboBox.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.tipo_ProveedorComboBox.FormattingEnabled = true;
             this.tipo_ProveedorComboBox.Items.AddRange(new object[] {
@@ -368,18 +371,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.btnMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMod.UseVisualStyleBackColor = true;
             // 
-            // proveedores1BindingSource
-            // 
-            this.proveedores1BindingSource.DataMember = "Proveedores1";
-            
-            // 
-            // _CATELSA_MULTICABLEDataSet
-            // 
-            
-            // 
             // rTNTextBox1
             // 
-            this.rTNTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedores1BindingSource, "RTN", true));
             this.rTNTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTNTextBox1.Location = new System.Drawing.Point(280, 189);
             this.rTNTextBox1.MaxLength = 14;
@@ -387,29 +380,74 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.rTNTextBox1.Size = new System.Drawing.Size(131, 23);
             this.rTNTextBox1.TabIndex = 2;
             // 
-            // tableAdapterManager
-            // 
-            
-            // 
-            // proveedores1TableAdapter
-            // 
-            
-            // 
             // iDProveedorTextBox
             // 
-            this.iDProveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedores1BindingSource, "IDProveedor", true));
             this.iDProveedorTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iDProveedorTextBox.Location = new System.Drawing.Point(49, 143);
             this.iDProveedorTextBox.Name = "iDProveedorTextBox";
             this.iDProveedorTextBox.Size = new System.Drawing.Size(100, 23);
-            this.iDProveedorTextBox.TabIndex = 94;
+            this.iDProveedorTextBox.TabIndex = 0;
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.proveedoresBindingSource, "Activo", true));
+            this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activoCheckBox.Location = new System.Drawing.Point(629, 188);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.activoCheckBox.TabIndex = 95;
+            this.activoCheckBox.Text = "Activo";
+            this.activoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataMember = "Proveedores";
+            this.proveedoresBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proveedoresTableAdapter
+            // 
+            this.proveedoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
+            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductosTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = this.proveedoresTableAdapter;
+            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
+            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
+            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
+            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.TipoMaterialTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
             // FrmRegistrarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(794, 461);
+            this.ClientSize = new System.Drawing.Size(794, 470);
+            this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(iDProveedorLabel);
             this.Controls.Add(this.iDProveedorTextBox);
             this.Controls.Add(this.rTNTextBox1);
@@ -445,7 +483,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.Text = "Registrar Proveedor";
             this.Load += new System.EventHandler(this.FrmRegistrarProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedores1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,9 +509,12 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.TextBox pais_ZonaTextBox;
         private System.Windows.Forms.TextBox personaContactoTextBox;
         
-        private System.Windows.Forms.BindingSource proveedores1BindingSource;
-        
         private System.Windows.Forms.TextBox rTNTextBox1;
         private System.Windows.Forms.TextBox iDProveedorTextBox;
+        private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource proveedoresBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter proveedoresTableAdapter;
+        private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.CheckBox activoCheckBox;
     }
 }

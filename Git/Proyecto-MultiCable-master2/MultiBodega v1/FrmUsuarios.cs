@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
 
 namespace MultiBodega_v1
 {
@@ -18,6 +19,7 @@ namespace MultiBodega_v1
 
         static string ConexionString = @"Data Source=(localdb)\CATELSA;Initial Catalog = CATELSA-MULTICABLE; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False";
         SqlConnection conexion = new SqlConnection(ConexionString);
+        
 
         public string _iDTextBox { get; set; }
         public string _rolNameTextBox { get; set; }
@@ -71,26 +73,17 @@ namespace MultiBodega_v1
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Vista_Usuarios' Puede moverla o quitarla según sea necesario.
+            this.vista_UsuariosTableAdapter.Fill(this._CATELSA_MULTICABLE.Vista_Usuarios);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
-
+            //this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
+            string consulta = "SELECT * FROM Vista_Usuarios";
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta,conexion);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            Vista_UsuariosDataGridView.DataSource = dt;
         }
 
-        private void Button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void NuevoTextBox_Click(object sender, EventArgs e)
-        {
-            //this.Estado_TextBox(true);
-        }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
@@ -104,7 +97,7 @@ namespace MultiBodega_v1
             conexion.Open();
             SqlCommand comando = conexion.CreateCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "Select * From Usuario WHERE Nombre LIKE ('%" +Txtbuscar.Text +"%')";
+            comando.CommandText = "Select * From Vista_Usuarios WHERE Nombre LIKE ('%" +Txtbuscar.Text +"%')";
             comando.ExecuteNonQuery();
 
             DataTable dt = new DataTable();
@@ -112,19 +105,34 @@ namespace MultiBodega_v1
             SqlDataAdapter da = new SqlDataAdapter(comando);
 
             da.Fill(dt);
-            dGV1.DataSource = dt;
+            Vista_UsuariosDataGridView.DataSource = dt;
+            this.vista_UsuariosTableAdapter.Fill(_CATELSA_MULTICABLE.Vista_Usuarios);
             conexion.Close();
         }
 
-        private void dGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void Vista_UsuariosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0 && e.RowIndex != -1)
             {
-                // Aquí deberías crear y mostrar el formulario de tu elección
-                // Por ejemplo:
-                NuevoUsuario ModificarUsuario= new NuevoUsuario();
-                ModificarUsuario.ShowDialog();
+                //Mostrar el formulario de tu elección
+                DataGridViewRow row = Vista_UsuariosDataGridView.CurrentRow;
+                ModificarUsuario Mostrar = new ModificarUsuario(); 
+                Mostrar.iDTextBox.Text = row.Cells[1].Value.ToString();
+                Mostrar.nombreTextBox.Text = row.Cells[2].Value.ToString();
+                Mostrar.nombreUsuarioTextBox.Text = row.Cells[3].Value.ToString();
+                Mostrar.numTelefonoTextBox.Text = row.Cells[4].Value.ToString();
+                Mostrar.contrasenaTextBox.Text= row.Cells[5].Value.ToString();
+                Mostrar.confirmarContrasenaTextBox.Text = row.Cells[6].Value.ToString();
+                Mostrar.bodegaIDComboBox.Text = row.Cells[7].Value.ToString();
+                Mostrar.rolIDComboBox.Text = row.Cells[8].Value.ToString();
+                Mostrar.activoCheckBox.Text = row.Cells[9].Value.ToString();
+                Mostrar.ShowDialog();
             }
+        }
+
+        private void BtnActualizarGrid_Click(object sender, EventArgs e)
+        {
+            Vista_UsuariosDataGridView.Refresh();
         }
     }
 }

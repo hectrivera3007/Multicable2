@@ -13,20 +13,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MultiBodega_v1.Botonera
 {
     public partial class Botonera_APP : Form
     {
+        
         public Botonera_APP()
         {
             InitializeComponent();
+            this.DragEnter += Botonera_APP_DragEnter;
+        }
+        private void Botonera_APP_DragEnter(object sender, DragEventArgs e)
+        {
+            // Cancelar el arrastre y soltar estableciendo el efecto en None 
+            e.Effect = DragDropEffects.None;
         }
 
         public void Btn_Inventario_Click(object sender, EventArgs e)
         {
             this.Close();
             var Inventario = new Inventario_Botonera();
-            Inventario.Show();
+            Inventario.ShowDialog();
         }
 
         private void BtnBodegas_Click(object sender, EventArgs e)
@@ -35,7 +43,7 @@ namespace MultiBodega_v1.Botonera
             this.Close();
             //Nueva instancia de inventario individual
             var bodega = new FrmBodegaBotonera();
-            bodega.Show();
+            bodega.ShowDialog(); 
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -52,54 +60,49 @@ namespace MultiBodega_v1.Botonera
         {
             this.Close();
             Botonera_Requisas NuevaRquisa = new Botonera_Requisas();
-            NuevaRquisa.Show();
+            NuevaRquisa.ShowDialog();
         }
 
         private void BtnCompras_Click(object sender, EventArgs e)
         {
             this.Close();
             FrmContCompras nuevoComp = new FrmContCompras();
-            nuevoComp.Show();
+            nuevoComp.ShowDialog();
         }
 
         private void BtnCodigoBarra_Click(object sender, EventArgs e)
         {
             this.Close();
             GenerarCodigodeBarra Nuevo = new GenerarCodigodeBarra();
-            Nuevo.Show();
+            Nuevo.ShowDialog();
         }
 
         private void BtnConfig_Click(object sender, EventArgs e)
         {
             this.Close();
             var nuevoConfig = new FrmContenedorConfig();
-            nuevoConfig.Show();
+            nuevoConfig.ShowDialog();
         }
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
             this.Close();
             FrmRegistrar nuevoformregistrar = new FrmRegistrar();
-            nuevoformregistrar.Show();
+            nuevoformregistrar.ShowDialog();
         }
 
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             this.Close();
             var nuevoCont = new FrmContUsuarios();
-            nuevoCont.Show();
+            nuevoCont.ShowDialog();
         }
 
         private void BtnReportes_Click(object sender, EventArgs e)
         {
             this.Close();
             var nuevoRep = new FrmContReportes();
-            nuevoRep.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            nuevoRep.ShowDialog();
         }
     }
 }

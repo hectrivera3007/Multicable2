@@ -1,0 +1,10 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT [Nombre]
+      ,[Expr1]
+      ,[NombreUsuario]
+      ,[NumTelefono]
+      ,[Contrasena]
+      ,[ConfirmarContrasena]
+      ,[Activo]
+      ,[RolName]
+  FROM [CATELSA-MULTICABLE].[dbo].[Vista_Usuarios]

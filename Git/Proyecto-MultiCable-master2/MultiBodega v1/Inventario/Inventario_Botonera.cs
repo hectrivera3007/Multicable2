@@ -21,7 +21,7 @@ namespace MultiBodega_v1.Botonera
         private void BtnNuevoProducto_Click(object sender, EventArgs e)
         {
             var producto = new FrmIngresarProducto();
-            producto.Show(this);
+            producto.ShowDialog(this);
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -32,34 +32,34 @@ namespace MultiBodega_v1.Botonera
             {
                 this.Close();
                 Botonera_APP nuevo = new Botonera_APP();
-                nuevo.Show();
+                nuevo.ShowDialog();
             }
         }
 
         private void BtnModificarProd_Click(object sender, EventArgs e)
         {
             var modificar_producto = new FrmIngresarProducto();
-            modificar_producto.Show(this);
+            modificar_producto.ShowDialog(this);
 
         }
 
         private void BtnInventarioFinal_Click(object sender, EventArgs e)
         {
             var muestra_inventario = new FrmInventarioGeneral();
-            muestra_inventario.Show(this);
+            muestra_inventario.ShowDialog(this);
 
         }
 
         private void BtnAjusteInventario_Click(object sender, EventArgs e)
         {
             var ajuste_inventario = new AjusteInventario();
-            ajuste_inventario.Show(this);
+            ajuste_inventario.ShowDialog(this);
         }
 
         private void BtnInventXbodega_Click(object sender, EventArgs e)
         {
             var ReporteBodega = new FrmReporteBodegas();
-            ReporteBodega.Show(this);
+            ReporteBodega.ShowDialog(this);
         }
 
         

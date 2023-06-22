@@ -273,6 +273,9 @@
     <Compile Include="Bodegas\Bodega_4.Designer.cs">
       <DependentUpon>Bodega_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="CATELSA-MULTICABLE.cs">
+      <DependentUpon>CATELSA-MULTICABLE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CATELSA-MULTICABLE.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +292,12 @@
     </Compile>
     <Compile Include="Configuración\FrmRol.Designer.cs">
       <DependentUpon>FrmRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmBodegaBotonera.cs">
       <SubType>Form</SubType>
@@ -586,6 +595,9 @@
     <EmbeddedResource Include="Configuración\FrmRol.resx">
       <DependentUpon>FrmRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmBodegaBotonera.resx">
       <DependentUpon>FrmBodegaBotonera.cs</DependentUpon>
     </EmbeddedResource>
@@ -842,6 +854,8 @@
     <None Include="Resources\actualizar1.png" />
     <None Include="Resources\eliminar1.png" />
     <None Include="Resources\agregar %282%29.png" />
+    <None Include="Resources\actualizar %282%29.png" />
+    <None Include="Resources\agregar-usuario %282%29.png" />
     <Content Include="Resources\mostrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

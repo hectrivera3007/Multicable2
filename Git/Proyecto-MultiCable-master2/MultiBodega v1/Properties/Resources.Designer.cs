@@ -73,6 +73,16 @@ namespace MultiBodega_v1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actualizar__2_ {
+            get {
+                object obj = ResourceManager.GetObject("actualizar (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap actualizar1 {
             get {
                 object obj = ResourceManager.GetObject("actualizar1", resourceCulture);
@@ -106,6 +116,16 @@ namespace MultiBodega_v1.Properties {
         internal static System.Drawing.Bitmap Agregar_20x20 {
             get {
                 object obj = ResourceManager.GetObject("Agregar_20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregar_usuario__2_ {
+            get {
+                object obj = ResourceManager.GetObject("agregar-usuario (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

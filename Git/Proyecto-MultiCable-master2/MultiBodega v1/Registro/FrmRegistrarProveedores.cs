@@ -33,13 +33,15 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private void proveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.proveedores1BindingSource.EndEdit();
-            //this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLEDataSet);
+            this.proveedoresBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLE);
 
         }
 
         private void FrmRegistrarProveedores_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Proveedores' Puede moverla o quitarla según sea necesario.
+            this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Proveedores1' Puede moverla o quitarla según sea necesario.
             //this.proveedores1TableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Proveedores1);
 
@@ -47,24 +49,31 @@ namespace MultiBodega_v1.Formularios_de_Registro
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            /*this.proveedores1TableAdapter.GuardarProveedor(nombreProveedorTextBox.Text, rTNTextBox1.Text,
+            this.proveedoresTableAdapter.Guardar(nombreProveedorTextBox.Text, Int32.Parse(rTNTextBox1.Text),
                 personaContactoTextBox.Text, direccionTextBox.Text, pais_ZonaTextBox.Text,tipo_ProveedorComboBox.Text,
-                num_TelefonoTextBox.Text, correoElectronicoTextBox.Text, notasTextBox.Text);
-            this.proveedores1TableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Proveedores1);
-            */
+                num_TelefonoTextBox.Text, correoElectronicoTextBox.Text, notasTextBox.Text, activoCheckBox.Checked);
+            this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
             MessageBox.Show("El registro se ha guardado con éxito..!");
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //this.proveedores1TableAdapter.EliminarRegistro(iDProveedorTextBox.Text);
-            //this.proveedores1TableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Proveedores1);
+            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
+                                    "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Si el usuario confirma, eliminamos el registro
+            if (resultado == DialogResult.Yes)
+            {
+                this.proveedoresTableAdapter.Eliminar(Convert.ToInt32(iDProveedorTextBox.Text));
+                this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
+
+            }
         }
 
         private void nuevoRegistro_Click(object sender, EventArgs e)
         { 
-            proveedores1BindingSource.AddNew();
+            proveedoresBindingSource.AddNew();
         }
     }
 }

@@ -67,7 +67,7 @@ namespace MultiBodega_v1
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.tipoMaterialTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter();
             this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -265,12 +265,12 @@ namespace MultiBodega_v1
             // 
             this.DtFechaIngreso.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFechaIngreso.CustomFormat = "";
-            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtFechaIngreso.Location = new System.Drawing.Point(19, 192);
             this.DtFechaIngreso.Name = "DtFechaIngreso";
-            this.DtFechaIngreso.Size = new System.Drawing.Size(196, 23);
+            this.DtFechaIngreso.Size = new System.Drawing.Size(199, 23);
             this.DtFechaIngreso.TabIndex = 2;
-            this.DtFechaIngreso.Value = new System.DateTime(2023, 6, 13, 0, 0, 0, 0);
+            this.DtFechaIngreso.Value = new System.DateTime(2023, 6, 22, 15, 15, 58, 0);
             // 
             // BtnNuevo
             // 
@@ -431,6 +431,7 @@ namespace MultiBodega_v1
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.Size = new System.Drawing.Size(749, 337);
             this.productoDataGridView.TabIndex = 69;
+            this.productoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productoDataGridView_CellContentClick);
             // 
             // productosBindingSource
             // 
@@ -481,6 +482,8 @@ namespace MultiBodega_v1
             // 
             this.btnSeleccionar.HeaderText = "";
             this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnSeleccionar.Width = 35;
             // 
             // iDProductoDataGridViewTextBoxColumn
@@ -544,6 +547,7 @@ namespace MultiBodega_v1
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1145, 540);
+            this.Controls.Add(this.DtFechaIngreso);
             this.Controls.Add(this.productoDataGridView);
             this.Controls.Add(bodegaIDLabel);
             this.Controls.Add(this.bodegaIDComboBox);
@@ -559,7 +563,6 @@ namespace MultiBodega_v1
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(fechaIngresoLabel);
-            this.Controls.Add(this.DtFechaIngreso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -624,7 +627,7 @@ namespace MultiBodega_v1
         private System.Windows.Forms.BindingSource bodegaBindingSource;
         private _CATELSA_MULTICABLETableAdapters.BodegaTableAdapter bodegaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreTipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaIngresoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoMaterial;

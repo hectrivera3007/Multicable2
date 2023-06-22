@@ -67,8 +67,8 @@ namespace MultiBodega_v1
             opcion = MessageBox.Show("¿Está listo para guardar este registro?", "Aviso del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (opcion == DialogResult.Yes)
             {
-                this.productosTableAdapter.Guardar(DtFechaIngreso.Value.ToString(),CmbNombreTipo.SelectedValue.ToString(),TxtCodigoGen.Text,TxtDescripcion.Text,
-                bodegaIDComboBox.SelectedIndex,activoCheckBox.Checked);
+                this.productosTableAdapter.Guardar(DtFechaIngreso.Value.ToString(),CmbNombreTipo.SelectedValue.ToString(),
+                TxtCodigoGen.Text,TxtDescripcion.Text, bodegaIDComboBox.SelectedIndex, activoCheckBox.Checked);
                 this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Productos);
                 DtFechaIngreso.Value=DateTime.Now;
                 CmbNombreTipo.SelectedValue = -1;
@@ -108,6 +108,20 @@ namespace MultiBodega_v1
             TxtDescripcion.Clear();
             bodegaIDComboBox.SelectedIndex = -1;
             activoCheckBox.Checked = true;
+        }
+
+        private void productoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0 && e.RowIndex != -1)
+            {
+                iDProductoTextBox.Text = productoDataGridView.SelectedCells[1].Value.ToString();
+                CmbNombreTipo.Text = productoDataGridView.SelectedCells[2].Value.ToString();
+                TxtCodigoGen.Text = productoDataGridView.SelectedCells[3].Value.ToString();
+                DtFechaIngreso.Text = productoDataGridView.SelectedCells[4].Value.ToString();
+                TxtDescripcion.Text = productoDataGridView.SelectedCells[5].Value.ToString();
+                bodegaIDComboBox.Text = productoDataGridView.SelectedCells[6].Value.ToString();
+                activoCheckBox.Text = productoDataGridView.SelectedCells[7].Value.ToString();
+            }
         }
     }
 }
