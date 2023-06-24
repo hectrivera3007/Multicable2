@@ -70,10 +70,13 @@ namespace MultiBodega_v1
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            this.usuarioTableAdapter.ActualizaRegistro(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
-            @contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex,
-            @bodegaIDComboBox.SelectedIndex, @activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
+            this.usuarioTableAdapter.Modificar(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
+            @contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex+1,
+            bodegaIDComboBox.SelectedIndex+1, @activoCheckBox.Checked, Int32.Parse(iDTextBox.Text));
             this.usuarioTableAdapter.Fill(_CATELSA_MULTICABLE.Usuario);
+            //FrmUsuarios nuevo = new FrmUsuarios();
+            //nuevo.Vista_UsuariosDataGridView.Refresh();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -110,6 +113,13 @@ namespace MultiBodega_v1
             rolIDComboBox.SelectedIndex = -1;
             bodegaIDComboBox.SelectedIndex = -1;
             activoCheckBox.Checked = false;
+        }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmUsuarios nuevo = new FrmUsuarios();
+            nuevo.Show();
         }
     }
 }

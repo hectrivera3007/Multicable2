@@ -70,7 +70,7 @@ namespace MultiBodega_v1 {
         
         private ProductosDataTable tableProductos;
         
-        private Vista_UsuariosDataTable tableVista_Usuarios;
+        private VistaUsuarioDataTable tableVistaUsuario;
         
         private global::System.Data.DataRelation relationFK__AjusteInv__Bodeg__5BE2A6F2;
         
@@ -215,8 +215,8 @@ namespace MultiBodega_v1 {
                 if ((ds.Tables["Productos"] != null)) {
                     base.Tables.Add(new ProductosDataTable(ds.Tables["Productos"]));
                 }
-                if ((ds.Tables["Vista_Usuarios"] != null)) {
-                    base.Tables.Add(new Vista_UsuariosDataTable(ds.Tables["Vista_Usuarios"]));
+                if ((ds.Tables["VistaUsuario"] != null)) {
+                    base.Tables.Add(new VistaUsuarioDataTable(ds.Tables["VistaUsuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -470,9 +470,9 @@ namespace MultiBodega_v1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Vista_UsuariosDataTable Vista_Usuarios {
+        public VistaUsuarioDataTable VistaUsuario {
             get {
-                return this.tableVista_Usuarios;
+                return this.tableVistaUsuario;
             }
         }
         
@@ -612,8 +612,8 @@ namespace MultiBodega_v1 {
                 if ((ds.Tables["Productos"] != null)) {
                     base.Tables.Add(new ProductosDataTable(ds.Tables["Productos"]));
                 }
-                if ((ds.Tables["Vista_Usuarios"] != null)) {
-                    base.Tables.Add(new Vista_UsuariosDataTable(ds.Tables["Vista_Usuarios"]));
+                if ((ds.Tables["VistaUsuario"] != null)) {
+                    base.Tables.Add(new VistaUsuarioDataTable(ds.Tables["VistaUsuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -786,10 +786,10 @@ namespace MultiBodega_v1 {
                     this.tableProductos.InitVars();
                 }
             }
-            this.tableVista_Usuarios = ((Vista_UsuariosDataTable)(base.Tables["Vista_Usuarios"]));
+            this.tableVistaUsuario = ((VistaUsuarioDataTable)(base.Tables["VistaUsuario"]));
             if ((initTable == true)) {
-                if ((this.tableVista_Usuarios != null)) {
-                    this.tableVista_Usuarios.InitVars();
+                if ((this.tableVistaUsuario != null)) {
+                    this.tableVistaUsuario.InitVars();
                 }
             }
             this.relationFK__AjusteInv__Bodeg__5BE2A6F2 = this.Relations["FK__AjusteInv__Bodeg__5BE2A6F2"];
@@ -871,8 +871,8 @@ namespace MultiBodega_v1 {
             base.Tables.Add(this.tableUsuario);
             this.tableProductos = new ProductosDataTable();
             base.Tables.Add(this.tableProductos);
-            this.tableVista_Usuarios = new Vista_UsuariosDataTable();
-            base.Tables.Add(this.tableVista_Usuarios);
+            this.tableVistaUsuario = new VistaUsuarioDataTable();
+            base.Tables.Add(this.tableVistaUsuario);
             this.relationFK__AjusteInv__Bodeg__5BE2A6F2 = new global::System.Data.DataRelation("FK__AjusteInv__Bodeg__5BE2A6F2", new global::System.Data.DataColumn[] {
                         this.tableBodega.BodegaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableAjusteInventario.BodegaIDColumn}, false);
@@ -1107,7 +1107,7 @@ namespace MultiBodega_v1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeVista_Usuarios() {
+        private bool ShouldSerializeVistaUsuario() {
             return false;
         }
         
@@ -1236,7 +1236,7 @@ namespace MultiBodega_v1 {
         public delegate void ProductosRowChangeEventHandler(object sender, ProductosRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void Vista_UsuariosRowChangeEventHandler(object sender, Vista_UsuariosRowChangeEvent e);
+        public delegate void VistaUsuarioRowChangeEventHandler(object sender, VistaUsuarioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -9833,7 +9833,7 @@ namespace MultiBodega_v1 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Vista_UsuariosDataTable : global::System.Data.TypedTableBase<Vista_UsuariosRow> {
+        public partial class VistaUsuarioDataTable : global::System.Data.TypedTableBase<VistaUsuarioRow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -9855,8 +9855,8 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosDataTable() {
-                this.TableName = "Vista_Usuarios";
+            public VistaUsuarioDataTable() {
+                this.TableName = "VistaUsuario";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -9864,7 +9864,7 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Vista_UsuariosDataTable(global::System.Data.DataTable table) {
+            internal VistaUsuarioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -9881,7 +9881,7 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected Vista_UsuariosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected VistaUsuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -9969,36 +9969,36 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRow this[int index] {
+            public VistaUsuarioRow this[int index] {
                 get {
-                    return ((Vista_UsuariosRow)(this.Rows[index]));
+                    return ((VistaUsuarioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Vista_UsuariosRowChangeEventHandler Vista_UsuariosRowChanging;
+            public event VistaUsuarioRowChangeEventHandler VistaUsuarioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Vista_UsuariosRowChangeEventHandler Vista_UsuariosRowChanged;
+            public event VistaUsuarioRowChangeEventHandler VistaUsuarioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Vista_UsuariosRowChangeEventHandler Vista_UsuariosRowDeleting;
+            public event VistaUsuarioRowChangeEventHandler VistaUsuarioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Vista_UsuariosRowChangeEventHandler Vista_UsuariosRowDeleted;
+            public event VistaUsuarioRowChangeEventHandler VistaUsuarioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddVista_UsuariosRow(Vista_UsuariosRow row) {
+            public void AddVistaUsuarioRow(VistaUsuarioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRow AddVista_UsuariosRow(int ID, string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, string Bodega_Asignada, string RolName, bool Activo) {
-                Vista_UsuariosRow rowVista_UsuariosRow = ((Vista_UsuariosRow)(this.NewRow()));
+            public VistaUsuarioRow AddVistaUsuarioRow(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, string Bodega_Asignada, string RolName, bool Activo) {
+                VistaUsuarioRow rowVistaUsuarioRow = ((VistaUsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
+                        null,
                         Nombre,
                         NombreUsuario,
                         NumTelefono,
@@ -10007,22 +10007,22 @@ namespace MultiBodega_v1 {
                         Bodega_Asignada,
                         RolName,
                         Activo};
-                rowVista_UsuariosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVista_UsuariosRow);
-                return rowVista_UsuariosRow;
+                rowVistaUsuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVistaUsuarioRow);
+                return rowVistaUsuarioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRow FindByID(int ID) {
-                return ((Vista_UsuariosRow)(this.Rows.Find(new object[] {
+            public VistaUsuarioRow FindByID(int ID) {
+                return ((VistaUsuarioRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Vista_UsuariosDataTable cln = ((Vista_UsuariosDataTable)(base.Clone()));
+                VistaUsuarioDataTable cln = ((VistaUsuarioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -10030,7 +10030,7 @@ namespace MultiBodega_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Vista_UsuariosDataTable();
+                return new VistaUsuarioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10070,7 +10070,9 @@ namespace MultiBodega_v1 {
                 base.Columns.Add(this.columnActivo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
+                this.columnID.AutoIncrement = true;
                 this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnNombre.MaxLength = 50;
                 this.columnNombreUsuario.MaxLength = 50;
@@ -10083,28 +10085,28 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRow NewVista_UsuariosRow() {
-                return ((Vista_UsuariosRow)(this.NewRow()));
+            public VistaUsuarioRow NewVistaUsuarioRow() {
+                return ((VistaUsuarioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Vista_UsuariosRow(builder);
+                return new VistaUsuarioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Vista_UsuariosRow);
+                return typeof(VistaUsuarioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Vista_UsuariosRowChanged != null)) {
-                    this.Vista_UsuariosRowChanged(this, new Vista_UsuariosRowChangeEvent(((Vista_UsuariosRow)(e.Row)), e.Action));
+                if ((this.VistaUsuarioRowChanged != null)) {
+                    this.VistaUsuarioRowChanged(this, new VistaUsuarioRowChangeEvent(((VistaUsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -10112,8 +10114,8 @@ namespace MultiBodega_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Vista_UsuariosRowChanging != null)) {
-                    this.Vista_UsuariosRowChanging(this, new Vista_UsuariosRowChangeEvent(((Vista_UsuariosRow)(e.Row)), e.Action));
+                if ((this.VistaUsuarioRowChanging != null)) {
+                    this.VistaUsuarioRowChanging(this, new VistaUsuarioRowChangeEvent(((VistaUsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -10121,8 +10123,8 @@ namespace MultiBodega_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Vista_UsuariosRowDeleted != null)) {
-                    this.Vista_UsuariosRowDeleted(this, new Vista_UsuariosRowChangeEvent(((Vista_UsuariosRow)(e.Row)), e.Action));
+                if ((this.VistaUsuarioRowDeleted != null)) {
+                    this.VistaUsuarioRowDeleted(this, new VistaUsuarioRowChangeEvent(((VistaUsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -10130,14 +10132,14 @@ namespace MultiBodega_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Vista_UsuariosRowDeleting != null)) {
-                    this.Vista_UsuariosRowDeleting(this, new Vista_UsuariosRowChangeEvent(((Vista_UsuariosRow)(e.Row)), e.Action));
+                if ((this.VistaUsuarioRowDeleting != null)) {
+                    this.VistaUsuarioRowDeleting(this, new VistaUsuarioRowChangeEvent(((VistaUsuarioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveVista_UsuariosRow(Vista_UsuariosRow row) {
+            public void RemoveVistaUsuarioRow(VistaUsuarioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -10164,7 +10166,7 @@ namespace MultiBodega_v1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Vista_UsuariosDataTable";
+                attribute2.FixedValue = "VistaUsuarioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -16177,25 +16179,25 @@ namespace MultiBodega_v1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Vista_UsuariosRow : global::System.Data.DataRow {
+        public partial class VistaUsuarioRow : global::System.Data.DataRow {
             
-            private Vista_UsuariosDataTable tableVista_Usuarios;
+            private VistaUsuarioDataTable tableVistaUsuario;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Vista_UsuariosRow(global::System.Data.DataRowBuilder rb) : 
+            internal VistaUsuarioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVista_Usuarios = ((Vista_UsuariosDataTable)(this.Table));
+                this.tableVistaUsuario = ((VistaUsuarioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableVista_Usuarios.IDColumn]));
+                    return ((int)(this[this.tableVistaUsuario.IDColumn]));
                 }
                 set {
-                    this[this.tableVista_Usuarios.IDColumn] = value;
+                    this[this.tableVistaUsuario.IDColumn] = value;
                 }
             }
             
@@ -16204,14 +16206,14 @@ namespace MultiBodega_v1 {
             public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.NombreColumn]));
+                        return ((string)(this[this.tableVistaUsuario.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.NombreColumn] = value;
+                    this[this.tableVistaUsuario.NombreColumn] = value;
                 }
             }
             
@@ -16220,14 +16222,14 @@ namespace MultiBodega_v1 {
             public string NombreUsuario {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.NombreUsuarioColumn]));
+                        return ((string)(this[this.tableVistaUsuario.NombreUsuarioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NombreUsuario\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NombreUsuario\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.NombreUsuarioColumn] = value;
+                    this[this.tableVistaUsuario.NombreUsuarioColumn] = value;
                 }
             }
             
@@ -16236,14 +16238,14 @@ namespace MultiBodega_v1 {
             public string NumTelefono {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.NumTelefonoColumn]));
+                        return ((string)(this[this.tableVistaUsuario.NumTelefonoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumTelefono\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumTelefono\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.NumTelefonoColumn] = value;
+                    this[this.tableVistaUsuario.NumTelefonoColumn] = value;
                 }
             }
             
@@ -16252,14 +16254,14 @@ namespace MultiBodega_v1 {
             public string Contrasena {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.ContrasenaColumn]));
+                        return ((string)(this[this.tableVistaUsuario.ContrasenaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Contrasena\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Contrasena\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.ContrasenaColumn] = value;
+                    this[this.tableVistaUsuario.ContrasenaColumn] = value;
                 }
             }
             
@@ -16268,15 +16270,15 @@ namespace MultiBodega_v1 {
             public string ConfirmarContrasena {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.ConfirmarContrasenaColumn]));
+                        return ((string)(this[this.tableVistaUsuario.ConfirmarContrasenaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ConfirmarContrasena\' de la tabla \'Vista_Usuarios\' es DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ConfirmarContrasena\' de la tabla \'VistaUsuario\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.ConfirmarContrasenaColumn] = value;
+                    this[this.tableVistaUsuario.ConfirmarContrasenaColumn] = value;
                 }
             }
             
@@ -16285,14 +16287,14 @@ namespace MultiBodega_v1 {
             public string Bodega_Asignada {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.Bodega_AsignadaColumn]));
+                        return ((string)(this[this.tableVistaUsuario.Bodega_AsignadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Bodega_Asignada\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Bodega_Asignada\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.Bodega_AsignadaColumn] = value;
+                    this[this.tableVistaUsuario.Bodega_AsignadaColumn] = value;
                 }
             }
             
@@ -16301,14 +16303,14 @@ namespace MultiBodega_v1 {
             public string RolName {
                 get {
                     try {
-                        return ((string)(this[this.tableVista_Usuarios.RolNameColumn]));
+                        return ((string)(this[this.tableVistaUsuario.RolNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RolName\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RolName\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.RolNameColumn] = value;
+                    this[this.tableVistaUsuario.RolNameColumn] = value;
                 }
             }
             
@@ -16317,111 +16319,111 @@ namespace MultiBodega_v1 {
             public bool Activo {
                 get {
                     try {
-                        return ((bool)(this[this.tableVista_Usuarios.ActivoColumn]));
+                        return ((bool)(this[this.tableVistaUsuario.ActivoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Activo\' de la tabla \'Vista_Usuarios\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Activo\' de la tabla \'VistaUsuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVista_Usuarios.ActivoColumn] = value;
+                    this[this.tableVistaUsuario.ActivoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNombreNull() {
-                return this.IsNull(this.tableVista_Usuarios.NombreColumn);
+                return this.IsNull(this.tableVistaUsuario.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNombreNull() {
-                this[this.tableVista_Usuarios.NombreColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNombreUsuarioNull() {
-                return this.IsNull(this.tableVista_Usuarios.NombreUsuarioColumn);
+                return this.IsNull(this.tableVistaUsuario.NombreUsuarioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNombreUsuarioNull() {
-                this[this.tableVista_Usuarios.NombreUsuarioColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.NombreUsuarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNumTelefonoNull() {
-                return this.IsNull(this.tableVista_Usuarios.NumTelefonoColumn);
+                return this.IsNull(this.tableVistaUsuario.NumTelefonoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNumTelefonoNull() {
-                this[this.tableVista_Usuarios.NumTelefonoColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.NumTelefonoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsContrasenaNull() {
-                return this.IsNull(this.tableVista_Usuarios.ContrasenaColumn);
+                return this.IsNull(this.tableVistaUsuario.ContrasenaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetContrasenaNull() {
-                this[this.tableVista_Usuarios.ContrasenaColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.ContrasenaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsConfirmarContrasenaNull() {
-                return this.IsNull(this.tableVista_Usuarios.ConfirmarContrasenaColumn);
+                return this.IsNull(this.tableVistaUsuario.ConfirmarContrasenaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetConfirmarContrasenaNull() {
-                this[this.tableVista_Usuarios.ConfirmarContrasenaColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.ConfirmarContrasenaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBodega_AsignadaNull() {
-                return this.IsNull(this.tableVista_Usuarios.Bodega_AsignadaColumn);
+                return this.IsNull(this.tableVistaUsuario.Bodega_AsignadaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBodega_AsignadaNull() {
-                this[this.tableVista_Usuarios.Bodega_AsignadaColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.Bodega_AsignadaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsRolNameNull() {
-                return this.IsNull(this.tableVista_Usuarios.RolNameColumn);
+                return this.IsNull(this.tableVistaUsuario.RolNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetRolNameNull() {
-                this[this.tableVista_Usuarios.RolNameColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.RolNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsActivoNull() {
-                return this.IsNull(this.tableVista_Usuarios.ActivoColumn);
+                return this.IsNull(this.tableVistaUsuario.ActivoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetActivoNull() {
-                this[this.tableVista_Usuarios.ActivoColumn] = global::System.Convert.DBNull;
+                this[this.tableVistaUsuario.ActivoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17211,22 +17213,22 @@ namespace MultiBodega_v1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class Vista_UsuariosRowChangeEvent : global::System.EventArgs {
+        public class VistaUsuarioRowChangeEvent : global::System.EventArgs {
             
-            private Vista_UsuariosRow eventRow;
+            private VistaUsuarioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRowChangeEvent(Vista_UsuariosRow row, global::System.Data.DataRowAction action) {
+            public VistaUsuarioRowChangeEvent(VistaUsuarioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Vista_UsuariosRow Row {
+            public VistaUsuarioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -29913,7 +29915,7 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, R" +
@@ -29921,37 +29923,36 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE       Usuario
-SET                Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolName, BodegaID = @Bodega_Asignada, 
-                         Activo = @Activo
-WHERE        (ID = @Original_ID)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolName", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bodega_Asignada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContra" +
+            this._commandCollection[1].CommandText = "SELECT        ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContra" +
                 "sena, RolID, BodegaID, Activo\r\nFROM            Usuario\r\nWHERE        (Nombre LIK" +
                 "E \'%\' + Nombre + \'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "DELETE FROM Usuario\r\nWHERE        (ID = @Original_ID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "DELETE FROM Usuario\r\nWHERE        (ID = @Original_ID)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO Usuario\r\n                         (Nombre, NombreUsuario, NumTelefono" +
+            this._commandCollection[3].CommandText = "INSERT INTO Usuario\r\n                         (Nombre, NombreUsuario, NumTelefono" +
                 ", Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo)\r\nVALUES        (@Nom" +
                 "bre,@NombreUsuario,@NumTelefono,@Contrasena,@ConfirmarContrasena,@RolID,@BodegaI" +
                 "D,@Activo)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BodegaID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"UPDATE       Usuario
+SET                Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, BodegaID = @BodegaID, 
+                         Activo = @Activo
+WHERE        (ID = @Original_ID)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -29961,29 +29962,14 @@ WHERE        (ID = @Original_ID)";
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BodegaID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = @"UPDATE       Usuario
-SET                Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, BodegaID = @BodegaID, 
-                         Activo = @Activo
-WHERE        (ID = @Original_ID)";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BodegaID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = @"SELECT        Bodega.Nombre AS Bodega, Usuario.Nombre AS [Nombre Empleado], Usuario.NombreUsuario, Usuario.NumTelefono, Usuario.Contrasena, Usuario.ConfirmarContrasena, Usuario.Activo, Rol.RolName
+            this._commandCollection[5].CommandText = @"SELECT        Bodega.Nombre AS Bodega, Usuario.Nombre AS [Nombre Empleado], Usuario.NombreUsuario, Usuario.NumTelefono, Usuario.Contrasena, Usuario.ConfirmarContrasena, Usuario.Activo, Rol.RolName
 FROM            Bodega INNER JOIN
                          Usuario ON Bodega.BodegaID = Usuario.BodegaID INNER JOIN
                          Rol ON Usuario.RolID = Rol.RolID";
-            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30015,7 +30001,7 @@ FROM            Bodega INNER JOIN
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual _CATELSA_MULTICABLE.UsuarioDataTable Buscar() {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             _CATELSA_MULTICABLE.UsuarioDataTable dataTable = new _CATELSA_MULTICABLE.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -30026,7 +30012,7 @@ FROM            Bodega INNER JOIN
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int VistaUsuario(_CATELSA_MULTICABLE.UsuarioDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -30039,7 +30025,7 @@ FROM            Bodega INNER JOIN
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual _CATELSA_MULTICABLE.UsuarioDataTable VistaU() {
-            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             _CATELSA_MULTICABLE.UsuarioDataTable dataTable = new _CATELSA_MULTICABLE.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -30410,71 +30396,9 @@ FROM            Bodega INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizaRegistro(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolName, int Bodega_Asignada, global::System.Nullable<bool> Activo, int Original_ID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((Nombre == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[0].Value = ((string)(Nombre));
-            }
-            if ((NombreUsuario == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[1].Value = ((string)(NombreUsuario));
-            }
-            if ((NumTelefono == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(NumTelefono));
-            }
-            if ((Contrasena == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(Contrasena));
-            }
-            if ((ConfirmarContrasena == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(ConfirmarContrasena));
-            }
-            command.Parameters[5].Value = ((int)(RolName));
-            command.Parameters[6].Value = ((int)(Bodega_Asignada));
-            if ((Activo.HasValue == true)) {
-                command.Parameters[7].Value = ((bool)(Activo.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            command.Parameters[8].Value = ((int)(Original_ID));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
         public virtual int Eliminar(int Original_ID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(Original_ID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -30498,7 +30422,7 @@ FROM            Bodega INNER JOIN
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int Guardar(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, global::System.Nullable<int> RolID, global::System.Nullable<int> BodegaID, global::System.Nullable<bool> Activo) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((Nombre == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -30569,7 +30493,7 @@ FROM            Bodega INNER JOIN
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int Modificar(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolID, int BodegaID, global::System.Nullable<bool> Activo, int Original_ID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((Nombre == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -31019,7 +30943,7 @@ FROM            Bodega INNER JOIN
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Vista_UsuariosTableAdapter : global::System.ComponentModel.Component {
+    public partial class VistaUsuarioTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -31033,7 +30957,7 @@ FROM            Bodega INNER JOIN
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Vista_UsuariosTableAdapter() {
+        public VistaUsuarioTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -31130,7 +31054,7 @@ FROM            Bodega INNER JOIN
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Vista_Usuarios";
+            tableMapping.DataSetTable = "VistaUsuario";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("NombreUsuario", "NombreUsuario");
@@ -31156,32 +31080,21 @@ FROM            Bodega INNER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, B" +
-                "odega_Asignada, RolName, Activo FROM dbo.Vista_Usuarios";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.VistaUsuario";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE       Usuario
-SET                Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolName, BodegaID = @Bodega_Asignada, 
-                         Activo = @Activo
-WHERE        (ID = @Original_ID)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolName", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bodega_Asignada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].CommandText = "dbo.VistaUsuario";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_CATELSA_MULTICABLE.Vista_UsuariosDataTable dataTable) {
+        public virtual int Fill(_CATELSA_MULTICABLE.VistaUsuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -31194,9 +31107,9 @@ WHERE        (ID = @Original_ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _CATELSA_MULTICABLE.Vista_UsuariosDataTable GetData() {
+        public virtual _CATELSA_MULTICABLE.VistaUsuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _CATELSA_MULTICABLE.Vista_UsuariosDataTable dataTable = new _CATELSA_MULTICABLE.Vista_UsuariosDataTable();
+            _CATELSA_MULTICABLE.VistaUsuarioDataTable dataTable = new _CATELSA_MULTICABLE.VistaUsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -31204,63 +31117,25 @@ WHERE        (ID = @Original_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Modificar(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolName, int Bodega_Asignada, global::System.Nullable<bool> Activo, int Original_ID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((Nombre == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int Mostrar(_CATELSA_MULTICABLE.VistaUsuarioDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            else {
-                command.Parameters[0].Value = ((string)(Nombre));
-            }
-            if ((NombreUsuario == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[1].Value = ((string)(NombreUsuario));
-            }
-            if ((NumTelefono == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(NumTelefono));
-            }
-            if ((Contrasena == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(Contrasena));
-            }
-            if ((ConfirmarContrasena == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(ConfirmarContrasena));
-            }
-            command.Parameters[5].Value = ((int)(RolName));
-            command.Parameters[6].Value = ((int)(Bodega_Asignada));
-            if ((Activo.HasValue == true)) {
-                command.Parameters[7].Value = ((bool)(Activo.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            command.Parameters[8].Value = ((int)(Original_ID));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
+            int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual _CATELSA_MULTICABLE.VistaUsuarioDataTable Show() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            _CATELSA_MULTICABLE.VistaUsuarioDataTable dataTable = new _CATELSA_MULTICABLE.VistaUsuarioDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

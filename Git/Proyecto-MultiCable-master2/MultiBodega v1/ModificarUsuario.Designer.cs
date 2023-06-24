@@ -200,6 +200,7 @@ namespace MultiBodega_v1
             // 
             // rolIDComboBox
             // 
+            this.rolIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.rolBindingSource, "RolName", true));
             this.rolIDComboBox.DataSource = this.rolBindingSource;
             this.rolIDComboBox.DisplayMember = "RolName";
             this.rolIDComboBox.FormattingEnabled = true;
@@ -208,11 +209,13 @@ namespace MultiBodega_v1
             this.rolIDComboBox.Size = new System.Drawing.Size(222, 25);
             this.rolIDComboBox.TabIndex = 8;
             this.rolIDComboBox.ValueMember = "RolID";
+
             // 
             // rolBindingSource
             // 
             this.rolBindingSource.DataMember = "Rol";
             this.rolBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            
             // 
             // _CATELSA_MULTICABLE
             // 
@@ -235,6 +238,7 @@ namespace MultiBodega_v1
             // 
             // bodegaIDComboBox
             // 
+            this.bodegaIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bodegaBindingSource, "Nombre", true));
             this.bodegaIDComboBox.DataSource = this.bodegaBindingSource;
             this.bodegaIDComboBox.DisplayMember = "Nombre";
             this.bodegaIDComboBox.FormattingEnabled = true;
@@ -341,6 +345,7 @@ namespace MultiBodega_v1
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // ckConfirmarContra
             // 

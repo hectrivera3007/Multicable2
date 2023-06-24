@@ -73,15 +73,15 @@ namespace MultiBodega_v1
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Vista_Usuarios' Puede moverla o quitarla según sea necesario.
-            this.vista_UsuariosTableAdapter.Fill(this._CATELSA_MULTICABLE.Vista_Usuarios);
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.VistaUsuario' Puede moverla o quitarla según sea necesario.
+            this.vistaUsuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.VistaUsuario);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
             //this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
-            string consulta = "SELECT * FROM Vista_Usuarios";
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta,conexion);
-            DataTable dt = new DataTable();
-            adaptador.Fill(dt);
-            Vista_UsuariosDataGridView.DataSource = dt;
+            //string consulta = "SELECT * FROM VistaUsuario";
+            //SqlDataAdapter adaptador = new SqlDataAdapter(consulta,conexion);
+            //DataTable dt = new DataTable();
+            //adaptador.Fill(dt);
+            //Vista_UsuariosDataGridView.DataSource = dt;
         }
 
 
@@ -92,23 +92,23 @@ namespace MultiBodega_v1
             Volver.Show();
         }
 
-        private void Txtbuscar_TextChanged(object sender, EventArgs e)
-        {
-            conexion.Open();
-            SqlCommand comando = conexion.CreateCommand();
-            comando.CommandType = CommandType.Text;
-            comando.CommandText = "Select * From Vista_Usuarios WHERE Nombre LIKE ('%" +Txtbuscar.Text +"%')";
-            comando.ExecuteNonQuery();
+        //private void Txtbuscar_TextChanged(object sender, EventArgs e)
+        //{
+        //    conexion.Open();
+        //    SqlCommand comando = conexion.CreateCommand();
+        //    comando.CommandType = CommandType.Text;
+        //    comando.CommandText = "Select * From VistaUsuario WHERE Nombre LIKE ('%" +Txtbuscar.Text +"%')";
+        //    comando.ExecuteNonQuery();
 
-            DataTable dt = new DataTable();
+        //    DataTable dt = new DataTable();
 
-            SqlDataAdapter da = new SqlDataAdapter(comando);
+        //    SqlDataAdapter da = new SqlDataAdapter(comando);
 
-            da.Fill(dt);
-            Vista_UsuariosDataGridView.DataSource = dt;
-            this.vista_UsuariosTableAdapter.Fill(_CATELSA_MULTICABLE.Vista_Usuarios);
-            conexion.Close();
-        }
+        //    da.Fill(dt);
+        //    Vista_UsuariosDataGridView.DataSource = dt;
+        //    this.vistaUsuarioTableAdapter .Fill(_CATELSA_MULTICABLE.VistaUsuario);
+        //    conexion.Close();
+        //}
 
         public void Vista_UsuariosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,6 +126,7 @@ namespace MultiBodega_v1
                 Mostrar.bodegaIDComboBox.Text = row.Cells[7].Value.ToString();
                 Mostrar.rolIDComboBox.Text = row.Cells[8].Value.ToString();
                 Mostrar.activoCheckBox.Text = row.Cells[9].Value.ToString();
+                this.Close();
                 Mostrar.ShowDialog();
             }
         }

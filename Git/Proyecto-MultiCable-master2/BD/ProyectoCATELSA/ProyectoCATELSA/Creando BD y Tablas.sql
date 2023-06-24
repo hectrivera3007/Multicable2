@@ -377,3 +377,18 @@ Create Table PermisosEncargadoBodega
 	Foreign Key (RolID) references Rol(RolID),
 	Foreign Key (BodegaID) references Bodega(BodegaID)
 );
+
+
+exec VistaUsuario
+Select * From Usuario
+Delete Usuario
+
+CREATE PROCEDURE dbo.VistaUsuario 
+AS BEGIN 
+SELECT dbo.Usuario.ID, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, 
+dbo.Usuario.Contrasena, dbo.Usuario.ConfirmarContrasena, dbo.Bodega.Nombre AS Bodega_Asignada, 
+dbo.Rol.RolName, dbo.Usuario.Activo 
+FROM dbo.Bodega 
+INNER JOIN dbo.Usuario ON dbo.Bodega.BodegaID = dbo.Usuario.BodegaID 
+INNER JOIN dbo.Rol ON dbo.Usuario.RolID = dbo.Rol.RolID 
+END

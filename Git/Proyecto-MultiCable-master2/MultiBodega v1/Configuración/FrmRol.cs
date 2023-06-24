@@ -137,7 +137,7 @@ namespace MultiBodega_v1
         }
         private void BtnActualizar_Click_1(object sender, EventArgs e)
         {
-            this.rolTableAdapter1.Modificar(@rolNameTextBox.Text,@activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
+            this.rolTableAdapter1.Modificar(@rolNameTextBox.Text, @activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
             this.rolTableAdapter1.Fill(_CATELSA_MULTICABLE.Rol);
             rolDataGridView.Refresh();
         }

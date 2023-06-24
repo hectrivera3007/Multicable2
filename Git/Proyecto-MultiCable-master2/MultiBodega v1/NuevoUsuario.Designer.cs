@@ -64,9 +64,9 @@ namespace MultiBodega_v1
             this.iDTextBox = new System.Windows.Forms.TextBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.vista_UsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vista_UsuariosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.Vista_UsuariosTableAdapter();
+            this.vistaUsuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter();
             this.numTelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.vistaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             confirmarContrasenaLabel = new System.Windows.Forms.Label();
             contrasenaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vista_UsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // confirmarContrasenaLabel
@@ -425,14 +425,9 @@ namespace MultiBodega_v1
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
-            // vista_UsuariosBindingSource
+            // vistaUsuarioTableAdapter
             // 
-            this.vista_UsuariosBindingSource.DataMember = "Vista_Usuarios";
-            this.vista_UsuariosBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // vista_UsuariosTableAdapter
-            // 
-            this.vista_UsuariosTableAdapter.ClearBeforeFill = true;
+            this.vistaUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // numTelefonoTextBox
             // 
@@ -441,6 +436,11 @@ namespace MultiBodega_v1
             this.numTelefonoTextBox.Name = "numTelefonoTextBox";
             this.numTelefonoTextBox.Size = new System.Drawing.Size(217, 23);
             this.numTelefonoTextBox.TabIndex = 3;
+            // 
+            // vistaUsuarioBindingSource
+            // 
+            this.vistaUsuarioBindingSource.DataMember = "VistaUsuario";
+            this.vistaUsuarioBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
             // NuevoUsuario
             // 
@@ -489,7 +489,7 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vista_UsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,8 +531,8 @@ namespace MultiBodega_v1
         public System.Windows.Forms.ComboBox rolIDComboBox;
         public System.Windows.Forms.CheckBox activoCheckBox;
         public System.Windows.Forms.TextBox iDTextBox;
-        private System.Windows.Forms.BindingSource vista_UsuariosBindingSource;
-        private _CATELSA_MULTICABLETableAdapters.Vista_UsuariosTableAdapter vista_UsuariosTableAdapter;
+        private _CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter vistaUsuarioTableAdapter;
         private System.Windows.Forms.MaskedTextBox numTelefonoTextBox;
+        private System.Windows.Forms.BindingSource vistaUsuarioBindingSource;
     }
 }

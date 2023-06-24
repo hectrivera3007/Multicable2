@@ -50,7 +50,7 @@ namespace MultiBodega_v1
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Vista_Usuarios' Puede moverla o quitarla según sea necesario.
-            this.vista_UsuariosTableAdapter.Fill(this._CATELSA_MULTICABLE.Vista_Usuarios);
+            this.vistaUsuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.VistaUsuario);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
             this.bodegaTableAdapter.Fill(this._CATELSA_MULTICABLE.Bodega);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Rol' Puede moverla o quitarla según sea necesario.
@@ -128,9 +128,9 @@ namespace MultiBodega_v1
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            this.usuarioTableAdapter.ActualizaRegistro(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
-            @contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex,
-            @bodegaIDComboBox.SelectedIndex, @activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
+            //this.usuarioTableAdapter.Modificar(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
+            //@contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex,
+            //@bodegaIDComboBox.SelectedIndex, @activoCheckBox.Checked);//Int32.Parse(@iDTextBox.Text));
             
         }
 
