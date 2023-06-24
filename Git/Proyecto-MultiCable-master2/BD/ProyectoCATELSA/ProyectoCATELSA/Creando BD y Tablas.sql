@@ -381,6 +381,8 @@ Create Table PermisosEncargadoBodega
 
 exec VistaUsuario
 Select * From Usuario
+Select * From Rol
+Select * From Bodega
 Delete Usuario
 
 CREATE PROCEDURE dbo.VistaUsuario 
@@ -392,3 +394,8 @@ FROM dbo.Bodega
 INNER JOIN dbo.Usuario ON dbo.Bodega.BodegaID = dbo.Usuario.BodegaID 
 INNER JOIN dbo.Rol ON dbo.Usuario.RolID = dbo.Rol.RolID 
 END
+
+
+UPDATE USUARIO  
+SET COLUM
+select * from Productos

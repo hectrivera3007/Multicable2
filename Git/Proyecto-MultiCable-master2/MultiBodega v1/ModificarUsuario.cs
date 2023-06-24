@@ -54,7 +54,6 @@ namespace MultiBodega_v1
             this.Validate();
             this.usuarioBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLE);
-
         }
 
         private void ModificarUsuario_Load(object sender, EventArgs e)
