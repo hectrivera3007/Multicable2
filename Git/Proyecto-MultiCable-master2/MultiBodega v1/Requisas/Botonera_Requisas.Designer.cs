@@ -48,7 +48,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnComprEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnComprEntrada.ForeColor = System.Drawing.Color.Navy;
             this.BtnComprEntrada.Image = ((System.Drawing.Image)(resources.GetObject("BtnComprEntrada.Image")));
-            this.BtnComprEntrada.Location = new System.Drawing.Point(55, 141);
+            this.BtnComprEntrada.Location = new System.Drawing.Point(89, 150);
             this.BtnComprEntrada.Name = "BtnComprEntrada";
             this.BtnComprEntrada.Size = new System.Drawing.Size(129, 115);
             this.BtnComprEntrada.TabIndex = 37;
@@ -65,9 +65,9 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnBuscSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscSalida.ForeColor = System.Drawing.Color.Navy;
             this.BtnBuscSalida.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscSalida.Image")));
-            this.BtnBuscSalida.Location = new System.Drawing.Point(55, 262);
+            this.BtnBuscSalida.Location = new System.Drawing.Point(551, 150);
             this.BtnBuscSalida.Name = "BtnBuscSalida";
-            this.BtnBuscSalida.Size = new System.Drawing.Size(103, 115);
+            this.BtnBuscSalida.Size = new System.Drawing.Size(129, 115);
             this.BtnBuscSalida.TabIndex = 36;
             this.BtnBuscSalida.Text = "Buscar Salida";
             this.BtnBuscSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -82,9 +82,9 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnBuscEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscEntrada.ForeColor = System.Drawing.Color.Navy;
             this.BtnBuscEntrada.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscEntrada.Image")));
-            this.BtnBuscEntrada.Location = new System.Drawing.Point(408, 141);
+            this.BtnBuscEntrada.Location = new System.Drawing.Point(442, 150);
             this.BtnBuscEntrada.Name = "BtnBuscEntrada";
-            this.BtnBuscEntrada.Size = new System.Drawing.Size(103, 115);
+            this.BtnBuscEntrada.Size = new System.Drawing.Size(129, 115);
             this.BtnBuscEntrada.TabIndex = 35;
             this.BtnBuscEntrada.Text = "Buscar Entrada";
             this.BtnBuscEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -99,9 +99,9 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnRegSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegSalida.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegSalida.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegSalida.Image")));
-            this.BtnRegSalida.Location = new System.Drawing.Point(299, 141);
+            this.BtnRegSalida.Location = new System.Drawing.Point(333, 150);
             this.BtnRegSalida.Name = "BtnRegSalida";
-            this.BtnRegSalida.Size = new System.Drawing.Size(103, 115);
+            this.BtnRegSalida.Size = new System.Drawing.Size(129, 115);
             this.BtnRegSalida.TabIndex = 34;
             this.BtnRegSalida.Text = "Registro de Salida";
             this.BtnRegSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -116,9 +116,9 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnRegEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegEntrada.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegEntrada.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegEntrada.Image")));
-            this.BtnRegEntrada.Location = new System.Drawing.Point(190, 141);
+            this.BtnRegEntrada.Location = new System.Drawing.Point(224, 150);
             this.BtnRegEntrada.Name = "BtnRegEntrada";
-            this.BtnRegEntrada.Size = new System.Drawing.Size(103, 115);
+            this.BtnRegEntrada.Size = new System.Drawing.Size(129, 115);
             this.BtnRegEntrada.TabIndex = 33;
             this.BtnRegEntrada.Text = "Registro de Entrada";
             this.BtnRegEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -129,7 +129,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
-            this.pictureBox1.Location = new System.Drawing.Point(179, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(257, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +145,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(437, 364);
+            this.BtnRegresar.Location = new System.Drawing.Point(621, 364);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 4;
@@ -160,7 +160,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(585, 415);
+            this.ClientSize = new System.Drawing.Size(769, 415);
             this.Controls.Add(this.BtnComprEntrada);
             this.Controls.Add(this.BtnBuscSalida);
             this.Controls.Add(this.BtnBuscEntrada);

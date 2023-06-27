@@ -21,7 +21,8 @@ namespace MultiBodega_v1.Botonera
         private void BtnNuevoProducto_Click(object sender, EventArgs e)
         {
             var producto = new FrmIngresarProducto();
-            producto.ShowDialog(this);
+            producto.Show();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -30,36 +31,40 @@ namespace MultiBodega_v1.Botonera
             opcion = MessageBox.Show("¿Estás seguro de volver a la vista principal?", "Aviso del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (opcion == DialogResult.Yes)
             {
-                this.Close();
                 Botonera_APP nuevo = new Botonera_APP();
-                nuevo.ShowDialog();
+                nuevo.Show();
+                this.Close();
             }
         }
 
         private void BtnModificarProd_Click(object sender, EventArgs e)
         {
             var modificar_producto = new FrmIngresarProducto();
-            modificar_producto.ShowDialog(this);
+            modificar_producto.Show();
+            this.Close();
 
         }
 
         private void BtnInventarioFinal_Click(object sender, EventArgs e)
         {
             var muestra_inventario = new FrmInventarioGeneral();
-            muestra_inventario.ShowDialog(this);
+            muestra_inventario.Show();
+            this.Close();
 
         }
 
         private void BtnAjusteInventario_Click(object sender, EventArgs e)
         {
             var ajuste_inventario = new AjusteInventario();
-            ajuste_inventario.ShowDialog(this);
+            ajuste_inventario.Show();
+            this.Close();
         }
 
         private void BtnInventXbodega_Click(object sender, EventArgs e)
         {
             var ReporteBodega = new FrmReporteBodegas();
-            ReporteBodega.ShowDialog(this);
+            ReporteBodega.Show();
+            this.Close();
         }
 
         

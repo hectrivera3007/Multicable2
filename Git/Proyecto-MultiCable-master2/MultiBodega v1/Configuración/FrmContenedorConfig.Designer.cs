@@ -75,7 +75,7 @@ namespace MultiBodega_v1.Configuración
             this.BtnRol.ForeColor = System.Drawing.Color.Navy;
             this.BtnRol.Image = ((System.Drawing.Image)(resources.GetObject("BtnRol.Image")));
             this.BtnRol.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRol.Location = new System.Drawing.Point(289, 107);
+            this.BtnRol.Location = new System.Drawing.Point(287, 107);
             this.BtnRol.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRol.Name = "BtnRol";
             this.BtnRol.Size = new System.Drawing.Size(172, 116);
@@ -96,10 +96,10 @@ namespace MultiBodega_v1.Configuración
             this.BtnConf.ForeColor = System.Drawing.Color.Navy;
             this.BtnConf.Image = ((System.Drawing.Image)(resources.GetObject("BtnConf.Image")));
             this.BtnConf.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnConf.Location = new System.Drawing.Point(145, 107);
+            this.BtnConf.Location = new System.Drawing.Point(115, 107);
             this.BtnConf.Margin = new System.Windows.Forms.Padding(5);
             this.BtnConf.Name = "BtnConf";
-            this.BtnConf.Size = new System.Drawing.Size(141, 116);
+            this.BtnConf.Size = new System.Drawing.Size(172, 116);
             this.BtnConf.TabIndex = 69;
             this.BtnConf.Text = "Configuración";
             this.BtnConf.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

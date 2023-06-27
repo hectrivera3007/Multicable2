@@ -396,6 +396,26 @@ INNER JOIN dbo.Rol ON dbo.Usuario.RolID = dbo.Rol.RolID
 END
 
 
-UPDATE USUARIO  
-SET COLUM
-select * from Productos
+
+UPDATE Productos SET Codigo = CONCAT(TipoMaterial, '-', REPLICATE('0', 4 - LEN(IDProducto)), IDProducto);
+
+
+Select * From Productos
+
+
+ CREATE PROCEDURE BuscarU
+ @nombre nvarchar(50) 
+ AS
+ BEGIN
+ SELECT dbo.Usuario.ID, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, dbo.Usuario.Contrasena,
+ dbo.Usuario.ConfirmarContrasena, dbo.Bodega.Nombre AS Bodega_Asignada, dbo.Rol.RolName, dbo.Usuario.Activo
+ FROM dbo.Bodega
+ INNER JOIN dbo.Usuario ON dbo.Bodega.BodegaID = dbo.Usuario.BodegaID
+ INNER JOIN dbo.Rol ON dbo.Usuario.RolID = dbo.Rol.RolID
+ WHERE dbo.Usuario.Nombre LIKE '%' + @nombre + '%' END
+
+
+
+ exec VistaUsuario
+
+

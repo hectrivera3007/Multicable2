@@ -22,44 +22,44 @@ namespace MultiBodega_v1.Registro
 
         private void BtnListar_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmListar nuevoform = new FrmListar();
             nuevoform.Show();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             Botonera_APP Volver = new Botonera_APP();
             Volver.Show();
+            this.Close();
         }
 
         private void BtnRP_Click(object sender, EventArgs e)
         {
-            this.Close();
             var nuevoproveedor = new FrmRegistrarProveedores();
             nuevoproveedor.Show();
+            this.Close();
         }
 
         private void BtnRT_Click(object sender, EventArgs e)
         {
-            this.Close();
             var nuevotec = new FrmRegistrarTecnico();
             nuevotec.Show();
+            this.Close();
         }
 
         private void BtnRBF_Click(object sender, EventArgs e)
         {
-            this.Close();
             var nuevoBasef = new FrmRegistrarBaseForanea();
             nuevoBasef.Show();
+            this.Close();
         }
 
         private void BtnRPV_Click(object sender, EventArgs e)
         {
-            this.Close();
             var nuevoPV = new FrmRegistrarPuntodeVenta();
             nuevoPV.Show();
+            this.Close();
         }
     }
 }

@@ -15,15 +15,13 @@ namespace MultiBodega_v1.Botonera
         public FrmPantallaPrincipal()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-
         }
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             var Botonera = new LoginBodega();
-            Botonera.ShowDialog();
-            BtnEntrar.Visible = false;
+            Botonera.Show();
+            //BtnEntrar.Visible = false;
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)

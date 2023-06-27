@@ -19,9 +19,9 @@ namespace MultiBodega_v1.Compras
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmContCompras Volver = new FrmContCompras();
             Volver.Show();
+            this.Close();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

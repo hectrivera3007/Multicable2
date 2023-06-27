@@ -38,9 +38,9 @@ namespace MultiBodega_v1
             System.Windows.Forms.Label nombreUsuarioLabel;
             System.Windows.Forms.Label numTelefonoLabel;
             System.Windows.Forms.Label rolIDLabel;
+            System.Windows.Forms.Label fechaActivacionLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarUsuario));
             this.iDTextBox = new System.Windows.Forms.TextBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.rolIDComboBox = new System.Windows.Forms.ComboBox();
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,13 +58,13 @@ namespace MultiBodega_v1
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.ckConfirmarContra = new System.Windows.Forms.CheckBox();
-            this.BtnGuardar = new System.Windows.Forms.Button();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
             this.rolTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RolTableAdapter();
             this.numTelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.fechaActivacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             iDLabel = new System.Windows.Forms.Label();
             nombreLabel1 = new System.Windows.Forms.Label();
             confirmarContrasenaLabel = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@ namespace MultiBodega_v1
             nombreUsuarioLabel = new System.Windows.Forms.Label();
             numTelefonoLabel = new System.Windows.Forms.Label();
             rolIDLabel = new System.Windows.Forms.Label();
+            fechaActivacionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
@@ -84,7 +85,7 @@ namespace MultiBodega_v1
             // 
             iDLabel.AutoSize = true;
             iDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iDLabel.Location = new System.Drawing.Point(26, 123);
+            iDLabel.Location = new System.Drawing.Point(22, 136);
             iDLabel.Name = "iDLabel";
             iDLabel.Size = new System.Drawing.Size(25, 16);
             iDLabel.TabIndex = 131;
@@ -94,7 +95,7 @@ namespace MultiBodega_v1
             // 
             nombreLabel1.AutoSize = true;
             nombreLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel1.Location = new System.Drawing.Point(295, 214);
+            nombreLabel1.Location = new System.Drawing.Point(332, 293);
             nombreLabel1.Name = "nombreLabel1";
             nombreLabel1.Size = new System.Drawing.Size(131, 16);
             nombreLabel1.TabIndex = 128;
@@ -104,7 +105,7 @@ namespace MultiBodega_v1
             // 
             confirmarContrasenaLabel.AutoSize = true;
             confirmarContrasenaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            confirmarContrasenaLabel.Location = new System.Drawing.Point(26, 352);
+            confirmarContrasenaLabel.Location = new System.Drawing.Point(22, 291);
             confirmarContrasenaLabel.Name = "confirmarContrasenaLabel";
             confirmarContrasenaLabel.Size = new System.Drawing.Size(156, 16);
             confirmarContrasenaLabel.TabIndex = 122;
@@ -114,7 +115,7 @@ namespace MultiBodega_v1
             // 
             contrasenaLabel.AutoSize = true;
             contrasenaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contrasenaLabel.Location = new System.Drawing.Point(26, 307);
+            contrasenaLabel.Location = new System.Drawing.Point(22, 246);
             contrasenaLabel.Name = "contrasenaLabel";
             contrasenaLabel.Size = new System.Drawing.Size(87, 16);
             contrasenaLabel.TabIndex = 123;
@@ -124,7 +125,7 @@ namespace MultiBodega_v1
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(26, 169);
+            nombreLabel.Location = new System.Drawing.Point(100, 136);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(64, 16);
             nombreLabel.TabIndex = 124;
@@ -134,7 +135,7 @@ namespace MultiBodega_v1
             // 
             nombreUsuarioLabel.AutoSize = true;
             nombreUsuarioLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreUsuarioLabel.Location = new System.Drawing.Point(26, 214);
+            nombreUsuarioLabel.Location = new System.Drawing.Point(22, 201);
             nombreUsuarioLabel.Name = "nombreUsuarioLabel";
             nombreUsuarioLabel.Size = new System.Drawing.Size(116, 16);
             nombreUsuarioLabel.TabIndex = 125;
@@ -144,7 +145,7 @@ namespace MultiBodega_v1
             // 
             numTelefonoLabel.AutoSize = true;
             numTelefonoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numTelefonoLabel.Location = new System.Drawing.Point(26, 262);
+            numTelefonoLabel.Location = new System.Drawing.Point(332, 201);
             numTelefonoLabel.Name = "numTelefonoLabel";
             numTelefonoLabel.Size = new System.Drawing.Size(142, 16);
             numTelefonoLabel.TabIndex = 126;
@@ -154,34 +155,29 @@ namespace MultiBodega_v1
             // 
             rolIDLabel.AutoSize = true;
             rolIDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rolIDLabel.Location = new System.Drawing.Point(295, 169);
+            rolIDLabel.Location = new System.Drawing.Point(332, 246);
             rolIDLabel.Name = "rolIDLabel";
             rolIDLabel.Size = new System.Drawing.Size(32, 16);
             rolIDLabel.TabIndex = 127;
             rolIDLabel.Text = "Rol:";
             // 
+            // fechaActivacionLabel
+            // 
+            fechaActivacionLabel.AutoSize = true;
+            fechaActivacionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaActivacionLabel.Location = new System.Drawing.Point(332, 136);
+            fechaActivacionLabel.Name = "fechaActivacionLabel";
+            fechaActivacionLabel.Size = new System.Drawing.Size(125, 16);
+            fechaActivacionLabel.TabIndex = 133;
+            fechaActivacionLabel.Text = "Fecha Activacion:";
+            // 
             // iDTextBox
             // 
-            this.iDTextBox.Location = new System.Drawing.Point(26, 143);
+            this.iDTextBox.Location = new System.Drawing.Point(22, 156);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.ReadOnly = true;
             this.iDTextBox.Size = new System.Drawing.Size(64, 23);
             this.iDTextBox.TabIndex = 0;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::MultiBodega_v1.Properties.Resources.agregar_usuario__2_;
-            this.btnNuevo.Location = new System.Drawing.Point(361, 349);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(55, 45);
-            this.btnNuevo.TabIndex = 11;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
@@ -190,7 +186,7 @@ namespace MultiBodega_v1
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::MultiBodega_v1.Properties.Resources.eliminar1;
-            this.btnEliminar.Location = new System.Drawing.Point(535, 349);
+            this.btnEliminar.Location = new System.Drawing.Point(300, 363);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(55, 45);
             this.btnEliminar.TabIndex = 14;
@@ -204,18 +200,16 @@ namespace MultiBodega_v1
             this.rolIDComboBox.DataSource = this.rolBindingSource;
             this.rolIDComboBox.DisplayMember = "RolName";
             this.rolIDComboBox.FormattingEnabled = true;
-            this.rolIDComboBox.Location = new System.Drawing.Point(295, 188);
+            this.rolIDComboBox.Location = new System.Drawing.Point(332, 265);
             this.rolIDComboBox.Name = "rolIDComboBox";
-            this.rolIDComboBox.Size = new System.Drawing.Size(222, 25);
+            this.rolIDComboBox.Size = new System.Drawing.Size(189, 25);
             this.rolIDComboBox.TabIndex = 8;
             this.rolIDComboBox.ValueMember = "RolID";
-
             // 
             // rolBindingSource
             // 
             this.rolBindingSource.DataMember = "Rol";
             this.rolBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            
             // 
             // _CATELSA_MULTICABLE
             // 
@@ -230,11 +224,12 @@ namespace MultiBodega_v1
             this.ckContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ckContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckContraseña.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
-            this.ckContraseña.Location = new System.Drawing.Point(248, 326);
+            this.ckContraseña.Location = new System.Drawing.Point(285, 265);
             this.ckContraseña.Name = "ckContraseña";
             this.ckContraseña.Size = new System.Drawing.Size(32, 23);
             this.ckContraseña.TabIndex = 5;
             this.ckContraseña.UseVisualStyleBackColor = true;
+            this.ckContraseña.CheckedChanged += new System.EventHandler(this.ckContraseña_CheckedChanged);
             // 
             // bodegaIDComboBox
             // 
@@ -242,9 +237,9 @@ namespace MultiBodega_v1
             this.bodegaIDComboBox.DataSource = this.bodegaBindingSource;
             this.bodegaIDComboBox.DisplayMember = "Nombre";
             this.bodegaIDComboBox.FormattingEnabled = true;
-            this.bodegaIDComboBox.Location = new System.Drawing.Point(295, 233);
+            this.bodegaIDComboBox.Location = new System.Drawing.Point(332, 312);
             this.bodegaIDComboBox.Name = "bodegaIDComboBox";
-            this.bodegaIDComboBox.Size = new System.Drawing.Size(222, 25);
+            this.bodegaIDComboBox.Size = new System.Drawing.Size(189, 25);
             this.bodegaIDComboBox.TabIndex = 9;
             this.bodegaIDComboBox.ValueMember = "BodegaID";
             // 
@@ -255,42 +250,45 @@ namespace MultiBodega_v1
             // 
             // activoCheckBox
             // 
+            this.activoCheckBox.Checked = true;
+            this.activoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheckBox.Location = new System.Drawing.Point(522, 233);
+            this.activoCheckBox.Location = new System.Drawing.Point(530, 312);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(68, 24);
             this.activoCheckBox.TabIndex = 10;
             this.activoCheckBox.Text = "Activo";
             this.activoCheckBox.UseVisualStyleBackColor = true;
+            this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged);
             // 
             // confirmarContrasenaTextBox
             // 
-            this.confirmarContrasenaTextBox.Location = new System.Drawing.Point(26, 371);
+            this.confirmarContrasenaTextBox.Location = new System.Drawing.Point(22, 310);
             this.confirmarContrasenaTextBox.Name = "confirmarContrasenaTextBox";
-            this.confirmarContrasenaTextBox.Size = new System.Drawing.Size(217, 23);
+            this.confirmarContrasenaTextBox.Size = new System.Drawing.Size(254, 23);
             this.confirmarContrasenaTextBox.TabIndex = 6;
             this.confirmarContrasenaTextBox.UseSystemPasswordChar = true;
             // 
             // contrasenaTextBox
             // 
-            this.contrasenaTextBox.Location = new System.Drawing.Point(26, 326);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(22, 265);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
-            this.contrasenaTextBox.Size = new System.Drawing.Size(217, 23);
+            this.contrasenaTextBox.Size = new System.Drawing.Size(254, 23);
             this.contrasenaTextBox.TabIndex = 4;
             this.contrasenaTextBox.UseSystemPasswordChar = true;
             // 
             // nombreTextBox
             // 
-            this.nombreTextBox.Location = new System.Drawing.Point(26, 188);
+            this.nombreTextBox.Location = new System.Drawing.Point(100, 156);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(217, 23);
             this.nombreTextBox.TabIndex = 1;
             // 
             // nombreUsuarioTextBox
             // 
-            this.nombreUsuarioTextBox.Location = new System.Drawing.Point(26, 233);
+            this.nombreUsuarioTextBox.Location = new System.Drawing.Point(22, 220);
             this.nombreUsuarioTextBox.Name = "nombreUsuarioTextBox";
-            this.nombreUsuarioTextBox.Size = new System.Drawing.Size(217, 23);
+            this.nombreUsuarioTextBox.Size = new System.Drawing.Size(254, 23);
             this.nombreUsuarioTextBox.TabIndex = 2;
             // 
             // pictureBox1
@@ -322,7 +320,7 @@ namespace MultiBodega_v1
             this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.Image = global::MultiBodega_v1.Properties.Resources.actualizar1;
-            this.BtnModificar.Location = new System.Drawing.Point(477, 349);
+            this.BtnModificar.Location = new System.Drawing.Point(242, 363);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(55, 45);
             this.BtnModificar.TabIndex = 13;
@@ -338,7 +336,7 @@ namespace MultiBodega_v1
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(454, 410);
+            this.BtnRegresar.Location = new System.Drawing.Point(472, 374);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 15;
@@ -355,27 +353,12 @@ namespace MultiBodega_v1
             this.ckConfirmarContra.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ckConfirmarContra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckConfirmarContra.Image = global::MultiBodega_v1.Properties.Resources.mostrar;
-            this.ckConfirmarContra.Location = new System.Drawing.Point(248, 373);
+            this.ckConfirmarContra.Location = new System.Drawing.Point(285, 310);
             this.ckConfirmarContra.Name = "ckConfirmarContra";
             this.ckConfirmarContra.Size = new System.Drawing.Size(32, 23);
             this.ckConfirmarContra.TabIndex = 7;
             this.ckConfirmarContra.UseVisualStyleBackColor = true;
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnGuardar.FlatAppearance.BorderSize = 0;
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Image = global::MultiBodega_v1.Properties.Resources.Guardar_32x32;
-            this.BtnGuardar.Location = new System.Drawing.Point(419, 349);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(55, 45);
-            this.BtnGuardar.TabIndex = 12;
-            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.ckConfirmarContra.CheckedChanged += new System.EventHandler(this.ckConfirmarContra_CheckedChanged);
             // 
             // usuarioBindingSource
             // 
@@ -424,22 +407,33 @@ namespace MultiBodega_v1
             // 
             // numTelefonoTextBox
             // 
-            this.numTelefonoTextBox.Location = new System.Drawing.Point(29, 281);
+            this.numTelefonoTextBox.Location = new System.Drawing.Point(332, 220);
             this.numTelefonoTextBox.Mask = "0000-0000";
             this.numTelefonoTextBox.Name = "numTelefonoTextBox";
-            this.numTelefonoTextBox.Size = new System.Drawing.Size(217, 23);
+            this.numTelefonoTextBox.Size = new System.Drawing.Size(189, 23);
             this.numTelefonoTextBox.TabIndex = 3;
+            // 
+            // fechaActivacionDateTimePicker
+            // 
+            this.fechaActivacionDateTimePicker.CustomFormat = "26/6/2023";
+            this.fechaActivacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaActivacionDateTimePicker.Location = new System.Drawing.Point(332, 156);
+            this.fechaActivacionDateTimePicker.Name = "fechaActivacionDateTimePicker";
+            this.fechaActivacionDateTimePicker.Size = new System.Drawing.Size(189, 23);
+            this.fechaActivacionDateTimePicker.TabIndex = 132;
+            this.fechaActivacionDateTimePicker.Value = new System.DateTime(2023, 6, 26, 0, 0, 0, 0);
             // 
             // ModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 469);
+            this.ClientSize = new System.Drawing.Size(620, 425);
             this.ControlBox = false;
+            this.Controls.Add(fechaActivacionLabel);
+            this.Controls.Add(this.fechaActivacionDateTimePicker);
             this.Controls.Add(this.numTelefonoTextBox);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.rolIDComboBox);
             this.Controls.Add(this.ckContraseña);
@@ -461,7 +455,6 @@ namespace MultiBodega_v1
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.ckConfirmarContra);
-            this.Controls.Add(this.BtnGuardar);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -469,7 +462,7 @@ namespace MultiBodega_v1
             this.MinimizeBox = false;
             this.Name = "ModificarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Usuario";
+            this.Text = "Realizar Cambios a Registro de Usuario";
             this.Load += new System.EventHandler(this.ModificarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
@@ -484,7 +477,6 @@ namespace MultiBodega_v1
         #endregion
 
         public System.Windows.Forms.TextBox iDTextBox;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.ComboBox rolIDComboBox;
         private System.Windows.Forms.CheckBox ckContraseña;
@@ -499,7 +491,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.CheckBox ckConfirmarContra;
-        private System.Windows.Forms.Button BtnGuardar;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private _CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
@@ -509,5 +500,6 @@ namespace MultiBodega_v1
         private _CATELSA_MULTICABLETableAdapters.BodegaTableAdapter bodegaTableAdapter;
         private System.Windows.Forms.BindingSource bodegaBindingSource;
         public System.Windows.Forms.MaskedTextBox numTelefonoTextBox;
+        public System.Windows.Forms.DateTimePicker fechaActivacionDateTimePicker;
     }
 }

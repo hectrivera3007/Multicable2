@@ -23,46 +23,51 @@ namespace MultiBodega_v1.Reportes
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             Botonera_APP Volver = new Botonera_APP();
             Volver.Show();
+            this.Close();
         }
 
         private void BtnReportesBodegas_Click(object sender, EventArgs e)
         {
             var ReporteBodegas = new FrmReporteBodegas();
             ReporteBodegas.Show();
+            this.Close();
         }
 
         private void BtnStockMinimo_Click(object sender, EventArgs e)
         {
             var BajosMinimos= new FrmBajosMinimos();
             BajosMinimos.Show();
+            this.Close();
         }
 
         private void BtnReporteEntradas_Click(object sender, EventArgs e)
         {
             var ReporteDetalladoEntradas = new FrmReporteDetalladoEntradas();
             ReporteDetalladoEntradas.Show();
+            this.Close();
         }
 
         private void BtnReporteSalidas_Click(object sender, EventArgs e)
         {
             var ReporteDetalladoSalidas = new FrmReporteDetalladoSalidas();
             ReporteDetalladoSalidas.Show();
+            this.Close();
         }
 
         private void BtnDevoluciones_Click(object sender, EventArgs e)
         {
             var Devoluciones = new FrmDevoluciones();
             Devoluciones.Show();
+            this.Close();
         }
 
         private void BtnListar_Click(object sender, EventArgs e)
         {
-            this.Close();
             var Listar = new FrmListar();
             Listar.Show();
+            this.Close();
         }
     }
 }

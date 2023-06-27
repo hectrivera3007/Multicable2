@@ -255,7 +255,6 @@ namespace MultiBodega_v1.Botonera
             this.Name = "Botonera_APP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Botonera_APP_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -20,23 +20,23 @@ namespace MultiBodega_v1
 
         private void BtnAgUsuario_Click(object sender, EventArgs e)
         {
-            this.Close();
             NuevoUsuario nuevoU = new NuevoUsuario();
             nuevoU.Show();
+            this.Close();
         }
 
         private void BtnVUsuario_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        { 
             FrmUsuarios nuevoVer = new FrmUsuarios();
             nuevoVer.Show();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             Botonera_APP Volver = new Botonera_APP();
             Volver.Show();
+            this.Close();
         }
     }
 }

@@ -76,12 +76,12 @@ namespace MultiBodega_v1
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.VistaUsuario' Puede moverla o quitarla según sea necesario.
             this.vistaUsuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.VistaUsuario);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
-            //this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
-            //string consulta = "SELECT * FROM VistaUsuario";
-            //SqlDataAdapter adaptador = new SqlDataAdapter(consulta,conexion);
-            //DataTable dt = new DataTable();
-            //adaptador.Fill(dt);
-            //Vista_UsuariosDataGridView.DataSource = dt;
+            this.usuarioTableAdapter1.Fill(this._CATELSA_MULTICABLE.Usuario);
+            string consulta = "Exec VistaUsuario";
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            VistaUsuariosDataGridView.DataSource = dt;
         }
 
 
@@ -92,48 +92,52 @@ namespace MultiBodega_v1
             Volver.Show();
         }
 
-        //private void Txtbuscar_TextChanged(object sender, EventArgs e)
-        //{
-        //    conexion.Open();
-        //    SqlCommand comando = conexion.CreateCommand();
-        //    comando.CommandType = CommandType.Text;
-        //    comando.CommandText = "Select * From VistaUsuario WHERE Nombre LIKE ('%" +Txtbuscar.Text +"%')";
-        //    comando.ExecuteNonQuery();
-
-        //    DataTable dt = new DataTable();
-
-        //    SqlDataAdapter da = new SqlDataAdapter(comando);
-
-        //    da.Fill(dt);
-        //    Vista_UsuariosDataGridView.DataSource = dt;
-        //    this.vistaUsuarioTableAdapter .Fill(_CATELSA_MULTICABLE.VistaUsuario);
-        //    conexion.Close();
-        //}
-
         public void Vista_UsuariosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0 && e.RowIndex != -1)
             {
                 //Mostrar el formulario de tu elección
-                DataGridViewRow row = Vista_UsuariosDataGridView.CurrentRow;
+                DataGridViewRow row = VistaUsuariosDataGridView.CurrentRow;
                 ModificarUsuario Mostrar = new ModificarUsuario(); 
                 Mostrar.iDTextBox.Text = row.Cells[1].Value.ToString();
-                Mostrar.nombreTextBox.Text = row.Cells[2].Value.ToString();
-                Mostrar.nombreUsuarioTextBox.Text = row.Cells[3].Value.ToString();
-                Mostrar.numTelefonoTextBox.Text = row.Cells[4].Value.ToString();
-                Mostrar.contrasenaTextBox.Text= row.Cells[5].Value.ToString();
-                Mostrar.confirmarContrasenaTextBox.Text = row.Cells[6].Value.ToString();
-                Mostrar.bodegaIDComboBox.Text = row.Cells[7].Value.ToString();
-                Mostrar.rolIDComboBox.Text = row.Cells[8].Value.ToString();
-                Mostrar.activoCheckBox.Text = row.Cells[9].Value.ToString();
+                Mostrar.fechaActivacionDateTimePicker.Text = row.Cells[2].Value.ToString();
+                Mostrar.nombreTextBox.Text = row.Cells[3].Value.ToString();
+                Mostrar.nombreUsuarioTextBox.Text = row.Cells[4].Value.ToString();
+                Mostrar.numTelefonoTextBox.Text = row.Cells[5].Value.ToString();
+                Mostrar.contrasenaTextBox.Text= row.Cells[6].Value.ToString();
+                Mostrar.confirmarContrasenaTextBox.Text = row.Cells[7].Value.ToString();
+                Mostrar.bodegaIDComboBox.Text = row.Cells[8].Value.ToString();
+                Mostrar.rolIDComboBox.Text = row.Cells[9].Value.ToString();
+                Mostrar.activoCheckBox.Text = row.Cells[10].Value.ToString();
                 this.Close();
                 Mostrar.ShowDialog();
             }
         }
-
+        
         private void BtnActualizarGrid_Click(object sender, EventArgs e)
         {
-            Vista_UsuariosDataGridView.Refresh();
+            VistaUsuariosDataGridView.Refresh();
+        }
+
+        private void BuscarU(string nombre)
+        {
+            nombre = TextoBuscar.Text;
+            SqlConnection connection = new SqlConnection(ConexionString);
+            SqlCommand command = new SqlCommand("BuscarU", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Nombre", nombre);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            VistaUsuariosDataGridView.DataSource = dataTable;
+            VistaUsuariosDataGridView.Refresh();
+        }
+
+
+        private void TextoBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarU(TextoBuscar.Text);
+            
         }
     }
 }

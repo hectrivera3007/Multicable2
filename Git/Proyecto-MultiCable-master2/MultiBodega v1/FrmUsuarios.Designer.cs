@@ -32,14 +32,21 @@ namespace MultiBodega_v1
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
-            this.Txtbuscar = new System.Windows.Forms.TextBox();
+            this.TextoBuscar = new System.Windows.Forms.TextBox();
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.label2 = new System.Windows.Forms.Label();
             this.usuarioTableAdapter1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.Vista_UsuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.VistaUsuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.vistaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BtnActualizarGrid = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vistaUsuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter();
             this.BtnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaActivacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,15 +55,9 @@ namespace MultiBodega_v1
             this.bodegaAsignadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.vistaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BtnActualizarGrid = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vistaUsuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vista_UsuariosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VistaUsuariosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
@@ -73,13 +74,14 @@ namespace MultiBodega_v1
             label1.TabIndex = 71;
             label1.Text = "Buscar Usuario:";
             // 
-            // Txtbuscar
+            // TextoBuscar
             // 
-            this.Txtbuscar.Location = new System.Drawing.Point(13, 132);
-            this.Txtbuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.Txtbuscar.Name = "Txtbuscar";
-            this.Txtbuscar.Size = new System.Drawing.Size(453, 23);
-            this.Txtbuscar.TabIndex = 0;
+            this.TextoBuscar.Location = new System.Drawing.Point(13, 132);
+            this.TextoBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.TextoBuscar.Name = "TextoBuscar";
+            this.TextoBuscar.Size = new System.Drawing.Size(453, 23);
+            this.TextoBuscar.TabIndex = 0;
+            this.TextoBuscar.TextChanged += new System.EventHandler(this.TextoBuscar_TextChanged);
             // 
             // _CATELSA_MULTICABLE
             // 
@@ -131,14 +133,15 @@ namespace MultiBodega_v1
             this.tableAdapterManager1.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.UsuarioTableAdapter = null;
             // 
-            // Vista_UsuariosDataGridView
+            // VistaUsuariosDataGridView
             // 
-            this.Vista_UsuariosDataGridView.AutoGenerateColumns = false;
-            this.Vista_UsuariosDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Vista_UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Vista_UsuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VistaUsuariosDataGridView.AutoGenerateColumns = false;
+            this.VistaUsuariosDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.VistaUsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VistaUsuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BtnSeleccionar,
             this.dataGridViewTextBoxColumn1,
+            this.FechaActivacion,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
@@ -147,86 +150,14 @@ namespace MultiBodega_v1
             this.bodegaAsignadaDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewCheckBoxColumn1});
-            this.Vista_UsuariosDataGridView.DataSource = this.vistaUsuarioBindingSource;
-            this.Vista_UsuariosDataGridView.Location = new System.Drawing.Point(-2, 162);
-            this.Vista_UsuariosDataGridView.Name = "Vista_UsuariosDataGridView";
-            this.Vista_UsuariosDataGridView.ReadOnly = true;
-            this.Vista_UsuariosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Vista_UsuariosDataGridView.Size = new System.Drawing.Size(897, 220);
-            this.Vista_UsuariosDataGridView.TabIndex = 71;
-            this.Vista_UsuariosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Vista_UsuariosDataGridView_CellContentClick_1);
-            // 
-            // BtnSeleccionar
-            // 
-            this.BtnSeleccionar.HeaderText = "";
-            this.BtnSeleccionar.Name = "BtnSeleccionar";
-            this.BtnSeleccionar.ReadOnly = true;
-            this.BtnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BtnSeleccionar.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NombreUsuario";
-            this.dataGridViewTextBoxColumn5.HeaderText = "NombreUsuario";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "NumTelefono";
-            this.dataGridViewTextBoxColumn6.HeaderText = "NumTelefono";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Contrasena";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ConfirmarContrasena";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ConfirmarContrasena";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // bodegaAsignadaDataGridViewTextBoxColumn
-            // 
-            this.bodegaAsignadaDataGridViewTextBoxColumn.DataPropertyName = "Bodega_Asignada";
-            this.bodegaAsignadaDataGridViewTextBoxColumn.HeaderText = "Bodega_Asignada";
-            this.bodegaAsignadaDataGridViewTextBoxColumn.Name = "bodegaAsignadaDataGridViewTextBoxColumn";
-            this.bodegaAsignadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "RolName";
-            this.dataGridViewTextBoxColumn9.HeaderText = "RolName";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.VistaUsuariosDataGridView.DataSource = this.vistaUsuarioBindingSource;
+            this.VistaUsuariosDataGridView.Location = new System.Drawing.Point(-2, 162);
+            this.VistaUsuariosDataGridView.Name = "VistaUsuariosDataGridView";
+            this.VistaUsuariosDataGridView.ReadOnly = true;
+            this.VistaUsuariosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.VistaUsuariosDataGridView.Size = new System.Drawing.Size(897, 220);
+            this.VistaUsuariosDataGridView.TabIndex = 71;
+            this.VistaUsuariosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Vista_UsuariosDataGridView_CellContentClick_1);
             // 
             // vistaUsuarioBindingSource
             // 
@@ -282,6 +213,95 @@ namespace MultiBodega_v1
             // 
             this.vistaUsuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // BtnSeleccionar
+            // 
+            this.BtnSeleccionar.HeaderText = "";
+            this.BtnSeleccionar.Name = "BtnSeleccionar";
+            this.BtnSeleccionar.ReadOnly = true;
+            this.BtnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BtnSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BtnSeleccionar.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // FechaActivacion
+            // 
+            this.FechaActivacion.DataPropertyName = "FechaActivacion";
+            this.FechaActivacion.HeaderText = "Fecha de Activacion";
+            this.FechaActivacion.Name = "FechaActivacion";
+            this.FechaActivacion.ReadOnly = true;
+            this.FechaActivacion.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NombreUsuario";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nombre de Usuario";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "NumTelefono";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Número de Teléfono";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Contraseña";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ConfirmarContrasena";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Confirmar Contraseña";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 170;
+            // 
+            // bodegaAsignadaDataGridViewTextBoxColumn
+            // 
+            this.bodegaAsignadaDataGridViewTextBoxColumn.DataPropertyName = "Bodega_Asignada";
+            this.bodegaAsignadaDataGridViewTextBoxColumn.HeaderText = "Bodega Asignada";
+            this.bodegaAsignadaDataGridViewTextBoxColumn.Name = "bodegaAsignadaDataGridViewTextBoxColumn";
+            this.bodegaAsignadaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bodegaAsignadaDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "RolName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nombre de Rol";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 190;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 150;
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -289,11 +309,11 @@ namespace MultiBodega_v1
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(915, 456);
             this.Controls.Add(this.BtnActualizarGrid);
-            this.Controls.Add(this.Vista_UsuariosDataGridView);
+            this.Controls.Add(this.VistaUsuariosDataGridView);
             this.Controls.Add(label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.Txtbuscar);
+            this.Controls.Add(this.TextoBuscar);
             this.Controls.Add(this.BtnRegresar);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -305,7 +325,7 @@ namespace MultiBodega_v1
             this.Text = "Usuarios del Sistema";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Vista_UsuariosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VistaUsuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
@@ -315,7 +335,7 @@ namespace MultiBodega_v1
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Txtbuscar;
+        private System.Windows.Forms.TextBox TextoBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn rolIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.Label label2;
@@ -337,10 +357,12 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button BtnActualizarGrid;
-        private System.Windows.Forms.DataGridViewButtonColumn BtnSeleccionar;
         private System.Windows.Forms.BindingSource vistaUsuarioBindingSource;
         private _CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter vistaUsuarioTableAdapter;
+        public System.Windows.Forms.DataGridView VistaUsuariosDataGridView;
+        private System.Windows.Forms.DataGridViewButtonColumn BtnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaActivacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -349,6 +371,5 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn bodegaAsignadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        public System.Windows.Forms.DataGridView Vista_UsuariosDataGridView;
     }
 }

@@ -22,9 +22,9 @@ namespace MultiBodega_v1.Configuración
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             var Volver = new FrmContenedorConfig();
             Volver.Show();
+            this.Close();
         }
 
         private void Ck_Marcar_Todos_CheckedChanged(object sender, EventArgs e)

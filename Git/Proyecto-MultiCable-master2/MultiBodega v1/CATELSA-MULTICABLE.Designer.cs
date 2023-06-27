@@ -9109,6 +9109,8 @@ namespace MultiBodega_v1 {
             
             private global::System.Data.DataColumn columnActivo;
             
+            private global::System.Data.DataColumn columnFechaActivacion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsuarioDataTable() {
@@ -9216,6 +9218,14 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaActivacionColumn {
+                get {
+                    return this.columnFechaActivacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9251,7 +9261,7 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsuarioRow AddUsuarioRow(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, RolRow parentRolRowByFK__Usuario__RolID__2B3F6F97, BodegaRow parentBodegaRowByFK__Usuario__BodegaI__01142BA1, bool Activo) {
+            public UsuarioRow AddUsuarioRow(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, RolRow parentRolRowByFK__Usuario__RolID__2B3F6F97, BodegaRow parentBodegaRowByFK__Usuario__BodegaI__01142BA1, bool Activo, System.DateTime FechaActivacion) {
                 UsuarioRow rowUsuarioRow = ((UsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -9262,7 +9272,8 @@ namespace MultiBodega_v1 {
                         ConfirmarContrasena,
                         null,
                         null,
-                        Activo};
+                        Activo,
+                        FechaActivacion};
                 if ((parentRolRowByFK__Usuario__RolID__2B3F6F97 != null)) {
                     columnValuesArray[6] = parentRolRowByFK__Usuario__RolID__2B3F6F97[0];
                 }
@@ -9307,6 +9318,7 @@ namespace MultiBodega_v1 {
                 this.columnRolID = base.Columns["RolID"];
                 this.columnBodegaID = base.Columns["BodegaID"];
                 this.columnActivo = base.Columns["Activo"];
+                this.columnFechaActivacion = base.Columns["FechaActivacion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9330,6 +9342,8 @@ namespace MultiBodega_v1 {
                 base.Columns.Add(this.columnBodegaID);
                 this.columnActivo = new global::System.Data.DataColumn("Activo", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActivo);
+                this.columnFechaActivacion = new global::System.Data.DataColumn("FechaActivacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaActivacion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -9853,6 +9867,8 @@ namespace MultiBodega_v1 {
             
             private global::System.Data.DataColumn columnActivo;
             
+            private global::System.Data.DataColumn columnFechaActivacion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public VistaUsuarioDataTable() {
@@ -9960,6 +9976,14 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaActivacionColumn {
+                get {
+                    return this.columnFechaActivacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9995,7 +10019,7 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VistaUsuarioRow AddVistaUsuarioRow(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, string Bodega_Asignada, string RolName, bool Activo) {
+            public VistaUsuarioRow AddVistaUsuarioRow(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, string Bodega_Asignada, string RolName, bool Activo, System.DateTime FechaActivacion) {
                 VistaUsuarioRow rowVistaUsuarioRow = ((VistaUsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -10006,7 +10030,8 @@ namespace MultiBodega_v1 {
                         ConfirmarContrasena,
                         Bodega_Asignada,
                         RolName,
-                        Activo};
+                        Activo,
+                        FechaActivacion};
                 rowVistaUsuarioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVistaUsuarioRow);
                 return rowVistaUsuarioRow;
@@ -10045,6 +10070,7 @@ namespace MultiBodega_v1 {
                 this.columnBodega_Asignada = base.Columns["Bodega_Asignada"];
                 this.columnRolName = base.Columns["RolName"];
                 this.columnActivo = base.Columns["Activo"];
+                this.columnFechaActivacion = base.Columns["FechaActivacion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10068,6 +10094,8 @@ namespace MultiBodega_v1 {
                 base.Columns.Add(this.columnRolName);
                 this.columnActivo = new global::System.Data.DataColumn("Activo", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActivo);
+                this.columnFechaActivacion = new global::System.Data.DataColumn("FechaActivacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaActivacion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -15771,6 +15799,22 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime FechaActivacion {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableUsuario.FechaActivacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaActivacion\' de la tabla \'Usuario\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuario.FechaActivacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public RolRow RolRow {
                 get {
                     return ((RolRow)(this.GetParentRow(this.Table.ParentRelations["FK__Usuario__RolID__2B3F6F97"])));
@@ -15885,6 +15929,18 @@ namespace MultiBodega_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetActivoNull() {
                 this[this.tableUsuario.ActivoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFechaActivacionNull() {
+                return this.IsNull(this.tableUsuario.FechaActivacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaActivacionNull() {
+                this[this.tableUsuario.FechaActivacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16332,6 +16388,22 @@ namespace MultiBodega_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime FechaActivacion {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVistaUsuario.FechaActivacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaActivacion\' de la tabla \'VistaUsuario\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVistaUsuario.FechaActivacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableVistaUsuario.NombreColumn);
             }
@@ -16424,6 +16496,18 @@ namespace MultiBodega_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetActivoNull() {
                 this[this.tableVistaUsuario.ActivoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFechaActivacionNull() {
+                return this.IsNull(this.tableVistaUsuario.FechaActivacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaActivacionNull() {
+                this[this.tableVistaUsuario.FechaActivacionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -29837,10 +29921,11 @@ SELECT IDTipo, Numeracion, TipoMaterial FROM TipoMaterial WHERE (IDTipo = @IDTip
             tableMapping.ColumnMappings.Add("RolID", "RolID");
             tableMapping.ColumnMappings.Add("BodegaID", "BodegaID");
             tableMapping.ColumnMappings.Add("Activo", "Activo");
+            tableMapping.ColumnMappings.Add("FechaActivacion", "FechaActivacion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuario] WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_NombreUsuario = 1 AND [NombreUsuario] IS NULL) OR ([NombreUsuario] = @Original_NombreUsuario)) AND ((@IsNull_NumTelefono = 1 AND [NumTelefono] IS NULL) OR ([NumTelefono] = @Original_NumTelefono)) AND ((@IsNull_Contrasena = 1 AND [Contrasena] IS NULL) OR ([Contrasena] = @Original_Contrasena)) AND ((@IsNull_ConfirmarContrasena = 1 AND [ConfirmarContrasena] IS NULL) OR ([ConfirmarContrasena] = @Original_ConfirmarContrasena)) AND ((@IsNull_RolID = 1 AND [RolID] IS NULL) OR ([RolID] = @Original_RolID)) AND ((@IsNull_BodegaID = 1 AND [BodegaID] IS NULL) OR ([BodegaID] = @Original_BodegaID)) AND ((@IsNull_Activo = 1 AND [Activo] IS NULL) OR ([Activo] = @Original_Activo)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Usuario] WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_NombreUsuario = 1 AND [NombreUsuario] IS NULL) OR ([NombreUsuario] = @Original_NombreUsuario)) AND ((@IsNull_NumTelefono = 1 AND [NumTelefono] IS NULL) OR ([NumTelefono] = @Original_NumTelefono)) AND ((@IsNull_Contrasena = 1 AND [Contrasena] IS NULL) OR ([Contrasena] = @Original_Contrasena)) AND ((@IsNull_ConfirmarContrasena = 1 AND [ConfirmarContrasena] IS NULL) OR ([ConfirmarContrasena] = @Original_ConfirmarContrasena)) AND ([RolID] = @Original_RolID) AND ([BodegaID] = @Original_BodegaID) AND ((@IsNull_Activo = 1 AND [Activo] IS NULL) OR ([Activo] = @Original_Activo)) AND ((@IsNull_FechaActivacion = 1 AND [FechaActivacion] IS NULL) OR ([FechaActivacion] = @Original_FechaActivacion)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -29853,16 +29938,16 @@ SELECT IDTipo, Numeracion, TipoMaterial FROM TipoMaterial WHERE (IDTipo = @IDTip
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Contrasena", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ConfirmarContrasena", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Activo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Activo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaActivacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaActivacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuario] ([Nombre], [NombreUsuario], [NumTelefono], [Contrasena], [ConfirmarContrasena], [RolID], [BodegaID], [Activo]) VALUES (@Nombre, @NombreUsuario, @NumTelefono, @Contrasena, @ConfirmarContrasena, @RolID, @BodegaID, @Activo);
-SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo FROM Usuario WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Usuario] ([Nombre], [NombreUsuario], [NumTelefono], [Contrasena], [ConfirmarContrasena], [RolID], [BodegaID], [Activo], [FechaActivacion]) VALUES (@Nombre, @NombreUsuario, @NumTelefono, @Contrasena, @ConfirmarContrasena, @RolID, @BodegaID, @Activo, @FechaActivacion);
+SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo, FechaActivacion FROM Usuario WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -29872,10 +29957,11 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActivacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Usuario] SET [Nombre] = @Nombre, [NombreUsuario] = @NombreUsuario, [NumTelefono] = @NumTelefono, [Contrasena] = @Contrasena, [ConfirmarContrasena] = @ConfirmarContrasena, [RolID] = @RolID, [BodegaID] = @BodegaID, [Activo] = @Activo WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_NombreUsuario = 1 AND [NombreUsuario] IS NULL) OR ([NombreUsuario] = @Original_NombreUsuario)) AND ((@IsNull_NumTelefono = 1 AND [NumTelefono] IS NULL) OR ([NumTelefono] = @Original_NumTelefono)) AND ((@IsNull_Contrasena = 1 AND [Contrasena] IS NULL) OR ([Contrasena] = @Original_Contrasena)) AND ((@IsNull_ConfirmarContrasena = 1 AND [ConfirmarContrasena] IS NULL) OR ([ConfirmarContrasena] = @Original_ConfirmarContrasena)) AND ((@IsNull_RolID = 1 AND [RolID] IS NULL) OR ([RolID] = @Original_RolID)) AND ((@IsNull_BodegaID = 1 AND [BodegaID] IS NULL) OR ([BodegaID] = @Original_BodegaID)) AND ((@IsNull_Activo = 1 AND [Activo] IS NULL) OR ([Activo] = @Original_Activo)));
-SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo FROM Usuario WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Usuario] SET [Nombre] = @Nombre, [NombreUsuario] = @NombreUsuario, [NumTelefono] = @NumTelefono, [Contrasena] = @Contrasena, [ConfirmarContrasena] = @ConfirmarContrasena, [RolID] = @RolID, [BodegaID] = @BodegaID, [Activo] = @Activo, [FechaActivacion] = @FechaActivacion WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_NombreUsuario = 1 AND [NombreUsuario] IS NULL) OR ([NombreUsuario] = @Original_NombreUsuario)) AND ((@IsNull_NumTelefono = 1 AND [NumTelefono] IS NULL) OR ([NumTelefono] = @Original_NumTelefono)) AND ((@IsNull_Contrasena = 1 AND [Contrasena] IS NULL) OR ([Contrasena] = @Original_Contrasena)) AND ((@IsNull_ConfirmarContrasena = 1 AND [ConfirmarContrasena] IS NULL) OR ([ConfirmarContrasena] = @Original_ConfirmarContrasena)) AND ([RolID] = @Original_RolID) AND ([BodegaID] = @Original_BodegaID) AND ((@IsNull_Activo = 1 AND [Activo] IS NULL) OR ([Activo] = @Original_Activo)) AND ((@IsNull_FechaActivacion = 1 AND [FechaActivacion] IS NULL) OR ([FechaActivacion] = @Original_FechaActivacion)));
+SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo, FechaActivacion FROM Usuario WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -29885,6 +29971,7 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActivacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -29896,12 +29983,12 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Contrasena", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contrasena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ConfirmarContrasena", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ConfirmarContrasena", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ConfirmarContrasena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RolID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RolID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BodegaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BodegaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Activo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Activo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Activo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaActivacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaActivacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -29919,13 +30006,13 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, R" +
-                "olID, BodegaID, Activo FROM dbo.Usuario";
+                "olID, BodegaID, Activo, FechaActivacion FROM Usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContra" +
-                "sena, RolID, BodegaID, Activo\r\nFROM            Usuario\r\nWHERE        (Nombre LIK" +
-                "E \'%\' + Nombre + \'%\')";
+            this._commandCollection[1].CommandText = "SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, R" +
+                "olID, BodegaID, Activo, FechaActivacion FROM Usuario WHERE (Nombre LIKE \'%\' + No" +
+                "mbre + \'%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -29934,11 +30021,11 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO Usuario\r\n                         (Nombre, NombreUsuario, NumTelefono" +
-                ", Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo)\r\nVALUES        (@Nom" +
-                "bre,@NombreUsuario,@NumTelefono,@Contrasena,@ConfirmarContrasena,@RolID,@BodegaI" +
-                "D,@Activo)";
+            this._commandCollection[3].CommandText = @"INSERT INTO Usuario
+                         (FechaActivacion, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo)
+VALUES        (@FechaActivacion,@Nombre,@NombreUsuario,@NumTelefono,@Contrasena,@ConfirmarContrasena,@RolID,@BodegaID,@Activo)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActivacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -29950,10 +30037,11 @@ SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, 
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = @"UPDATE       Usuario
-SET                Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, BodegaID = @BodegaID, 
-                         Activo = @Activo
+SET                FechaActivacion = @FechaActivacion, Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, 
+                         BodegaID = @BodegaID, Activo = @Activo
 WHERE        (ID = @Original_ID)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActivacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActivacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NombreUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumTelefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumTelefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -30064,7 +30152,7 @@ FROM            Bodega INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Nombre, string Original_NombreUsuario, string Original_NumTelefono, string Original_Contrasena, string Original_ConfirmarContrasena, global::System.Nullable<int> Original_RolID, global::System.Nullable<int> Original_BodegaID, global::System.Nullable<bool> Original_Activo) {
+        public virtual int Delete(int Original_ID, string Original_Nombre, string Original_NombreUsuario, string Original_NumTelefono, string Original_Contrasena, string Original_ConfirmarContrasena, int Original_RolID, int Original_BodegaID, global::System.Nullable<bool> Original_Activo, global::System.Nullable<global::System.DateTime> Original_FechaActivacion) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_Nombre == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -30106,25 +30194,19 @@ FROM            Bodega INNER JOIN
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ConfirmarContrasena));
             }
-            if ((Original_RolID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_RolID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BodegaID.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_RolID));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_BodegaID));
+            if ((Original_Activo.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_BodegaID.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_Activo.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Activo.HasValue == true)) {
+            if ((Original_FechaActivacion.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_Activo.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_FechaActivacion.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
@@ -30150,7 +30232,7 @@ FROM            Bodega INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, global::System.Nullable<int> RolID, global::System.Nullable<int> BodegaID, global::System.Nullable<bool> Activo) {
+        public virtual int Insert(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolID, int BodegaID, global::System.Nullable<bool> Activo, global::System.Nullable<global::System.DateTime> FechaActivacion) {
             if ((Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -30181,23 +30263,19 @@ FROM            Bodega INNER JOIN
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ConfirmarContrasena));
             }
-            if ((RolID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(RolID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((BodegaID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(BodegaID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(RolID));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(BodegaID));
             if ((Activo.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(Activo.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((FechaActivacion.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(FechaActivacion.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -30225,18 +30303,20 @@ FROM            Bodega INNER JOIN
                     string NumTelefono, 
                     string Contrasena, 
                     string ConfirmarContrasena, 
-                    global::System.Nullable<int> RolID, 
-                    global::System.Nullable<int> BodegaID, 
+                    int RolID, 
+                    int BodegaID, 
                     global::System.Nullable<bool> Activo, 
+                    global::System.Nullable<global::System.DateTime> FechaActivacion, 
                     int Original_ID, 
                     string Original_Nombre, 
                     string Original_NombreUsuario, 
                     string Original_NumTelefono, 
                     string Original_Contrasena, 
                     string Original_ConfirmarContrasena, 
-                    global::System.Nullable<int> Original_RolID, 
-                    global::System.Nullable<int> Original_BodegaID, 
+                    int Original_RolID, 
+                    int Original_BodegaID, 
                     global::System.Nullable<bool> Original_Activo, 
+                    global::System.Nullable<global::System.DateTime> Original_FechaActivacion, 
                     int ID) {
             if ((Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -30268,90 +30348,80 @@ FROM            Bodega INNER JOIN
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ConfirmarContrasena));
             }
-            if ((RolID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(RolID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((BodegaID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(BodegaID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(RolID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(BodegaID));
             if ((Activo.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Activo.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ID));
-            if ((Original_Nombre == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((FechaActivacion.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(FechaActivacion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Nombre));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ID));
+            if ((Original_Nombre == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Nombre));
             }
             if ((Original_NombreUsuario == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_NombreUsuario));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_NombreUsuario));
             }
             if ((Original_NumTelefono == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_NumTelefono));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_NumTelefono));
             }
             if ((Original_Contrasena == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Contrasena));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Contrasena));
             }
             if ((Original_ConfirmarContrasena == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_ConfirmarContrasena));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_ConfirmarContrasena));
             }
-            if ((Original_RolID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_RolID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BodegaID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_BodegaID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_RolID));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_BodegaID));
             if ((Original_Activo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((bool)(Original_Activo.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_Activo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(ID));
+            if ((Original_FechaActivacion.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_FechaActivacion.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -30378,19 +30448,21 @@ FROM            Bodega INNER JOIN
                     string NumTelefono, 
                     string Contrasena, 
                     string ConfirmarContrasena, 
-                    global::System.Nullable<int> RolID, 
-                    global::System.Nullable<int> BodegaID, 
+                    int RolID, 
+                    int BodegaID, 
                     global::System.Nullable<bool> Activo, 
+                    global::System.Nullable<global::System.DateTime> FechaActivacion, 
                     int Original_ID, 
                     string Original_Nombre, 
                     string Original_NombreUsuario, 
                     string Original_NumTelefono, 
                     string Original_Contrasena, 
                     string Original_ConfirmarContrasena, 
-                    global::System.Nullable<int> Original_RolID, 
-                    global::System.Nullable<int> Original_BodegaID, 
-                    global::System.Nullable<bool> Original_Activo) {
-            return this.Update(Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo, Original_ID, Original_Nombre, Original_NombreUsuario, Original_NumTelefono, Original_Contrasena, Original_ConfirmarContrasena, Original_RolID, Original_BodegaID, Original_Activo, Original_ID);
+                    int Original_RolID, 
+                    int Original_BodegaID, 
+                    global::System.Nullable<bool> Original_Activo, 
+                    global::System.Nullable<global::System.DateTime> Original_FechaActivacion) {
+            return this.Update(Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo, FechaActivacion, Original_ID, Original_Nombre, Original_NombreUsuario, Original_NumTelefono, Original_Contrasena, Original_ConfirmarContrasena, Original_RolID, Original_BodegaID, Original_Activo, Original_FechaActivacion, Original_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30421,55 +30493,51 @@ FROM            Bodega INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int Guardar(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, global::System.Nullable<int> RolID, global::System.Nullable<int> BodegaID, global::System.Nullable<bool> Activo) {
+        public virtual int Guardar(global::System.Nullable<global::System.DateTime> FechaActivacion, string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolID, int BodegaID, global::System.Nullable<bool> Activo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            if ((Nombre == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+            if ((FechaActivacion.HasValue == true)) {
+                command.Parameters[0].Value = ((System.DateTime)(FechaActivacion.Value));
             }
             else {
-                command.Parameters[0].Value = ((string)(Nombre));
+                command.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((NombreUsuario == null)) {
+            if ((Nombre == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(NombreUsuario));
+                command.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((NumTelefono == null)) {
+            if ((NombreUsuario == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(NumTelefono));
+                command.Parameters[2].Value = ((string)(NombreUsuario));
             }
-            if ((Contrasena == null)) {
+            if ((NumTelefono == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Contrasena));
+                command.Parameters[3].Value = ((string)(NumTelefono));
             }
-            if ((ConfirmarContrasena == null)) {
+            if ((Contrasena == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(ConfirmarContrasena));
+                command.Parameters[4].Value = ((string)(Contrasena));
             }
-            if ((RolID.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(RolID.Value));
-            }
-            else {
+            if ((ConfirmarContrasena == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((BodegaID.HasValue == true)) {
-                command.Parameters[6].Value = ((int)(BodegaID.Value));
-            }
             else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
+                command.Parameters[5].Value = ((string)(ConfirmarContrasena));
             }
+            command.Parameters[6].Value = ((int)(RolID));
+            command.Parameters[7].Value = ((int)(BodegaID));
             if ((Activo.HasValue == true)) {
-                command.Parameters[7].Value = ((bool)(Activo.Value));
+                command.Parameters[8].Value = ((bool)(Activo.Value));
             }
             else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
+                command.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -30492,47 +30560,53 @@ FROM            Bodega INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Modificar(string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolID, int BodegaID, global::System.Nullable<bool> Activo, int Original_ID) {
+        public virtual int Modificar(global::System.Nullable<global::System.DateTime> FechaActivacion, string Nombre, string NombreUsuario, string NumTelefono, string Contrasena, string ConfirmarContrasena, int RolID, int BodegaID, global::System.Nullable<bool> Activo, int Original_ID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
-            if ((Nombre == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+            if ((FechaActivacion.HasValue == true)) {
+                command.Parameters[0].Value = ((System.DateTime)(FechaActivacion.Value));
             }
             else {
-                command.Parameters[0].Value = ((string)(Nombre));
+                command.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((NombreUsuario == null)) {
+            if ((Nombre == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(NombreUsuario));
+                command.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((NumTelefono == null)) {
+            if ((NombreUsuario == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(NumTelefono));
+                command.Parameters[2].Value = ((string)(NombreUsuario));
             }
-            if ((Contrasena == null)) {
+            if ((NumTelefono == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Contrasena));
+                command.Parameters[3].Value = ((string)(NumTelefono));
             }
-            if ((ConfirmarContrasena == null)) {
+            if ((Contrasena == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(ConfirmarContrasena));
+                command.Parameters[4].Value = ((string)(Contrasena));
             }
-            command.Parameters[5].Value = ((int)(RolID));
-            command.Parameters[6].Value = ((int)(BodegaID));
-            if ((Activo.HasValue == true)) {
-                command.Parameters[7].Value = ((bool)(Activo.Value));
+            if ((ConfirmarContrasena == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
+                command.Parameters[5].Value = ((string)(ConfirmarContrasena));
             }
-            command.Parameters[8].Value = ((int)(Original_ID));
+            command.Parameters[6].Value = ((int)(RolID));
+            command.Parameters[7].Value = ((int)(BodegaID));
+            if ((Activo.HasValue == true)) {
+                command.Parameters[8].Value = ((bool)(Activo.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[9].Value = ((int)(Original_ID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -31064,6 +31138,7 @@ FROM            Bodega INNER JOIN
             tableMapping.ColumnMappings.Add("Bodega_Asignada", "Bodega_Asignada");
             tableMapping.ColumnMappings.Add("RolName", "RolName");
             tableMapping.ColumnMappings.Add("Activo", "Activo");
+            tableMapping.ColumnMappings.Add("FechaActivacion", "FechaActivacion");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

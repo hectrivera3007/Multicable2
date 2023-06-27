@@ -95,6 +95,7 @@ namespace MultiBodega_v1
             this.Passwd.PasswordChar = '●';
             this.Passwd.Size = new System.Drawing.Size(202, 27);
             this.Passwd.TabIndex = 2;
+            this.Passwd.Text = "Progreso1029";
             this.Passwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Passwd_KeyPress);
             // 
             // pictureBox1

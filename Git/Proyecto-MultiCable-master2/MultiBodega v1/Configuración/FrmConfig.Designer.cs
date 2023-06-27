@@ -33,79 +33,79 @@ namespace MultiBodega_v1.Configuración
             System.Windows.Forms.Label nombreUsuarioLabel;
             System.Windows.Forms.Label rolIDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Devoluciones");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Ingresar Producto");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Agregar Producto");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Inventario General");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Ajuste de Inventario");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Inventario", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Requisa de Entrada");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Requisa de Salida");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Buscar Entrada");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Buscar Salida");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Comprobante de Entrega");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Requisas", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Bodega 1");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Bodega 2");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Bodega 3");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Bodega 4");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Bodegas", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16});
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Compras");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Costos de Importación");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Calcular Precio de Venta");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Compras", new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode19,
-            treeNode20});
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Registrar Base Foránea");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Registrar Proveedor");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Registrar Punto de Venta ");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Registrar Técnico");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Listar Base Fóranea");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Listar Proveedor");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Listar Punto de Venta");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Listar Técnico");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Registro", new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23,
-            treeNode24,
-            treeNode25,
-            treeNode26,
-            treeNode27,
-            treeNode28,
-            treeNode29});
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Reporte Bodega 1");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Reporte Bodega 2");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Reporte Bodega 3");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Reporte Bodega 4");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Reporte de Bajos Mínimos");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Reporte Detallado de Entradas");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Reporte Detallado de Salidas");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
-            treeNode31,
-            treeNode32,
-            treeNode33,
-            treeNode34,
-            treeNode35,
-            treeNode36,
-            treeNode37});
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Crear Nuevo Usuario");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
-            treeNode39});
+            System.Windows.Forms.TreeNode treeNode121 = new System.Windows.Forms.TreeNode("Devoluciones");
+            System.Windows.Forms.TreeNode treeNode122 = new System.Windows.Forms.TreeNode("Ingresar Producto");
+            System.Windows.Forms.TreeNode treeNode123 = new System.Windows.Forms.TreeNode("Agregar Producto");
+            System.Windows.Forms.TreeNode treeNode124 = new System.Windows.Forms.TreeNode("Inventario General");
+            System.Windows.Forms.TreeNode treeNode125 = new System.Windows.Forms.TreeNode("Ajuste de Inventario");
+            System.Windows.Forms.TreeNode treeNode126 = new System.Windows.Forms.TreeNode("Inventario", new System.Windows.Forms.TreeNode[] {
+            treeNode121,
+            treeNode122,
+            treeNode123,
+            treeNode124,
+            treeNode125});
+            System.Windows.Forms.TreeNode treeNode127 = new System.Windows.Forms.TreeNode("Requisa de Entrada");
+            System.Windows.Forms.TreeNode treeNode128 = new System.Windows.Forms.TreeNode("Requisa de Salida");
+            System.Windows.Forms.TreeNode treeNode129 = new System.Windows.Forms.TreeNode("Buscar Entrada");
+            System.Windows.Forms.TreeNode treeNode130 = new System.Windows.Forms.TreeNode("Buscar Salida");
+            System.Windows.Forms.TreeNode treeNode131 = new System.Windows.Forms.TreeNode("Comprobante de Entrega");
+            System.Windows.Forms.TreeNode treeNode132 = new System.Windows.Forms.TreeNode("Requisas", new System.Windows.Forms.TreeNode[] {
+            treeNode127,
+            treeNode128,
+            treeNode129,
+            treeNode130,
+            treeNode131});
+            System.Windows.Forms.TreeNode treeNode133 = new System.Windows.Forms.TreeNode("Bodega 1");
+            System.Windows.Forms.TreeNode treeNode134 = new System.Windows.Forms.TreeNode("Bodega 2");
+            System.Windows.Forms.TreeNode treeNode135 = new System.Windows.Forms.TreeNode("Bodega 3");
+            System.Windows.Forms.TreeNode treeNode136 = new System.Windows.Forms.TreeNode("Bodega 4");
+            System.Windows.Forms.TreeNode treeNode137 = new System.Windows.Forms.TreeNode("Bodegas", new System.Windows.Forms.TreeNode[] {
+            treeNode133,
+            treeNode134,
+            treeNode135,
+            treeNode136});
+            System.Windows.Forms.TreeNode treeNode138 = new System.Windows.Forms.TreeNode("Compras");
+            System.Windows.Forms.TreeNode treeNode139 = new System.Windows.Forms.TreeNode("Costos de Importación");
+            System.Windows.Forms.TreeNode treeNode140 = new System.Windows.Forms.TreeNode("Calcular Precio de Venta");
+            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("Compras", new System.Windows.Forms.TreeNode[] {
+            treeNode138,
+            treeNode139,
+            treeNode140});
+            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("Registrar Base Foránea");
+            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("Registrar Proveedor");
+            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("Registrar Punto de Venta ");
+            System.Windows.Forms.TreeNode treeNode145 = new System.Windows.Forms.TreeNode("Registrar Técnico");
+            System.Windows.Forms.TreeNode treeNode146 = new System.Windows.Forms.TreeNode("Listar Base Fóranea");
+            System.Windows.Forms.TreeNode treeNode147 = new System.Windows.Forms.TreeNode("Listar Proveedor");
+            System.Windows.Forms.TreeNode treeNode148 = new System.Windows.Forms.TreeNode("Listar Punto de Venta");
+            System.Windows.Forms.TreeNode treeNode149 = new System.Windows.Forms.TreeNode("Listar Técnico");
+            System.Windows.Forms.TreeNode treeNode150 = new System.Windows.Forms.TreeNode("Registro", new System.Windows.Forms.TreeNode[] {
+            treeNode142,
+            treeNode143,
+            treeNode144,
+            treeNode145,
+            treeNode146,
+            treeNode147,
+            treeNode148,
+            treeNode149});
+            System.Windows.Forms.TreeNode treeNode151 = new System.Windows.Forms.TreeNode("Reporte Bodega 1");
+            System.Windows.Forms.TreeNode treeNode152 = new System.Windows.Forms.TreeNode("Reporte Bodega 2");
+            System.Windows.Forms.TreeNode treeNode153 = new System.Windows.Forms.TreeNode("Reporte Bodega 3");
+            System.Windows.Forms.TreeNode treeNode154 = new System.Windows.Forms.TreeNode("Reporte Bodega 4");
+            System.Windows.Forms.TreeNode treeNode155 = new System.Windows.Forms.TreeNode("Reporte de Bajos Mínimos");
+            System.Windows.Forms.TreeNode treeNode156 = new System.Windows.Forms.TreeNode("Reporte Detallado de Entradas");
+            System.Windows.Forms.TreeNode treeNode157 = new System.Windows.Forms.TreeNode("Reporte Detallado de Salidas");
+            System.Windows.Forms.TreeNode treeNode158 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode151,
+            treeNode152,
+            treeNode153,
+            treeNode154,
+            treeNode155,
+            treeNode156,
+            treeNode157});
+            System.Windows.Forms.TreeNode treeNode159 = new System.Windows.Forms.TreeNode("Crear Nuevo Usuario");
+            System.Windows.Forms.TreeNode treeNode160 = new System.Windows.Forms.TreeNode("Usuarios", new System.Windows.Forms.TreeNode[] {
+            treeNode159});
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -214,102 +214,102 @@ namespace MultiBodega_v1.Configuración
             this.treeView1.ItemHeight = 20;
             this.treeView1.Location = new System.Drawing.Point(96, 227);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "devoluciones";
-            treeNode1.Text = "Devoluciones";
-            treeNode2.Name = "ingresarproducto";
-            treeNode2.Text = "Ingresar Producto";
-            treeNode3.Name = "agregarproducto";
-            treeNode3.Text = "Agregar Producto";
-            treeNode4.Name = "inventariogeneral";
-            treeNode4.Text = "Inventario General";
-            treeNode5.Name = "ajusteinventario";
-            treeNode5.Text = "Ajuste de Inventario";
-            treeNode6.BackColor = System.Drawing.Color.Gainsboro;
-            treeNode6.Name = "Nodo0";
-            treeNode6.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode6.Text = "Inventario";
-            treeNode7.Name = "requisaentrada";
-            treeNode7.Text = "Requisa de Entrada";
-            treeNode8.Name = "requisasalida";
-            treeNode8.Text = "Requisa de Salida";
-            treeNode9.Name = "buscarentrada";
-            treeNode9.Text = "Buscar Entrada";
-            treeNode10.Name = "buscarsalida";
-            treeNode10.Text = "Buscar Salida";
-            treeNode11.Name = "comprobanteentrega";
-            treeNode11.Text = "Comprobante de Entrega";
-            treeNode12.Name = "Nodo5";
-            treeNode12.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode12.Text = "Requisas";
-            treeNode13.Name = "Nodo11";
-            treeNode13.Text = "Bodega 1";
-            treeNode14.Name = "Nodo12";
-            treeNode14.Text = "Bodega 2";
-            treeNode15.Name = "Nodo13";
-            treeNode15.Text = "Bodega 3";
-            treeNode16.Name = "Nodo14";
-            treeNode16.Text = "Bodega 4";
-            treeNode17.Name = "Nodo10";
-            treeNode17.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
-            treeNode17.Text = "Bodegas";
-            treeNode18.Name = "Nodo16";
-            treeNode18.Text = "Compras";
-            treeNode19.Name = "Nodo17";
-            treeNode19.Text = "Costos de Importación";
-            treeNode20.Name = "Nodo18";
-            treeNode20.Text = "Calcular Precio de Venta";
-            treeNode21.Name = "Nodo15";
-            treeNode21.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode21.Text = "Compras";
-            treeNode22.Name = "Nodo39";
-            treeNode22.Text = "Registrar Base Foránea";
-            treeNode23.Name = "Nodo40";
-            treeNode23.Text = "Registrar Proveedor";
-            treeNode24.Name = "Nodo41";
-            treeNode24.Text = "Registrar Punto de Venta ";
-            treeNode25.Name = "Nodo42";
-            treeNode25.Text = "Registrar Técnico";
-            treeNode26.Name = "Nodo43";
-            treeNode26.Text = "Listar Base Fóranea";
-            treeNode27.Name = "Nodo44";
-            treeNode27.Text = "Listar Proveedor";
-            treeNode28.Name = "Nodo45";
-            treeNode28.Text = "Listar Punto de Venta";
-            treeNode29.Name = "Nodo46";
-            treeNode29.Text = "Listar Técnico";
-            treeNode30.Name = "Nodo23";
-            treeNode30.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode30.Text = "Registro";
-            treeNode31.Name = "Nodo27";
-            treeNode31.Text = "Reporte Bodega 1";
-            treeNode32.Name = "Nodo28";
-            treeNode32.Text = "Reporte Bodega 2";
-            treeNode33.Name = "Nodo29";
-            treeNode33.Text = "Reporte Bodega 3";
-            treeNode34.Name = "Nodo30";
-            treeNode34.Text = "Reporte Bodega 4";
-            treeNode35.Name = "Nodo31";
-            treeNode35.Text = "Reporte de Bajos Mínimos";
-            treeNode36.Name = "Nodo32";
-            treeNode36.Text = "Reporte Detallado de Entradas";
-            treeNode37.Name = "Nodo33";
-            treeNode37.Text = "Reporte Detallado de Salidas";
-            treeNode38.Name = "Nodo24";
-            treeNode38.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode38.Text = "Reportes";
-            treeNode39.Name = "Nodo26";
-            treeNode39.Text = "Crear Nuevo Usuario";
-            treeNode40.Name = "Nodo25";
-            treeNode40.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode40.Text = "Usuarios";
+            treeNode121.Name = "devoluciones";
+            treeNode121.Text = "Devoluciones";
+            treeNode122.Name = "ingresarproducto";
+            treeNode122.Text = "Ingresar Producto";
+            treeNode123.Name = "agregarproducto";
+            treeNode123.Text = "Agregar Producto";
+            treeNode124.Name = "inventariogeneral";
+            treeNode124.Text = "Inventario General";
+            treeNode125.Name = "ajusteinventario";
+            treeNode125.Text = "Ajuste de Inventario";
+            treeNode126.BackColor = System.Drawing.Color.Gainsboro;
+            treeNode126.Name = "Nodo0";
+            treeNode126.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode126.Text = "Inventario";
+            treeNode127.Name = "requisaentrada";
+            treeNode127.Text = "Requisa de Entrada";
+            treeNode128.Name = "requisasalida";
+            treeNode128.Text = "Requisa de Salida";
+            treeNode129.Name = "buscarentrada";
+            treeNode129.Text = "Buscar Entrada";
+            treeNode130.Name = "buscarsalida";
+            treeNode130.Text = "Buscar Salida";
+            treeNode131.Name = "comprobanteentrega";
+            treeNode131.Text = "Comprobante de Entrega";
+            treeNode132.Name = "Nodo5";
+            treeNode132.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode132.Text = "Requisas";
+            treeNode133.Name = "Nodo11";
+            treeNode133.Text = "Bodega 1";
+            treeNode134.Name = "Nodo12";
+            treeNode134.Text = "Bodega 2";
+            treeNode135.Name = "Nodo13";
+            treeNode135.Text = "Bodega 3";
+            treeNode136.Name = "Nodo14";
+            treeNode136.Text = "Bodega 4";
+            treeNode137.Name = "Nodo10";
+            treeNode137.NodeFont = new System.Drawing.Font("Century Gothic", 9F);
+            treeNode137.Text = "Bodegas";
+            treeNode138.Name = "Nodo16";
+            treeNode138.Text = "Compras";
+            treeNode139.Name = "Nodo17";
+            treeNode139.Text = "Costos de Importación";
+            treeNode140.Name = "Nodo18";
+            treeNode140.Text = "Calcular Precio de Venta";
+            treeNode141.Name = "Nodo15";
+            treeNode141.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode141.Text = "Compras";
+            treeNode142.Name = "Nodo39";
+            treeNode142.Text = "Registrar Base Foránea";
+            treeNode143.Name = "Nodo40";
+            treeNode143.Text = "Registrar Proveedor";
+            treeNode144.Name = "Nodo41";
+            treeNode144.Text = "Registrar Punto de Venta ";
+            treeNode145.Name = "Nodo42";
+            treeNode145.Text = "Registrar Técnico";
+            treeNode146.Name = "Nodo43";
+            treeNode146.Text = "Listar Base Fóranea";
+            treeNode147.Name = "Nodo44";
+            treeNode147.Text = "Listar Proveedor";
+            treeNode148.Name = "Nodo45";
+            treeNode148.Text = "Listar Punto de Venta";
+            treeNode149.Name = "Nodo46";
+            treeNode149.Text = "Listar Técnico";
+            treeNode150.Name = "Nodo23";
+            treeNode150.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode150.Text = "Registro";
+            treeNode151.Name = "Nodo27";
+            treeNode151.Text = "Reporte Bodega 1";
+            treeNode152.Name = "Nodo28";
+            treeNode152.Text = "Reporte Bodega 2";
+            treeNode153.Name = "Nodo29";
+            treeNode153.Text = "Reporte Bodega 3";
+            treeNode154.Name = "Nodo30";
+            treeNode154.Text = "Reporte Bodega 4";
+            treeNode155.Name = "Nodo31";
+            treeNode155.Text = "Reporte de Bajos Mínimos";
+            treeNode156.Name = "Nodo32";
+            treeNode156.Text = "Reporte Detallado de Entradas";
+            treeNode157.Name = "Nodo33";
+            treeNode157.Text = "Reporte Detallado de Salidas";
+            treeNode158.Name = "Nodo24";
+            treeNode158.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode158.Text = "Reportes";
+            treeNode159.Name = "Nodo26";
+            treeNode159.Text = "Crear Nuevo Usuario";
+            treeNode160.Name = "Nodo25";
+            treeNode160.NodeFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode160.Text = "Usuarios";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode12,
-            treeNode17,
-            treeNode21,
-            treeNode30,
-            treeNode38,
-            treeNode40});
+            treeNode126,
+            treeNode132,
+            treeNode137,
+            treeNode141,
+            treeNode150,
+            treeNode158,
+            treeNode160});
             this.treeView1.RightToLeftLayout = true;
             this.treeView1.ShowNodeToolTips = true;
             this.treeView1.Size = new System.Drawing.Size(554, 242);
@@ -350,14 +350,15 @@ namespace MultiBodega_v1.Configuración
             // 
             // rolNameComboBox
             // 
-            this.rolNameComboBox.DataSource = this.rolBindingSource;
-            this.rolNameComboBox.DisplayMember = "RolName";
+            this.rolNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usuarioBindingSource, "RolID", true));
+            this.rolNameComboBox.DataSource = this.usuarioBindingSource;
+            this.rolNameComboBox.DisplayMember = "RolID";
             this.rolNameComboBox.FormattingEnabled = true;
             this.rolNameComboBox.Location = new System.Drawing.Point(467, 167);
             this.rolNameComboBox.Name = "rolNameComboBox";
             this.rolNameComboBox.Size = new System.Drawing.Size(183, 25);
             this.rolNameComboBox.TabIndex = 135;
-            this.rolNameComboBox.ValueMember = "RolName";
+            this.rolNameComboBox.ValueMember = "RolID";
             // 
             // rolBindingSource
             // 
@@ -384,6 +385,7 @@ namespace MultiBodega_v1.Configuración
             this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
             this.tableAdapterManager.PermisosComprasTableAdapter = null;
             this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;

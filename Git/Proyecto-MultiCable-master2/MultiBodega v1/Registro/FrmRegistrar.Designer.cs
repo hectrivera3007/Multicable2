@@ -48,7 +48,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRPV.ForeColor = System.Drawing.Color.Navy;
             this.BtnRPV.Image = ((System.Drawing.Image)(resources.GetObject("BtnRPV.Image")));
             this.BtnRPV.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRPV.Location = new System.Drawing.Point(482, 126);
+            this.BtnRPV.Location = new System.Drawing.Point(473, 126);
             this.BtnRPV.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRPV.Name = "BtnRPV";
             this.BtnRPV.Size = new System.Drawing.Size(141, 116);
@@ -63,7 +63,7 @@ namespace MultiBodega_v1.Registro
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
-            this.pictureBox1.Location = new System.Drawing.Point(203, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(200, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRBF.ForeColor = System.Drawing.Color.Navy;
             this.BtnRBF.Image = ((System.Drawing.Image)(resources.GetObject("BtnRBF.Image")));
             this.BtnRBF.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRBF.Location = new System.Drawing.Point(338, 126);
+            this.BtnRBF.Location = new System.Drawing.Point(329, 126);
             this.BtnRBF.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRBF.Name = "BtnRBF";
             this.BtnRBF.Size = new System.Drawing.Size(141, 116);
@@ -118,7 +118,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRT.ForeColor = System.Drawing.Color.Navy;
             this.BtnRT.Image = ((System.Drawing.Image)(resources.GetObject("BtnRT.Image")));
             this.BtnRT.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRT.Location = new System.Drawing.Point(194, 126);
+            this.BtnRT.Location = new System.Drawing.Point(185, 126);
             this.BtnRT.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRT.Name = "BtnRT";
             this.BtnRT.Size = new System.Drawing.Size(141, 116);
@@ -139,7 +139,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRP.ForeColor = System.Drawing.Color.Navy;
             this.BtnRP.Image = ((System.Drawing.Image)(resources.GetObject("BtnRP.Image")));
             this.BtnRP.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRP.Location = new System.Drawing.Point(50, 126);
+            this.BtnRP.Location = new System.Drawing.Point(41, 126);
             this.BtnRP.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRP.Name = "BtnRP";
             this.BtnRP.Size = new System.Drawing.Size(141, 116);

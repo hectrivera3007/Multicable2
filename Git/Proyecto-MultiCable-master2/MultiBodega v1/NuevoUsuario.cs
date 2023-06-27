@@ -86,16 +86,15 @@ namespace MultiBodega_v1
 
             if (resultado == DialogResult.Yes)
             {
-                this.usuarioTableAdapter.Guardar(nombreTextBox.Text, nombreUsuarioTextBox.Text, numTelefonoTextBox.Text,
-                contrasenaTextBox.Text, confirmarContrasenaTextBox.Text, rolIDComboBox.SelectedIndex,
-                bodegaIDComboBox.SelectedIndex, activoCheckBox.Checked);
+                this.usuarioTableAdapter.Guardar(fechaActivacionDateTimePicker.Value, nombreTextBox.Text, nombreUsuarioTextBox.Text, numTelefonoTextBox.Text,
+                contrasenaTextBox.Text, confirmarContrasenaTextBox.Text, rolIDComboBox.SelectedIndex+1,
+                bodegaIDComboBox.SelectedIndex+1, activoCheckBox.Checked);
                 MessageBox.Show("¡El registro ha sido guardado con éxito!");
             }
         }
 
         private void ckContraseña_CheckedChanged(object sender, EventArgs e)
         {
-
             if (ckContraseña.Checked)
             {
                 // Reemplaza la imagen de mostrar con la de ocultar desde los recursos del proyecto
@@ -125,41 +124,6 @@ namespace MultiBodega_v1
                 ckConfirmarContra.Image = Properties.Resources.mostrar;
             }
         }
-
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            //this.usuarioTableAdapter.Modificar(@nombreTextBox.Text, @nombreUsuarioTextBox.Text, @numTelefonoTextBox.Text,
-            //@contrasenaTextBox.Text, @confirmarContrasenaTextBox.Text, @rolIDComboBox.SelectedIndex,
-            //@bodegaIDComboBox.SelectedIndex, @activoCheckBox.Checked);//Int32.Parse(@iDTextBox.Text));
-            
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //Le preguntamos al usuario si en verdad quiere eliminar el registro.
-            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
-                                    "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Si el usuario confirma, eliminamos el registro
-            if (resultado == DialogResult.Yes)
-            {
-                this.usuarioTableAdapter.Eliminar(Int32.Parse(iDTextBox.Text)); // Eliminamos el registro
-                this.usuarioTableAdapter.Fill(_CATELSA_MULTICABLE.Usuario); // Cargamos nuevamente los datos del dataset
-            }
-            //Limpiamos los TextBox luego de guardar el registro de Rol de Usuario.            
-            iDTextBox.Clear();
-            nombreTextBox.Clear();
-            nombreUsuarioTextBox.Clear();
-            numTelefonoTextBox.Clear();
-            contrasenaTextBox.Clear();
-            confirmarContrasenaTextBox.Clear();
-            rolIDComboBox.SelectedIndex = -1;
-            bodegaIDComboBox.SelectedIndex = -1;
-            activoCheckBox.Checked = false;
-        }
-
-
-        
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {

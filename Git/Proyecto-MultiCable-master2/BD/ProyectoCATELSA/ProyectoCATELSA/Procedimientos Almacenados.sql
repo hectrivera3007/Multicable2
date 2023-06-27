@@ -19,3 +19,17 @@ END
 
 exec BuscarProveedorPorNombre CaribeComp;
 
+
+
+
+CREATE PROCEDURE BuscarUsuariosProc
+@Nombre NVARCHAR(100)
+AS
+BEGIN 
+SET NOCOUNT ON; 
+SELECT * FROM VistaUsuario WHERE Nombre LIKE '%' + @Nombre + '%'
+END
+
+
+
+EXEC VistaUsuario

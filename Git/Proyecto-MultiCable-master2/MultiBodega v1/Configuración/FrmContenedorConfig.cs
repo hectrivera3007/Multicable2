@@ -20,23 +20,23 @@ namespace MultiBodega_v1.Configuración
 
         private void BtnConf_Click(object sender, EventArgs e)
         {
-            this.Close();
             var NuevoConf = new FrmConfig();
             NuevoConf.Show();
+            this.Close();
         }
 
         private void BtnRol_Click(object sender, EventArgs e)
         {
-            this.Close();
             var NuevoRol = new FrmRol();
             NuevoRol.Show();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             var Volver = new Botonera_APP();
             Volver.Show();
+            this.Close();
         }
     }
 }

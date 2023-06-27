@@ -67,7 +67,7 @@ namespace MultiBodega_v1.Botonera
             this.Bodega4.ForeColor = System.Drawing.Color.Navy;
             this.Bodega4.Image = ((System.Drawing.Image)(resources.GetObject("Bodega4.Image")));
             this.Bodega4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Bodega4.Location = new System.Drawing.Point(370, 117);
+            this.Bodega4.Location = new System.Drawing.Point(381, 117);
             this.Bodega4.Margin = new System.Windows.Forms.Padding(5);
             this.Bodega4.Name = "Bodega4";
             this.Bodega4.Size = new System.Drawing.Size(100, 95);
@@ -88,7 +88,7 @@ namespace MultiBodega_v1.Botonera
             this.Bodega3.ForeColor = System.Drawing.Color.Navy;
             this.Bodega3.Image = ((System.Drawing.Image)(resources.GetObject("Bodega3.Image")));
             this.Bodega3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Bodega3.Location = new System.Drawing.Point(260, 117);
+            this.Bodega3.Location = new System.Drawing.Point(271, 117);
             this.Bodega3.Margin = new System.Windows.Forms.Padding(5);
             this.Bodega3.Name = "Bodega3";
             this.Bodega3.Size = new System.Drawing.Size(100, 95);
@@ -109,7 +109,7 @@ namespace MultiBodega_v1.Botonera
             this.Bodega2.ForeColor = System.Drawing.Color.Navy;
             this.Bodega2.Image = ((System.Drawing.Image)(resources.GetObject("Bodega2.Image")));
             this.Bodega2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Bodega2.Location = new System.Drawing.Point(150, 117);
+            this.Bodega2.Location = new System.Drawing.Point(161, 117);
             this.Bodega2.Margin = new System.Windows.Forms.Padding(5);
             this.Bodega2.Name = "Bodega2";
             this.Bodega2.Size = new System.Drawing.Size(100, 95);
@@ -130,7 +130,7 @@ namespace MultiBodega_v1.Botonera
             this.Bodega1.ForeColor = System.Drawing.Color.Navy;
             this.Bodega1.Image = ((System.Drawing.Image)(resources.GetObject("Bodega1.Image")));
             this.Bodega1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Bodega1.Location = new System.Drawing.Point(40, 117);
+            this.Bodega1.Location = new System.Drawing.Point(51, 117);
             this.Bodega1.Margin = new System.Windows.Forms.Padding(5);
             this.Bodega1.Name = "Bodega1";
             this.Bodega1.Size = new System.Drawing.Size(100, 95);
@@ -145,7 +145,7 @@ namespace MultiBodega_v1.Botonera
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(139, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

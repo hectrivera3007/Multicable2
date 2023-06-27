@@ -20,30 +20,30 @@ namespace MultiBodega_v1.Compras
 
         private void BtnAgUsuario_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmCompras Nuevo = new FrmCompras();
             Nuevo.Show();
+            this.Close();
         }
 
         private void BtnCostosImp_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmCostosImport nuevoCost = new FrmCostosImport();
             nuevoCost.Show();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            this.Close();
             Botonera_APP Volver = new Botonera_APP();
             Volver.Show();
+            this.Close();
         }
 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmPrecioVenta nuevoPV = new FrmPrecioVenta();
             nuevoPV.Show();
+            this.Close();
         }
     }
 }

@@ -64,7 +64,7 @@ namespace MultiBodega_v1.Compras
             this.BtnCostosImp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCostosImp.ForeColor = System.Drawing.Color.Navy;
             this.BtnCostosImp.Image = ((System.Drawing.Image)(resources.GetObject("BtnCostosImp.Image")));
-            this.BtnCostosImp.Location = new System.Drawing.Point(229, 126);
+            this.BtnCostosImp.Location = new System.Drawing.Point(227, 106);
             this.BtnCostosImp.Name = "BtnCostosImp";
             this.BtnCostosImp.Size = new System.Drawing.Size(143, 108);
             this.BtnCostosImp.TabIndex = 135;
@@ -81,7 +81,7 @@ namespace MultiBodega_v1.Compras
             this.BtnAgUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgUsuario.ForeColor = System.Drawing.Color.Navy;
             this.BtnAgUsuario.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgUsuario.Image")));
-            this.BtnAgUsuario.Location = new System.Drawing.Point(80, 126);
+            this.BtnAgUsuario.Location = new System.Drawing.Point(78, 106);
             this.BtnAgUsuario.Name = "BtnAgUsuario";
             this.BtnAgUsuario.Size = new System.Drawing.Size(143, 108);
             this.BtnAgUsuario.TabIndex = 134;
@@ -94,7 +94,7 @@ namespace MultiBodega_v1.Compras
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(171, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@ namespace MultiBodega_v1.Compras
             this.BtnCalcular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCalcular.ForeColor = System.Drawing.Color.Navy;
             this.BtnCalcular.Image = ((System.Drawing.Image)(resources.GetObject("BtnCalcular.Image")));
-            this.BtnCalcular.Location = new System.Drawing.Point(378, 126);
+            this.BtnCalcular.Location = new System.Drawing.Point(376, 106);
             this.BtnCalcular.Name = "BtnCalcular";
             this.BtnCalcular.Size = new System.Drawing.Size(143, 108);
             this.BtnCalcular.TabIndex = 137;
