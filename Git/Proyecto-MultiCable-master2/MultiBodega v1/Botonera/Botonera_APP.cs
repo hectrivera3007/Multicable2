@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,9 @@ namespace MultiBodega_v1.Botonera
 {
     public partial class Botonera_APP : Form
     {
-        
+
+        SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
+
         public Botonera_APP()
         {
             InitializeComponent();
@@ -96,6 +99,11 @@ namespace MultiBodega_v1.Botonera
             var nuevoRep = new FrmContReportes();
             nuevoRep.Show();
             this.Close();
+        }
+
+        private void RelojSistema_Tick(object sender, EventArgs e)
+        {
+            Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
         }
     }
 }

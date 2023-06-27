@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using MultiBodega_v1;
-
+using MultiBodega_v1.Botonera;
 
 namespace MultiBodega_v1
 {
@@ -65,6 +65,8 @@ namespace MultiBodega_v1
                 MessageBox.Show("¡Bienvenido a CATELSA LOGISTIC!", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 var MostrarPantalla = new Botonera.Botonera_APP();
+                Botonera_APP Botonera = new Botonera_APP();
+                Botonera.UsuariolblStat.Text = NombreUsuario.Text;
                 MostrarPantalla.ShowDialog();
                 BtnLogIn.Visible = false;
             }

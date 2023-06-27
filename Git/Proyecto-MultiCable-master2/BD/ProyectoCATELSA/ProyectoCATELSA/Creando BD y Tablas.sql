@@ -417,5 +417,3 @@ Select * From Productos
 
 
  exec VistaUsuario
-
-

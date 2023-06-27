@@ -230,7 +230,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Passwd;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnLogIn;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -241,5 +240,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private _CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         public System.Windows.Forms.ComboBox NombreUsuario;
+        public System.Windows.Forms.TextBox Passwd;
     }
 }

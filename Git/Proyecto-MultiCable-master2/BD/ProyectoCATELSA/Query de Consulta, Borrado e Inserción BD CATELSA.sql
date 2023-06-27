@@ -1,5 +1,6 @@
 SELECT * FROM Rol
 SELECT * FROM Usuario
+Exec VistaUsuario
 Select * FROM Bodega
 Select * FROM Productos
 Select * FROM TipoMaterial
@@ -32,11 +33,13 @@ SELECT * FROM Rol
 --SELECT ID, Nombre, NombreUsuario, NumTelefono, Contrasena, ConfirmarContrasena, RolID, BodegaID, Activo FROM Usuario WHERE (ID = SCOPE_IDENTITY())
 
 INSERT INTO Usuario VALUES('Hector Iván Rivera Cabrera', 'hector.rivera', '9647-2222', 'Progreso1029', 'Progreso1029', 1, 1, 1)
+INSERT INTO Usuario VALUES('Rosa Saraí Sarmiento Bautista', 'sarai.sarmiento', '9728-5971', 'ccshh2023', 'ccshh2023', 2, 1, 1)
 INSERT INTO Usuario VALUES('Hector Santiago Rivera Sarmiento', 'santiago.rivera', '9647-2222', 'Santibebe', 'Santibebe', 1, 2, 1)
 INSERT INTO Usuario VALUES('Camila del Carmen Cabrera', 'camila.cabrera', '8794-0498', 'Cabrera_2023', 'Cabrera_2023', 3, 1, 1)
-INSERT INTO Usuario VALUES('Rosa Saraí Sarmiento Bautista', 'sarai.sarmiento', '9728-5971', 'ccshh2023', 'ccshh2023', 2, 1, 1)
 INSERT INTO Usuario VALUES('Juanitta Dinora Ferrera Tobar', 'j.ferrerat', '9435-2034', 'ferrerat2023', 'ferrerat2023', 2, 1, 1)
 INSERT INTO Usuario VALUES('Kevin Antonio Rivera Cabrera', 'k.rivera01', '9959-2089', 'Sathsa2023', 'Sathsa2023', 3, 1, 1)
+
+exec VistaUsuario
 
 SELECT * FROM Usuario
 
