@@ -1,7 +1,7 @@
 /*Creación de la Base de Datos*/
 CREATE DATABASE "CATELSA-MULTICABLE"
 USE [CATELSA-MULTICABLE]
-
+use master
 --DBCC CHECKIDENT ('Usuario', RESEED, 0);
 
 --Creación de la tabla Roles
@@ -36,6 +36,7 @@ Create Table Bodega
 Create Table Usuario
 (
 	ID int IDENTITY(1,1) not null,
+	FechaActivacion date,
 	Nombre varchar(50),
 	NombreUsuario varchar(50),
 	NumTelefono varchar(50),
@@ -387,7 +388,7 @@ Delete Usuario
 
 CREATE PROCEDURE dbo.VistaUsuario 
 AS BEGIN 
-SELECT dbo.Usuario.ID, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, 
+SELECT dbo.Usuario.ID, dbo.Usuario.FechaActivacion, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, 
 dbo.Usuario.Contrasena, dbo.Usuario.ConfirmarContrasena, dbo.Bodega.Nombre AS Bodega_Asignada, 
 dbo.Rol.RolName, dbo.Usuario.Activo 
 FROM dbo.Bodega 
@@ -407,7 +408,7 @@ Select * From Productos
  @nombre nvarchar(50) 
  AS
  BEGIN
- SELECT dbo.Usuario.ID, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, dbo.Usuario.Contrasena,
+ SELECT dbo.Usuario.ID, dbo.Usuario.FechaActivacion, dbo.Usuario.Nombre, dbo.Usuario.NombreUsuario, dbo.Usuario.NumTelefono, dbo.Usuario.Contrasena,
  dbo.Usuario.ConfirmarContrasena, dbo.Bodega.Nombre AS Bodega_Asignada, dbo.Rol.RolName, dbo.Usuario.Activo
  FROM dbo.Bodega
  INNER JOIN dbo.Usuario ON dbo.Bodega.BodegaID = dbo.Usuario.BodegaID

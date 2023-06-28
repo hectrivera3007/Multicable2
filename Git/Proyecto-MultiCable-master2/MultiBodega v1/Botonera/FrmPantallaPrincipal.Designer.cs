@@ -37,31 +37,33 @@ namespace MultiBodega_v1.Botonera
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(298, 214);
+            this.pictureBox2.Location = new System.Drawing.Point(160, 160);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(771, 296);
+            this.pictureBox2.Size = new System.Drawing.Size(1047, 404);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
             // BtnEntrar
             // 
+            this.BtnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnEntrar.FlatAppearance.BorderSize = 0;
             this.BtnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEntrar.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnEntrar.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.BtnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(177)))), ((int)(((byte)(29)))));
             this.BtnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrar.Image")));
             this.BtnEntrar.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.BtnEntrar.Location = new System.Drawing.Point(1219, 580);
+            this.BtnEntrar.Location = new System.Drawing.Point(1191, 580);
             this.BtnEntrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(135, 71);
+            this.BtnEntrar.Size = new System.Drawing.Size(163, 71);
             this.BtnEntrar.TabIndex = 14;
             this.BtnEntrar.Text = "&Entrar";
             this.BtnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
