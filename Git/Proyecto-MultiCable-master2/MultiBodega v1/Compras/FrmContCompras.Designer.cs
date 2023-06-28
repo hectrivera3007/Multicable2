@@ -60,6 +60,8 @@ namespace MultiBodega_v1.Compras
             // 
             this.BtnCostosImp.BackColor = System.Drawing.Color.Transparent;
             this.BtnCostosImp.FlatAppearance.BorderSize = 0;
+            this.BtnCostosImp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnCostosImp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCostosImp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCostosImp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCostosImp.ForeColor = System.Drawing.Color.Navy;
@@ -77,6 +79,8 @@ namespace MultiBodega_v1.Compras
             // 
             this.BtnAgUsuario.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgUsuario.FlatAppearance.BorderSize = 0;
+            this.BtnAgUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnAgUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgUsuario.ForeColor = System.Drawing.Color.Navy;
@@ -105,6 +109,8 @@ namespace MultiBodega_v1.Compras
             // 
             this.BtnCalcular.BackColor = System.Drawing.Color.Transparent;
             this.BtnCalcular.FlatAppearance.BorderSize = 0;
+            this.BtnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalcular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCalcular.ForeColor = System.Drawing.Color.Navy;

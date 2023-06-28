@@ -44,6 +44,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnComprEntrada.BackColor = System.Drawing.Color.Transparent;
             this.BtnComprEntrada.FlatAppearance.BorderSize = 0;
+            this.BtnComprEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnComprEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnComprEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnComprEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnComprEntrada.ForeColor = System.Drawing.Color.Navy;
@@ -61,6 +63,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnBuscSalida.BackColor = System.Drawing.Color.Transparent;
             this.BtnBuscSalida.FlatAppearance.BorderSize = 0;
+            this.BtnBuscSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscSalida.ForeColor = System.Drawing.Color.Navy;
@@ -78,6 +82,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnBuscEntrada.BackColor = System.Drawing.Color.Transparent;
             this.BtnBuscEntrada.FlatAppearance.BorderSize = 0;
+            this.BtnBuscEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscEntrada.ForeColor = System.Drawing.Color.Navy;
@@ -95,6 +101,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnRegSalida.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegSalida.FlatAppearance.BorderSize = 0;
+            this.BtnRegSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRegSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegSalida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegSalida.ForeColor = System.Drawing.Color.Navy;
@@ -112,6 +120,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnRegEntrada.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegEntrada.FlatAppearance.BorderSize = 0;
+            this.BtnRegEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRegEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegEntrada.ForeColor = System.Drawing.Color.Navy;
@@ -140,6 +150,8 @@ namespace MultiBodega_v1.Botonera.Requisas
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;

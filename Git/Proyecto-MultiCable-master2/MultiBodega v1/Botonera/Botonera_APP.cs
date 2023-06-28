@@ -105,5 +105,10 @@ namespace MultiBodega_v1.Botonera
         {
             Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
         }
+
+        private void Botonera_APP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

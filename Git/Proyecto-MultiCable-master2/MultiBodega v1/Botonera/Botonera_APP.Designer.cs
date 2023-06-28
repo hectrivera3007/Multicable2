@@ -42,7 +42,6 @@ namespace MultiBodega_v1.Botonera
             this.Btn_Inventario = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnReportes = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.NombredeUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.UsuariolblStat = new System.Windows.Forms.ToolStripStatusLabel();
@@ -57,11 +56,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegistrar.FlatAppearance.BorderSize = 0;
+            this.BtnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.BtnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegistrar.Image")));
-            this.BtnRegistrar.Location = new System.Drawing.Point(711, 135);
+            this.BtnRegistrar.Location = new System.Drawing.Point(711, 154);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(130, 108);
             this.BtnRegistrar.TabIndex = 28;
@@ -74,11 +75,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnConfig.BackColor = System.Drawing.Color.Transparent;
             this.BtnConfig.FlatAppearance.BorderSize = 0;
+            this.BtnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfig.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfig.ForeColor = System.Drawing.Color.Black;
             this.BtnConfig.Image = ((System.Drawing.Image)(resources.GetObject("BtnConfig.Image")));
-            this.BtnConfig.Location = new System.Drawing.Point(291, 361);
+            this.BtnConfig.Location = new System.Drawing.Point(291, 380);
             this.BtnConfig.Name = "BtnConfig";
             this.BtnConfig.Size = new System.Drawing.Size(130, 108);
             this.BtnConfig.TabIndex = 27;
@@ -89,14 +92,16 @@ namespace MultiBodega_v1.Botonera
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.Black;
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnSalir.Location = new System.Drawing.Point(844, 1);
+            this.BtnSalir.Location = new System.Drawing.Point(844, 16);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(96, 93);
             this.BtnSalir.TabIndex = 26;
@@ -109,11 +114,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.BtnUsuarios.FlatAppearance.BorderSize = 0;
+            this.BtnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUsuarios.ForeColor = System.Drawing.Color.Black;
             this.BtnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios.Image")));
-            this.BtnUsuarios.Location = new System.Drawing.Point(520, 361);
+            this.BtnUsuarios.Location = new System.Drawing.Point(520, 380);
             this.BtnUsuarios.Name = "BtnUsuarios";
             this.BtnUsuarios.Size = new System.Drawing.Size(130, 108);
             this.BtnUsuarios.TabIndex = 25;
@@ -126,11 +133,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnCompras.BackColor = System.Drawing.Color.Transparent;
             this.BtnCompras.FlatAppearance.BorderSize = 0;
+            this.BtnCompras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCompras.ForeColor = System.Drawing.Color.Black;
             this.BtnCompras.Image = ((System.Drawing.Image)(resources.GetObject("BtnCompras.Image")));
-            this.BtnCompras.Location = new System.Drawing.Point(182, 246);
+            this.BtnCompras.Location = new System.Drawing.Point(182, 265);
             this.BtnCompras.Name = "BtnCompras";
             this.BtnCompras.Size = new System.Drawing.Size(130, 108);
             this.BtnCompras.TabIndex = 24;
@@ -143,11 +152,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnCodigoBarra.BackColor = System.Drawing.Color.Transparent;
             this.BtnCodigoBarra.FlatAppearance.BorderSize = 0;
+            this.BtnCodigoBarra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnCodigoBarra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCodigoBarra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCodigoBarra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCodigoBarra.ForeColor = System.Drawing.Color.Black;
             this.BtnCodigoBarra.Image = ((System.Drawing.Image)(resources.GetObject("BtnCodigoBarra.Image")));
-            this.BtnCodigoBarra.Location = new System.Drawing.Point(405, 246);
+            this.BtnCodigoBarra.Location = new System.Drawing.Point(405, 265);
             this.BtnCodigoBarra.Name = "BtnCodigoBarra";
             this.BtnCodigoBarra.Size = new System.Drawing.Size(130, 108);
             this.BtnCodigoBarra.TabIndex = 23;
@@ -160,11 +171,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnRequisas.BackColor = System.Drawing.Color.Transparent;
             this.BtnRequisas.FlatAppearance.BorderSize = 0;
+            this.BtnRequisas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRequisas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRequisas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRequisas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRequisas.ForeColor = System.Drawing.Color.Black;
             this.BtnRequisas.Image = ((System.Drawing.Image)(resources.GetObject("BtnRequisas.Image")));
-            this.BtnRequisas.Location = new System.Drawing.Point(507, 135);
+            this.BtnRequisas.Location = new System.Drawing.Point(507, 154);
             this.BtnRequisas.Name = "BtnRequisas";
             this.BtnRequisas.Size = new System.Drawing.Size(130, 108);
             this.BtnRequisas.TabIndex = 22;
@@ -177,11 +190,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnBodegas.BackColor = System.Drawing.Color.Transparent;
             this.BtnBodegas.FlatAppearance.BorderSize = 0;
+            this.BtnBodegas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBodegas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBodegas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBodegas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBodegas.ForeColor = System.Drawing.Color.Black;
             this.BtnBodegas.Image = ((System.Drawing.Image)(resources.GetObject("BtnBodegas.Image")));
-            this.BtnBodegas.Location = new System.Drawing.Point(303, 135);
+            this.BtnBodegas.Location = new System.Drawing.Point(303, 154);
             this.BtnBodegas.Name = "BtnBodegas";
             this.BtnBodegas.Size = new System.Drawing.Size(130, 108);
             this.BtnBodegas.TabIndex = 21;
@@ -194,11 +209,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.Btn_Inventario.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Inventario.FlatAppearance.BorderSize = 0;
+            this.Btn_Inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Btn_Inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Btn_Inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Inventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Inventario.ForeColor = System.Drawing.Color.Black;
             this.Btn_Inventario.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Inventario.Image")));
-            this.Btn_Inventario.Location = new System.Drawing.Point(99, 135);
+            this.Btn_Inventario.Location = new System.Drawing.Point(99, 154);
             this.Btn_Inventario.Name = "Btn_Inventario";
             this.Btn_Inventario.Size = new System.Drawing.Size(130, 108);
             this.Btn_Inventario.TabIndex = 20;
@@ -210,9 +227,9 @@ namespace MultiBodega_v1.Botonera
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(335, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(335, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,11 +240,13 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnReportes.BackColor = System.Drawing.Color.Transparent;
             this.BtnReportes.FlatAppearance.BorderSize = 0;
+            this.BtnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReportes.ForeColor = System.Drawing.Color.Black;
             this.BtnReportes.Image = ((System.Drawing.Image)(resources.GetObject("BtnReportes.Image")));
-            this.BtnReportes.Location = new System.Drawing.Point(628, 246);
+            this.BtnReportes.Location = new System.Drawing.Point(628, 265);
             this.BtnReportes.Name = "BtnReportes";
             this.BtnReportes.Size = new System.Drawing.Size(130, 108);
             this.BtnReportes.TabIndex = 29;
@@ -235,15 +254,6 @@ namespace MultiBodega_v1.Botonera
             this.BtnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnReportes.UseVisualStyleBackColor = false;
             this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(941, 94);
-            this.label1.TabIndex = 30;
             // 
             // statusStrip1
             // 
@@ -256,7 +266,7 @@ namespace MultiBodega_v1.Botonera
             this.UsuariolblStat,
             this.Fecha_Hora,
             this.Fecha});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 94);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStrip1.Size = new System.Drawing.Size(941, 22);
@@ -305,12 +315,11 @@ namespace MultiBodega_v1.Botonera
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(941, 483);
+            this.ClientSize = new System.Drawing.Size(941, 517);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnReportes);
             this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.BtnConfig);
@@ -328,6 +337,7 @@ namespace MultiBodega_v1.Botonera
             this.Name = "Botonera_APP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = ":::Inicio:::";
+            this.Load += new System.EventHandler(this.Botonera_APP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -348,7 +358,6 @@ namespace MultiBodega_v1.Botonera
         private System.Windows.Forms.Button BtnConfig;
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Button BtnReportes;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel NombredeUsuario;
         private System.Windows.Forms.ToolStripStatusLabel Fecha_Hora;

@@ -37,7 +37,6 @@ namespace MultiBodega_v1
             this.Passwd = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnLogIn = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -55,7 +54,7 @@ namespace MultiBodega_v1
             // BtnSalir
             // 
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Location = new System.Drawing.Point(458, 302);
+            this.BtnSalir.Location = new System.Drawing.Point(371, 312);
             this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(79, 30);
@@ -67,6 +66,7 @@ namespace MultiBodega_v1
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.Location = new System.Drawing.Point(220, 196);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -78,6 +78,7 @@ namespace MultiBodega_v1
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.Location = new System.Drawing.Point(220, 252);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -100,6 +101,7 @@ namespace MultiBodega_v1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(132, 34);
             this.pictureBox1.Name = "pictureBox1";
@@ -111,7 +113,7 @@ namespace MultiBodega_v1
             // BtnLogIn
             // 
             this.BtnLogIn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogIn.Location = new System.Drawing.Point(371, 302);
+            this.BtnLogIn.Location = new System.Drawing.Point(284, 312);
             this.BtnLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Size = new System.Drawing.Size(79, 30);
@@ -119,18 +121,6 @@ namespace MultiBodega_v1
             this.BtnLogIn.Text = "Entrar";
             this.BtnLogIn.UseVisualStyleBackColor = true;
             this.BtnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.linkLabel1.Location = new System.Drawing.Point(159, 305);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(170, 21);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Crear Nuevo Usuario";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // checkBox1
             // 
@@ -145,6 +135,7 @@ namespace MultiBodega_v1
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(163, 180);
             this.pictureBox2.Name = "pictureBox2";
@@ -155,6 +146,7 @@ namespace MultiBodega_v1
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(163, 236);
             this.pictureBox3.Name = "pictureBox3";
@@ -194,12 +186,13 @@ namespace MultiBodega_v1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(735, 366);
             this.ControlBox = false;
             this.Controls.Add(this.NombreUsuario);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.BtnLogIn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Passwd);
@@ -207,6 +200,7 @@ namespace MultiBodega_v1
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -232,7 +226,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnLogIn;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

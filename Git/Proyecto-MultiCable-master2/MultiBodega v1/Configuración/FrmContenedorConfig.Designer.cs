@@ -70,6 +70,8 @@ namespace MultiBodega_v1.Configuración
             this.BtnRol.BackColor = System.Drawing.Color.Transparent;
             this.BtnRol.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnRol.FlatAppearance.BorderSize = 0;
+            this.BtnRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRol.ForeColor = System.Drawing.Color.Navy;

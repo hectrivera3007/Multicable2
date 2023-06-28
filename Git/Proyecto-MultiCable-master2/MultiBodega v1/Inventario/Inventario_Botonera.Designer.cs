@@ -44,6 +44,8 @@ namespace MultiBodega_v1.Botonera
             this.BtnNuevoProducto.BackColor = System.Drawing.Color.Transparent;
             this.BtnNuevoProducto.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnNuevoProducto.FlatAppearance.BorderSize = 0;
+            this.BtnNuevoProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNuevoProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnNuevoProducto.ForeColor = System.Drawing.Color.Navy;
@@ -65,6 +67,8 @@ namespace MultiBodega_v1.Botonera
             this.BtnModificarProd.BackColor = System.Drawing.Color.Transparent;
             this.BtnModificarProd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnModificarProd.FlatAppearance.BorderSize = 0;
+            this.BtnModificarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnModificarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnModificarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModificarProd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnModificarProd.ForeColor = System.Drawing.Color.Navy;
@@ -85,6 +89,8 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnInventarioFinal.BackColor = System.Drawing.Color.Transparent;
             this.BtnInventarioFinal.FlatAppearance.BorderSize = 0;
+            this.BtnInventarioFinal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnInventarioFinal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnInventarioFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInventarioFinal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnInventarioFinal.ForeColor = System.Drawing.Color.Navy;
@@ -105,6 +111,8 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
@@ -134,6 +142,8 @@ namespace MultiBodega_v1.Botonera
             // 
             this.BtnAjusteInventario.BackColor = System.Drawing.Color.Transparent;
             this.BtnAjusteInventario.FlatAppearance.BorderSize = 0;
+            this.BtnAjusteInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnAjusteInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAjusteInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAjusteInventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAjusteInventario.ForeColor = System.Drawing.Color.Navy;

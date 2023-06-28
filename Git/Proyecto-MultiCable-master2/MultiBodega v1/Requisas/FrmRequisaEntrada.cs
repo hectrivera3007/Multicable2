@@ -58,6 +58,8 @@ namespace MultiBodega_v1
 
         private void FrmRequisaEntrada_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RequisaEntrada' Puede moverla o quitarla según sea necesario.
+            this.requisaEntradaTableAdapter.Fill(this._CATELSA_MULTICABLE.RequisaEntrada);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.RequisaEntrada' Puede moverla o quitarla según sea necesario.
             //this.requisaEntradaTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.RequisaEntrada);
 

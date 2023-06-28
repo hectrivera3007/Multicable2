@@ -24,10 +24,6 @@ namespace MultiBodega_v1.Botonera
             //BtnEntrar.Visible = false;
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            label1.Text = DateTime.Now.ToString("hh:mm:ss");
-            label2.Text = DateTime.Now.ToLongDateString();
-        }
+        
     }
 }
