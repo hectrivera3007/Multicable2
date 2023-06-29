@@ -50,10 +50,12 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
+            // Crear un combo box que desplace RTN, DNI, DUI, DE LOS DIFERENTES PAISES Y QUE EL TAMAÑO DEL DATO SEA DEPENDIENDO EL TAMAÑO DE RTN, ETC.
+
             try
             {
                 string nombreProveedor = nombreProveedorTextBox.Text;
-                char rtn[] = rTNTextBox.Text;
+                string rtn = rTNTextBox.Text;
                 string personaContacto = personaContactoTextBox.Text;
                 string direccion = direccionTextBox.Text;
                 string paisZona = pais_ZonaTextBox.Text;
@@ -81,7 +83,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
                         command.Parameters.AddWithValue("@correoElectronico", correoElectronico);
                         command.Parameters.AddWithValue("@notas", notas);
                         command.Parameters.AddWithValue("@activo", activo);
-
+                        proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Los datos se han insertado correctamente.");

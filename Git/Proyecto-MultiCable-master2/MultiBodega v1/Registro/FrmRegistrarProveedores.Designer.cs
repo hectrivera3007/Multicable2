@@ -450,7 +450,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewCheckBoxColumn1});
             this.proveedoresDataGridView.DataSource = this.proveedoresBindingSource;
-            this.proveedoresDataGridView.Location = new System.Drawing.Point(13, 470);
+            this.proveedoresDataGridView.Location = new System.Drawing.Point(-14, 470);
             this.proveedoresDataGridView.Name = "proveedoresDataGridView";
             this.proveedoresDataGridView.Size = new System.Drawing.Size(769, 220);
             this.proveedoresDataGridView.TabIndex = 95;
