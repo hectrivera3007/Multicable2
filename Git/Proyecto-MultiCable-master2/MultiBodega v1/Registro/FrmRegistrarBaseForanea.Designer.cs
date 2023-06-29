@@ -45,7 +45,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.num_TelefonoTextBox = new System.Windows.Forms.TextBox();
             this.nuevoTextBox = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -202,18 +201,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.nuevoTextBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.nuevoTextBox.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(652, 383);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 28);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "&Salir";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,7 +288,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nuevoTextBox);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -340,7 +326,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.TextBox notasTextBox;
         private System.Windows.Forms.TextBox num_TelefonoTextBox;
         private System.Windows.Forms.Button nuevoTextBox;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

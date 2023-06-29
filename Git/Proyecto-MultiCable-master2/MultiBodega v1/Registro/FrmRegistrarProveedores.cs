@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,16 @@ namespace MultiBodega_v1.Formularios_de_Registro
 {
     public partial class FrmRegistrarProveedores : Form
     {
+
+
+        SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
+
         public FrmRegistrarProveedores()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
@@ -41,19 +43,56 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private void FrmRegistrarProveedores_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Proveedores' Puede moverla o quitarla según sea necesario.
-            this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.Proveedores1' Puede moverla o quitarla según sea necesario.
-            //this.proveedores1TableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.Proveedores1);
+            //this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            this.proveedoresTableAdapter.Guardar(nombreProveedorTextBox.Text, Int32.Parse(rTNTextBox1.Text),
-                personaContactoTextBox.Text, direccionTextBox.Text, pais_ZonaTextBox.Text,tipo_ProveedorComboBox.Text,
-                num_TelefonoTextBox.Text, correoElectronicoTextBox.Text, notasTextBox.Text, activoCheckBox.Checked);
-            this.proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
-            MessageBox.Show("El registro se ha guardado con éxito..!");
+
+            try
+            {
+                string nombreProveedor = nombreProveedorTextBox.Text;
+                char rtn[] = rTNTextBox.Text;
+                string personaContacto = personaContactoTextBox.Text;
+                string direccion = direccionTextBox.Text;
+                string paisZona = pais_ZonaTextBox.Text;
+                string tipoProveedor = tipo_ProveedorComboBox.Text;
+                string numTelefono = num_TelefonoTextBox.Text;
+                string correoElectronico = correoElectronicoTextBox.Text;
+                string notas = notasTextBox.Text;
+                bool activo = true;
+
+                string connectionString = "Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;";
+                SqlConnection connection = new SqlConnection(connectionString);
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Proveedores (NombreProveedor, RTN, PersonaContacto, Direccion, Pais_Zona, Tipo_Proveedor, Num_Telefono, CorreoElectronico, Notas, Activo) " +
+                                   "VALUES (@nombreProveedor, @rtn, @personaContacto, @direccion, @paisZona, @tipoProveedor, @numTelefono, @correoElectronico, @notas, @activo)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
+                        command.Parameters.AddWithValue("@rtn", rtn);
+                        command.Parameters.AddWithValue("@personaContacto", personaContacto);
+                        command.Parameters.AddWithValue("@direccion", direccion);
+                        command.Parameters.AddWithValue("@paisZona", paisZona);
+                        command.Parameters.AddWithValue("@tipoProveedor", tipoProveedor);
+                        command.Parameters.AddWithValue("@numTelefono", numTelefono);
+                        command.Parameters.AddWithValue("@correoElectronico", correoElectronico);
+                        command.Parameters.AddWithValue("@notas", notas);
+                        command.Parameters.AddWithValue("@activo", activo);
+
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Los datos se han insertado correctamente.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
         }
 
@@ -75,5 +114,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         { 
             proveedoresBindingSource.AddNew();
         }
+
     }
 }

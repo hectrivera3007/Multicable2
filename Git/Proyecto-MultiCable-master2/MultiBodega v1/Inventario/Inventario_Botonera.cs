@@ -16,8 +16,9 @@ namespace MultiBodega_v1.Botonera
         public Inventario_Botonera()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
-        
+
         private void BtnNuevoProducto_Click(object sender, EventArgs e)
         {
             var producto = new FrmIngresarProducto();
@@ -67,6 +68,9 @@ namespace MultiBodega_v1.Botonera
             this.Close();
         }
 
-        
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

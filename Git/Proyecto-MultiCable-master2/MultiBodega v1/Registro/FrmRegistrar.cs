@@ -20,11 +20,14 @@ namespace MultiBodega_v1.Registro
             InitializeComponent();
         }
 
-        private void BtnListar_Click(object sender, EventArgs e)
+        protected override CreateParams CreateParams
         {
-            FrmListar nuevoform = new FrmListar();
-            nuevoform.Show();
-            this.Close();
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x20;
+                return cp;
+            }
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)

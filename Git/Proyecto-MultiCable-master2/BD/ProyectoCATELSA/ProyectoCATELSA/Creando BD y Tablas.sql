@@ -3,6 +3,7 @@ CREATE DATABASE "CATELSA-MULTICABLE"
 USE [CATELSA-MULTICABLE]
 use master
 --DBCC CHECKIDENT ('Usuario', RESEED, 0);
+DBCC CHECKIDENT ('Proveedores', RESEED, 0);
 
 --Creación de la tabla Roles
 Create Table Rol
@@ -19,7 +20,7 @@ Create Table Rol
 
 Select Max(ID)+1 FROM Usuario
 
-select * from Vista_Usuarios
+EXEC VistaUsuario
 
 Select * From Usuario
 
@@ -82,21 +83,46 @@ Create Table RequisaSalida
 
 
 /*Creación de la tabla de Proveedor*/
-Create Table Proveedores
-(
-	IDProveedor int IDENTITY(1,1) NOT NULL,
-	NombreProveedor varchar(50),
-	RTN int,
-	PersonaContacto varchar(50),
-	Direccion varchar(50),
-	Pais_Zona varchar(50),
-    Tipo_Proveedor varchar(50),
-	Num_Telefono varchar(50) UNIQUE,
-	CorreoElectronico varchar(50),
-	Notas varchar(150),
-	Activo bit DEFAULT 1,
-	Primary Key(IDProveedor)
+--Create Table Proveedores
+--(
+--	IDProveedor int IDENTITY(1,1) NOT NULL,
+--	NombreProveedor varchar(50),
+--	RTN varchar(50),
+--	PersonaContacto varchar(50),
+--	Direccion varchar(50),
+--	Pais_Zona varchar(50),
+--    Tipo_Proveedor varchar(50),
+--	Num_Telefono varchar(50) UNIQUE,
+--	CorreoElectronico varchar(50),
+--	Notas varchar(150),
+--	Activo bit DEFAULT 1,
+--	Primary Key(IDProveedor)
+--);
+
+CREATE TABLE Proveedores (
+    IDProveedor INT IDENTITY(1,1) NOT NULL,
+    NombreProveedor VARCHAR(50),
+    RTN BIGINT UNIQUE CHECK (LEN(RTN) >= 14),
+    PersonaContacto VARCHAR(50),
+    Direccion VARCHAR(50),
+    Pais_Zona VARCHAR(50),
+    Tipo_Proveedor VARCHAR(50),
+    Num_Telefono VARCHAR(50) UNIQUE,
+    CorreoElectronico VARCHAR(50),
+    Notas VARCHAR(150),
+    Activo BIT DEFAULT 1,
+    PRIMARY KEY (IDProveedor)
 );
+
+INSERT INTO Proveedores
+(NombreProveedor,RTN,PersonaContacto,Direccion,Pais_Zona,Tipo_Proveedor,Num_Telefono,CorreoElectronico,
+Notas)
+VALUES('Sycom', 18041987032321, 'Hector Ivan Rivera', 'Barrio Paz Barahona','Honduras', 'Local', '+5049647-2222','sycomhn@sycom.com',
+'Proveedor de articulos tecnológicos');
+
+
+select * from Proveedores
+delete from Proveedores
 
 /*Creación de la tabla de RequisaEntrada*/
 Create Table RequisaEntrada
@@ -224,7 +250,7 @@ Create Table InventarioBodega4
 Create Table Producto
 (
 	IDProducto int IDENTITY(1,1) NOT NULL,
-	FechaIngreso DateTime,
+	FechaIngreso Date,
 	CodigoProd varchar(50),
 	CodigoGen varchar(50),
 	Descripcion varchar(100),
@@ -234,6 +260,17 @@ Create Table Producto
 	Primary Key(IDProducto),
 	Foreign Key(BodegaID) references Bodega(BodegaID)
 );
+
+--CREATE TABLE Producto (
+--  IDProducto INT IDENTITY(1,1),
+--  FechaIngreso DATE,
+--  TipoMaterial VARCHAR(50),
+--  Codigo VARCHAR(10),
+--  Descripcion VARCHAR(100),
+--  BodegaID INT,
+--  Activo BIT Default 1,
+--  FOREIGN KEY (BodegaID) REFERENCES Bodega(BodegaID)
+--);
 
 Create Table TipoMaterial
 (
@@ -322,7 +359,7 @@ Create Table Compras
 Create Table ComprobanteEntrega
 (
 	ID int IDENTITY(1,1) NOT NULL,
-	FechaEntrega DateTime,
+	FechaEntrega Date,
 	Cliente varchar(65),
 	Direccion varchar(100),
 	Descripcion varchar(150),
@@ -334,6 +371,7 @@ Create Table ComprobanteEntrega
 	Primary Key(ID),
 	Foreign Key (IDProducto) references Producto(IDProducto)
 );
+
 
 /*Creación de la tabla de PermisosAdministrador*/
 Create Table PermisosAdministrador
@@ -401,8 +439,8 @@ END
 UPDATE Productos SET Codigo = CONCAT(TipoMaterial, '-', REPLICATE('0', 4 - LEN(IDProducto)), IDProducto);
 
 
-Select * From Productos
-
+Select * From Proveedores
+delete Proveedores where IDProveedor=1
 
  CREATE PROCEDURE BuscarU
  @nombre nvarchar(50) 

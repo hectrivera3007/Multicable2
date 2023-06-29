@@ -229,9 +229,9 @@ namespace MultiBodega_v1.Botonera
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(335, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(285, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(371, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -358,11 +358,11 @@ namespace MultiBodega_v1.Botonera
         private System.Windows.Forms.Button BtnConfig;
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Button BtnReportes;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel NombredeUsuario;
         private System.Windows.Forms.ToolStripStatusLabel Fecha_Hora;
         private System.Windows.Forms.ToolStripStatusLabel Fecha;
         public System.Windows.Forms.Timer RelojSistema;
         public System.Windows.Forms.ToolStripStatusLabel UsuariolblStat;
+        public System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

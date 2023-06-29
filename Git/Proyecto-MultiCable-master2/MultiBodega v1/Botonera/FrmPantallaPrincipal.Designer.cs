@@ -52,10 +52,11 @@ namespace MultiBodega_v1.Botonera
             this.BtnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEntrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnEntrar.FlatAppearance.BorderSize = 0;
             this.BtnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEntrar.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.BtnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(177)))), ((int)(((byte)(29)))));
             this.BtnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrar.Image")));
@@ -87,7 +88,7 @@ namespace MultiBodega_v1.Botonera
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmPantallaPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CATELSA LOGISTIC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

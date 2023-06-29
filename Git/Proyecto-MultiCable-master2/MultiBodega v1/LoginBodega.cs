@@ -65,8 +65,7 @@ namespace MultiBodega_v1
                 MessageBox.Show("¡Bienvenido a CATELSA LOGISTIC!", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 var MostrarPantalla = new Botonera.Botonera_APP();
-                Botonera_APP Botonera = new Botonera_APP();
-                Botonera.UsuariolblStat.Text = NombreUsuario.Text;
+                MostrarPantalla.UsuariolblStat.Text = NombreUsuario.Text;
                 MostrarPantalla.ShowDialog();
                 BtnLogIn.Visible = false;
             }

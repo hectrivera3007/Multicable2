@@ -45,7 +45,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRPV.FlatAppearance.BorderSize = 0;
             this.BtnRPV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRPV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRPV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRPV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRPV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRPV.ForeColor = System.Drawing.Color.Navy;
             this.BtnRPV.Image = ((System.Drawing.Image)(resources.GetObject("BtnRPV.Image")));
@@ -54,7 +54,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRPV.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRPV.Name = "BtnRPV";
             this.BtnRPV.Size = new System.Drawing.Size(141, 116);
-            this.BtnRPV.TabIndex = 22;
+            this.BtnRPV.TabIndex = 3;
             this.BtnRPV.Text = "Registrar Punto de Venta";
             this.BtnRPV.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnRPV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -78,7 +78,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
             this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -86,7 +86,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRegresar.Location = new System.Drawing.Point(506, 320);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
-            this.BtnRegresar.TabIndex = 20;
+            this.BtnRegresar.TabIndex = 4;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegresar.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRBF.FlatAppearance.BorderSize = 0;
             this.BtnRBF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRBF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRBF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRBF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRBF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRBF.ForeColor = System.Drawing.Color.Navy;
             this.BtnRBF.Image = ((System.Drawing.Image)(resources.GetObject("BtnRBF.Image")));
@@ -107,7 +107,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRBF.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRBF.Name = "BtnRBF";
             this.BtnRBF.Size = new System.Drawing.Size(141, 116);
-            this.BtnRBF.TabIndex = 19;
+            this.BtnRBF.TabIndex = 2;
             this.BtnRBF.Text = "Registrar Base Foránea";
             this.BtnRBF.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnRBF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -121,7 +121,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRT.FlatAppearance.BorderSize = 0;
             this.BtnRT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRT.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRT.ForeColor = System.Drawing.Color.Navy;
             this.BtnRT.Image = ((System.Drawing.Image)(resources.GetObject("BtnRT.Image")));
@@ -130,7 +130,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRT.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRT.Name = "BtnRT";
             this.BtnRT.Size = new System.Drawing.Size(141, 116);
-            this.BtnRT.TabIndex = 18;
+            this.BtnRT.TabIndex = 1;
             this.BtnRT.Text = "Registrar Técnico";
             this.BtnRT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -144,7 +144,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRP.FlatAppearance.BorderSize = 0;
             this.BtnRP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRP.ForeColor = System.Drawing.Color.Navy;
             this.BtnRP.Image = ((System.Drawing.Image)(resources.GetObject("BtnRP.Image")));
@@ -153,7 +153,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRP.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRP.Name = "BtnRP";
             this.BtnRP.Size = new System.Drawing.Size(141, 116);
-            this.BtnRP.TabIndex = 17;
+            this.BtnRP.TabIndex = 0;
             this.BtnRP.Text = "Registrar Proveedor";
             this.BtnRP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

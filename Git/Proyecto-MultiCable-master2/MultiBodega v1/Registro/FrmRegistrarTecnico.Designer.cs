@@ -46,7 +46,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.num_TelefonoTextBox = new System.Windows.Forms.TextBox();
             this.nuevoTextBox = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -68,6 +67,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
+            apellidoLabel.BackColor = System.Drawing.Color.Transparent;
             apellidoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             apellidoLabel.Location = new System.Drawing.Point(300, 151);
             apellidoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -79,6 +79,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
+            direccionLabel.BackColor = System.Drawing.Color.Transparent;
             direccionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             direccionLabel.Location = new System.Drawing.Point(19, 196);
             direccionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -90,6 +91,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // dNILabel
             // 
             dNILabel.AutoSize = true;
+            dNILabel.BackColor = System.Drawing.Color.Transparent;
             dNILabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dNILabel.Location = new System.Drawing.Point(185, 275);
             dNILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -101,6 +103,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.Location = new System.Drawing.Point(594, 151);
             fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -112,6 +115,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // nombresLabel
             // 
             nombresLabel.AutoSize = true;
+            nombresLabel.BackColor = System.Drawing.Color.Transparent;
             nombresLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombresLabel.Location = new System.Drawing.Point(19, 151);
             nombresLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -123,6 +127,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // notasLabel
             // 
             notasLabel.AutoSize = true;
+            notasLabel.BackColor = System.Drawing.Color.Transparent;
             notasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             notasLabel.Location = new System.Drawing.Point(19, 320);
             notasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -134,6 +139,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // num_TelefonoLabel
             // 
             num_TelefonoLabel.AutoSize = true;
+            num_TelefonoLabel.BackColor = System.Drawing.Color.Transparent;
             num_TelefonoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             num_TelefonoLabel.Location = new System.Drawing.Point(19, 276);
             num_TelefonoLabel.Name = "num_TelefonoLabel";
@@ -201,6 +207,10 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // nuevoTextBox
             // 
+            this.nuevoTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
             this.nuevoTextBox.Location = new System.Drawing.Point(597, 242);
@@ -210,23 +220,15 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.nuevoTextBox.Text = "&Nuevo";
             this.nuevoTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.nuevoTextBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevoTextBox.UseVisualStyleBackColor = true;
+            this.nuevoTextBox.UseVisualStyleBackColor = false;
             this.nuevoTextBox.Click += new System.EventHandler(this.nuevoTextBox_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(597, 387);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 30);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "&Salir";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(597, 351);
@@ -235,10 +237,14 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.button4.TabIndex = 10;
             this.button4.Text = "&Eliminar";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.Location = new System.Drawing.Point(597, 278);
@@ -248,11 +254,15 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnGuardar.Text = "&Guardar";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(597, 314);
@@ -261,11 +271,12 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.button3.TabIndex = 9;
             this.button3.Text = "&Modificar";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(225, 84);
@@ -277,6 +288,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(237, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -288,8 +300,11 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -300,35 +315,25 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.TabIndex = 71;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
-            // 
-            // _CATELSA_MULTICABLEDataSet
-            // 
-            
             // 
             // registrarTecnicosBindingSource
             // 
             this.registrarTecnicosBindingSource.DataMember = "RegistrarTecnicos";
-            // 
-            // registrarTecnicosTableAdapter
-            // 
-            // 
-            // tableAdapterManager
-            // 
-
             // 
             // FrmRegistrarTecnico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(740, 500);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nuevoTextBox);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.button3);
@@ -346,6 +351,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(notasLabel);
             this.Controls.Add(this.notasTextBox);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -369,7 +375,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.TextBox notasTextBox;
         private System.Windows.Forms.TextBox num_TelefonoTextBox;
         private System.Windows.Forms.Button nuevoTextBox;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button button3;

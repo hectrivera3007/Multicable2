@@ -10,6 +10,7 @@ DBCC CHECKIDENT ('Usuario', RESEED, 0);
 DBCC CHECKIDENT ('Bodega', RESEED, 0);
 DBCC CHECKIDENT ('Productos', RESEED, 0);
 DBCC CHECKIDENT ('TipoMaterial', RESEED, 0);
+DBCC CHECKIDENT ('Proveedores', RESEED, 0);
 
 DROP DATABASE "CATELSA-MULTICABLE"
 DELETE from Usuario WHERE Activo=NULL
@@ -39,7 +40,7 @@ INSERT INTO Usuario VALUES('2023-06-23', 'Camila del Carmen Cabrera', 'camila.ca
 INSERT INTO Usuario VALUES('2023-06-24', 'Juanitta Dinora Ferrera Tobar', 'j.ferrerat', '9435-2034', 'ferrerat2023', 'ferrerat2023', 2, 1, 1)
 INSERT INTO Usuario VALUES('2023-06-25', 'Kevin Antonio Rivera Cabrera', 'k.rivera01', '9959-2089', 'Sathsa2023', 'Sathsa2023', 3, 1, 1)
 
-delete from usuario where Activo=1
+delete from usuario where Activo = 1
 
 exec VistaUsuario
 
@@ -89,9 +90,7 @@ CREATE TABLE Productos (
   Codigo VARCHAR(10),
   Descripcion VARCHAR(100),
   BodegaID INT,
-  IDTipo INT,
   Activo BIT Default 1,
-  FOREIGN KEY (IDTipo) REFERENCES TipoMaterial(IDTipo),
   FOREIGN KEY (BodegaID) REFERENCES Bodega(BodegaID)
 );
 

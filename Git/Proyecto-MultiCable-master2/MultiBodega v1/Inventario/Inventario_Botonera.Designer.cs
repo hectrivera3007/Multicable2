@@ -36,6 +36,7 @@ namespace MultiBodega_v1.Botonera
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAjusteInventario = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,6 +161,10 @@ namespace MultiBodega_v1.Botonera
             this.BtnAjusteInventario.UseVisualStyleBackColor = false;
             this.BtnAjusteInventario.Click += new System.EventHandler(this.BtnAjusteInventario_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Inventario_Botonera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -194,5 +199,6 @@ namespace MultiBodega_v1.Botonera
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnAjusteInventario;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
