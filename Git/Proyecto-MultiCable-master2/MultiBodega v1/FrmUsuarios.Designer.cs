@@ -38,12 +38,6 @@ namespace MultiBodega_v1
             this.usuarioTableAdapter1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager1 = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.VistaUsuariosDataGridView = new System.Windows.Forms.DataGridView();
-            this.vistaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BtnActualizarGrid = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vistaUsuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter();
             this.BtnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaActivacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +49,12 @@ namespace MultiBodega_v1
             this.bodegaAsignadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.vistaUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vistaUsuarioTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VistaUsuariosDataGridView)).BeginInit();
@@ -66,8 +66,9 @@ namespace MultiBodega_v1
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
             label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(13, 114);
+            label1.Location = new System.Drawing.Point(701, 97);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(108, 16);
@@ -76,10 +77,10 @@ namespace MultiBodega_v1
             // 
             // TextoBuscar
             // 
-            this.TextoBuscar.Location = new System.Drawing.Point(13, 132);
+            this.TextoBuscar.Location = new System.Drawing.Point(704, 117);
             this.TextoBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TextoBuscar.Name = "TextoBuscar";
-            this.TextoBuscar.Size = new System.Drawing.Size(453, 23);
+            this.TextoBuscar.Size = new System.Drawing.Size(259, 23);
             this.TextoBuscar.TabIndex = 0;
             this.TextoBuscar.TextChanged += new System.EventHandler(this.TextoBuscar_TextChanged);
             // 
@@ -91,9 +92,10 @@ namespace MultiBodega_v1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(280, 78);
+            this.label2.Location = new System.Drawing.Point(381, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(260, 32);
@@ -151,67 +153,13 @@ namespace MultiBodega_v1
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewCheckBoxColumn1});
             this.VistaUsuariosDataGridView.DataSource = this.vistaUsuarioBindingSource;
-            this.VistaUsuariosDataGridView.Location = new System.Drawing.Point(-2, 162);
+            this.VistaUsuariosDataGridView.Location = new System.Drawing.Point(0, 149);
             this.VistaUsuariosDataGridView.Name = "VistaUsuariosDataGridView";
             this.VistaUsuariosDataGridView.ReadOnly = true;
             this.VistaUsuariosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.VistaUsuariosDataGridView.Size = new System.Drawing.Size(897, 220);
+            this.VistaUsuariosDataGridView.Size = new System.Drawing.Size(1023, 387);
             this.VistaUsuariosDataGridView.TabIndex = 71;
             this.VistaUsuariosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Vista_UsuariosDataGridView_CellContentClick_1);
-            // 
-            // vistaUsuarioBindingSource
-            // 
-            this.vistaUsuarioBindingSource.DataMember = "VistaUsuario";
-            this.vistaUsuarioBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // BtnActualizarGrid
-            // 
-            this.BtnActualizarGrid.FlatAppearance.BorderSize = 0;
-            this.BtnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnActualizarGrid.Image = global::MultiBodega_v1.Properties.Resources.actualizar__2_;
-            this.BtnActualizarGrid.Location = new System.Drawing.Point(852, 119);
-            this.BtnActualizarGrid.Name = "BtnActualizarGrid";
-            this.BtnActualizarGrid.Size = new System.Drawing.Size(39, 40);
-            this.BtnActualizarGrid.TabIndex = 72;
-            this.BtnActualizarGrid.UseVisualStyleBackColor = true;
-            this.BtnActualizarGrid.Click += new System.EventHandler(this.BtnActualizarGrid_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(283, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(255, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 68;
-            this.pictureBox2.TabStop = false;
-            // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
-            this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(698, 388);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(131, 42);
-            this.BtnRegresar.TabIndex = 67;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
-            // 
-            // usuarioBindingSource1
-            // 
-            this.usuarioBindingSource1.DataMember = "Usuario";
-            this.usuarioBindingSource1.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // vistaUsuarioTableAdapter
-            // 
-            this.vistaUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // BtnSeleccionar
             // 
@@ -302,19 +250,80 @@ namespace MultiBodega_v1
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 150;
             // 
+            // vistaUsuarioBindingSource
+            // 
+            this.vistaUsuarioBindingSource.DataMember = "VistaUsuario";
+            this.vistaUsuarioBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(384, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(255, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 68;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BtnRegresar
+            // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.BorderSize = 0;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
+            this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
+            this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRegresar.Location = new System.Drawing.Point(880, 561);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(131, 42);
+            this.BtnRegresar.TabIndex = 67;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // usuarioBindingSource1
+            // 
+            this.usuarioBindingSource1.DataMember = "Usuario";
+            this.usuarioBindingSource1.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // vistaUsuarioTableAdapter
+            // 
+            this.vistaUsuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnLimpiar.FlatAppearance.BorderSize = 0;
+            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
+            this.BtnLimpiar.Location = new System.Drawing.Point(967, 111);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(36, 30);
+            this.BtnLimpiar.TabIndex = 72;
+            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(915, 456);
-            this.Controls.Add(this.BtnActualizarGrid);
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1023, 615);
+            this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.VistaUsuariosDataGridView);
             this.Controls.Add(label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.TextoBuscar);
             this.Controls.Add(this.BtnRegresar);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -356,7 +365,6 @@ namespace MultiBodega_v1
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button BtnActualizarGrid;
         private System.Windows.Forms.BindingSource vistaUsuarioBindingSource;
         private _CATELSA_MULTICABLETableAdapters.VistaUsuarioTableAdapter vistaUsuarioTableAdapter;
         public System.Windows.Forms.DataGridView VistaUsuariosDataGridView;
@@ -371,5 +379,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn bodegaAsignadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button BtnLimpiar;
     }
 }

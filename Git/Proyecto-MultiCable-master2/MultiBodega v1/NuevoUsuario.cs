@@ -29,23 +29,7 @@ namespace MultiBodega_v1
             InitializeComponent();
         }
 
-        private void BtnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmContUsuarios Volver = new FrmContUsuarios();
-            Volver.Show();
-        }
-        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (activoCheckBox.Checked)
-            {
-                activoCheckBox.ForeColor = Color.Green;
-            }
-            else
-            {
-                activoCheckBox.ForeColor = Color.Black;
-            }
-        }        
+        
 
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
@@ -90,6 +74,15 @@ namespace MultiBodega_v1
                 contrasenaTextBox.Text, confirmarContrasenaTextBox.Text, rolIDComboBox.SelectedIndex+1,
                 bodegaIDComboBox.SelectedIndex+1, activoCheckBox.Checked);
                 MessageBox.Show("¡El registro ha sido guardado con éxito!");
+                iDTextBox.Clear();
+                nombreTextBox.Clear();
+                nombreUsuarioTextBox.Clear();
+                numTelefonoTextBox.Clear();
+                contrasenaTextBox.Clear();
+                confirmarContrasenaTextBox.Clear();
+                rolIDComboBox.SelectedIndex = -1;
+                bodegaIDComboBox.SelectedIndex = -1;
+                activoCheckBox.Checked = false;
             }
         }
 
@@ -136,6 +129,24 @@ namespace MultiBodega_v1
             rolIDComboBox.SelectedIndex = -1;
             bodegaIDComboBox.SelectedIndex = -1;
             activoCheckBox.Checked = false;
+        }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmContUsuarios Volver = new FrmContUsuarios();
+            Volver.Show();
+        }
+        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (activoCheckBox.Checked)
+            {
+                activoCheckBox.ForeColor = Color.Green;
+            }
+            else
+            {
+                activoCheckBox.ForeColor = Color.Black;
+            }
         }
     }
 }

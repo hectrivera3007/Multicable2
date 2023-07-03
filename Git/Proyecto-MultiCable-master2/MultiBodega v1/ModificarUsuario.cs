@@ -17,37 +17,7 @@ namespace MultiBodega_v1
             InitializeComponent();
         }
 
-        //private void BtnGuardar_Click(object sender, EventArgs e)
-        //{
-        //    string nom_Usuario = nombreUsuarioTextBox.Text;
-        //    if (string.IsNullOrWhiteSpace(nom_Usuario))
-        //    {
-        //        MessageBox.Show("Por favor, ingrese un Nombre de Usuario válido.",
-        //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return;
-        //    }
-
-        //    bool nom_UsuarioExistente = _CATELSA_MULTICABLE.Usuario.AsEnumerable().Any(row => row.Field<string>("NombreUsuario") == nom_Usuario);
-
-        //    if (nom_UsuarioExistente)
-        //    {
-
-        //        MessageBox.Show("El Nombre de Usuario que intenta guardar ya existe. Por favor, ingrese un Nombre de Usuario diferente.",
-        //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return;
-        //    }
-
-        //    DialogResult resultado = MessageBox.Show("¿Está seguro de que desea Guardar este Registro?",
-        //                            "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-        //    if (resultado == DialogResult.Yes)
-        //    {
-        //        this.usuarioTableAdapter.Guardar(nombreTextBox.Text, nombreUsuarioTextBox.Text, numTelefonoTextBox.Text,
-        //        contrasenaTextBox.Text, confirmarContrasenaTextBox.Text, rolIDComboBox.SelectedIndex,
-        //        bodegaIDComboBox.SelectedIndex, activoCheckBox.Checked);
-        //        MessageBox.Show("¡El registro ha sido guardado con éxito!");
-        //    }
-        //}
+       
 
         private void ModificarUsuario_Load(object sender, EventArgs e)
         {
@@ -68,7 +38,16 @@ namespace MultiBodega_v1
             this.usuarioTableAdapter.Fill(_CATELSA_MULTICABLE.Usuario);
             FrmUsuarios nuevo = new FrmUsuarios();
             nuevo.Show();
-
+            //Limpiamos los TextBox luego de Modificar el registro de Rol de Usuario.            
+            iDTextBox.Clear();
+            nombreTextBox.Clear();
+            nombreUsuarioTextBox.Clear();
+            numTelefonoTextBox.Clear();
+            contrasenaTextBox.Clear();
+            confirmarContrasenaTextBox.Clear();
+            rolIDComboBox.SelectedIndex = -1;
+            bodegaIDComboBox.SelectedIndex = -1;
+            activoCheckBox.Checked = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -93,19 +72,6 @@ namespace MultiBodega_v1
             bodegaIDComboBox.SelectedIndex = -1;
             activoCheckBox.Checked = false;
         }
-
-        //private void btnNuevo_Click(object sender, EventArgs e)
-        //{
-        //    iDTextBox.Clear();
-        //    nombreTextBox.Clear();
-        //    nombreUsuarioTextBox.Clear();
-        //    numTelefonoTextBox.Clear();
-        //    contrasenaTextBox.Clear();
-        //    confirmarContrasenaTextBox.Clear();
-        //    rolIDComboBox.SelectedIndex = -1;
-        //    bodegaIDComboBox.SelectedIndex = -1;
-        //    activoCheckBox.Checked = false;
-        //}
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {

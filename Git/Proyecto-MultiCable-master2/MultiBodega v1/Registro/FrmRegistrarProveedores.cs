@@ -32,13 +32,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             VolverAtras.Show();
         }
 
-        private void proveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.proveedoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLE);
-
-        }
+        
 
         private void FrmRegistrarProveedores_Load(object sender, EventArgs e)
         {
@@ -83,8 +77,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
                         command.Parameters.AddWithValue("@correoElectronico", correoElectronico);
                         command.Parameters.AddWithValue("@notas", notas);
                         command.Parameters.AddWithValue("@activo", activo);
-                        proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
-
+                        //proveedoresTableAdapter.Fill(this._CATELSA_MULTICABLE.Proveedores);
+                        
                         command.ExecuteNonQuery();
                         MessageBox.Show("Los datos se han insertado correctamente.");
                     }
@@ -113,9 +107,29 @@ namespace MultiBodega_v1.Formularios_de_Registro
         }
 
         private void nuevoRegistro_Click(object sender, EventArgs e)
-        { 
-            proveedoresBindingSource.AddNew();
+        {
+            nombreProveedorTextBox.Clear();
+            rTNTextBox.Clear();
+            personaContactoTextBox.Clear();
+            direccionTextBox.Clear();
+            pais_ZonaTextBox.Clear();
+            tipo_ProveedorComboBox.SelectedIndex = -1;
+            num_TelefonoTextBox.Clear();
+            correoElectronicoTextBox.Clear();
+            notasTextBox.Clear();
+            activoCheckBox.Checked = true;
         }
 
+        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (activoCheckBox.Checked)
+            {
+                activoCheckBox.ForeColor = Color.Green;
+            }
+            else
+            {
+                activoCheckBox.ForeColor = Color.Black;
+            }
+        }
     }
 }

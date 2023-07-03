@@ -108,15 +108,10 @@ namespace MultiBodega_v1
                 Mostrar.confirmarContrasenaTextBox.Text = row.Cells[7].Value.ToString();
                 Mostrar.bodegaIDComboBox.Text = row.Cells[8].Value.ToString();
                 Mostrar.rolIDComboBox.Text = row.Cells[9].Value.ToString();
-                Mostrar.activoCheckBox.Text = row.Cells[10].Value.ToString();
+                Mostrar.activoCheckBox.Checked = (bool)row.Cells[10].Value;
                 this.Close();
                 Mostrar.ShowDialog();
             }
-        }
-        
-        private void BtnActualizarGrid_Click(object sender, EventArgs e)
-        {
-            VistaUsuariosDataGridView.Refresh();
         }
 
         private void BuscarU(string nombre)
@@ -138,6 +133,11 @@ namespace MultiBodega_v1
         {
             BuscarU(TextoBuscar.Text);
             
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            TextoBuscar.Clear();
         }
     }
 }

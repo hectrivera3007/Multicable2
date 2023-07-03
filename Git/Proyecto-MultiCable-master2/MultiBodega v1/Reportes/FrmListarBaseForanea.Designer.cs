@@ -41,9 +41,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BuscarBase = new System.Windows.Forms.TextBox();
+            this.Limpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
@@ -70,10 +69,10 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.registro_RegistrarBaseForaneaDataGridView.DataSource = this.registro_RegistrarBaseForaneaBindingSource;
-            this.registro_RegistrarBaseForaneaDataGridView.Location = new System.Drawing.Point(11, 149);
+            this.registro_RegistrarBaseForaneaDataGridView.Location = new System.Drawing.Point(0, 149);
             this.registro_RegistrarBaseForaneaDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.registro_RegistrarBaseForaneaDataGridView.Name = "registro_RegistrarBaseForaneaDataGridView";
-            this.registro_RegistrarBaseForaneaDataGridView.Size = new System.Drawing.Size(992, 383);
+            this.registro_RegistrarBaseForaneaDataGridView.Size = new System.Drawing.Size(1023, 387);
             this.registro_RegistrarBaseForaneaDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -128,48 +127,43 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(673, 120);
+            this.label2.Location = new System.Drawing.Point(711, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 51;
             this.label2.Text = "Buscar:";
             // 
-            // textBox1
+            // BuscarBase
             // 
-            this.textBox1.Location = new System.Drawing.Point(733, 117);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 23);
-            this.textBox1.TabIndex = 0;
+            this.BuscarBase.Location = new System.Drawing.Point(771, 118);
+            this.BuscarBase.Margin = new System.Windows.Forms.Padding(4);
+            this.BuscarBase.Name = "BuscarBase";
+            this.BuscarBase.Size = new System.Drawing.Size(185, 23);
+            this.BuscarBase.TabIndex = 0;
             // 
-            // button1
+            // Limpiar
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(923, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 30);
-            this.button1.TabIndex = 53;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(963, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 30);
-            this.button2.TabIndex = 54;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Limpiar.BackColor = System.Drawing.Color.Transparent;
+            this.Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Limpiar.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar.Image")));
+            this.Limpiar.Location = new System.Drawing.Point(963, 112);
+            this.Limpiar.Name = "Limpiar";
+            this.Limpiar.Size = new System.Drawing.Size(36, 30);
+            this.Limpiar.TabIndex = 54;
+            this.Limpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Limpiar.UseVisualStyleBackColor = false;
+            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(326, 77);
+            this.label1.Location = new System.Drawing.Point(334, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(355, 32);
@@ -178,8 +172,9 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(376, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(384, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
@@ -189,8 +184,11 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -201,7 +199,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.TabIndex = 75;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // FrmListarBaseForanea
@@ -209,15 +207,17 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1013, 619);
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1023, 615);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Limpiar);
+            this.Controls.Add(this.BuscarBase);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.registro_RegistrarBaseForaneaDataGridView);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -244,9 +244,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox BuscarBase;
+        private System.Windows.Forms.Button Limpiar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnRegresar;

@@ -24,5 +24,10 @@ namespace MultiBodega_v1.Formularios_de_Registro
             var Volver = new FrmListar();
             Volver.Show();
         }
+
+        private void Limpiar_Click(object sender, EventArgs e)
+        {
+            BuscarPuntos.Clear();
+        }
     }
 }

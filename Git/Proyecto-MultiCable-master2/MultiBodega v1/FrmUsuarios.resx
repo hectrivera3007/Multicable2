@@ -138,6 +138,15 @@
   <metadata name="vistaUsuarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>723, 17</value>
   </metadata>
+  <metadata name="BtnSeleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FechaActivacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="vistaUsuarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>723, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1077,6 +1086,25 @@
   <metadata name="vistaUsuarioTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
+  <data name="BtnLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfnAxcOJwyUFkcoAAAC
+        w0lEQVQ4T6WUW4hMcRzHz4zFYk3s5jbTNO7TmduZ+wzTEFG767IPkvLgWaJIYl83SimPJE/LFilPIilJ
+        Siu3B602pTa32hKxm3VJfL7/OWc720jJvz79rv/f//e/nGP9z8jn84ZcLjerUChchocypvAvo1gsWhRR
+        0U7kGDxVkVZoK5fLpqC3qvjb8OW2Uega/IKjWuES3CSwmqRpkm6SO7V5JBIJf3c7kV9hBD0l5yiMYayH
+        FeiPkVuR7vTmQdyjnbw7oO4uZrPZ6Sq4jsAWbR05G7phCbjTG0NbZIIppMUE+g7kN/iJvku+yaC2gHMB
+        xKAFplySiiWTyQB+h/y9yB7IwiHsAWQEGokqiLEWOQivoI9iM00Co1QqeTlF5AvQFtXZfXwHwI7H440G
+        NImiAYLn3EQxij/txkxiOBxWro7iIPEH8N2XP4S/Ry/FFKzVaurghC9BXSwHU1AdkqczOk7xeegdsBv7
+        OnwGzXmEb5H/+iPI03AVfTvnZRaLRCKS2/C/gXvoC+XXHIrPQd+E3g+D6KvMm1JQSZVKxbJtO6BFSNbF
+        2MROwgd4go0oWP6PIBQKaRdz0ZdBq5VKmbeoYDuU0btA53QF3sIn6CcW10KZTMYU8u1sA1K7Ssn2n9ER
+        HOPwBdTREJzFv5FuzI1Ho1ErnU4bZNOMLvMM6ONIgmVWlELCGuRLmEA/DB31et2cEwS9LSqXgnqPsldi
+        j8CA4zgtyjFbFjoXEjYT1A2r8D7s/dDpvUM9L+wsE+cj5euFcXQdk1WtVs27NV2ygve1VAjeBT2Fd9j6
+        LLVlvcFj0Et+EKlnpcVvoOu2zQVPDrXr29Zi6IPX8B5uwTMYJu7wpFTwFLZ+Kt1I80KahgIqKGKxmPfd
+        auIw/ADd+G3Q3/kjnOcYZqgRXe4fh9pWUKhwMBiUXAp7KHABnsOEJD5bOaIxLOs3MBolorXzCOcAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>94</value>
   </metadata>

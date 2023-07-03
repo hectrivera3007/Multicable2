@@ -21,15 +21,12 @@ namespace MultiBodega_v1.Formularios_de_Registro
             InitializeComponent();
         }
 
-        private void BtnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            var Volver = new FrmListar();
-            Volver.Show();
-        }
+        
 
         private void FrmListarTecnicos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
+            this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
             //this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLEDataSet.RegistrarTecnicos);
 
@@ -51,6 +48,18 @@ namespace MultiBodega_v1.Formularios_de_Registro
             da.Fill(dt);
             registro_RegistrarTecnicosDataGridView.DataSource = dt;
             conexion.Close();
+        }
+
+        private void Limpiar_Click(object sender, EventArgs e)
+        {
+            BuscarTecnico.Clear();
+        }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var Volver = new FrmListar();
+            Volver.Show();
         }
     }
 }

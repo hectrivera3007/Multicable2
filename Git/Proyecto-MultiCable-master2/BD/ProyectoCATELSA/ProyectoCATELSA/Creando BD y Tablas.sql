@@ -99,10 +99,11 @@ Create Table RequisaSalida
 --	Primary Key(IDProveedor)
 --);
 
+
 CREATE TABLE Proveedores (
     IDProveedor INT IDENTITY(1,1) NOT NULL,
     NombreProveedor VARCHAR(50),
-    RTN BIGINT UNIQUE CHECK (LEN(RTN) >= 14),
+    RTN VARCHAR(14)UNIQUE CHECK (LEN(RTN) = 14),
     PersonaContacto VARCHAR(50),
     Direccion VARCHAR(50),
     Pais_Zona VARCHAR(50),
@@ -114,15 +115,28 @@ CREATE TABLE Proveedores (
     PRIMARY KEY (IDProveedor)
 );
 
-INSERT INTO Proveedores
-(NombreProveedor,RTN,PersonaContacto,Direccion,Pais_Zona,Tipo_Proveedor,Num_Telefono,CorreoElectronico,
-Notas)
-VALUES('Sycom', 18041987032321, 'Hector Ivan Rivera', 'Barrio Paz Barahona','Honduras', 'Local', '+5049647-2222','sycomhn@sycom.com',
-'Proveedor de articulos tecnológicos');
+UPDATE Proveedores
+SET NombreProveedor = @NombreProveedor , RTN = @RTN, PersonaContacto = @PersonaContacto, Direccion = @Direccion, Pais_Zona = @Pais_Zona, Tipo_Proveedor = @Tipo_Proveedor, Num_Telefono = @Num_Telefono, CorreoElectronico = @CorreoElectronico, Notas = @Notas, Activo = @Activo
+FROM dbo.Proveedores
+WHERE (IDProveedor = @Original_ID)
+
+
+UPDATE       Usuario
+SET                FechaActivacion = @FechaActivacion, Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena, ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, 
+                         BodegaID = @BodegaID, Activo = @Activo
+
+
+
+
+--INSERT INTO Proveedores
+--(NombreProveedor,RTN,PersonaContacto,Direccion,Pais_Zona,Tipo_Proveedor,Num_Telefono,CorreoElectronico,
+--Notas)
+--VALUES('Sycom', '18041987032321', 'Hector Ivan Rivera', 'Barrio Paz Barahona','Honduras', 'Local', '+5049647-2222','sycomhn@sycom.com',
+--'Proveedor de Artículos Tecnológicos');
 
 
 select * from Proveedores
-delete from Proveedores
+delete from Proveedores where IDProveedor=2;
 
 /*Creación de la tabla de RequisaEntrada*/
 Create Table RequisaEntrada

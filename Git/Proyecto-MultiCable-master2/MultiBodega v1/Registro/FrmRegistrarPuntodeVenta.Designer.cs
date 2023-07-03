@@ -66,7 +66,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             direccionLabel.AutoSize = true;
             direccionLabel.BackColor = System.Drawing.Color.Transparent;
             direccionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(59, 187);
+            direccionLabel.Location = new System.Drawing.Point(48, 187);
             direccionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(74, 16);
@@ -78,7 +78,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             fechaRegistroLabel.AutoSize = true;
             fechaRegistroLabel.BackColor = System.Drawing.Color.Transparent;
             fechaRegistroLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaRegistroLabel.Location = new System.Drawing.Point(499, 143);
+            fechaRegistroLabel.Location = new System.Drawing.Point(488, 143);
             fechaRegistroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaRegistroLabel.Name = "fechaRegistroLabel";
             fechaRegistroLabel.Size = new System.Drawing.Size(107, 16);
@@ -90,7 +90,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             lugar_ZonaLabel.AutoSize = true;
             lugar_ZonaLabel.BackColor = System.Drawing.Color.Transparent;
             lugar_ZonaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lugar_ZonaLabel.Location = new System.Drawing.Point(353, 261);
+            lugar_ZonaLabel.Location = new System.Drawing.Point(342, 261);
             lugar_ZonaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lugar_ZonaLabel.Name = "lugar_ZonaLabel";
             lugar_ZonaLabel.Size = new System.Drawing.Size(87, 16);
@@ -102,7 +102,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             nombreLabel.AutoSize = true;
             nombreLabel.BackColor = System.Drawing.Color.Transparent;
             nombreLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(61, 143);
+            nombreLabel.Location = new System.Drawing.Point(50, 143);
             nombreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(64, 16);
@@ -114,7 +114,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             notasLabel.AutoSize = true;
             notasLabel.BackColor = System.Drawing.Color.Transparent;
             notasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            notasLabel.Location = new System.Drawing.Point(59, 303);
+            notasLabel.Location = new System.Drawing.Point(48, 303);
             notasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             notasLabel.Name = "notasLabel";
             notasLabel.Size = new System.Drawing.Size(49, 16);
@@ -126,7 +126,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             num_TelefonoLabel.AutoSize = true;
             num_TelefonoLabel.BackColor = System.Drawing.Color.Transparent;
             num_TelefonoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            num_TelefonoLabel.Location = new System.Drawing.Point(59, 260);
+            num_TelefonoLabel.Location = new System.Drawing.Point(48, 260);
             num_TelefonoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             num_TelefonoLabel.Name = "num_TelefonoLabel";
             num_TelefonoLabel.Size = new System.Drawing.Size(142, 16);
@@ -140,7 +140,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(59, 205);
+            this.direccionTextBox.Location = new System.Drawing.Point(48, 205);
             this.direccionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.direccionTextBox.Multiline = true;
             this.direccionTextBox.Name = "direccionTextBox";
@@ -151,7 +151,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             this.fechaRegistroDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.registro_RegistrarPuntodeVentaBindingSource, "FechaRegistro", true));
             this.fechaRegistroDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaRegistroDateTimePicker.Location = new System.Drawing.Point(502, 162);
+            this.fechaRegistroDateTimePicker.Location = new System.Drawing.Point(491, 162);
             this.fechaRegistroDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechaRegistroDateTimePicker.Name = "fechaRegistroDateTimePicker";
             this.fechaRegistroDateTimePicker.Size = new System.Drawing.Size(110, 23);
@@ -160,7 +160,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // lugar_ZonaTextBox
             // 
             this.lugar_ZonaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Lugar_Zona", true));
-            this.lugar_ZonaTextBox.Location = new System.Drawing.Point(356, 279);
+            this.lugar_ZonaTextBox.Location = new System.Drawing.Point(345, 279);
             this.lugar_ZonaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lugar_ZonaTextBox.Name = "lugar_ZonaTextBox";
             this.lugar_ZonaTextBox.Size = new System.Drawing.Size(256, 23);
@@ -169,7 +169,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(62, 162);
+            this.nombreTextBox.Location = new System.Drawing.Point(51, 162);
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(265, 23);
@@ -178,7 +178,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // notasTextBox
             // 
             this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Notas", true));
-            this.notasTextBox.Location = new System.Drawing.Point(59, 322);
+            this.notasTextBox.Location = new System.Drawing.Point(48, 322);
             this.notasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.notasTextBox.Multiline = true;
             this.notasTextBox.Name = "notasTextBox";
@@ -188,7 +188,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // num_TelefonoTextBox
             // 
             this.num_TelefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Num_Telefono", true));
-            this.num_TelefonoTextBox.Location = new System.Drawing.Point(59, 279);
+            this.num_TelefonoTextBox.Location = new System.Drawing.Point(48, 279);
             this.num_TelefonoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
             this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
@@ -202,7 +202,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.nuevoTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
-            this.nuevoTextBox.Location = new System.Drawing.Point(638, 243);
+            this.nuevoTextBox.Location = new System.Drawing.Point(627, 243);
             this.nuevoTextBox.Name = "nuevoTextBox";
             this.nuevoTextBox.Size = new System.Drawing.Size(105, 28);
             this.nuevoTextBox.TabIndex = 6;
@@ -219,7 +219,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(638, 345);
+            this.button4.Location = new System.Drawing.Point(627, 345);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(105, 28);
             this.button4.TabIndex = 9;
@@ -235,7 +235,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(638, 277);
+            this.button2.Location = new System.Drawing.Point(627, 277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 28);
             this.button2.TabIndex = 7;
@@ -252,7 +252,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(638, 311);
+            this.button3.Location = new System.Drawing.Point(627, 311);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(105, 28);
             this.button3.TabIndex = 8;
@@ -266,7 +266,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(201, 79);
+            this.label2.Location = new System.Drawing.Point(207, 79);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(381, 32);
@@ -277,7 +277,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(264, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(270, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(255, 71);
@@ -296,7 +296,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(621, 432);
+            this.BtnRegresar.Location = new System.Drawing.Point(610, 432);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 69;

@@ -299,6 +299,30 @@
     <Compile Include="ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro\ModificarBaseForanea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\ModificarBaseForanea.Designer.cs">
+      <DependentUpon>ModificarBaseForanea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\ModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\ModificarProveedor.Designer.cs">
+      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\ModificarPuntodeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\ModificarPuntodeVenta.Designer.cs">
+      <DependentUpon>ModificarPuntodeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\ModificarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\ModificarTecnico.Designer.cs">
+      <DependentUpon>ModificarTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmBodegaBotonera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -597,6 +621,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\ModificarBaseForanea.resx">
+      <DependentUpon>ModificarBaseForanea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\ModificarProveedor.resx">
+      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\ModificarPuntodeVenta.resx">
+      <DependentUpon>ModificarPuntodeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\ModificarTecnico.resx">
+      <DependentUpon>ModificarTecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmBodegaBotonera.resx">
       <DependentUpon>FrmBodegaBotonera.cs</DependentUpon>
