@@ -29,12 +29,14 @@ namespace MultiBodega_v1.Registro
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label fechaRegistroLabel;
             System.Windows.Forms.Label lugar_ZonaLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label notasLabel;
             System.Windows.Forms.Label num_TelefonoLabel;
+            System.Windows.Forms.Label iDSolicitanteLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarBaseForanea));
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +49,22 @@ namespace MultiBodega_v1.Registro
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.num_TelefonoTextBox = new System.Windows.Forms.TextBox();
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.registrarBaseForaneaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.registrarBaseForaneaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarBaseForaneaTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.iDSolicitanteTextBox = new System.Windows.Forms.TextBox();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
             direccionLabel = new System.Windows.Forms.Label();
             fechaRegistroLabel = new System.Windows.Forms.Label();
             lugar_ZonaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
             num_TelefonoLabel = new System.Windows.Forms.Label();
+            iDSolicitanteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrarBaseForaneaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // direccionLabel
@@ -128,6 +139,17 @@ namespace MultiBodega_v1.Registro
             num_TelefonoLabel.TabIndex = 89;
             num_TelefonoLabel.Text = "Número de Teléfono:";
             // 
+            // iDSolicitanteLabel
+            // 
+            iDSolicitanteLabel.AutoSize = true;
+            iDSolicitanteLabel.BackColor = System.Drawing.Color.Transparent;
+            iDSolicitanteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iDSolicitanteLabel.Location = new System.Drawing.Point(41, 102);
+            iDSolicitanteLabel.Name = "iDSolicitanteLabel";
+            iDSolicitanteLabel.Size = new System.Drawing.Size(25, 16);
+            iDSolicitanteLabel.TabIndex = 93;
+            iDSolicitanteLabel.Text = "ID:";
+            // 
             // BtnRegresar
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
@@ -146,6 +168,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegresar.UseVisualStyleBackColor = false;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // label2
             // 
@@ -260,14 +283,78 @@ namespace MultiBodega_v1.Registro
             this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
             this.num_TelefonoTextBox.TabIndex = 79;
             // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // registrarBaseForaneaBindingSource
+            // 
+            this.registrarBaseForaneaBindingSource.DataMember = "RegistrarBaseForanea";
+            this.registrarBaseForaneaBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // registrarBaseForaneaTableAdapter
+            // 
+            this.registrarBaseForaneaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
+            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = this.registrarBaseForaneaTableAdapter;
+            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
+            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.TipoMaterialTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // iDSolicitanteTextBox
+            // 
+            this.iDSolicitanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registrarBaseForaneaBindingSource, "IDSolicitante", true));
+            this.iDSolicitanteTextBox.Location = new System.Drawing.Point(44, 121);
+            this.iDSolicitanteTextBox.Name = "iDSolicitanteTextBox";
+            this.iDSolicitanteTextBox.ReadOnly = true;
+            this.iDSolicitanteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iDSolicitanteTextBox.TabIndex = 94;
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registrarBaseForaneaBindingSource, "Activo", true));
+            this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activoCheckBox.Location = new System.Drawing.Point(667, 162);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(77, 24);
+            this.activoCheckBox.TabIndex = 95;
+            this.activoCheckBox.Text = "Activo";
+            this.activoCheckBox.UseVisualStyleBackColor = false;
+            // 
             // ModificarBaseForanea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(794, 492);
+            this.ClientSize = new System.Drawing.Size(802, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.activoCheckBox);
+            this.Controls.Add(iDSolicitanteLabel);
+            this.Controls.Add(this.iDSolicitanteTextBox);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -289,7 +376,10 @@ namespace MultiBodega_v1.Registro
             this.Name = "ModificarBaseForanea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Base Foranea";
+            this.Load += new System.EventHandler(this.ModificarBaseForanea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrarBaseForaneaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +398,11 @@ namespace MultiBodega_v1.Registro
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox notasTextBox;
         private System.Windows.Forms.TextBox num_TelefonoTextBox;
+        private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource registrarBaseForaneaBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.RegistrarBaseForaneaTableAdapter registrarBaseForaneaTableAdapter;
+        private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox iDSolicitanteTextBox;
+        private System.Windows.Forms.CheckBox activoCheckBox;
     }
 }

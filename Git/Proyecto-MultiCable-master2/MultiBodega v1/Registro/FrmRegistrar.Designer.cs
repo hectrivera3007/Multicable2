@@ -45,7 +45,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRPV.FlatAppearance.BorderSize = 0;
             this.BtnRPV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRPV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRPV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRPV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRPV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRPV.ForeColor = System.Drawing.Color.Navy;
             this.BtnRPV.Image = ((System.Drawing.Image)(resources.GetObject("BtnRPV.Image")));
@@ -98,7 +98,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRBF.FlatAppearance.BorderSize = 0;
             this.BtnRBF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRBF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRBF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRBF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRBF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRBF.ForeColor = System.Drawing.Color.Navy;
             this.BtnRBF.Image = ((System.Drawing.Image)(resources.GetObject("BtnRBF.Image")));
@@ -121,7 +121,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRT.FlatAppearance.BorderSize = 0;
             this.BtnRT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRT.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRT.ForeColor = System.Drawing.Color.Navy;
             this.BtnRT.Image = ((System.Drawing.Image)(resources.GetObject("BtnRT.Image")));
@@ -144,7 +144,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRP.FlatAppearance.BorderSize = 0;
             this.BtnRP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.BtnRP.ForeColor = System.Drawing.Color.Navy;
             this.BtnRP.Image = ((System.Drawing.Image)(resources.GetObject("BtnRP.Image")));

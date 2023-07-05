@@ -43,14 +43,16 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.lugar_ZonaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.notasTextBox = new System.Windows.Forms.TextBox();
-            this.num_TelefonoTextBox = new System.Windows.Forms.TextBox();
-            this.nuevoTextBox = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.num_TelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.registrarPuntodeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.registrarPuntodeVentaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarPuntodeVentaTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             direccionLabel = new System.Windows.Forms.Label();
             fechaRegistroLabel = new System.Windows.Forms.Label();
             lugar_ZonaLabel = new System.Windows.Forms.Label();
@@ -59,6 +61,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             num_TelefonoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.registro_RegistrarPuntodeVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrarPuntodeVentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             this.SuspendLayout();
             // 
             // direccionLabel
@@ -145,7 +149,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.direccionTextBox.Multiline = true;
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(553, 53);
-            this.direccionTextBox.TabIndex = 2;
+            this.direccionTextBox.TabIndex = 3;
             // 
             // fechaRegistroDateTimePicker
             // 
@@ -164,7 +168,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.lugar_ZonaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lugar_ZonaTextBox.Name = "lugar_ZonaTextBox";
             this.lugar_ZonaTextBox.Size = new System.Drawing.Size(256, 23);
-            this.lugar_ZonaTextBox.TabIndex = 4;
+            this.lugar_ZonaTextBox.TabIndex = 5;
             // 
             // nombreTextBox
             // 
@@ -183,82 +187,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.notasTextBox.Multiline = true;
             this.notasTextBox.Name = "notasTextBox";
             this.notasTextBox.Size = new System.Drawing.Size(553, 88);
-            this.notasTextBox.TabIndex = 5;
-            // 
-            // num_TelefonoTextBox
-            // 
-            this.num_TelefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registro_RegistrarPuntodeVentaBindingSource, "Num_Telefono", true));
-            this.num_TelefonoTextBox.Location = new System.Drawing.Point(48, 279);
-            this.num_TelefonoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
-            this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
-            this.num_TelefonoTextBox.TabIndex = 3;
-            // 
-            // nuevoTextBox
-            // 
-            this.nuevoTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.nuevoTextBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.nuevoTextBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.nuevoTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
-            this.nuevoTextBox.Location = new System.Drawing.Point(627, 243);
-            this.nuevoTextBox.Name = "nuevoTextBox";
-            this.nuevoTextBox.Size = new System.Drawing.Size(105, 28);
-            this.nuevoTextBox.TabIndex = 6;
-            this.nuevoTextBox.Text = "&Nuevo";
-            this.nuevoTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nuevoTextBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevoTextBox.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(627, 345);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 28);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "&Eliminar";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(627, 277);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "&Guardar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(627, 311);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 28);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "&Modificar";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.notasTextBox.TabIndex = 6;
             // 
             // label2
             // 
@@ -299,11 +228,89 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.Location = new System.Drawing.Point(610, 432);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
-            this.BtnRegresar.TabIndex = 69;
+            this.BtnRegresar.TabIndex = 8;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registrarPuntodeVentaBindingSource, "Activo", true));
+            this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activoCheckBox.Location = new System.Drawing.Point(610, 161);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.activoCheckBox.TabIndex = 2;
+            this.activoCheckBox.Text = "Activo";
+            this.activoCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::MultiBodega_v1.Properties.Resources.Guardar_32x32;
+            this.btnGuardar.Location = new System.Drawing.Point(694, 338);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // num_TelefonoTextBox
+            // 
+            this.num_TelefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_TelefonoTextBox.Location = new System.Drawing.Point(48, 279);
+            this.num_TelefonoTextBox.Mask = "+000 0000-0000";
+            this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
+            this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
+            this.num_TelefonoTextBox.TabIndex = 4;
+            // 
+            // registrarPuntodeVentaBindingSource
+            // 
+            this.registrarPuntodeVentaBindingSource.DataMember = "RegistrarPuntodeVenta";
+            this.registrarPuntodeVentaBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // registrarPuntodeVentaTableAdapter
+            // 
+            this.registrarPuntodeVentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
+            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
+            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = this.registrarPuntodeVentaTableAdapter;
+            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.TipoMaterialTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
             // FrmRegistrarPuntodeVenta
             // 
@@ -313,13 +320,13 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(794, 492);
+            this.ControlBox = false;
+            this.Controls.Add(this.num_TelefonoTextBox);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.nuevoTextBox);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(fechaRegistroLabel);
@@ -331,16 +338,19 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.Controls.Add(notasLabel);
             this.Controls.Add(this.notasTextBox);
             this.Controls.Add(num_TelefonoLabel);
-            this.Controls.Add(this.num_TelefonoTextBox);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmRegistrarPuntodeVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Punto de Venta";
+            this.Load += new System.EventHandler(this.FrmRegistrarPuntodeVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.registro_RegistrarPuntodeVentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrarPuntodeVentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,13 +364,15 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.TextBox lugar_ZonaTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox notasTextBox;
-        private System.Windows.Forms.TextBox num_TelefonoTextBox;
-        private System.Windows.Forms.Button nuevoTextBox;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button BtnRegresar;
+        private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource registrarPuntodeVentaBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.RegistrarPuntodeVentaTableAdapter registrarPuntodeVentaTableAdapter;
+        private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
     }
 }

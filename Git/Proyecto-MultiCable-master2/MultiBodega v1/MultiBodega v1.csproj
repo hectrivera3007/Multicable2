@@ -244,11 +244,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD_CATELSA_MULTICABLE.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Bodegas\Bodega_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -782,17 +777,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="BD_CATELSA_MULTICABLE.xsc">
-      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
-    </None>
-    <None Include="BD_CATELSA_MULTICABLE.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BD_CATELSA_MULTICABLE.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BD_CATELSA_MULTICABLE.xss">
-      <DependentUpon>BD_CATELSA_MULTICABLE.xsd</DependentUpon>
-    </None>
     <None Include="CATELSA-MULTICABLE.xsc">
       <DependentUpon>CATELSA-MULTICABLE.xsd</DependentUpon>
     </None>
@@ -895,6 +879,7 @@
     <None Include="Resources\actualizar %282%29.png" />
     <None Include="Resources\agregar-usuario %282%29.png" />
     <None Include="Resources\Fondo_.png" />
+    <None Include="Resources\agregar-usuario.png" />
     <Content Include="Resources\mostrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

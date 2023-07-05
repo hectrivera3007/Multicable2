@@ -1,5 +1,4 @@
 ﻿using BL.Bodega;
-using MultiBodega_v1.BD_CATELSA_MULTICABLETableAdapters;
 using MultiBodega_v1.Botonera;
 using System;
 using System.Collections.Generic;

@@ -54,6 +54,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaLabel.Location = new System.Drawing.Point(13, 103);
             fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaLabel.Name = "fechaLabel";
@@ -134,6 +135,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 16);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -146,6 +148,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(255, 40);
@@ -157,6 +160,10 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             // printbtn
             // 
+            this.printbtn.BackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Image = ((System.Drawing.Image)(resources.GetObject("printbtn.Image")));
             this.printbtn.Location = new System.Drawing.Point(717, 82);
@@ -165,13 +172,15 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.printbtn.Size = new System.Drawing.Size(38, 38);
             this.printbtn.TabIndex = 53;
             this.printbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.printbtn.UseVisualStyleBackColor = true;
+            this.printbtn.UseVisualStyleBackColor = false;
             // 
             // BtnRegresar
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -189,6 +198,8 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(814, 513);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.printbtn);
@@ -197,6 +208,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.Controls.Add(fechaLabel);
             this.Controls.Add(this.fechaDateTimePicker);
             this.Controls.Add(this.bajosMinimosDataGridView);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

@@ -152,7 +152,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
             this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -171,6 +171,7 @@ namespace MultiBodega_v1.Botonera.Requisas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(769, 415);
             this.Controls.Add(this.BtnComprEntrada);

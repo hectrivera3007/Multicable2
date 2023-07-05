@@ -406,7 +406,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
@@ -422,7 +421,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -454,7 +452,7 @@ namespace MultiBodega_v1
             this.fechaActivacionDateTimePicker.Name = "fechaActivacionDateTimePicker";
             this.fechaActivacionDateTimePicker.Size = new System.Drawing.Size(189, 23);
             this.fechaActivacionDateTimePicker.TabIndex = 107;
-            this.fechaActivacionDateTimePicker.Value = new System.DateTime(2023, 6, 26, 14, 22, 0, 0);
+            this.fechaActivacionDateTimePicker.Value = new System.DateTime(2023, 7, 4, 0, 0, 0, 0);
             // 
             // NuevoUsuario
             // 

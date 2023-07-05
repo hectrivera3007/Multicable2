@@ -4,5 +4,8 @@
 
     partial class _CATELSA_MULTICABLE
     {
+        partial class RegistrarTecnicosDataTable
+        {
+        }
     }
 }

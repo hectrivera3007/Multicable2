@@ -179,7 +179,7 @@ namespace MultiBodega_v1.Inventario
             this.printbtn.FlatAppearance.BorderSize = 0;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.ForeColor = System.Drawing.Color.White;
+            this.printbtn.ForeColor = System.Drawing.Color.Black;
             this.printbtn.Image = ((System.Drawing.Image)(resources.GetObject("printbtn.Image")));
             this.printbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.printbtn.Location = new System.Drawing.Point(914, 104);
@@ -195,12 +195,14 @@ namespace MultiBodega_v1.Inventario
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.White;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(885, 507);
+            this.BtnRegresar.Location = new System.Drawing.Point(912, 517);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 65;
@@ -284,9 +286,9 @@ namespace MultiBodega_v1.Inventario
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1060, 552);
+            this.ClientSize = new System.Drawing.Size(1060, 568);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox1);

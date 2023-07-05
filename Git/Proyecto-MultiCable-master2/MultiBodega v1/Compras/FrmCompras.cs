@@ -27,8 +27,7 @@ namespace MultiBodega_v1.Compras
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Compras' Puede moverla o quitarla según sea necesario.
-            this.comprasTableAdapter.Fill(this._CATELSA_MULTICABLE.Compras);
+            
 
         }
     }

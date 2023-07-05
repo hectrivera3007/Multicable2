@@ -34,11 +34,6 @@ namespace MultiBodega_v1.Reporte_Bodegas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bodega4));
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ReporteBodegas_ReporteBodega4DataGridView = new System.Windows.Forms.DataGridView();
-            this.reporteBodegas_ReporteBodega4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.printbtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +42,11 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reporteBodegas_ReporteBodega4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.printbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             fechaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteBodegas_ReporteBodega4DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteBodegas_ReporteBodega4BindingSource)).BeginInit();
@@ -56,9 +56,10 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.ForeColor = System.Drawing.Color.Navy;
-            fechaLabel.Location = new System.Drawing.Point(683, 140);
+            fechaLabel.Location = new System.Drawing.Point(681, 138);
             fechaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(62, 19);
@@ -95,63 +96,6 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.ReporteBodegas_ReporteBodega4DataGridView.Name = "ReporteBodegas_ReporteBodega4DataGridView";
             this.ReporteBodegas_ReporteBodega4DataGridView.Size = new System.Drawing.Size(953, 271);
             this.ReporteBodegas_ReporteBodega4DataGridView.TabIndex = 48;
-            // 
-            // reporteBodegas_ReporteBodega4BindingSource
-            // 
-            this.reporteBodegas_ReporteBodega4BindingSource.DataSource = typeof(BL.Bodega.ReporteBodegas.ReporteBodega4);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(336, 83);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(332, 32);
-            this.label3.TabIndex = 86;
-            this.label3.Text = "REPORTE DE INVENTARIO";
-            // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
-            this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(842, 457);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(135, 39);
-            this.BtnRegresar.TabIndex = 88;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
-            // 
-            // printbtn
-            // 
-            this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Image = ((System.Drawing.Image)(resources.GetObject("printbtn.Image")));
-            this.printbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.printbtn.Location = new System.Drawing.Point(867, 122);
-            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(107, 37);
-            this.printbtn.TabIndex = 87;
-            this.printbtn.Text = "Imprimir";
-            this.printbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.printbtn.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(375, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 85;
-            this.pictureBox1.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -210,11 +154,79 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // reporteBodegas_ReporteBodega4BindingSource
+            // 
+            this.reporteBodegas_ReporteBodega4BindingSource.DataSource = typeof(BL.Bodega.ReporteBodegas.ReporteBodega4);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label3.Location = new System.Drawing.Point(336, 83);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(332, 32);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "REPORTE DE INVENTARIO";
+            // 
+            // BtnRegresar
+            // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.BorderSize = 0;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
+            this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
+            this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRegresar.Location = new System.Drawing.Point(842, 449);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(135, 39);
+            this.BtnRegresar.TabIndex = 88;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // printbtn
+            // 
+            this.printbtn.BackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn.Image = ((System.Drawing.Image)(resources.GetObject("printbtn.Image")));
+            this.printbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.printbtn.Location = new System.Drawing.Point(867, 122);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(107, 37);
+            this.printbtn.TabIndex = 87;
+            this.printbtn.Text = "Imprimir";
+            this.printbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.printbtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(375, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
+            // 
             // Bodega4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(989, 500);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.printbtn);
@@ -223,6 +235,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.Controls.Add(this.ReporteBodegas_ReporteBodega4DataGridView);
             this.Controls.Add(this.fechaDateTimePicker);
             this.Controls.Add(fechaLabel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bodega4";

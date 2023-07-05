@@ -51,7 +51,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.personaContactoTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
-            this.nuevoRegistro = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.rTNTextBox = new System.Windows.Forms.TextBox();
             this.iDProveedorTextBox = new System.Windows.Forms.TextBox();
@@ -283,7 +282,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.pictureBox2.Location = new System.Drawing.Point(270, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(255, 71);
+            this.pictureBox2.Size = new System.Drawing.Size(255, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 91;
             this.pictureBox2.TabStop = false;
@@ -299,7 +298,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(633, 411);
+            this.BtnRegresar.Location = new System.Drawing.Point(646, 418);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 15;
@@ -308,24 +307,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
-            // nuevoRegistro
-            // 
-            this.nuevoRegistro.BackColor = System.Drawing.Color.Transparent;
-            this.nuevoRegistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.nuevoRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.nuevoRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.nuevoRegistro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevoRegistro.Image = ((System.Drawing.Image)(resources.GetObject("nuevoRegistro.Image")));
-            this.nuevoRegistro.Location = new System.Drawing.Point(650, 229);
-            this.nuevoRegistro.Name = "nuevoRegistro";
-            this.nuevoRegistro.Size = new System.Drawing.Size(105, 28);
-            this.nuevoRegistro.TabIndex = 11;
-            this.nuevoRegistro.Text = "&Nuevo";
-            this.nuevoRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nuevoRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevoRegistro.UseVisualStyleBackColor = false;
-            this.nuevoRegistro.Click += new System.EventHandler(this.nuevoRegistro_Click);
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -333,12 +314,11 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(650, 263);
+            this.btnGuardar.Image = global::MultiBodega_v1.Properties.Resources.Guardar_32x32;
+            this.btnGuardar.Location = new System.Drawing.Point(694, 338);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(105, 28);
+            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -395,7 +375,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -410,7 +389,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -444,7 +422,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(tipo_ProveedorLabel);
             this.Controls.Add(this.tipo_ProveedorComboBox);
-            this.Controls.Add(this.nuevoRegistro);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(correoElectronicoLabel);
             this.Controls.Add(this.correoElectronicoTextBox);
@@ -480,23 +457,21 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button BtnRegresar;
-        private System.Windows.Forms.ComboBox tipo_ProveedorComboBox;
-        private System.Windows.Forms.Button nuevoRegistro;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox correoElectronicoTextBox;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.TextBox nombreProveedorTextBox;
-        private System.Windows.Forms.TextBox notasTextBox;
-        private System.Windows.Forms.TextBox pais_ZonaTextBox;
-        private System.Windows.Forms.TextBox personaContactoTextBox;
-        
-        private System.Windows.Forms.TextBox rTNTextBox;
-        private System.Windows.Forms.TextBox iDProveedorTextBox;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
         private _CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter proveedoresTableAdapter;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
+        public System.Windows.Forms.ComboBox tipo_ProveedorComboBox;
+        public System.Windows.Forms.TextBox correoElectronicoTextBox;
+        public System.Windows.Forms.TextBox direccionTextBox;
+        public System.Windows.Forms.TextBox nombreProveedorTextBox;
+        public System.Windows.Forms.TextBox notasTextBox;
+        public System.Windows.Forms.TextBox pais_ZonaTextBox;
+        public System.Windows.Forms.TextBox personaContactoTextBox;
+        public System.Windows.Forms.TextBox rTNTextBox;
+        public System.Windows.Forms.TextBox iDProveedorTextBox;
+        public System.Windows.Forms.CheckBox activoCheckBox;
+        public System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
     }
 }

@@ -18,11 +18,38 @@ namespace MultiBodega_v1.Formularios_de_Registro
             InitializeComponent();
         }
 
+        private void FrmRegistrarBaseForanea_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarBaseForanea' Puede moverla o quitarla según sea necesario.
+            this.registrarBaseForaneaTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarBaseForanea);
+
+        }
+
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
             FrmRegistrar VolverAtras = new FrmRegistrar();
             VolverAtras.Show();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea Guardar este Registro?",
+                                    "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.registrarBaseForaneaTableAdapter.RegistrarBaseForanea(FechaRegistroDateTimePicker.Value, nombreTextBox.Text,
+                lugar_ZonaTextBox.Text, direccionTextBox.Text, num_TelefonoTextBox.Text, notasTextBox.Text, activoCheckBox.Checked);
+                this.registrarBaseForaneaTableAdapter.Fill(_CATELSA_MULTICABLE.RegistrarBaseForanea);
+                MessageBox.Show("El Registro ha sido Guardado con Éxito!");
+                FechaRegistroDateTimePicker.ResetText();
+                nombreTextBox.Clear();
+                lugar_ZonaTextBox.Clear();
+                direccionTextBox.Clear();
+                num_TelefonoTextBox.Clear();
+                notasTextBox.Clear();
+                activoCheckBox.Checked = true;
+            }
         }
     }
 }

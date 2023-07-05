@@ -257,7 +257,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.BajosMinimosTableAdapter = null;
             this.tableAdapterManager1.BodegaTableAdapter = null;
-            this.tableAdapterManager1.ComprasTableAdapter = null;
             this.tableAdapterManager1.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager1.DevolucionesTableAdapter = null;
             this.tableAdapterManager1.InventarioBodega1TableAdapter = null;
@@ -271,7 +270,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager1.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager1.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager1.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager1.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager1.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager1.RolTableAdapter = this.rolTableAdapter1;
             this.tableAdapterManager1.TipoMaterialTableAdapter = null;

@@ -62,11 +62,6 @@ namespace MultiBodega_v1
             this.bodegaIDComboBox = new System.Windows.Forms.ComboBox();
             this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
-            this.productosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProductoTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.tipoMaterialTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter();
-            this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +73,11 @@ namespace MultiBodega_v1
             this.bodegaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProductoTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.tipoMaterialTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter();
+            this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
             label3 = new System.Windows.Forms.Label();
             lblStockMin = new System.Windows.Forms.Label();
             codigoProdLabel = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@ namespace MultiBodega_v1
             // 
             // label3
             // 
+            label3.BackColor = System.Drawing.Color.Transparent;
             label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label3.Location = new System.Drawing.Point(1000, 237);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -106,6 +107,7 @@ namespace MultiBodega_v1
             // lblStockMin
             // 
             lblStockMin.AutoSize = true;
+            lblStockMin.BackColor = System.Drawing.Color.Transparent;
             lblStockMin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblStockMin.Location = new System.Drawing.Point(1005, 184);
             lblStockMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -117,6 +119,7 @@ namespace MultiBodega_v1
             // codigoProdLabel
             // 
             codigoProdLabel.AutoSize = true;
+            codigoProdLabel.BackColor = System.Drawing.Color.Transparent;
             codigoProdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoProdLabel.Location = new System.Drawing.Point(19, 125);
             codigoProdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -128,6 +131,7 @@ namespace MultiBodega_v1
             // descripcionLabel
             // 
             descripcionLabel.AutoSize = true;
+            descripcionLabel.BackColor = System.Drawing.Color.Transparent;
             descripcionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descripcionLabel.Location = new System.Drawing.Point(19, 217);
             descripcionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -139,6 +143,7 @@ namespace MultiBodega_v1
             // fechaIngresoLabel
             // 
             fechaIngresoLabel.AutoSize = true;
+            fechaIngresoLabel.BackColor = System.Drawing.Color.Transparent;
             fechaIngresoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaIngresoLabel.Location = new System.Drawing.Point(19, 172);
             fechaIngresoLabel.Name = "fechaIngresoLabel";
@@ -149,6 +154,7 @@ namespace MultiBodega_v1
             // iDProductoLabel
             // 
             iDProductoLabel.AutoSize = true;
+            iDProductoLabel.BackColor = System.Drawing.Color.Transparent;
             iDProductoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             iDProductoLabel.Location = new System.Drawing.Point(19, 80);
             iDProductoLabel.Name = "iDProductoLabel";
@@ -159,6 +165,7 @@ namespace MultiBodega_v1
             // bodegaIDLabel
             // 
             bodegaIDLabel.AutoSize = true;
+            bodegaIDLabel.BackColor = System.Drawing.Color.Transparent;
             bodegaIDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bodegaIDLabel.Location = new System.Drawing.Point(19, 263);
             bodegaIDLabel.Name = "bodegaIDLabel";
@@ -169,6 +176,7 @@ namespace MultiBodega_v1
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(479, 80);
@@ -180,6 +188,7 @@ namespace MultiBodega_v1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(436, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -276,6 +285,10 @@ namespace MultiBodega_v1
             // 
             // BtnNuevo
             // 
+            this.BtnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.Image")));
             this.BtnNuevo.Location = new System.Drawing.Point(19, 368);
@@ -285,11 +298,15 @@ namespace MultiBodega_v1
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnSalir
             // 
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.Location = new System.Drawing.Point(19, 436);
@@ -298,11 +315,15 @@ namespace MultiBodega_v1
             this.BtnSalir.TabIndex = 10;
             this.BtnSalir.Text = "&Salir";
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.button4_Click);
             // 
             // BtnEliminar
             // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
             this.BtnEliminar.Location = new System.Drawing.Point(115, 402);
@@ -311,11 +332,15 @@ namespace MultiBodega_v1
             this.BtnEliminar.TabIndex = 9;
             this.BtnEliminar.Text = "&Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.Location = new System.Drawing.Point(115, 368);
@@ -325,11 +350,15 @@ namespace MultiBodega_v1
             this.BtnGuardar.Text = "&Guardar";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnModificar
             // 
+            this.BtnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
             this.BtnModificar.Location = new System.Drawing.Point(19, 402);
@@ -338,13 +367,16 @@ namespace MultiBodega_v1
             this.BtnModificar.TabIndex = 8;
             this.BtnModificar.Text = "&Modificar";
             this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.UseVisualStyleBackColor = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -355,39 +387,48 @@ namespace MultiBodega_v1
             this.BtnRegresar.TabIndex = 11;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // BtnQuitar
             // 
+            this.BtnQuitar.BackColor = System.Drawing.Color.Transparent;
             this.BtnQuitar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnQuitar.BackgroundImage")));
             this.BtnQuitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnQuitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnQuitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnQuitar.Location = new System.Drawing.Point(1062, 288);
             this.BtnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(36, 28);
             this.BtnQuitar.TabIndex = 13;
-            this.BtnQuitar.UseVisualStyleBackColor = true;
+            this.BtnQuitar.UseVisualStyleBackColor = false;
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
             this.BtnAgregar.Location = new System.Drawing.Point(1018, 288);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(36, 28);
             this.BtnAgregar.TabIndex = 12;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             // 
             // activoCheckBox
             // 
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activoCheckBox.Location = new System.Drawing.Point(19, 308);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(68, 24);
             this.activoCheckBox.TabIndex = 5;
             this.activoCheckBox.Text = "Activo";
-            this.activoCheckBox.UseVisualStyleBackColor = true;
+            this.activoCheckBox.UseVisualStyleBackColor = false;
             // 
             // iDProductoTextBox
             // 
@@ -436,51 +477,6 @@ namespace MultiBodega_v1
             this.productoDataGridView.Size = new System.Drawing.Size(749, 337);
             this.productoDataGridView.TabIndex = 69;
             this.productoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productoDataGridView_CellContentClick);
-            // 
-            // productosTableAdapter
-            // 
-            this.productosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BajosMinimosTableAdapter = null;
-            this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
-            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
-            this.tableAdapterManager.DevolucionesTableAdapter = null;
-            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
-            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
-            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
-            this.tableAdapterManager.PermisosComprasTableAdapter = null;
-            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = this.productosTableAdapter;
-            this.tableAdapterManager.ProveedoresTableAdapter = null;
-            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
-            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
-            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
-            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
-            this.tableAdapterManager.RolTableAdapter = null;
-            this.tableAdapterManager.TipoMaterialTableAdapter = this.tipoMaterialTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // tipoMaterialTableAdapter
-            // 
-            this.tipoMaterialTableAdapter.ClearBeforeFill = true;
-            // 
-            // bodegaTableAdapter
-            // 
-            this.bodegaTableAdapter.ClearBeforeFill = true;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
             // btnSeleccionar
             // 
@@ -553,6 +549,49 @@ namespace MultiBodega_v1
             this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
             this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
             // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AjusteInventarioTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BajosMinimosTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.InventarioBodega1TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega2TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega3TableAdapter = null;
+            this.tableAdapterManager.InventarioBodega4TableAdapter = null;
+            this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
+            this.tableAdapterManager.PermisosComprasTableAdapter = null;
+            this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = this.productosTableAdapter;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
+            this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
+            this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
+            this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaSalidaTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
+            this.tableAdapterManager.TipoMaterialTableAdapter = this.tipoMaterialTableAdapter;
+            this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // tipoMaterialTableAdapter
+            // 
+            this.tipoMaterialTableAdapter.ClearBeforeFill = true;
+            // 
+            // bodegaTableAdapter
+            // 
+            this.bodegaTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmIngresarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -560,6 +599,8 @@ namespace MultiBodega_v1
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1145, 540);
             this.Controls.Add(this.DtFechaIngreso);
             this.Controls.Add(this.productoDataGridView);
@@ -589,6 +630,7 @@ namespace MultiBodega_v1
             this.Controls.Add(codigoProdLabel);
             this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(descripcionLabel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -3,7 +3,13 @@ CREATE DATABASE "CATELSA-MULTICABLE"
 USE [CATELSA-MULTICABLE]
 use master
 --DBCC CHECKIDENT ('Usuario', RESEED, 0);
-DBCC CHECKIDENT ('Proveedores', RESEED, 0);
+DBCC CHECKIDENT ('RegistrarBaseForanea', RESEED, 0);
+
+
+
+select * from RegistrarPuntodeVenta
+delete from RegistrarTecnicos where IDSolicitante=2
+
 
 --Creación de la tabla Roles
 Create Table Rol
@@ -14,16 +20,17 @@ Create Table Rol
 	Primary Key (RolID),
 );
 
---UPDATE Usuario SET Nombre = @Nombre, NombreUsuario = @NombreUsuario, NumTelefono = @NumTelefono, Contrasena = @Contrasena,
---ConfirmarContrasena = @ConfirmarContrasena, RolID = @RolID, BodegaID = @BodegaID, Activo = @Activo
---WHERE (ID = @Original_ID)
+UPDATE dbo.RegistrarTecnicos
+SET (FechaRegistro = @FechaRegistro, Nombres = @Nombres, Apellidos = @Apellidos, DNI = @DNI,
+Direccion = @Direccion, Num_Telefono = Num_Telefono, Notas = @Notas, Activo = @Activo)
+WHERE (IDSolicitante = @Original_ID)
 
 Select Max(ID)+1 FROM Usuario
 
 EXEC VistaUsuario
 
-Select * From Usuario
-
+Select * From RegistrarBaseForanea
+delete RegistrarBaseForanea
 /*Creación de la tabla de Bodega*/
 Create Table Bodega
 (

@@ -125,15 +125,7 @@ namespace MultiBodega_v1
             iDTextBox.Clear();
             rolNameTextBox.Clear();
             rolNameTextBox.Focus();
-            //this.rolTableAdapter.ObtenerIndice();
-            //this.rolTableAdapter.Fill(_CATELSA_MULTICABLE.Rol);
-
-            // Habilita el botones y textbox
-            //HabilitarControl(iDTextBox, true);
-            //HabilitarControl(rolNameTextBox, true);
-            //HabilitarControl(activoCheckBox, true);
-            //HabilitarControl(btnEliminar, true);
-            //HabilitarControl(btnGuardar, true);
+            
         }
         private void BtnActualizar_Click_1(object sender, EventArgs e)
         {

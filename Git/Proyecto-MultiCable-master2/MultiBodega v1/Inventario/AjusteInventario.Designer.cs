@@ -96,6 +96,7 @@ namespace MultiBodega_v1.Inventario
             // bodegaLabel
             // 
             bodegaLabel.AutoSize = true;
+            bodegaLabel.BackColor = System.Drawing.Color.Transparent;
             bodegaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bodegaLabel.Location = new System.Drawing.Point(421, 115);
             bodegaLabel.Name = "bodegaLabel";
@@ -106,6 +107,7 @@ namespace MultiBodega_v1.Inventario
             // observacionLabel
             // 
             observacionLabel.AutoSize = true;
+            observacionLabel.BackColor = System.Drawing.Color.Transparent;
             observacionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             observacionLabel.Location = new System.Drawing.Point(56, 462);
             observacionLabel.Name = "observacionLabel";
@@ -116,6 +118,7 @@ namespace MultiBodega_v1.Inventario
             // numdeOrdenLabel
             // 
             numdeOrdenLabel.AutoSize = true;
+            numdeOrdenLabel.BackColor = System.Drawing.Color.Transparent;
             numdeOrdenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numdeOrdenLabel.Location = new System.Drawing.Point(229, 117);
             numdeOrdenLabel.Name = "numdeOrdenLabel";
@@ -126,6 +129,7 @@ namespace MultiBodega_v1.Inventario
             // tipodeAjusteLabel
             // 
             tipodeAjusteLabel.AutoSize = true;
+            tipodeAjusteLabel.BackColor = System.Drawing.Color.Transparent;
             tipodeAjusteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tipodeAjusteLabel.Location = new System.Drawing.Point(578, 118);
             tipodeAjusteLabel.Name = "tipodeAjusteLabel";
@@ -136,6 +140,7 @@ namespace MultiBodega_v1.Inventario
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.Location = new System.Drawing.Point(119, 117);
             fechaLabel.Name = "fechaLabel";
@@ -146,6 +151,7 @@ namespace MultiBodega_v1.Inventario
             // códigoLabel
             // 
             códigoLabel.AutoSize = true;
+            códigoLabel.BackColor = System.Drawing.Color.Transparent;
             códigoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             códigoLabel.Location = new System.Drawing.Point(734, 119);
             códigoLabel.Name = "códigoLabel";
@@ -156,6 +162,7 @@ namespace MultiBodega_v1.Inventario
             // descripcionLabel
             // 
             descripcionLabel.AutoSize = true;
+            descripcionLabel.BackColor = System.Drawing.Color.Transparent;
             descripcionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descripcionLabel.Location = new System.Drawing.Point(119, 166);
             descripcionLabel.Name = "descripcionLabel";
@@ -166,6 +173,7 @@ namespace MultiBodega_v1.Inventario
             // existenciaLabel
             // 
             existenciaLabel.AutoSize = true;
+            existenciaLabel.BackColor = System.Drawing.Color.Transparent;
             existenciaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             existenciaLabel.Location = new System.Drawing.Point(421, 166);
             existenciaLabel.Name = "existenciaLabel";
@@ -176,6 +184,7 @@ namespace MultiBodega_v1.Inventario
             // faltante_SobranteLabel
             // 
             faltante_SobranteLabel.AutoSize = true;
+            faltante_SobranteLabel.BackColor = System.Drawing.Color.Transparent;
             faltante_SobranteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             faltante_SobranteLabel.Location = new System.Drawing.Point(578, 166);
             faltante_SobranteLabel.Name = "faltante_SobranteLabel";
@@ -186,6 +195,7 @@ namespace MultiBodega_v1.Inventario
             // cantidadLabel
             // 
             cantidadLabel.AutoSize = true;
+            cantidadLabel.BackColor = System.Drawing.Color.Transparent;
             cantidadLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cantidadLabel.Location = new System.Drawing.Point(734, 166);
             cantidadLabel.Name = "cantidadLabel";
@@ -196,6 +206,7 @@ namespace MultiBodega_v1.Inventario
             // cantidad_AjustadaLabel
             // 
             cantidad_AjustadaLabel.AutoSize = true;
+            cantidad_AjustadaLabel.BackColor = System.Drawing.Color.Transparent;
             cantidad_AjustadaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cantidad_AjustadaLabel.Location = new System.Drawing.Point(852, 166);
             cantidad_AjustadaLabel.Name = "cantidad_AjustadaLabel";
@@ -216,7 +227,7 @@ namespace MultiBodega_v1.Inventario
             this.ajusteInventario_AjusteDataGridDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -244,6 +255,7 @@ namespace MultiBodega_v1.Inventario
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ajusteInventario_AjusteDataGridDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.ajusteInventario_AjusteDataGridDataGridView.EnableHeadersVisualStyles = false;
+            this.ajusteInventario_AjusteDataGridDataGridView.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ajusteInventario_AjusteDataGridDataGridView.Location = new System.Drawing.Point(59, 218);
             this.ajusteInventario_AjusteDataGridDataGridView.Name = "ajusteInventario_AjusteDataGridDataGridView";
             this.ajusteInventario_AjusteDataGridDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -337,6 +349,10 @@ namespace MultiBodega_v1.Inventario
             // 
             // nuevoTextBox
             // 
+            this.nuevoTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
             this.nuevoTextBox.Location = new System.Drawing.Point(1042, 295);
@@ -346,10 +362,14 @@ namespace MultiBodega_v1.Inventario
             this.nuevoTextBox.Text = "&Nuevo";
             this.nuevoTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.nuevoTextBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevoTextBox.UseVisualStyleBackColor = true;
+            this.nuevoTextBox.UseVisualStyleBackColor = false;
             // 
             // BtnSalir
             // 
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.Location = new System.Drawing.Point(1042, 431);
@@ -358,11 +378,15 @@ namespace MultiBodega_v1.Inventario
             this.BtnSalir.TabIndex = 54;
             this.BtnSalir.Text = "&Salir";
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(1042, 397);
@@ -371,7 +395,7 @@ namespace MultiBodega_v1.Inventario
             this.button4.TabIndex = 53;
             this.button4.Text = "&Eliminar";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // bodegaComboBox
             // 
@@ -389,6 +413,10 @@ namespace MultiBodega_v1.Inventario
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(1042, 329);
@@ -398,10 +426,14 @@ namespace MultiBodega_v1.Inventario
             this.button2.Text = "&Guardar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(1042, 363);
@@ -410,7 +442,7 @@ namespace MultiBodega_v1.Inventario
             this.button3.TabIndex = 52;
             this.button3.Text = "&Modificar";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // observacionTextBox
             // 
@@ -503,6 +535,7 @@ namespace MultiBodega_v1.Inventario
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(396, 80);
@@ -514,6 +547,7 @@ namespace MultiBodega_v1.Inventario
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(425, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -525,8 +559,11 @@ namespace MultiBodega_v1.Inventario
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -537,7 +574,7 @@ namespace MultiBodega_v1.Inventario
             this.BtnRegresar.TabIndex = 65;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // AjusteInventario
@@ -546,6 +583,8 @@ namespace MultiBodega_v1.Inventario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1156, 591);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label1);
@@ -578,6 +617,7 @@ namespace MultiBodega_v1.Inventario
             this.Controls.Add(tipodeAjusteLabel);
             this.Controls.Add(this.tipodeAjusteComboBox);
             this.Controls.Add(this.ajusteInventario_AjusteDataGridDataGridView);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

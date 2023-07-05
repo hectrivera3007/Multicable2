@@ -67,7 +67,6 @@ namespace MultiBodega_v1
             this.button8 = new System.Windows.Forms.Button();
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.requisaEntradaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.requisaEntradaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RequisaEntradaTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -467,7 +466,6 @@ namespace MultiBodega_v1
             // 
             // requisaEntradaTableAdapter
             // 
-            this.requisaEntradaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -475,7 +473,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
-            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -490,7 +487,6 @@ namespace MultiBodega_v1
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
-            this.tableAdapterManager.RequisaEntradaTableAdapter = this.requisaEntradaTableAdapter;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -658,7 +654,6 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn bodegaIDDataGridViewTextBoxColumn;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource requisaEntradaBindingSource1;
-        private _CATELSA_MULTICABLETableAdapters.RequisaEntradaTableAdapter requisaEntradaTableAdapter;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

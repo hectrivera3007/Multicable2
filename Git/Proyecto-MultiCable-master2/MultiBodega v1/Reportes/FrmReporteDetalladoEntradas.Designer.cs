@@ -72,6 +72,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // fechaActualLabel
             // 
             fechaActualLabel.AutoSize = true;
+            fechaActualLabel.BackColor = System.Drawing.Color.Transparent;
             fechaActualLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaActualLabel.Location = new System.Drawing.Point(1079, 89);
             fechaActualLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -83,6 +84,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // movimientoReportadoLabel
             // 
             movimientoReportadoLabel.AutoSize = true;
+            movimientoReportadoLabel.BackColor = System.Drawing.Color.Transparent;
             movimientoReportadoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             movimientoReportadoLabel.Location = new System.Drawing.Point(457, 89);
             movimientoReportadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -94,6 +96,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // nombreProveedorLabel
             // 
             nombreProveedorLabel.AutoSize = true;
+            nombreProveedorLabel.BackColor = System.Drawing.Color.Transparent;
             nombreProveedorLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreProveedorLabel.Location = new System.Drawing.Point(301, 89);
             nombreProveedorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -105,6 +108,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // rangoFechasLabel
             // 
             rangoFechasLabel.AutoSize = true;
+            rangoFechasLabel.BackColor = System.Drawing.Color.Transparent;
             rangoFechasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             rangoFechasLabel.Location = new System.Drawing.Point(48, 89);
             rangoFechasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -116,6 +120,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
             label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(170, 89);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -174,6 +179,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 16);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -186,6 +192,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(479, 41);
@@ -198,13 +205,14 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // CkOcultarPrecios
             // 
             this.CkOcultarPrecios.AutoSize = true;
+            this.CkOcultarPrecios.BackColor = System.Drawing.Color.Transparent;
             this.CkOcultarPrecios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CkOcultarPrecios.Location = new System.Drawing.Point(1054, 143);
             this.CkOcultarPrecios.Name = "CkOcultarPrecios";
             this.CkOcultarPrecios.Size = new System.Drawing.Size(124, 20);
             this.CkOcultarPrecios.TabIndex = 51;
             this.CkOcultarPrecios.Text = "Ocultar Precios";
-            this.CkOcultarPrecios.UseVisualStyleBackColor = true;
+            this.CkOcultarPrecios.UseVisualStyleBackColor = false;
             this.CkOcultarPrecios.CheckedChanged += new System.EventHandler(this.CkOcultarPrecios_CheckedChanged);
             // 
             // reporteDetalladoEntradas_EncabezadoBindingSource
@@ -302,7 +310,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -320,6 +328,8 @@ namespace MultiBodega_v1.Reporte_Bodegas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1221, 579);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.reporteDetalladoEntradas_InfoDataGridDataGridView);
@@ -336,6 +346,7 @@ namespace MultiBodega_v1.Reporte_Bodegas
             this.Controls.Add(this.nombreProveedorComboBox);
             this.Controls.Add(rangoFechasLabel);
             this.Controls.Add(this.rangoFechasDateTimePicker);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

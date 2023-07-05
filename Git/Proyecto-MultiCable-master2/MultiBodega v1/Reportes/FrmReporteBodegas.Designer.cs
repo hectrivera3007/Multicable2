@@ -41,23 +41,27 @@ namespace MultiBodega_v1.Botonera
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(358, 253);
+            this.BtnRegresar.Location = new System.Drawing.Point(385, 253);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(135, 39);
             this.BtnRegresar.TabIndex = 39;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // Bodega4
             // 
+            this.Bodega4.BackColor = System.Drawing.Color.Transparent;
             this.Bodega4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Bodega4.FlatAppearance.BorderSize = 0;
             this.Bodega4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -78,6 +82,7 @@ namespace MultiBodega_v1.Botonera
             // 
             // Bodega3
             // 
+            this.Bodega3.BackColor = System.Drawing.Color.Transparent;
             this.Bodega3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Bodega3.FlatAppearance.BorderSize = 0;
             this.Bodega3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -98,6 +103,7 @@ namespace MultiBodega_v1.Botonera
             // 
             // Bodega2
             // 
+            this.Bodega2.BackColor = System.Drawing.Color.Transparent;
             this.Bodega2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Bodega2.FlatAppearance.BorderSize = 0;
             this.Bodega2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,6 +124,7 @@ namespace MultiBodega_v1.Botonera
             // 
             // Bodega1
             // 
+            this.Bodega1.BackColor = System.Drawing.Color.Transparent;
             this.Bodega1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Bodega1.FlatAppearance.BorderSize = 0;
             this.Bodega1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,6 +145,7 @@ namespace MultiBodega_v1.Botonera
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MultiBodega_v1.Properties.Resources.logo_catelsa;
             this.pictureBox1.Location = new System.Drawing.Point(130, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -151,6 +159,8 @@ namespace MultiBodega_v1.Botonera
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(532, 304);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.Bodega4);
@@ -158,6 +168,7 @@ namespace MultiBodega_v1.Botonera
             this.Controls.Add(this.Bodega2);
             this.Controls.Add(this.Bodega1);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "FrmReporteBodegas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Bodegas";

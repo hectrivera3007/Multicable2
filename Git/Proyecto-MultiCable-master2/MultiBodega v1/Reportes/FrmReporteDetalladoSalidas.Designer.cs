@@ -63,6 +63,7 @@ namespace MultiBodega_v1
             // fechaActualLabel
             // 
             fechaActualLabel.AutoSize = true;
+            fechaActualLabel.BackColor = System.Drawing.Color.Transparent;
             fechaActualLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaActualLabel.Location = new System.Drawing.Point(749, 89);
             fechaActualLabel.Name = "fechaActualLabel";
@@ -73,6 +74,7 @@ namespace MultiBodega_v1
             // movimientoReportadoLabel
             // 
             movimientoReportadoLabel.AutoSize = true;
+            movimientoReportadoLabel.BackColor = System.Drawing.Color.Transparent;
             movimientoReportadoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             movimientoReportadoLabel.Location = new System.Drawing.Point(48, 142);
             movimientoReportadoLabel.Name = "movimientoReportadoLabel";
@@ -83,6 +85,7 @@ namespace MultiBodega_v1
             // NombreTecnicoLabel
             // 
             NombreTecnicoLabel.AutoSize = true;
+            NombreTecnicoLabel.BackColor = System.Drawing.Color.Transparent;
             NombreTecnicoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             NombreTecnicoLabel.Location = new System.Drawing.Point(270, 89);
             NombreTecnicoLabel.Name = "NombreTecnicoLabel";
@@ -93,6 +96,7 @@ namespace MultiBodega_v1
             // rangoFechasLabel
             // 
             rangoFechasLabel.AutoSize = true;
+            rangoFechasLabel.BackColor = System.Drawing.Color.Transparent;
             rangoFechasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             rangoFechasLabel.Location = new System.Drawing.Point(48, 89);
             rangoFechasLabel.Name = "rangoFechasLabel";
@@ -103,6 +107,7 @@ namespace MultiBodega_v1
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
             label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(158, 89);
             label1.Name = "label1";
@@ -201,6 +206,7 @@ namespace MultiBodega_v1
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 16);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -213,6 +219,7 @@ namespace MultiBodega_v1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(315, 40);
@@ -226,7 +233,9 @@ namespace MultiBodega_v1
             // 
             this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
@@ -244,6 +253,8 @@ namespace MultiBodega_v1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(923, 651);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.pictureBox2);
@@ -259,6 +270,7 @@ namespace MultiBodega_v1
             this.Controls.Add(NombreTecnicoLabel);
             this.Controls.Add(rangoFechasLabel);
             this.Controls.Add(this.rangoFechasDateTimePicker);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

@@ -138,52 +138,10 @@
   <metadata name="num_TelefonoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="iDSolicitanteLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="nuevoTextBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAATBJREFUOE9jIAdcDg3NvBoVNeOwt7cgVIh4sLRr6v5N0xf9/trb+/9aZOR0hvKO
-        mXIVPbON8eEV2w777jx+Kebg5vpti9Zt+Xjuzqt/IEOuhoZmMCzYuHfVrSev/+PC91+8///u25//9y6v
-        /v/h3pT/D67O+r947ZZPS4AuATtpyZYDSz79+v8fH75/ZQ1Y8/93i/9/fDD1/6HNtTvBmkGAkAHomu9c
-        XP4f5B2odvwGoGu+e2kF2DugMIFqx23ApYP9GJpB4qAwAQUsVDt2Ay4cXvj/wYkqsOZP96eBXQKTAwUs
-        QQNObGz6f39f4f+HQEPO72lHkSNowN59u/4nxIeBDTl/aCGKZhAmaMD27Rv/79mzA0UTMibKC/jwIDRg
-        xrItuSBDiMWgvAPKgBDdDAwARIGs7EoTHvwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAVRJREFUOE9jgIHq7jnyFT2zjbHh0p45zmkzZ3JBlWIHSzftXfXkxev/2PDuI2f+
-        LVq3+wVeQ1ZuPbDkPw5w8uL1/99//Py/YN2uV7kTJ/JBtaACQgaAAMiQhbgMwWfAlVsPwIaA8L7j5/9P
-        WbLhOFQbAuAzAB2A1EK1IcDQMODvjx//vz9+/H/z3uP7oNoQAJ8BII1Ppk37/6yh4f/rxsb/t0vKvl8K
-        C2uBaoUAfAaANH/p7v7/Y8aM/9/7+8H0+5aWn5fDw0ug2nEbALIdZDNI099Xr/7/2rfv/1+gN75PmPD/
-        blraUah23AaA/AxyNshmkGYQ+LliBZj/ICvrJlQ7bgP+/fnz/0l9PcQFQMNAmv8+fAh2we3k5L1Q7fgz
-        04058/+/b2sDawLZDKJfVFS8vRgY6AfVjj87z127J+RwcdmyG3kFN+/m5z+7mpl5FqKZgQEAIreYYrdJ
-        u4UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BtnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAATVJREFUOE+tk71Kw2AUhuPauxEvQTdvoTfRGgMtyCdYHEpBBCGkmp82S5daTI2x
-        2BhqEVNNKQl2UjqIWNFNwcGCR0/AkI/gRwq+8Gzv+5zpcIRImcqathSSV5fLOS27ub6fK/LSRpwCLwmE
-        l1aAgwUuHhw6xhi83gMYugvbggpyowPHjpdArJ986buWQklQgOP78Rt0Wz5sCUpYdv27iEJZgVqzC/qh
-        A8FgOtN2zHokmVeAPUoSF9itAEqCDO3zG0rQMC+g0x9FAsS1J7NKvrZICW69F2iqfdgTDRCrbYqqYsGR
-        OYwEuMEtJZiHhODqcgKntp8K7CYEZ70A0ga7fwqmH2wwTEGaMAVPP1dYYJiC9082mP8X4DMZ1jU8Pr+m
-        Aru4CQW/71wqHqwSImfTgF3cECJlvgENZxEODky03gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAATdJREFUOE9jIBX8r69nuhAUlHzez88RKkQ8mB8fz7G4fcq9Fx2dv1+Ul78/7+/v
-        AJUiDCZOzGWftWzd7gv33vzftGr7/xdtHb/PBQTEQ6Xxg/319izHN2VsWLlx7Y/rTz//P3/39X+QS0De
-        gSrBDUCaz21JXvfz2Zy/318s+r9y09rvM5as2wvyDlQJbrBqVSjz+S0pq0Ca/79b/P/n8zn/Tm3K3Dy/
-        nkzNF7akrQe5CKoEN4BoTl6Nonlr6gYSNKPZTB/N9aFsJ9YkniVLMwjsnR9+6evDaf8hmmcDAyx5HdGa
-        F7V761/fXPj+1u7c/18eTf1/fE38baI1g0BFbvCRtyea/1/fXPBh7/ywS/Pr7QnHMwzEpvnI2bv5/qnM
-        DTq2pMXLACpMPMiIcdVJSPCXhXJJBAwMAAvZ6894SytwAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABFYAAAE7CAYAAAD3kgVFAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
@@ -1129,6 +1087,6 @@
     <value>637, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>40</value>
+    <value>37</value>
   </metadata>
 </root>
