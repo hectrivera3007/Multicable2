@@ -29,6 +29,7 @@ namespace MultiBodega_v1.Compras
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label cantidadLabel;
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label costFOBDolaresLabel;
@@ -49,7 +50,6 @@ namespace MultiBodega_v1.Compras
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
             this.ComprasDGV = new System.Windows.Forms.DataGridView();
-            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.cantidadTextBox = new System.Windows.Forms.TextBox();
             this.codigoTextBox = new System.Windows.Forms.TextBox();
             this.costFOBDolaresTextBox = new System.Windows.Forms.TextBox();
@@ -62,10 +62,7 @@ namespace MultiBodega_v1.Compras
             this.precioUnitarioCompraDolaresTextBox = new System.Windows.Forms.TextBox();
             this.productoTextBox = new System.Windows.Forms.TextBox();
             this.nuevoTextBox = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,7 +84,27 @@ namespace MultiBodega_v1.Compras
             this.fechaEnBodegaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.impuestoPagadoTextBox = new System.Windows.Forms.TextBox();
             this.numOrdenTextBox = new System.Windows.Forms.TextBox();
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comprasTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ComprasTableAdapter();
+            this.numOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costosDeImportacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoCIFLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoCIFDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costosDeTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costFOBDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obtenerComprasConProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cantidadLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             costFOBDolaresLabel = new System.Windows.Forms.Label();
@@ -106,13 +123,16 @@ namespace MultiBodega_v1.Compras
             impuestoPagadoLabel = new System.Windows.Forms.Label();
             numOrdenLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ComprasDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerComprasConProveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cantidadLabel
             // 
             cantidadLabel.AutoSize = true;
+            cantidadLabel.BackColor = System.Drawing.Color.Transparent;
             cantidadLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cantidadLabel.Location = new System.Drawing.Point(31, 169);
             cantidadLabel.Name = "cantidadLabel";
@@ -123,6 +143,7 @@ namespace MultiBodega_v1.Compras
             // codigoLabel
             // 
             codigoLabel.AutoSize = true;
+            codigoLabel.BackColor = System.Drawing.Color.Transparent;
             codigoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoLabel.Location = new System.Drawing.Point(148, 169);
             codigoLabel.Name = "codigoLabel";
@@ -133,6 +154,7 @@ namespace MultiBodega_v1.Compras
             // costFOBDolaresLabel
             // 
             costFOBDolaresLabel.AutoSize = true;
+            costFOBDolaresLabel.BackColor = System.Drawing.Color.Transparent;
             costFOBDolaresLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costFOBDolaresLabel.Location = new System.Drawing.Point(313, 169);
             costFOBDolaresLabel.Name = "costFOBDolaresLabel";
@@ -143,6 +165,7 @@ namespace MultiBodega_v1.Compras
             // costoCIFDolaresLabel
             // 
             costoCIFDolaresLabel.AutoSize = true;
+            costoCIFDolaresLabel.BackColor = System.Drawing.Color.Transparent;
             costoCIFDolaresLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costoCIFDolaresLabel.Location = new System.Drawing.Point(453, 169);
             costoCIFDolaresLabel.Name = "costoCIFDolaresLabel";
@@ -153,6 +176,7 @@ namespace MultiBodega_v1.Compras
             // costoCIFLempirasLabel
             // 
             costoCIFLempirasLabel.AutoSize = true;
+            costoCIFLempirasLabel.BackColor = System.Drawing.Color.Transparent;
             costoCIFLempirasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costoCIFLempirasLabel.Location = new System.Drawing.Point(603, 169);
             costoCIFLempirasLabel.Name = "costoCIFLempirasLabel";
@@ -163,6 +187,7 @@ namespace MultiBodega_v1.Compras
             // costosDeImportacionLabel
             // 
             costosDeImportacionLabel.AutoSize = true;
+            costosDeImportacionLabel.BackColor = System.Drawing.Color.Transparent;
             costosDeImportacionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costosDeImportacionLabel.Location = new System.Drawing.Point(758, 169);
             costosDeImportacionLabel.Name = "costosDeImportacionLabel";
@@ -173,6 +198,7 @@ namespace MultiBodega_v1.Compras
             // costosDeTransporteLabel
             // 
             costosDeTransporteLabel.AutoSize = true;
+            costosDeTransporteLabel.BackColor = System.Drawing.Color.Transparent;
             costosDeTransporteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costosDeTransporteLabel.Location = new System.Drawing.Point(944, 169);
             costosDeTransporteLabel.Name = "costosDeTransporteLabel";
@@ -183,6 +209,7 @@ namespace MultiBodega_v1.Compras
             // costoTotalCompraDolaresLabel
             // 
             costoTotalCompraDolaresLabel.AutoSize = true;
+            costoTotalCompraDolaresLabel.BackColor = System.Drawing.Color.Transparent;
             costoTotalCompraDolaresLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costoTotalCompraDolaresLabel.Location = new System.Drawing.Point(31, 214);
             costoTotalCompraDolaresLabel.Name = "costoTotalCompraDolaresLabel";
@@ -193,6 +220,7 @@ namespace MultiBodega_v1.Compras
             // costoTotalCompraLempirasLabel
             // 
             costoTotalCompraLempirasLabel.AutoSize = true;
+            costoTotalCompraLempirasLabel.BackColor = System.Drawing.Color.Transparent;
             costoTotalCompraLempirasLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             costoTotalCompraLempirasLabel.Location = new System.Drawing.Point(313, 214);
             costoTotalCompraLempirasLabel.Name = "costoTotalCompraLempirasLabel";
@@ -203,6 +231,7 @@ namespace MultiBodega_v1.Compras
             // precioUnitarioCompraDolaresLabel
             // 
             precioUnitarioCompraDolaresLabel.AutoSize = true;
+            precioUnitarioCompraDolaresLabel.BackColor = System.Drawing.Color.Transparent;
             precioUnitarioCompraDolaresLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precioUnitarioCompraDolaresLabel.Location = new System.Drawing.Point(603, 214);
             precioUnitarioCompraDolaresLabel.Name = "precioUnitarioCompraDolaresLabel";
@@ -213,6 +242,7 @@ namespace MultiBodega_v1.Compras
             // productoLabel
             // 
             productoLabel.AutoSize = true;
+            productoLabel.BackColor = System.Drawing.Color.Transparent;
             productoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             productoLabel.Location = new System.Drawing.Point(946, 214);
             productoLabel.Name = "productoLabel";
@@ -223,6 +253,7 @@ namespace MultiBodega_v1.Compras
             // proveedorLabel
             // 
             proveedorLabel.AutoSize = true;
+            proveedorLabel.BackColor = System.Drawing.Color.Transparent;
             proveedorLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             proveedorLabel.Location = new System.Drawing.Point(31, 123);
             proveedorLabel.Name = "proveedorLabel";
@@ -233,6 +264,7 @@ namespace MultiBodega_v1.Compras
             // numDeclaracionLabel
             // 
             numDeclaracionLabel.AutoSize = true;
+            numDeclaracionLabel.BackColor = System.Drawing.Color.Transparent;
             numDeclaracionLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numDeclaracionLabel.Location = new System.Drawing.Point(216, 123);
             numDeclaracionLabel.Name = "numDeclaracionLabel";
@@ -243,6 +275,7 @@ namespace MultiBodega_v1.Compras
             // numFacturaLabel
             // 
             numFacturaLabel.AutoSize = true;
+            numFacturaLabel.BackColor = System.Drawing.Color.Transparent;
             numFacturaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numFacturaLabel.Location = new System.Drawing.Point(453, 123);
             numFacturaLabel.Name = "numFacturaLabel";
@@ -253,6 +286,7 @@ namespace MultiBodega_v1.Compras
             // fechaEnBodegaLabel
             // 
             fechaEnBodegaLabel.AutoSize = true;
+            fechaEnBodegaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaEnBodegaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaEnBodegaLabel.Location = new System.Drawing.Point(603, 123);
             fechaEnBodegaLabel.Name = "fechaEnBodegaLabel";
@@ -263,6 +297,7 @@ namespace MultiBodega_v1.Compras
             // impuestoPagadoLabel
             // 
             impuestoPagadoLabel.AutoSize = true;
+            impuestoPagadoLabel.BackColor = System.Drawing.Color.Transparent;
             impuestoPagadoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             impuestoPagadoLabel.Location = new System.Drawing.Point(758, 123);
             impuestoPagadoLabel.Name = "impuestoPagadoLabel";
@@ -273,6 +308,7 @@ namespace MultiBodega_v1.Compras
             // numOrdenLabel
             // 
             numOrdenLabel.AutoSize = true;
+            numOrdenLabel.BackColor = System.Drawing.Color.Transparent;
             numOrdenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numOrdenLabel.Location = new System.Drawing.Point(1066, 39);
             numOrdenLabel.Name = "numOrdenLabel";
@@ -282,6 +318,7 @@ namespace MultiBodega_v1.Compras
             // 
             // ComprasDGV
             // 
+            this.ComprasDGV.AutoGenerateColumns = false;
             this.ComprasDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ComprasDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ComprasDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
@@ -295,18 +332,31 @@ namespace MultiBodega_v1.Compras
             this.ComprasDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ComprasDGV.ColumnHeadersHeight = 45;
             this.ComprasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ComprasDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCompraDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.productoDataGridViewTextBoxColumn,
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn,
+            this.costFOBDolaresDataGridViewTextBoxColumn,
+            this.costosDeTransporteDataGridViewTextBoxColumn,
+            this.costoCIFDolaresDataGridViewTextBoxColumn,
+            this.costoCIFLempirasDataGridViewTextBoxColumn,
+            this.costosDeImportacionDataGridViewTextBoxColumn,
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn,
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn,
+            this.iDProveedorDataGridViewTextBoxColumn,
+            this.activoDataGridViewCheckBoxColumn,
+            this.numOrdenDataGridViewTextBoxColumn});
+            this.ComprasDGV.DataSource = this.comprasBindingSource;
             this.ComprasDGV.EnableHeadersVisualStyles = false;
-            this.ComprasDGV.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ComprasDGV.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ComprasDGV.Location = new System.Drawing.Point(26, 267);
             this.ComprasDGV.Name = "ComprasDGV";
             this.ComprasDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.ComprasDGV.Size = new System.Drawing.Size(1121, 251);
             this.ComprasDGV.TabIndex = 1;
-            // 
-            // _CATELSA_MULTICABLE
-            // 
-            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
-            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cantidadTextBox
             // 
@@ -387,94 +437,73 @@ namespace MultiBodega_v1.Compras
             // 
             // nuevoTextBox
             // 
+            this.nuevoTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.nuevoTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nuevoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoTextBox.Image = ((System.Drawing.Image)(resources.GetObject("nuevoTextBox.Image")));
-            this.nuevoTextBox.Location = new System.Drawing.Point(1169, 319);
+            this.nuevoTextBox.Location = new System.Drawing.Point(1169, 353);
             this.nuevoTextBox.Name = "nuevoTextBox";
             this.nuevoTextBox.Size = new System.Drawing.Size(105, 28);
             this.nuevoTextBox.TabIndex = 79;
             this.nuevoTextBox.Text = "&Nuevo";
             this.nuevoTextBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevoTextBox.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1169, 490);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 28);
-            this.button5.TabIndex = 78;
-            this.button5.Text = "&Salir";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1169, 457);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 28);
-            this.button2.TabIndex = 77;
-            this.button2.Text = "&Eliminar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.nuevoTextBox.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1169, 353);
+            this.button6.Location = new System.Drawing.Point(1169, 387);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(105, 28);
             this.button6.TabIndex = 75;
             this.button6.Text = "&Guardar";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(1169, 423);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 28);
-            this.button7.TabIndex = 76;
-            this.button7.Text = "&Modificar";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(1154, 228);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 30);
             this.button4.TabIndex = 74;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // printbtn
             // 
+            this.printbtn.BackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printbtn.Image = ((System.Drawing.Image)(resources.GetObject("printbtn.Image")));
             this.printbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.printbtn.Location = new System.Drawing.Point(1169, 388);
+            this.printbtn.Location = new System.Drawing.Point(1169, 422);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(105, 28);
             this.printbtn.TabIndex = 80;
             this.printbtn.Text = "Imprimir";
             this.printbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.printbtn.UseVisualStyleBackColor = true;
+            this.printbtn.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(229, 524);
             this.label1.Name = "label1";
@@ -485,6 +514,7 @@ namespace MultiBodega_v1.Compras
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(366, 524);
             this.label2.Name = "label2";
@@ -495,6 +525,7 @@ namespace MultiBodega_v1.Compras
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(482, 524);
             this.label3.Name = "label3";
@@ -505,6 +536,7 @@ namespace MultiBodega_v1.Compras
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(595, 524);
             this.label4.Name = "label4";
@@ -515,6 +547,7 @@ namespace MultiBodega_v1.Compras
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(919, 524);
             this.label5.Name = "label5";
@@ -525,6 +558,7 @@ namespace MultiBodega_v1.Compras
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(798, 524);
             this.label6.Name = "label6";
@@ -535,6 +569,7 @@ namespace MultiBodega_v1.Compras
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(682, 524);
             this.label7.Name = "label7";
@@ -545,6 +580,7 @@ namespace MultiBodega_v1.Compras
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(1047, 524);
             this.label9.Name = "label9";
@@ -564,6 +600,7 @@ namespace MultiBodega_v1.Compras
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(1087, 17);
             this.label10.Name = "label10";
@@ -573,24 +610,28 @@ namespace MultiBodega_v1.Compras
             // 
             // BtnRegresar
             // 
+            this.BtnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.BtnRegresar.ForeColor = System.Drawing.Color.Navy;
             this.BtnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegresar.Image")));
             this.BtnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegresar.Location = new System.Drawing.Point(1138, 543);
+            this.BtnRegresar.Location = new System.Drawing.Point(1146, 551);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
             this.BtnRegresar.TabIndex = 91;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.UseVisualStyleBackColor = false;
             this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
             this.label11.Location = new System.Drawing.Point(489, 73);
@@ -602,6 +643,7 @@ namespace MultiBodega_v1.Compras
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(516, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -653,12 +695,18 @@ namespace MultiBodega_v1.Compras
             this.numOrdenTextBox.Size = new System.Drawing.Size(91, 23);
             this.numOrdenTextBox.TabIndex = 99;
             // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AjusteInventarioTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
@@ -680,13 +728,128 @@ namespace MultiBodega_v1.Compras
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
+            // comprasBindingSource
+            // 
+            this.comprasBindingSource.DataMember = "Compras";
+            this.comprasBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // comprasTableAdapter
+            // 
+            this.comprasTableAdapter.ClearBeforeFill = true;
+            // 
+            // numOrdenDataGridViewTextBoxColumn
+            // 
+            this.numOrdenDataGridViewTextBoxColumn.DataPropertyName = "NumOrden";
+            this.numOrdenDataGridViewTextBoxColumn.HeaderText = "NumOrden";
+            this.numOrdenDataGridViewTextBoxColumn.Name = "numOrdenDataGridViewTextBoxColumn";
+            this.numOrdenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
+            // iDProveedorDataGridViewTextBoxColumn
+            // 
+            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
+            // 
+            // costoTotalCompraDolaresDataGridViewTextBoxColumn
+            // 
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraDolares";
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraDolares";
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.Name = "costoTotalCompraDolaresDataGridViewTextBoxColumn";
+            // 
+            // costoTotalCompraLempirasDataGridViewTextBoxColumn
+            // 
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraLempiras";
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraLempiras";
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.Name = "costoTotalCompraLempirasDataGridViewTextBoxColumn";
+            // 
+            // costosDeImportacionDataGridViewTextBoxColumn
+            // 
+            this.costosDeImportacionDataGridViewTextBoxColumn.DataPropertyName = "CostosDeImportacion";
+            this.costosDeImportacionDataGridViewTextBoxColumn.HeaderText = "CostosDeImportacion";
+            this.costosDeImportacionDataGridViewTextBoxColumn.Name = "costosDeImportacionDataGridViewTextBoxColumn";
+            // 
+            // costoCIFLempirasDataGridViewTextBoxColumn
+            // 
+            this.costoCIFLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFLempiras";
+            this.costoCIFLempirasDataGridViewTextBoxColumn.HeaderText = "CostoCIFLempiras";
+            this.costoCIFLempirasDataGridViewTextBoxColumn.Name = "costoCIFLempirasDataGridViewTextBoxColumn";
+            // 
+            // costoCIFDolaresDataGridViewTextBoxColumn
+            // 
+            this.costoCIFDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFDolares";
+            this.costoCIFDolaresDataGridViewTextBoxColumn.HeaderText = "CostoCIFDolares";
+            this.costoCIFDolaresDataGridViewTextBoxColumn.Name = "costoCIFDolaresDataGridViewTextBoxColumn";
+            // 
+            // costosDeTransporteDataGridViewTextBoxColumn
+            // 
+            this.costosDeTransporteDataGridViewTextBoxColumn.DataPropertyName = "CostosDeTransporte";
+            this.costosDeTransporteDataGridViewTextBoxColumn.HeaderText = "CostosDeTransporte";
+            this.costosDeTransporteDataGridViewTextBoxColumn.Name = "costosDeTransporteDataGridViewTextBoxColumn";
+            // 
+            // costFOBDolaresDataGridViewTextBoxColumn
+            // 
+            this.costFOBDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostFOBDolares";
+            this.costFOBDolaresDataGridViewTextBoxColumn.HeaderText = "CostFOBDolares";
+            this.costFOBDolaresDataGridViewTextBoxColumn.Name = "costFOBDolaresDataGridViewTextBoxColumn";
+            // 
+            // precioUnitarioCompraDolaresDataGridViewTextBoxColumn
+            // 
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitarioCompraDolares";
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.HeaderText = "PrecioUnitarioCompraDolares";
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.Name = "precioUnitarioCompraDolaresDataGridViewTextBoxColumn";
+            // 
+            // productoDataGridViewTextBoxColumn
+            // 
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // iDCompraDataGridViewTextBoxColumn
+            // 
+            this.iDCompraDataGridViewTextBoxColumn.DataPropertyName = "IDCompra";
+            this.iDCompraDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDCompraDataGridViewTextBoxColumn.Name = "iDCompraDataGridViewTextBoxColumn";
+            this.iDCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCompraDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // obtenerComprasConProveedoresBindingSource
+            // 
+            this.obtenerComprasConProveedoresBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            this.obtenerComprasConProveedoresBindingSource.Position = 0;
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1286, 594);
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1294, 602);
             this.Controls.Add(numOrdenLabel);
             this.Controls.Add(this.numOrdenTextBox);
             this.Controls.Add(impuestoPagadoLabel);
@@ -714,10 +877,7 @@ namespace MultiBodega_v1.Compras
             this.Controls.Add(this.label1);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.nuevoTextBox);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(cantidadLabel);
             this.Controls.Add(this.cantidadTextBox);
@@ -742,6 +902,7 @@ namespace MultiBodega_v1.Compras
             this.Controls.Add(productoLabel);
             this.Controls.Add(this.productoTextBox);
             this.Controls.Add(this.ComprasDGV);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -751,8 +912,10 @@ namespace MultiBodega_v1.Compras
             this.Text = "Registro de Nueva Compra";
             this.Load += new System.EventHandler(this.FrmCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ComprasDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerComprasConProveedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -774,10 +937,7 @@ namespace MultiBodega_v1.Compras
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button nuevoTextBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button printbtn;
         private System.Windows.Forms.Label label1;
@@ -801,5 +961,24 @@ namespace MultiBodega_v1.Compras
         private System.Windows.Forms.TextBox numOrdenTextBox;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource comprasBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.ComprasTableAdapter comprasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCompraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitarioCompraDolaresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costFOBDolaresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costosDeTransporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoCIFDolaresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoCIFLempirasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costosDeImportacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoTotalCompraLempirasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoTotalCompraDolaresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numOrdenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource obtenerComprasConProveedoresBindingSource;
     }
 }

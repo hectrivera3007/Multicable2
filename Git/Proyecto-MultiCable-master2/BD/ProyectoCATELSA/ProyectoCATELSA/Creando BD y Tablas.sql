@@ -142,7 +142,7 @@ SET                FechaActivacion = @FechaActivacion, Nombre = @Nombre, NombreU
 --'Proveedor de Artículos Tecnológicos');
 
 
-select * from Proveedores
+select * from Compras
 delete from Proveedores where IDProveedor=2;
 
 /*Creación de la tabla de RequisaEntrada*/
@@ -164,7 +164,13 @@ Create Table RequisaEntrada
 	Foreign Key (IDProveedor) references Proveedores(IDProveedor)
 );
 
-
+/*Procedimiento Almacenado para ver las compras
+SELECT        dbo.Compras.IDCompra as ID, dbo.Compras.Fecha as Fecha, dbo.Compras.Codigo as Código, dbo.Compras.Producto as Producto, dbo.Compras.Cantidad as Cantidad, dbo.Compras.PrecioUnitarioCompraDolares as [Precio en Dólares], dbo.Compras.CostFOBDolares as [Costo FOB Dólares], 
+                         dbo.Compras.CostosDeTransporte as [Costos de Transporte], dbo.Compras.CostoCIFDolares as [Costo CIF Dólares], dbo.Compras.CostoCIFLempiras as [Costo CIF Lempiras], dbo.Compras.CostosDeImportacion as [Costos de Importación], dbo.Compras.CostoTotalCompraLempiras as [Total Lempiras] , dbo.Compras.CostoTotalCompraDolares as [Total Dólares], 
+                         dbo.Proveedores.NombreProveedor as [Nombre Proveedor], dbo.Compras.Activo as Activo
+FROM            dbo.Compras INNER JOIN
+                         dbo.Proveedores ON dbo.Compras.IDProveedor = dbo.Proveedores.IDProveedor
+*/
 
 /*Creación de la tabla de RegistrarBaseForanea*/
 Create Table RegistrarBaseForanea
