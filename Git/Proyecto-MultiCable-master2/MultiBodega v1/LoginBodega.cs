@@ -18,11 +18,11 @@ namespace MultiBodega_v1
     public partial class LoginBodega : Form
     {
         SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
-        
-
+        public static string cUsuario;
         public LoginBodega()
         {
             InitializeComponent();
+
         }
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -63,11 +63,13 @@ namespace MultiBodega_v1
             if (lector.HasRows == true)
             {
                 MessageBox.Show("¡Bienvenido a CATELSA LOGISTIC!", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var MostrarPantalla = new Botonera_APP(cUsuario);
+                             
                 this.Hide();
-                var MostrarPantalla = new Botonera.Botonera_APP();
                 MostrarPantalla.UsuariolblStat.Text = NombreUsuario.Text;
                 MostrarPantalla.ShowDialog();
                 BtnLogIn.Visible = false;
+                
             }
             else
             {

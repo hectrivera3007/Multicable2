@@ -211,9 +211,9 @@ namespace MultiBodega_v1
 
         private void ListarProveedoresToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            var ListaProveedores = new FrmListarProveedor();
-            ListaProveedores.MdiParent = this;
-            ListaProveedores.Show();
+            //var ListaProveedores = new FrmListarProveedor();
+            //ListaProveedores.MdiParent = this;
+            //ListaProveedores.Show();
         }
 
         private void ListarTécnicosToolStripMenuItem_Click_1(object sender, EventArgs e)

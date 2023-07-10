@@ -32,7 +32,16 @@ namespace MultiBodega_v1.Inventario
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarProveedor));
             this.proveedoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.BtnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BuscarProveedor = new System.Windows.Forms.TextBox();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.proveedoresTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,16 +53,6 @@ namespace MultiBodega_v1.Inventario
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BuscarProveedor = new System.Windows.Forms.TextBox();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.proveedoresTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter();
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
@@ -66,7 +65,6 @@ namespace MultiBodega_v1.Inventario
             this.proveedoresDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.proveedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.proveedoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BtnSeleccionar,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -82,96 +80,11 @@ namespace MultiBodega_v1.Inventario
             this.proveedoresDataGridView.Location = new System.Drawing.Point(0, 149);
             this.proveedoresDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.proveedoresDataGridView.Name = "proveedoresDataGridView";
+            this.proveedoresDataGridView.ReadOnly = true;
+            this.proveedoresDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.proveedoresDataGridView.Size = new System.Drawing.Size(1023, 387);
             this.proveedoresDataGridView.TabIndex = 1;
-            this.proveedoresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.proveedoresDataGridView_CellContentClick);
-            // 
-            // BtnSeleccionar
-            // 
-            this.BtnSeleccionar.HeaderText = "";
-            this.BtnSeleccionar.Name = "BtnSeleccionar";
-            this.BtnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BtnSeleccionar.Width = 35;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDProveedor";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombreProveedor";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Proveedor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "RTN";
-            this.dataGridViewTextBoxColumn3.HeaderText = "RTN";
-            this.dataGridViewTextBoxColumn3.MaxInputLength = 14;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PersonaContacto";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Persona Contacto";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Dirección";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 250;
-            // 
-            // paisZonaDataGridViewTextBoxColumn
-            // 
-            this.paisZonaDataGridViewTextBoxColumn.DataPropertyName = "Pais_Zona";
-            this.paisZonaDataGridViewTextBoxColumn.HeaderText = "País/Zona";
-            this.paisZonaDataGridViewTextBoxColumn.Name = "paisZonaDataGridViewTextBoxColumn";
-            this.paisZonaDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Tipo_Proveedor";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Tipo de Proveedor";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Num_Telefono";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Número de Teléfono";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "CorreoElectronico";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Correo Electrónico";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Notas";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Notas";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 250;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            this.activoDataGridViewCheckBoxColumn.Width = 80;
+            this.proveedoresDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.proveedoresDataGridView_CellContentDoubleClick);
             // 
             // proveedoresBindingSource
             // 
@@ -272,6 +185,7 @@ namespace MultiBodega_v1.Inventario
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -281,7 +195,7 @@ namespace MultiBodega_v1.Inventario
             this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
             this.tableAdapterManager.PermisosComprasTableAdapter = null;
             this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedoresTableAdapter = this.proveedoresTableAdapter;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
@@ -291,6 +205,95 @@ namespace MultiBodega_v1.Inventario
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDProveedor";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombreProveedor";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Proveedor";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "RTN";
+            this.dataGridViewTextBoxColumn3.HeaderText = "RTN";
+            this.dataGridViewTextBoxColumn3.MaxInputLength = 14;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PersonaContacto";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Persona Contacto";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Dirección";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 250;
+            // 
+            // paisZonaDataGridViewTextBoxColumn
+            // 
+            this.paisZonaDataGridViewTextBoxColumn.DataPropertyName = "Pais_Zona";
+            this.paisZonaDataGridViewTextBoxColumn.HeaderText = "País/Zona";
+            this.paisZonaDataGridViewTextBoxColumn.Name = "paisZonaDataGridViewTextBoxColumn";
+            this.paisZonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paisZonaDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Tipo_Proveedor";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Tipo de Proveedor";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Num_Telefono";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Número de Teléfono";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "CorreoElectronico";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Correo Electrónico";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Notas";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Notas";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 250;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activoDataGridViewCheckBoxColumn.Width = 80;
             // 
             // FrmListarProveedor
             // 
@@ -346,7 +349,6 @@ namespace MultiBodega_v1.Inventario
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
         private _CATELSA_MULTICABLETableAdapters.ProveedoresTableAdapter proveedoresTableAdapter;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewButtonColumn BtnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

@@ -26,6 +26,7 @@ namespace MultiBodega_v1.Registro
         public ModificarBaseForanea(string idSolicitante, string FechaRegistro, string Nombre, string Lugar_Zona, string Direccion, string Num_Telefono, string Notas, bool Activo)
         {
             InitializeComponent();
+
             this.idSolicitante = idSolicitante;
             this.FechaRegistro = FechaRegistro;
             this.Nombre = Nombre;

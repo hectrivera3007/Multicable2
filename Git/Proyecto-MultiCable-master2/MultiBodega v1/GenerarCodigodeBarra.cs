@@ -15,6 +15,7 @@ namespace MultiBodega_v1
 {
     public partial class GenerarCodigodeBarra : Form
     {
+        public string cUsuario;
         public GenerarCodigodeBarra()
         {
             InitializeComponent();
@@ -53,7 +54,7 @@ namespace MultiBodega_v1
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
-            var Volver = new Botonera_APP();
+            var Volver = new Botonera_APP(cUsuario);
             Volver.Show();
         }
     }

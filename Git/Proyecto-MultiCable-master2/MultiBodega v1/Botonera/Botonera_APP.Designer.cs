@@ -285,8 +285,7 @@ namespace MultiBodega_v1.Botonera
             // UsuariolblStat
             // 
             this.UsuariolblStat.Name = "UsuariolblStat";
-            this.UsuariolblStat.Size = new System.Drawing.Size(141, 17);
-            this.UsuariolblStat.Text = "toolStripStatusLabel2";
+            this.UsuariolblStat.Size = new System.Drawing.Size(0, 17);
             // 
             // Fecha_Hora
             // 
@@ -334,10 +333,13 @@ namespace MultiBodega_v1.Botonera
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Botonera_APP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = ":::Inicio:::";
             this.Load += new System.EventHandler(this.Botonera_APP_Load);
+            this.Move += new System.EventHandler(this.Botonera_APP_Move);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

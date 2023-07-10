@@ -18,10 +18,12 @@ namespace MultiBodega_v1.Inventario
 
         static string ConexionString = @"Data Source=(localdb)\CATELSA;Initial Catalog = CATELSA-MULTICABLE; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False";
         SqlConnection conexion = new SqlConnection(ConexionString);
+        private DataGridViewRow selectedRow;
 
         public FrmListarProveedor()
         {
             InitializeComponent();
+            proveedoresDataGridView.CellDoubleClick += proveedoresDataGridView_CellContentDoubleClick;
         }
 
         private void FrmListarProveedor_Load(object sender, EventArgs e)
@@ -70,8 +72,19 @@ namespace MultiBodega_v1.Inventario
                 if (dt.Rows.Count > 0)
                 {
                     proveedoresDataGridView.DataSource = dt;
-                    proveedoresDataGridView.Rows[0].DefaultCellStyle.BackColor = Color.CadetBlue;
-                    proveedoresDataGridView.Rows[0].DefaultCellStyle.ForeColor = Color.White;
+                    if (!string.IsNullOrEmpty(BuscarProveedor.Text))
+                    {
+                        proveedoresDataGridView.Rows[0].DefaultCellStyle.BackColor = Color.CornflowerBlue;
+                        proveedoresDataGridView.Rows[0].DefaultCellStyle.ForeColor = Color.White;
+                        proveedoresDataGridView.RowsDefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Regular); // Establecer la fuente regular para todas las filas
+                        proveedoresDataGridView.Rows[0].DefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Bold); // Establecer la fuente negrita solo para la primera fila
+                    }
+                    else
+                    {
+                        proveedoresDataGridView.RowsDefaultCellStyle.BackColor = Color.Empty;
+                        proveedoresDataGridView.RowsDefaultCellStyle.ForeColor = Color.Empty;
+                        proveedoresDataGridView.RowsDefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Regular); // Establecer la fuente regular para todas las filas
+                    }
                 }
                 else
                 {
@@ -80,7 +93,7 @@ namespace MultiBodega_v1.Inventario
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al realizar la búsqueda de proveedores: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al realizar la búsqueda de Bases Foráneas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -89,27 +102,27 @@ namespace MultiBodega_v1.Inventario
             
         }
 
-        private void proveedoresDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void proveedoresDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 && e.RowIndex != -1)
-            {
-                //Mostrar el formulario de tu elección
-                DataGridViewRow row = proveedoresDataGridView.CurrentRow;
-                ModificarProveedor Mostrar = new ModificarProveedor();
-                Mostrar.iDProveedorTextBox.Text = row.Cells[1].Value.ToString();
-                Mostrar.nombreProveedorTextBox.Text = row.Cells[2].Value.ToString();
-                Mostrar.rTNTextBox.Text = row.Cells[3].Value.ToString();
-                Mostrar.personaContactoTextBox.Text = row.Cells[4].Value.ToString();
-                Mostrar.direccionTextBox.Text = row.Cells[5].Value.ToString();
-                Mostrar.pais_ZonaTextBox.Text = row.Cells[6].Value.ToString();
-                Mostrar.tipo_ProveedorComboBox.Text = row.Cells[7].Value.ToString();
-                Mostrar.num_TelefonoTextBox.Text = row.Cells[8].Value.ToString();
-                Mostrar.correoElectronicoTextBox.Text = row.Cells[9].Value.ToString();
-                Mostrar.notasTextBox.Text = row.Cells[10].Value.ToString();
-                Mostrar.activoCheckBox.Checked = (bool)row.Cells[11].Value;
-                this.Close();
-                Mostrar.ShowDialog();
-            }
+
+            // Obtener la fila seleccionada
+            DataGridViewRow selectedRow = proveedoresDataGridView.Rows[e.RowIndex];
+            string iDProveedor = selectedRow.Cells[0].Value.ToString();
+            string NombreProveedor = selectedRow.Cells[1].Value.ToString();
+            string RTN = selectedRow.Cells[2].Value.ToString();
+            string personaContacto = selectedRow.Cells[3].Value.ToString();
+            string Direccion = selectedRow.Cells[4].Value.ToString();
+            string pais_Zona = selectedRow.Cells[5].Value.ToString();
+            string tipo_Proveedor = selectedRow.Cells[6].Value.ToString();
+            string num_Telefono = selectedRow.Cells[7].Value.ToString();
+            string correoElectronico = selectedRow.Cells[8].Value.ToString();
+            string notas = selectedRow.Cells[9].Value.ToString();
+            bool Activo = Convert.ToBoolean(selectedRow.Cells[10].Value);
+
+            // Abrir el formulario de modificación y pasar el registro seleccionado
+            ModificarProveedor formModificar = new ModificarProveedor(iDProveedor, NombreProveedor, RTN, personaContacto, pais_Zona, Direccion, tipo_Proveedor, num_Telefono, correoElectronico, notas, Activo);
+            formModificar.ShowDialog();
+            this.Close();            
         }
     }
 }

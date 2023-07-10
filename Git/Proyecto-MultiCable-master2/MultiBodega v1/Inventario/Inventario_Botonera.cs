@@ -13,10 +13,10 @@ namespace MultiBodega_v1.Botonera
 {
     public partial class Inventario_Botonera : Form
     {
+        public string cUsuario;
         public Inventario_Botonera()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
         }
 
         private void BtnNuevoProducto_Click(object sender, EventArgs e)
@@ -32,9 +32,9 @@ namespace MultiBodega_v1.Botonera
             opcion = MessageBox.Show("¿Estás seguro de volver a la vista principal?", "Aviso del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (opcion == DialogResult.Yes)
             {
-                Botonera_APP nuevo = new Botonera_APP();
-                nuevo.Show();
                 this.Close();
+                Botonera_APP Volver = new Botonera_APP(cUsuario);
+                Volver.Show();
             }
         }
 
@@ -68,9 +68,10 @@ namespace MultiBodega_v1.Botonera
             this.Close();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void Inventario_Botonera_Load(object sender, EventArgs e)
         {
-
         }
+
+        
     }
 }

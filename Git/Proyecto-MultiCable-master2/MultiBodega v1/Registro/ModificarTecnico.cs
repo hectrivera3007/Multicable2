@@ -1,4 +1,5 @@
 ﻿using MultiBodega_v1.Formularios_de_Registro;
+using MultiBodega_v1.Registro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

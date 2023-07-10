@@ -23,9 +23,9 @@ namespace MultiBodega_v1.Listar
 
         private void BtnLP_Click(object sender, EventArgs e)
         {
-            this.Close();
             FrmListarProveedor nuevoprov = new FrmListarProveedor();
             nuevoprov.Show();
+            this.Close();
         }
 
         private void BtnLT_Click(object sender, EventArgs e)

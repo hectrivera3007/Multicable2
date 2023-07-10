@@ -22,7 +22,7 @@ namespace MultiBodega_v1
         private void FrmIngresarProducto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Productos' Puede moverla o quitarla según sea necesario.
-            this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Producto);
+            this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Productos);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Bodega' Puede moverla o quitarla según sea necesario.
             this.bodegaTableAdapter.Fill(this._CATELSA_MULTICABLE.Bodega);
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.TipoMaterial' Puede moverla o quitarla según sea necesario.
@@ -68,7 +68,7 @@ namespace MultiBodega_v1
             if (opcion == DialogResult.Yes)
             {
                // this.productosTableAdapter.Guardar();
-                this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Producto);
+                this.productosTableAdapter.Fill(this._CATELSA_MULTICABLE.Productos);
                 DtFechaIngreso.Value=DateTime.Now;
                 CmbNombreTipo.SelectedValue = -1;
                 TxtCodigoGen.Clear();

@@ -161,10 +161,6 @@ namespace MultiBodega_v1.Botonera
             this.BtnAjusteInventario.UseVisualStyleBackColor = false;
             this.BtnAjusteInventario.Click += new System.EventHandler(this.BtnAjusteInventario_Click);
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // Inventario_Botonera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -187,6 +183,7 @@ namespace MultiBodega_v1.Botonera
             this.Name = "Inventario_Botonera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Botonera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

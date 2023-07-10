@@ -13,6 +13,7 @@ namespace MultiBodega_v1.Configuración
 {
     public partial class FrmContenedorConfig : Form
     {
+        public string cUsuario;
         public FrmContenedorConfig()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace MultiBodega_v1.Configuración
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            var Volver = new Botonera_APP();
+            var Volver = new Botonera_APP(cUsuario);
             Volver.Show();
             this.Close();
         }

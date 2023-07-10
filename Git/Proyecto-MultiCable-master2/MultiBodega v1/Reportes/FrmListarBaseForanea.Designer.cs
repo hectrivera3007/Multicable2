@@ -32,6 +32,14 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarBaseForanea));
             this.RegistrarBaseForaneaDataGridView = new System.Windows.Forms.DataGridView();
+            this.iDSolicitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarZonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numTelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.registrarBaseForaneaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,14 +50,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.registrarBaseForaneaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarBaseForaneaTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.iDSolicitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarZonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numTelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarBaseForaneaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrarBaseForaneaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
@@ -80,6 +80,69 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.RegistrarBaseForaneaDataGridView.TabIndex = 1;
             this.RegistrarBaseForaneaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RegistrarBaseForaneaDataGridView_CellContentClick);
             this.RegistrarBaseForaneaDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RegistrarBaseForaneaDataGridView_CellContentDoubleClick);
+            // 
+            // iDSolicitanteDataGridViewTextBoxColumn
+            // 
+            this.iDSolicitanteDataGridViewTextBoxColumn.DataPropertyName = "IDSolicitante";
+            this.iDSolicitanteDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDSolicitanteDataGridViewTextBoxColumn.Name = "iDSolicitanteDataGridViewTextBoxColumn";
+            this.iDSolicitanteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDSolicitanteDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // fechaRegistroDataGridViewTextBoxColumn
+            // 
+            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "Fecha de Registro";
+            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
+            this.fechaRegistroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // lugarZonaDataGridViewTextBoxColumn
+            // 
+            this.lugarZonaDataGridViewTextBoxColumn.DataPropertyName = "Lugar_Zona";
+            this.lugarZonaDataGridViewTextBoxColumn.HeaderText = "Lugar/Zona";
+            this.lugarZonaDataGridViewTextBoxColumn.Name = "lugarZonaDataGridViewTextBoxColumn";
+            this.lugarZonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lugarZonaDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.direccionDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // numTelefonoDataGridViewTextBoxColumn
+            // 
+            this.numTelefonoDataGridViewTextBoxColumn.DataPropertyName = "Num_Telefono";
+            this.numTelefonoDataGridViewTextBoxColumn.HeaderText = "Número de Teléfono";
+            this.numTelefonoDataGridViewTextBoxColumn.Name = "numTelefonoDataGridViewTextBoxColumn";
+            this.numTelefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numTelefonoDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // notasDataGridViewTextBoxColumn
+            // 
+            this.notasDataGridViewTextBoxColumn.DataPropertyName = "Notas";
+            this.notasDataGridViewTextBoxColumn.HeaderText = "Notas";
+            this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
+            this.notasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.notasDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activoDataGridViewCheckBoxColumn.Width = 80;
             // 
             // registrarBaseForaneaBindingSource
             // 
@@ -180,6 +243,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -189,7 +253,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
             this.tableAdapterManager.PermisosComprasTableAdapter = null;
             this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = this.registrarBaseForaneaTableAdapter;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
@@ -199,62 +263,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // iDSolicitanteDataGridViewTextBoxColumn
-            // 
-            this.iDSolicitanteDataGridViewTextBoxColumn.DataPropertyName = "IDSolicitante";
-            this.iDSolicitanteDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDSolicitanteDataGridViewTextBoxColumn.Name = "iDSolicitanteDataGridViewTextBoxColumn";
-            this.iDSolicitanteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDSolicitanteDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // fechaRegistroDataGridViewTextBoxColumn
-            // 
-            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
-            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "Fecha de Registro";
-            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 220;
-            // 
-            // lugarZonaDataGridViewTextBoxColumn
-            // 
-            this.lugarZonaDataGridViewTextBoxColumn.DataPropertyName = "Lugar_Zona";
-            this.lugarZonaDataGridViewTextBoxColumn.HeaderText = "Lugar/Zona";
-            this.lugarZonaDataGridViewTextBoxColumn.Name = "lugarZonaDataGridViewTextBoxColumn";
-            this.lugarZonaDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // numTelefonoDataGridViewTextBoxColumn
-            // 
-            this.numTelefonoDataGridViewTextBoxColumn.DataPropertyName = "Num_Telefono";
-            this.numTelefonoDataGridViewTextBoxColumn.HeaderText = "Número de Teléfono";
-            this.numTelefonoDataGridViewTextBoxColumn.Name = "numTelefonoDataGridViewTextBoxColumn";
-            this.numTelefonoDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // notasDataGridViewTextBoxColumn
-            // 
-            this.notasDataGridViewTextBoxColumn.DataPropertyName = "Notas";
-            this.notasDataGridViewTextBoxColumn.HeaderText = "Notas";
-            this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
-            this.notasDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            this.activoDataGridViewCheckBoxColumn.Width = 80;
             // 
             // FrmListarBaseForanea
             // 

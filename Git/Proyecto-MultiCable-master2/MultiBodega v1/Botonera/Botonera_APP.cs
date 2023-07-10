@@ -1,4 +1,5 @@
-﻿using MultiBodega_v1.Botonera.Requisas;
+﻿using BL.Bodega;
+using MultiBodega_v1.Botonera.Requisas;
 using MultiBodega_v1.Compras;
 using MultiBodega_v1.Configuración;
 using MultiBodega_v1.Registro;
@@ -21,17 +22,29 @@ namespace MultiBodega_v1.Botonera
     {
 
         SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
-
-        public Botonera_APP()
+        public string cUsuario;
+        private int Ypos=0;
+        private int Xpos=0;
+        public Botonera_APP(string cUsuario)
         {
             InitializeComponent();
+            //MessageBox.Show(cUsuario);
+        }
+
+        private void Botonera_APP_Load(object sender, EventArgs e)
+        {
+            //cUsuario = UsuariolblStat.Text;
+            CenterToScreen();
+            Ypos = Location.Y;
+            Xpos = Location.X;
+
         }
 
         public void Btn_Inventario_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var Inventario = new Inventario_Botonera();
-            Inventario.Show();
-            this.Close();
+            Inventario.ShowDialog();
         }
 
         private void BtnBodegas_Click(object sender, EventArgs e)
@@ -108,9 +121,19 @@ namespace MultiBodega_v1.Botonera
             Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
         }
 
-        private void Botonera_APP_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            //UsuariolblStat.Text = cUsuario;
 
+        }
+
+        private void Botonera_APP_Move(object sender, EventArgs e)
+        {
+            if (Xpos > 0)
+            {
+                Location = new Point(Xpos, Ypos);
+
+            }
         }
     }
 }

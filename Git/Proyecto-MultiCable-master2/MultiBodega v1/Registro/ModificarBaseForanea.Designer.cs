@@ -229,7 +229,7 @@ namespace MultiBodega_v1.Registro
             // 
             // direccionTextBox
             // 
-            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionTextBox.Location = new System.Drawing.Point(44, 207);
             this.direccionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.direccionTextBox.Multiline = true;
@@ -239,16 +239,17 @@ namespace MultiBodega_v1.Registro
             // 
             // FechaRegistroDateTimePicker
             // 
+            this.FechaRegistroDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaRegistroDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaRegistroDateTimePicker.Location = new System.Drawing.Point(487, 162);
             this.FechaRegistroDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.FechaRegistroDateTimePicker.Name = "FechaRegistroDateTimePicker";
-            this.FechaRegistroDateTimePicker.Size = new System.Drawing.Size(173, 20);
+            this.FechaRegistroDateTimePicker.Size = new System.Drawing.Size(173, 23);
             this.FechaRegistroDateTimePicker.TabIndex = 76;
             // 
             // lugar_ZonaTextBox
             // 
-            this.lugar_ZonaTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.lugar_ZonaTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lugar_ZonaTextBox.Location = new System.Drawing.Point(332, 281);
             this.lugar_ZonaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lugar_ZonaTextBox.Name = "lugar_ZonaTextBox";
@@ -266,7 +267,7 @@ namespace MultiBodega_v1.Registro
             // 
             // notasTextBox
             // 
-            this.notasTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.notasTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notasTextBox.Location = new System.Drawing.Point(44, 325);
             this.notasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.notasTextBox.Multiline = true;
@@ -276,7 +277,7 @@ namespace MultiBodega_v1.Registro
             // 
             // num_TelefonoTextBox
             // 
-            this.num_TelefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.num_TelefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_TelefonoTextBox.Location = new System.Drawing.Point(44, 281);
             this.num_TelefonoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
@@ -303,6 +304,7 @@ namespace MultiBodega_v1.Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -312,7 +314,7 @@ namespace MultiBodega_v1.Registro
             this.tableAdapterManager.PermisosAdministradorTableAdapter = null;
             this.tableAdapterManager.PermisosComprasTableAdapter = null;
             this.tableAdapterManager.PermisosEncargadoBodegaTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedoresTableAdapter = null;
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = this.registrarBaseForaneaTableAdapter;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
@@ -326,10 +328,11 @@ namespace MultiBodega_v1.Registro
             // iDSolicitanteTextBox
             // 
             this.iDSolicitanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registrarBaseForaneaBindingSource, "IDSolicitante", true));
+            this.iDSolicitanteTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iDSolicitanteTextBox.Location = new System.Drawing.Point(44, 121);
             this.iDSolicitanteTextBox.Name = "iDSolicitanteTextBox";
             this.iDSolicitanteTextBox.ReadOnly = true;
-            this.iDSolicitanteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iDSolicitanteTextBox.Size = new System.Drawing.Size(100, 23);
             this.iDSolicitanteTextBox.TabIndex = 94;
             // 
             // activoCheckBox

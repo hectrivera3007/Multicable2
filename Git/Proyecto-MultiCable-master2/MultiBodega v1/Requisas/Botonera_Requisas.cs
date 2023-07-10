@@ -13,6 +13,7 @@ namespace MultiBodega_v1.Botonera.Requisas
 {
     public partial class Botonera_Requisas : Form
     {
+        public string cUsuario;
         public Botonera_Requisas()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace MultiBodega_v1.Botonera.Requisas
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            Botonera_APP nuevo = new Botonera_APP();
+            Botonera_APP nuevo = new Botonera_APP(cUsuario);
             nuevo.Show();
             this.Close();
         }

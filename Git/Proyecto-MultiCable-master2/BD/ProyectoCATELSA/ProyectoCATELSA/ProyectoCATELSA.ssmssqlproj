@@ -25,6 +25,12 @@
           <AssociatedConnUserName />
           <FullPath>Creando BD y Tablas.sql</FullPath>
         </FileNode>
+        <FileNode Name="ListarProveedores_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(localdb)\CATELSA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(localdb)\CATELSA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ListarProveedores_SP.sql</FullPath>
+        </FileNode>
         <FileNode Name="Procedimientos Almacenados.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(localdb)\CATELSA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(localdb)\CATELSA</AssociatedConnSrvName>

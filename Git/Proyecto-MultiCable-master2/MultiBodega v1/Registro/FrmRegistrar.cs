@@ -15,24 +15,17 @@ namespace MultiBodega_v1.Registro
 {
     public partial class FrmRegistrar : Form
     {
+        public string cUsuario;
         public FrmRegistrar()
         {
             InitializeComponent();
         }
 
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x20;
-                return cp;
-            }
-        }
+        
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            Botonera_APP Volver = new Botonera_APP();
+            Botonera_APP Volver = new Botonera_APP(cUsuario);
             Volver.Show();
             this.Close();
         }

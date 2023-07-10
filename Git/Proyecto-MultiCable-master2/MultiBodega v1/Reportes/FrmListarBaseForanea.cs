@@ -23,6 +23,26 @@ namespace MultiBodega_v1.Formularios_de_Registro
         public FrmListarBaseForanea()
         {
             InitializeComponent();
+            RegistrarBaseForaneaDataGridView.CellDoubleClick += RegistrarBaseForaneaDataGridView_CellDoubleClick;
+        }
+
+        private void RegistrarBaseForaneaDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtener la fila seleccionada
+            DataGridViewRow selectedRow = RegistrarBaseForaneaDataGridView.Rows[e.RowIndex];
+            string idSolicitante = selectedRow.Cells[0].Value.ToString();
+            string FechaRegistro = selectedRow.Cells[1].Value.ToString();
+            string Nombre = selectedRow.Cells[2].Value.ToString();
+            string Lugar_Zona = selectedRow.Cells[3].Value.ToString();
+            string Direccion = selectedRow.Cells[4].Value.ToString();
+            string Num_Telefono = selectedRow.Cells[5].Value.ToString();
+                        string Notas = selectedRow.Cells[6].Value.ToString();
+            bool Activo = Convert.ToBoolean(selectedRow.Cells[7].Value);
+
+            // Abrir el formulario de modificación y pasar el registro seleccionado
+            ModificarPuntodeVenta formModificar = new ModificarPuntodeVenta(idSolicitante, Nombre, FechaRegistro, Direccion, Num_Telefono, Lugar_Zona, Notas, Activo);
+            formModificar.ShowDialog();
+            this.Close();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)

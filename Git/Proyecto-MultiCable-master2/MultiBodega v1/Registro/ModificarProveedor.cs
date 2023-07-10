@@ -13,16 +13,55 @@ namespace MultiBodega_v1.Registro
 {
     public partial class ModificarProveedor : Form
     {
-        public ModificarProveedor()
+
+        private string iDProveedor;
+        private string NombreProveedor;
+        private string RTN;
+        private string personaContacto;
+        private string Direccion;
+        private string pais_Zona;
+        private string tipo_Proveedor;
+        private string num_Telefono;
+        private string correoElectronico;
+        private string notas;
+        private bool Activo;
+
+        public ModificarProveedor(string iDProveedor, string NombreProveedor, string RTN, string personaContacto, string pais_Zona, string Direccion, string tipo_Proveedor, string num_Telefono, string correoElectronico, string notas, bool Activo)
         {
             InitializeComponent();
+
+
+            this.iDProveedor = iDProveedor;
+            this.NombreProveedor = NombreProveedor;
+            this.RTN = RTN;
+            this.personaContacto = personaContacto;
+            this.Direccion = Direccion;
+            this.pais_Zona = pais_Zona;
+            this.tipo_Proveedor = tipo_Proveedor;
+            this.num_Telefono = num_Telefono;
+            this.correoElectronico = correoElectronico;
+            this.notas = notas;
+            this.Activo = Activo;
+
+            iDProveedorTextBox.Text = iDProveedor;
+            nombreProveedorTextBox.Text = NombreProveedor;
+            rTNTextBox.Text = RTN;
+            personaContactoTextBox.Text = personaContacto;
+            direccionTextBox.Text = Direccion;
+            pais_ZonaTextBox.Text = pais_Zona;
+            tipo_ProveedorComboBox.Text = tipo_Proveedor;
+            num_TelefonoTextBox.Text = num_Telefono;
+            correoElectronicoTextBox.Text = correoElectronico;
+            notasTextBox.Text = notas;
+            activoCheckBox.Checked = Activo;
+
         }
 
-        private void BtnRegresar_Click(object sender, EventArgs e)
+        private void ModificarProveedor_Load(object sender, EventArgs e)
         {
-            FrmListarProveedor listarProveedores = new FrmListarProveedor();
-            listarProveedores.Show();
-            this.Close();
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarPuntodeVenta' Puede moverla o quitarla según sea necesario.
+            //this.proveedoresTableAdapter.Fill(_CATELSA_MULTICABLE.Proveedores);
+
         }
 
         private void btnMod_Click(object sender, EventArgs e)
@@ -31,14 +70,17 @@ namespace MultiBodega_v1.Registro
                 @pais_ZonaTextBox.Text, @tipo_ProveedorComboBox.Text, @num_TelefonoTextBox.Text, @correoElectronicoTextBox.Text, @notasTextBox.Text,
                 @activoCheckBox.Checked, Int32.Parse(@iDProveedorTextBox.Text));
             MessageBox.Show("El registro ha sido actualizado");
-        }
-
-        private void proveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.proveedoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this._CATELSA_MULTICABLE);
-
+            iDProveedorTextBox.Clear();
+            nombreProveedorTextBox.Clear();
+            rTNTextBox.Clear();
+            personaContactoTextBox.Clear();
+            direccionTextBox.Clear();
+            pais_ZonaTextBox.Clear();
+            tipo_ProveedorComboBox.SelectedIndex = -1;
+            num_TelefonoTextBox.Clear();
+            correoElectronicoTextBox.Clear();
+            notasTextBox.Clear();
+            activoCheckBox.Checked = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -76,6 +118,13 @@ namespace MultiBodega_v1.Registro
             {
                 activoCheckBox.ForeColor = Color.Black;
             }
+        }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmListarProveedor listarProveedor = new FrmListarProveedor();
+            listarProveedor.Show();
+            this.Close();
         }
     }
 }

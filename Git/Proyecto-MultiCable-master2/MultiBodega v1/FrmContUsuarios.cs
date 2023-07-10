@@ -13,6 +13,7 @@ namespace MultiBodega_v1
 {
     public partial class FrmContUsuarios : Form
     {
+        public string cUsuario;
         public FrmContUsuarios()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace MultiBodega_v1
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            Botonera_APP Volver = new Botonera_APP();
+            Botonera_APP Volver = new Botonera_APP(cUsuario);
             Volver.Show();
             this.Close();
         }
