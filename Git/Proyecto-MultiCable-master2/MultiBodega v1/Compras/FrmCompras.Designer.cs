@@ -50,6 +50,24 @@ namespace MultiBodega_v1.Compras
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
             this.ComprasDGV = new System.Windows.Forms.DataGridView();
+            this.iDCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costFOBDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costosDeTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoCIFDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoCIFLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costosDeImportacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.numOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.cantidadTextBox = new System.Windows.Forms.TextBox();
             this.codigoTextBox = new System.Windows.Forms.TextBox();
             this.costFOBDolaresTextBox = new System.Windows.Forms.TextBox();
@@ -84,26 +102,8 @@ namespace MultiBodega_v1.Compras
             this.fechaEnBodegaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.impuestoPagadoTextBox = new System.Windows.Forms.TextBox();
             this.numOrdenTextBox = new System.Windows.Forms.TextBox();
-            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comprasTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ComprasTableAdapter();
-            this.numOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoTotalCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoTotalCompraLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costosDeImportacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoCIFLempirasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoCIFDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costosDeTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costFOBDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obtenerComprasConProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cantidadLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
@@ -123,9 +123,9 @@ namespace MultiBodega_v1.Compras
             impuestoPagadoLabel = new System.Windows.Forms.Label();
             numOrdenLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ComprasDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerComprasConProveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -357,6 +357,115 @@ namespace MultiBodega_v1.Compras
             this.ComprasDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.ComprasDGV.Size = new System.Drawing.Size(1121, 251);
             this.ComprasDGV.TabIndex = 1;
+            // 
+            // iDCompraDataGridViewTextBoxColumn
+            // 
+            this.iDCompraDataGridViewTextBoxColumn.DataPropertyName = "IDCompra";
+            this.iDCompraDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDCompraDataGridViewTextBoxColumn.Name = "iDCompraDataGridViewTextBoxColumn";
+            this.iDCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCompraDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // productoDataGridViewTextBoxColumn
+            // 
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            // 
+            // precioUnitarioCompraDolaresDataGridViewTextBoxColumn
+            // 
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitarioCompraDolares";
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.HeaderText = "PrecioUnitarioCompraDolares";
+            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.Name = "precioUnitarioCompraDolaresDataGridViewTextBoxColumn";
+            // 
+            // costFOBDolaresDataGridViewTextBoxColumn
+            // 
+            this.costFOBDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostFOBDolares";
+            this.costFOBDolaresDataGridViewTextBoxColumn.HeaderText = "CostFOBDolares";
+            this.costFOBDolaresDataGridViewTextBoxColumn.Name = "costFOBDolaresDataGridViewTextBoxColumn";
+            // 
+            // costosDeTransporteDataGridViewTextBoxColumn
+            // 
+            this.costosDeTransporteDataGridViewTextBoxColumn.DataPropertyName = "CostosDeTransporte";
+            this.costosDeTransporteDataGridViewTextBoxColumn.HeaderText = "CostosDeTransporte";
+            this.costosDeTransporteDataGridViewTextBoxColumn.Name = "costosDeTransporteDataGridViewTextBoxColumn";
+            // 
+            // costoCIFDolaresDataGridViewTextBoxColumn
+            // 
+            this.costoCIFDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFDolares";
+            this.costoCIFDolaresDataGridViewTextBoxColumn.HeaderText = "CostoCIFDolares";
+            this.costoCIFDolaresDataGridViewTextBoxColumn.Name = "costoCIFDolaresDataGridViewTextBoxColumn";
+            // 
+            // costoCIFLempirasDataGridViewTextBoxColumn
+            // 
+            this.costoCIFLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFLempiras";
+            this.costoCIFLempirasDataGridViewTextBoxColumn.HeaderText = "CostoCIFLempiras";
+            this.costoCIFLempirasDataGridViewTextBoxColumn.Name = "costoCIFLempirasDataGridViewTextBoxColumn";
+            // 
+            // costosDeImportacionDataGridViewTextBoxColumn
+            // 
+            this.costosDeImportacionDataGridViewTextBoxColumn.DataPropertyName = "CostosDeImportacion";
+            this.costosDeImportacionDataGridViewTextBoxColumn.HeaderText = "CostosDeImportacion";
+            this.costosDeImportacionDataGridViewTextBoxColumn.Name = "costosDeImportacionDataGridViewTextBoxColumn";
+            // 
+            // costoTotalCompraLempirasDataGridViewTextBoxColumn
+            // 
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraLempiras";
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraLempiras";
+            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.Name = "costoTotalCompraLempirasDataGridViewTextBoxColumn";
+            // 
+            // costoTotalCompraDolaresDataGridViewTextBoxColumn
+            // 
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraDolares";
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraDolares";
+            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.Name = "costoTotalCompraDolaresDataGridViewTextBoxColumn";
+            // 
+            // iDProveedorDataGridViewTextBoxColumn
+            // 
+            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
+            // numOrdenDataGridViewTextBoxColumn
+            // 
+            this.numOrdenDataGridViewTextBoxColumn.DataPropertyName = "NumOrden";
+            this.numOrdenDataGridViewTextBoxColumn.HeaderText = "NumOrden";
+            this.numOrdenDataGridViewTextBoxColumn.Name = "numOrdenDataGridViewTextBoxColumn";
+            this.numOrdenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // comprasBindingSource
+            // 
+            this.comprasBindingSource.DataMember = "Compras";
+            this.comprasBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cantidadTextBox
             // 
@@ -634,18 +743,18 @@ namespace MultiBodega_v1.Compras
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(489, 73);
+            this.label11.Location = new System.Drawing.Point(525, 73);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(308, 32);
+            this.label11.Size = new System.Drawing.Size(244, 32);
             this.label11.TabIndex = 93;
-            this.label11.Text = "REGISTRO DE COMPRA";
+            this.label11.Text = "HOJA DE COSTOS";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(516, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(520, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -695,11 +804,6 @@ namespace MultiBodega_v1.Compras
             this.numOrdenTextBox.Size = new System.Drawing.Size(91, 23);
             this.numOrdenTextBox.TabIndex = 99;
             // 
-            // _CATELSA_MULTICABLE
-            // 
-            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
-            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AjusteInventarioTableAdapter = null;
@@ -722,119 +826,16 @@ namespace MultiBodega_v1.Compras
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
-            // comprasBindingSource
-            // 
-            this.comprasBindingSource.DataMember = "Compras";
-            this.comprasBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            // 
             // comprasTableAdapter
             // 
             this.comprasTableAdapter.ClearBeforeFill = true;
-            // 
-            // numOrdenDataGridViewTextBoxColumn
-            // 
-            this.numOrdenDataGridViewTextBoxColumn.DataPropertyName = "NumOrden";
-            this.numOrdenDataGridViewTextBoxColumn.HeaderText = "NumOrden";
-            this.numOrdenDataGridViewTextBoxColumn.Name = "numOrdenDataGridViewTextBoxColumn";
-            this.numOrdenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            // 
-            // iDProveedorDataGridViewTextBoxColumn
-            // 
-            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
-            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
-            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
-            // 
-            // costoTotalCompraDolaresDataGridViewTextBoxColumn
-            // 
-            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraDolares";
-            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraDolares";
-            this.costoTotalCompraDolaresDataGridViewTextBoxColumn.Name = "costoTotalCompraDolaresDataGridViewTextBoxColumn";
-            // 
-            // costoTotalCompraLempirasDataGridViewTextBoxColumn
-            // 
-            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoTotalCompraLempiras";
-            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.HeaderText = "CostoTotalCompraLempiras";
-            this.costoTotalCompraLempirasDataGridViewTextBoxColumn.Name = "costoTotalCompraLempirasDataGridViewTextBoxColumn";
-            // 
-            // costosDeImportacionDataGridViewTextBoxColumn
-            // 
-            this.costosDeImportacionDataGridViewTextBoxColumn.DataPropertyName = "CostosDeImportacion";
-            this.costosDeImportacionDataGridViewTextBoxColumn.HeaderText = "CostosDeImportacion";
-            this.costosDeImportacionDataGridViewTextBoxColumn.Name = "costosDeImportacionDataGridViewTextBoxColumn";
-            // 
-            // costoCIFLempirasDataGridViewTextBoxColumn
-            // 
-            this.costoCIFLempirasDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFLempiras";
-            this.costoCIFLempirasDataGridViewTextBoxColumn.HeaderText = "CostoCIFLempiras";
-            this.costoCIFLempirasDataGridViewTextBoxColumn.Name = "costoCIFLempirasDataGridViewTextBoxColumn";
-            // 
-            // costoCIFDolaresDataGridViewTextBoxColumn
-            // 
-            this.costoCIFDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostoCIFDolares";
-            this.costoCIFDolaresDataGridViewTextBoxColumn.HeaderText = "CostoCIFDolares";
-            this.costoCIFDolaresDataGridViewTextBoxColumn.Name = "costoCIFDolaresDataGridViewTextBoxColumn";
-            // 
-            // costosDeTransporteDataGridViewTextBoxColumn
-            // 
-            this.costosDeTransporteDataGridViewTextBoxColumn.DataPropertyName = "CostosDeTransporte";
-            this.costosDeTransporteDataGridViewTextBoxColumn.HeaderText = "CostosDeTransporte";
-            this.costosDeTransporteDataGridViewTextBoxColumn.Name = "costosDeTransporteDataGridViewTextBoxColumn";
-            // 
-            // costFOBDolaresDataGridViewTextBoxColumn
-            // 
-            this.costFOBDolaresDataGridViewTextBoxColumn.DataPropertyName = "CostFOBDolares";
-            this.costFOBDolaresDataGridViewTextBoxColumn.HeaderText = "CostFOBDolares";
-            this.costFOBDolaresDataGridViewTextBoxColumn.Name = "costFOBDolaresDataGridViewTextBoxColumn";
-            // 
-            // precioUnitarioCompraDolaresDataGridViewTextBoxColumn
-            // 
-            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitarioCompraDolares";
-            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.HeaderText = "PrecioUnitarioCompraDolares";
-            this.precioUnitarioCompraDolaresDataGridViewTextBoxColumn.Name = "precioUnitarioCompraDolaresDataGridViewTextBoxColumn";
-            // 
-            // productoDataGridViewTextBoxColumn
-            // 
-            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
-            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
-            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            // 
-            // iDCompraDataGridViewTextBoxColumn
-            // 
-            this.iDCompraDataGridViewTextBoxColumn.DataPropertyName = "IDCompra";
-            this.iDCompraDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDCompraDataGridViewTextBoxColumn.Name = "iDCompraDataGridViewTextBoxColumn";
-            this.iDCompraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCompraDataGridViewTextBoxColumn.Width = 40;
             // 
             // obtenerComprasConProveedoresBindingSource
             // 
@@ -850,6 +851,7 @@ namespace MultiBodega_v1.Compras
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1294, 602);
+            this.ControlBox = false;
             this.Controls.Add(numOrdenLabel);
             this.Controls.Add(this.numOrdenTextBox);
             this.Controls.Add(impuestoPagadoLabel);
@@ -912,9 +914,9 @@ namespace MultiBodega_v1.Compras
             this.Text = "Registro de Nueva Compra";
             this.Load += new System.EventHandler(this.FrmCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ComprasDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerComprasConProveedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

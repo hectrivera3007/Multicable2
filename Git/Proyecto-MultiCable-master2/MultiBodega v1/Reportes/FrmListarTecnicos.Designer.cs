@@ -93,7 +93,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.ListarTecnicosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListarTecnicosDataGridView.Size = new System.Drawing.Size(1023, 387);
             this.ListarTecnicosDataGridView.TabIndex = 51;
-            this.ListarTecnicosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarTecnicosDataGridView_CellContentClick);
+            
             this.ListarTecnicosDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarTecnicosDataGridView_CellContentDoubleClick);
             // 
             // iDSolicitanteDataGridViewTextBoxColumn2

@@ -18,14 +18,36 @@ namespace MultiBodega_v1
 {
     public partial class FrmMenuPrincipal : Form
     {
+
+        public static FrmMenuPrincipal Instance;
+        public ToolStripLabel RotuloUser;
+        //public ToolStripSeparator RotuloHora;
         public FrmMenuPrincipal()
         {
             InitializeComponent();
+            Instance = this;
+            RotuloUser = LblUser;
+            /*
+            RotuloHora = SeparadorHora;
+            int nSeparadorposder = 0;
+            int nAnchoForm = this.Size.Height;
+            //MessageBox.Show(this.Size.Height.ToString());
+            
+            int iCtd = LblFecha.Text.Length;
+            nSeparadorposder = (nAnchoForm - iCtd) - 10;
+            //RotuloHora.Margin.Right = nSeparadorposder;
+            
+            
+            //MessageBox.Show(LblFecha.Text.Length.ToString());
+
+            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             var login = new LoginBodega();
+            //MdiParent = this;
             login.ShowDialog();
         }
 
@@ -279,5 +301,19 @@ namespace MultiBodega_v1
             };
             BuscaSalida.Show();
         }
+
+        private void RelojSistema_Tick(object sender, EventArgs e)
+        {
+            LblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+        }
     }
+}
+
+
+//Confirmar  las imagenes de la aplicación, en caso de movimiento de iagen, crer condición para evitar error, programable y diseño
+//Consultar con Dinora sobre Logo de Nombre de la aplicacion en la pantalla principal, en caso de colocarse, redimencionar posición por medio de código
+//Tambien el cuadro de la hora que esta en el statusbar
+public static class UsuarioActual
+{ 
+    public static string NombreUsuario { get; set; }
 }

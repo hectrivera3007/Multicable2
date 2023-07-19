@@ -36,6 +36,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             System.Windows.Forms.Label lugar_ZonaLabel;
             System.Windows.Forms.Label fechaRegistroLabel;
             System.Windows.Forms.Label direccionLabel;
+            System.Windows.Forms.Label iDSolicitanteLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarBaseForanea));
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
@@ -53,12 +54,14 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.registrarBaseForaneaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarBaseForaneaTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.num_TelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.iDSolicitanteTextBox = new System.Windows.Forms.TextBox();
             num_TelefonoLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             lugar_ZonaLabel = new System.Windows.Forms.Label();
             fechaRegistroLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
+            iDSolicitanteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrarBaseForaneaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
@@ -135,6 +138,17 @@ namespace MultiBodega_v1.Formularios_de_Registro
             direccionLabel.Size = new System.Drawing.Size(74, 16);
             direccionLabel.TabIndex = 0;
             direccionLabel.Text = "Direccion:";
+            // 
+            // iDSolicitanteLabel
+            // 
+            iDSolicitanteLabel.AutoSize = true;
+            iDSolicitanteLabel.BackColor = System.Drawing.Color.Transparent;
+            iDSolicitanteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iDSolicitanteLabel.Location = new System.Drawing.Point(56, 95);
+            iDSolicitanteLabel.Name = "iDSolicitanteLabel";
+            iDSolicitanteLabel.Size = new System.Drawing.Size(25, 16);
+            iDSolicitanteLabel.TabIndex = 78;
+            iDSolicitanteLabel.Text = "ID:";
             // 
             // notasTextBox
             // 
@@ -290,6 +304,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -304,6 +319,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = this.registrarBaseForaneaTableAdapter;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -319,6 +335,14 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.num_TelefonoTextBox.Size = new System.Drawing.Size(212, 23);
             this.num_TelefonoTextBox.TabIndex = 78;
             // 
+            // iDSolicitanteTextBox
+            // 
+            this.iDSolicitanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registrarBaseForaneaBindingSource, "IDSolicitante", true));
+            this.iDSolicitanteTextBox.Location = new System.Drawing.Point(59, 116);
+            this.iDSolicitanteTextBox.Name = "iDSolicitanteTextBox";
+            this.iDSolicitanteTextBox.Size = new System.Drawing.Size(100, 23);
+            this.iDSolicitanteTextBox.TabIndex = 79;
+            // 
             // FrmRegistrarBaseForanea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -327,6 +351,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(807, 505);
+            this.Controls.Add(iDSolicitanteLabel);
+            this.Controls.Add(this.iDSolicitanteTextBox);
             this.Controls.Add(this.num_TelefonoTextBox);
             this.Controls.Add(this.nuevoRegistro);
             this.Controls.Add(this.btnGuardar);
@@ -378,5 +404,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.Button nuevoRegistro;
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
+        private System.Windows.Forms.TextBox iDSolicitanteTextBox;
     }
 }

@@ -325,6 +325,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -339,6 +340,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = this.registrarTecnicosTableAdapter;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -380,7 +382,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.MaximizeBox = false;
             this.Name = "FrmRegistrarTecnico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Tecnico";
+            this.Text = "xwzz rede43<sstswgxt";
             this.Load += new System.EventHandler(this.FrmRegistrarTecnico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();

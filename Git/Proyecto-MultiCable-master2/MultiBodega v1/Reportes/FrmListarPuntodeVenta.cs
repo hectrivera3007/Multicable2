@@ -27,6 +27,24 @@ namespace MultiBodega_v1.Formularios_de_Registro
 
         }
 
+        private void RegistrarPuntodeVentaDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtener la fila seleccionada
+            DataGridViewRow selectedRow = RegistrarPuntodeVentaDataGridView.Rows[e.RowIndex];
+            string iDPV = selectedRow.Cells[0].Value.ToString();
+            DateTime FechaRegistro = DateTime.Parse(selectedRow.Cells[1].Value.ToString());
+            string Nombre = selectedRow.Cells[2].Value.ToString();
+            string Lugar_Zona = selectedRow.Cells[3].Value.ToString();
+            string Direccion = selectedRow.Cells[4].Value.ToString();
+            string Num_Telefono = selectedRow.Cells[5].Value.ToString();
+            string Notas = selectedRow.Cells[6].Value.ToString();
+            bool Activo = Convert.ToBoolean(selectedRow.Cells[7].Value);
+
+            // Abrir el formulario de modificación y pasar el registro seleccionado
+            ModificarPuntodeVenta formModificar = new ModificarPuntodeVenta(iDPV, FechaRegistro, Nombre, Lugar_Zona, Direccion, Num_Telefono, Notas, Activo);
+            formModificar.ShowDialog();
+        }
+
         private void FrmListarPuntodeVenta_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarPuntodeVenta' Puede moverla o quitarla según sea necesario.
@@ -95,23 +113,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             BuscarPuntos.Clear();
         }
 
-        private void RegistrarPuntodeVentaDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Obtener la fila seleccionada
-            DataGridViewRow selectedRow = RegistrarPuntodeVentaDataGridView.Rows[e.RowIndex];
-            string iD = selectedRow.Cells[0].Value.ToString();
-            string FechaRegistro = selectedRow.Cells[1].Value.ToString();
-            string Nombre = selectedRow.Cells[2].Value.ToString();
-            string Lugar_Zona = selectedRow.Cells[3].Value.ToString();
-            string Direccion = selectedRow.Cells[4].Value.ToString();
-            string Num_Telefono = selectedRow.Cells[5].Value.ToString();
-            string Notas = selectedRow.Cells[6].Value.ToString();
-            bool Activo = Convert.ToBoolean(selectedRow.Cells[7].Value);
-
-            // Abrir el formulario de modificación y pasar el registro seleccionado
-            ModificarPuntodeVenta formModificar = new ModificarPuntodeVenta(iD, FechaRegistro, Nombre, Lugar_Zona, Direccion, Num_Telefono, Notas, Activo);
-            formModificar.ShowDialog();
-            this.Close();
-        }
+        
     }
 }

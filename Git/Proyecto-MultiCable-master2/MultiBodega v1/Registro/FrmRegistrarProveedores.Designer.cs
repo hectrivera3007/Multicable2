@@ -375,6 +375,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -389,6 +390,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -399,7 +401,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // 
             this.num_TelefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_TelefonoTextBox.Location = new System.Drawing.Point(49, 330);
-            this.num_TelefonoTextBox.Mask = "+000 0000-0000";
+            this.num_TelefonoTextBox.Mask = "+000 0000-000000";
             this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
             this.num_TelefonoTextBox.Size = new System.Drawing.Size(212, 23);
             this.num_TelefonoTextBox.TabIndex = 7;

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Http;
 using MultiBodega_v1.Registro;
 
 namespace MultiBodega_v1.Inventario
@@ -122,7 +123,6 @@ namespace MultiBodega_v1.Inventario
             // Abrir el formulario de modificación y pasar el registro seleccionado
             ModificarProveedor formModificar = new ModificarProveedor(iDProveedor, NombreProveedor, RTN, personaContacto, pais_Zona, Direccion, tipo_Proveedor, num_Telefono, correoElectronico, notas, Activo);
             formModificar.ShowDialog();
-            this.Close();            
         }
     }
 }

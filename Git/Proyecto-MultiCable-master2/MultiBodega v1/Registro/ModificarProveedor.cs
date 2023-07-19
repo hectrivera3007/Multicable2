@@ -66,10 +66,17 @@ namespace MultiBodega_v1.Registro
 
         private void btnMod_Click(object sender, EventArgs e)
         {
+                if (string.IsNullOrWhiteSpace(iDProveedorTextBox.Text))
+                {
+                    MessageBox.Show("Debe completar todos los campos antes de actualizar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
             this.proveedoresTableAdapter.ModificarProveedor(@nombreProveedorTextBox.Text, @rTNTextBox.Text, @personaContactoTextBox.Text, @direccionTextBox.Text,
                 @pais_ZonaTextBox.Text, @tipo_ProveedorComboBox.Text, @num_TelefonoTextBox.Text, @correoElectronicoTextBox.Text, @notasTextBox.Text,
                 @activoCheckBox.Checked, Int32.Parse(@iDProveedorTextBox.Text));
             MessageBox.Show("El registro ha sido actualizado");
+            //Limpiamos el formulario despues de Actualizar
             iDProveedorTextBox.Clear();
             nombreProveedorTextBox.Clear();
             rTNTextBox.Clear();
@@ -85,27 +92,43 @@ namespace MultiBodega_v1.Registro
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
-                                   "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Si el usuario confirma, eliminamos el registro
-            if (resultado == DialogResult.Yes)
+            try
             {
-                this.proveedoresTableAdapter.Eliminar(Int32.Parse(iDProveedorTextBox.Text)); // Eliminamos el registro
-                this.proveedoresTableAdapter.Fill(_CATELSA_MULTICABLE.Proveedores); // Cargamos nuevamente los datos del dataset
+                // Verificar si los campos están vacíos
+                if (string.IsNullOrWhiteSpace(iDProveedorTextBox.Text))
+                {
+                    MessageBox.Show("Debe seleccionar un registro válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
+                                       "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Si el usuario confirma, eliminamos el registro
+                if (resultado == DialogResult.Yes)
+                {
+
+                    this.proveedoresTableAdapter.Eliminar(Int32.Parse(iDProveedorTextBox.Text)); // Eliminamos el registro
+                    //this.proveedoresTableAdapter.Fill(_CATELSA_MULTICABLE.Proveedores); // Cargamos nuevamente los datos del dataset
+                }
+                //Limpiamos el formulario despues de Eliminar
+                iDProveedorTextBox.Clear();
+                nombreProveedorTextBox.Clear();
+                rTNTextBox.Clear();
+                personaContactoTextBox.Clear();
+                direccionTextBox.Clear();
+                pais_ZonaTextBox.Clear();
+                tipo_ProveedorComboBox.SelectedIndex = -1;
+                num_TelefonoTextBox.Clear();
+                correoElectronicoTextBox.Clear();
+                notasTextBox.Clear();
+                activoCheckBox.Checked = false;
             }
-            //Limpiamos los TextBox luego de guardar el registro de Rol de Usuario.            
-            iDProveedorTextBox.Clear();
-            nombreProveedorTextBox.Clear();
-            rTNTextBox.Clear();
-            personaContactoTextBox.Clear();
-            direccionTextBox.Clear();
-            pais_ZonaTextBox.Clear();
-            tipo_ProveedorComboBox.SelectedIndex = -1;
-            num_TelefonoTextBox.Clear();
-            correoElectronicoTextBox.Clear();
-            notasTextBox.Clear();
-            activoCheckBox.Checked = false;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
         }
 
         private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -122,9 +145,9 @@ namespace MultiBodega_v1.Registro
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
+            this.Close();
             FrmListarProveedor listarProveedor = new FrmListarProveedor();
             listarProveedor.Show();
-            this.Close();
         }
     }
 }

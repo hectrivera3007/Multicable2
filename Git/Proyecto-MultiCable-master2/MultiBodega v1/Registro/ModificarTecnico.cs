@@ -14,8 +14,8 @@ namespace MultiBodega_v1.Registro
 {
     public partial class ModificarTecnico : Form
     {
-        private string id;
-        private string fecha;
+        private int id;
+        private DateTime fecha;
         private string nombres;
         private string apellido;
         private string dni;
@@ -24,7 +24,7 @@ namespace MultiBodega_v1.Registro
         private string notas;
         private bool activo;
 
-        public ModificarTecnico(string id, string fecha, string nombres, string apellido, string dni, string direccion, string numTelefono, string notas, bool activo)
+        public ModificarTecnico(int id, DateTime fecha, string nombres, string apellido, string dni, string direccion, string numTelefono, string notas, bool activo)
         {
             InitializeComponent();
 
@@ -40,8 +40,8 @@ namespace MultiBodega_v1.Registro
             this.activo = activo;
 
             // Aquí puedes usar las variables para cargar los datos en los controles del formulario
-            iDSolicitanteTextBox.Text = id;
-            fechaDateTimePicker.Text = fecha;
+            iDSolicitanteTextBox.Text = Convert.ToString(id);
+            fechaDateTimePicker.Value = DateTime.Parse(fecha.ToString("dd-MM-yyyy"));
             nombresTextBox.Text = nombres;
             apellidoTextBox.Text = apellido;
             dNITextBox.Text = dni;
@@ -66,7 +66,7 @@ namespace MultiBodega_v1.Registro
         private void ModificarTecnico_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
-            this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
+            //this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
 
         }
 
@@ -98,8 +98,26 @@ namespace MultiBodega_v1.Registro
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            registrarTecnicosTableAdapter.EliminarTecnico(Int32.Parse(iDSolicitanteTextBox.Text));
-            MessageBox.Show("El Registro ha sido Eliminado!");
+            try
+            {
+                DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar este registro?",
+                                   "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Si el usuario confirma, eliminamos el registro
+                if (resultado == DialogResult.Yes)
+                {
+                    registrarTecnicosTableAdapter.EliminarTecnico(Int32.Parse(iDSolicitanteTextBox.Text));
+                    MessageBox.Show("El Registro ha sido Eliminado!");
+                    registrarTecnicosTableAdapter.Fill(_CATELSA_MULTICABLE.RegistrarTecnicos); // Cargamos nuevamente los datos del dataset
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar eliminar un registro: "+ex.ToString());
+            }
+            
+
+            
         }
     }
 }

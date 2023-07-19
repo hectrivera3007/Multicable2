@@ -36,13 +36,13 @@ namespace MultiBodega_v1.Botonera
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAjusteInventario = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnNuevoProducto
             // 
             this.BtnNuevoProducto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNuevoProducto.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnNuevoProducto.FlatAppearance.BorderSize = 0;
             this.BtnNuevoProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -163,12 +163,15 @@ namespace MultiBodega_v1.Botonera
             // 
             // Inventario_Botonera
             // 
+            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.BtnRegresar;
             this.ClientSize = new System.Drawing.Size(649, 356);
+            this.ControlBox = false;
             this.Controls.Add(this.BtnAjusteInventario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnRegresar);
@@ -177,6 +180,7 @@ namespace MultiBodega_v1.Botonera
             this.Controls.Add(this.BtnNuevoProducto);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -197,6 +201,5 @@ namespace MultiBodega_v1.Botonera
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnAjusteInventario;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

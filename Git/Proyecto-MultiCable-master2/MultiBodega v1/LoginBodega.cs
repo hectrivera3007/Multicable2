@@ -19,12 +19,20 @@ namespace MultiBodega_v1
     {
         SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
         public static string cUsuario;
+       
+
         public LoginBodega()
         {
             InitializeComponent();
-
+            
         }
 
+        private void LoginBodega_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.Usuario);
+
+        }
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var NuevoUsuario = new NuevoUsuario();
@@ -62,14 +70,15 @@ namespace MultiBodega_v1
 
             if (lector.HasRows == true)
             {
-                MessageBox.Show("¡Bienvenido a CATELSA LOGISTIC!", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var MostrarPantalla = new Botonera_APP(cUsuario);
-                             
+
                 this.Hide();
-                MostrarPantalla.UsuariolblStat.Text = NombreUsuario.Text;
-                MostrarPantalla.ShowDialog();
-                BtnLogIn.Visible = false;
+                UsuarioActual.NombreUsuario = NombreUsuario.Text;
                 
+                MessageBox.Show("¡Bienvenido a CATELSA LOGISTIC!", "Confirmar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmMenuPrincipal.Instance.RotuloUser.Text = UsuarioActual.NombreUsuario;
+
+                MostrarPantalla.ShowDialog();
             }
             else
             {
@@ -81,6 +90,7 @@ namespace MultiBodega_v1
             public void BtnLogIn_Click(object sender, EventArgs e)
         {
             Login();
+
         }
 
         private void Passwd_KeyPress(object sender, KeyPressEventArgs e)
@@ -99,13 +109,6 @@ namespace MultiBodega_v1
                 NombreUsuario.Focus();
 
             }
-        }
-
-        private void LoginBodega_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this._CATELSA_MULTICABLE.Usuario);
-
         }
     }
 }

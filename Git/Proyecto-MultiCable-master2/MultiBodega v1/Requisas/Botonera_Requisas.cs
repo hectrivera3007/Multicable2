@@ -22,7 +22,7 @@ namespace MultiBodega_v1.Botonera.Requisas
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             Botonera_APP nuevo = new Botonera_APP(cUsuario);
-            nuevo.Show();
+            nuevo.ShowDialog();
             this.Close();
         }
 

@@ -2,13 +2,17 @@
 CREATE DATABASE "CATELSA-MULTICABLE"
 USE [CATELSA-MULTICABLE]
 use master
---DBCC CHECKIDENT ('Usuario', RESEED, 0);
+--DBCC CHECKIDENT ('Productos', RESEED, 0);
 DBCC CHECKIDENT ('RegistrarBaseForanea', RESEED, 0);
 
 
+SELECT * FROM BODEGA
+select * from Productos
+delete from Productos where IDSolicitante=2
+SELECT MAX(IDProducto)+1 as [Numero que sigue] FROM Productos
 
-select * from RegistrarPuntodeVenta
-delete from RegistrarTecnicos where IDSolicitante=2
+
+
 
 
 --Creación de la tabla Roles

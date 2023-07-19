@@ -14,6 +14,8 @@ namespace MultiBodega_v1
 {
     public partial class FrmRol : Form
     {
+        SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
+
         public string _iDTextBox { get; set; }
         public string _rolNameTextBox { get; set; }
         private static int _iDRol = 0;
@@ -22,6 +24,35 @@ namespace MultiBodega_v1
         public FrmRol()
         {
             InitializeComponent();
+        }
+
+        private int ObtenerUltimoIDProducto()
+        {
+            // Realiza la consulta a la base de datos para obtener el último valor de IDProducto
+            // Supongamos que utilizas una conexión a la base de datos llamada "conexion" y una consulta SQL adecuada para tu base de datos específica
+            string consulta = "SELECT MAX(RolID) FROM Rol";
+            using (SqlCommand comando = new SqlCommand(consulta, Conexion))
+            {
+                Conexion.Open();
+                // Ejecuta la consulta y obtén el resultado
+                object resultado = comando.ExecuteScalar();
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // Parsea el resultado a un entero y devuelve el valor
+                    return Convert.ToInt32(resultado);
+                }
+            }
+
+            // Si no se encuentra ningún valor, devuelve 0 o algún valor inicial apropiado
+            return 0;
+            Conexion.Close();
+        }
+
+        private void EstablecerValorIDProducto()
+        {
+            int ultimoIDProducto = ObtenerUltimoIDProducto();
+            int siguienteIDProducto = ultimoIDProducto + 1;
+            iDTextBox.Text = siguienteIDProducto.ToString();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -35,6 +66,7 @@ namespace MultiBodega_v1
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.Rol' Puede moverla o quitarla según sea necesario.
             this.rolTableAdapter1.Fill(this._CATELSA_MULTICABLE.Rol);
+            EstablecerValorIDProducto();
         }
 
         private void HabilitarControl(Control control, bool habilitado)
@@ -72,10 +104,12 @@ namespace MultiBodega_v1
                 
                 this.rolTableAdapter1.Guardar(rolNameTextBox.Text, activoCheckBox.Checked);
                 this.rolTableAdapter1.Fill(this._CATELSA_MULTICABLE.Rol);
+
                 rolNameTextBox.Clear();
                 iDTextBox.Clear();
                 activoCheckBox.Checked = false;
-                
+                EstablecerValorIDProducto();
+
             }
 
         }

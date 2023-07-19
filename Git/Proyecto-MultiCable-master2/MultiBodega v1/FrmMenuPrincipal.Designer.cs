@@ -108,23 +108,18 @@ namespace MultiBodega_v1
             this.ReporteDetalladoDeSalidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
             this.BajosMínimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.permisosDataGridView = new System.Windows.Forms.DataGridView();
-            
             this.permisosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePermisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.concedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.usuarioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RelojSistema = new System.Windows.Forms.Timer(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator29 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.LblUser = new System.Windows.Forms.ToolStripLabel();
+            this.SeparadorHora = new System.Windows.Forms.ToolStripSeparator();
+            this.LblFecha = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosDataGridView)).BeginInit();
-            
             ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bodegasToolStripMenuItem
@@ -501,6 +496,7 @@ namespace MultiBodega_v1
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(1067, 27);
             this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Visible = false;
             // 
             // ProveedoresToolStripMenuItem
             // 
@@ -755,91 +751,70 @@ namespace MultiBodega_v1
             this.BajosMínimosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BajosMínimosToolStripMenuItem.Click += new System.EventHandler(this.BajosMínimosToolStripMenuItem_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 603);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1067, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(53, 17);
-            this.toolStripStatusLabel1.Text = "Usuario: ";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(52, 66);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(193, 20);
-            this.checkBox1.TabIndex = 138;
-            this.checkBox1.Text = "Marcar/Desmarcar Todos";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // permisosDataGridView
-            // 
-            this.permisosDataGridView.AutoGenerateColumns = false;
-            this.permisosDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.permisosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.permisosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.nombrePermisoDataGridViewTextBoxColumn,
-            this.concedidoDataGridViewCheckBoxColumn,
-            this.usuarioIDDataGridViewTextBoxColumn});
-            this.permisosDataGridView.DataSource = this.permisosBindingSource;
-            this.permisosDataGridView.Location = new System.Drawing.Point(52, 89);
-            this.permisosDataGridView.Name = "permisosDataGridView";
-            this.permisosDataGridView.Size = new System.Drawing.Size(546, 297);
-            this.permisosDataGridView.TabIndex = 137;
-            // 
-            // _CATELSA_MULTICABLEDataSet
-            // 
-            
-            
-            // 
             // permisosBindingSource
             // 
             this.permisosBindingSource.DataMember = "Permisos";
-            
             // 
-            // permisosTableAdapter
+            // RelojSistema
             // 
-            
+            this.RelojSistema.Enabled = true;
+            this.RelojSistema.Tick += new System.EventHandler(this.RelojSistema_Tick);
             // 
-            // tableAdapterManager
+            // toolStrip1
             // 
-            
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator29,
+            this.toolStripButton1,
+            this.toolStripLabel1,
+            this.LblUser,
+            this.SeparadorHora,
+            this.LblFecha});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 600);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // iDDataGridViewTextBoxColumn
+            // toolStripSeparator29
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toolStripSeparator29.Name = "toolStripSeparator29";
+            this.toolStripSeparator29.Size = new System.Drawing.Size(6, 25);
             // 
-            // nombrePermisoDataGridViewTextBoxColumn
+            // toolStripLabel1
             // 
-            this.nombrePermisoDataGridViewTextBoxColumn.DataPropertyName = "NombrePermiso";
-            this.nombrePermisoDataGridViewTextBoxColumn.HeaderText = "NombrePermiso";
-            this.nombrePermisoDataGridViewTextBoxColumn.Name = "nombrePermisoDataGridViewTextBoxColumn";
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(50, 22);
+            this.toolStripLabel1.Text = "Usuario:";
             // 
-            // concedidoDataGridViewCheckBoxColumn
+            // LblUser
             // 
-            this.concedidoDataGridViewCheckBoxColumn.DataPropertyName = "Concedido";
-            this.concedidoDataGridViewCheckBoxColumn.HeaderText = "Concedido";
-            this.concedidoDataGridViewCheckBoxColumn.Name = "concedidoDataGridViewCheckBoxColumn";
+            this.LblUser.Name = "LblUser";
+            this.LblUser.Size = new System.Drawing.Size(0, 22);
+            this.LblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // usuarioIDDataGridViewTextBoxColumn
+            // SeparadorHora
             // 
-            this.usuarioIDDataGridViewTextBoxColumn.DataPropertyName = "UsuarioID";
-            this.usuarioIDDataGridViewTextBoxColumn.HeaderText = "UsuarioID";
-            this.usuarioIDDataGridViewTextBoxColumn.Name = "usuarioIDDataGridViewTextBoxColumn";
+            this.SeparadorHora.Margin = new System.Windows.Forms.Padding(0, 0, 900, 0);
+            this.SeparadorHora.Name = "SeparadorHora";
+            this.SeparadorHora.Size = new System.Drawing.Size(6, 25);
+            // 
+            // LblFecha
+            // 
+            this.LblFecha.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.LblFecha.Name = "LblFecha";
+            this.LblFecha.Size = new System.Drawing.Size(0, 24);
+            this.LblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::MultiBodega_v1.Properties.Resources.Usuario;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FrmMenuPrincipal
             // 
@@ -847,11 +822,10 @@ namespace MultiBodega_v1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImage = global::MultiBodega_v1.Properties.Resources.Fondo_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 625);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.permisosDataGridView);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -866,11 +840,9 @@ namespace MultiBodega_v1
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosDataGridView)).EndInit();
-            
             ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,12 +926,8 @@ namespace MultiBodega_v1
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarNuevaCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator35;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem BuscarEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BuscarSalidaToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridView permisosDataGridView;
         
         private System.Windows.Forms.BindingSource permisosBindingSource;
         
@@ -968,6 +936,14 @@ namespace MultiBodega_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePermisoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn concedidoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioIDDataGridViewTextBoxColumn;
+        public System.Windows.Forms.Timer RelojSistema;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator29;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        public System.Windows.Forms.ToolStripLabel LblUser;
+        public System.Windows.Forms.ToolStripLabel LblFecha;
+        public System.Windows.Forms.ToolStripSeparator SeparadorHora;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

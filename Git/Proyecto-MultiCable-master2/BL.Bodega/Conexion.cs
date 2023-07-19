@@ -1,62 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data;
-using MySql.Data.MySqlClient;
 
 
 namespace BL.Bodega
 {
-    public class Conexion
+
+    public static class ConexionBD
     {
-        private string Server { get; set; }
-        private string Port { get; set; }
-        private string Database { get; set; }
-        private string User { get; set; }
-        private string Password { get; set; }
-        private string Ssl { get; set; }
+        private static string connectionString = "Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;";
 
-        private static Conexion conn = null;
-
-        private Conexion()
+        public static SqlConnection ObtenerConexion()
         {
-            Server = "localhost";
-            Port = "3306";
-            Database = "bd_bodega_multicable";
-            User = "root";
-            Password = "rivera1529";
-            //Ssl = "verifyfull";
-        }
-
-        public MySqlConnection CreateConnection()
-        {
-            MySqlConnection cadena = new MySqlConnection();
-
+            SqlConnection connection = new SqlConnection(connectionString);
             try
             {
-                cadena.ConnectionString = $"SERVER={Server}; PORT={Port}; USERNAME={User}; PASSWORD={Password}; DATABASE={Database};";
+                connection.Open();
+                return connection;
             }
-            catch (System.Exception e)
+            catch (Exception ex)
             {
-                cadena = null;
-
-                throw e;
+                MessageBox.Show("Error al obtener la conexión: " + ex.ToString());
+                return null;
             }
-
-            return cadena;
         }
 
-        public static Conexion GetConexion()
+        public static void CerrarConexion(SqlConnection connection)
         {
-            if (conn == null)
+            if (connection != null && connection.State != ConnectionState.Closed)
             {
-                conn = new Conexion();
+                connection.Close();
             }
-
-            return conn;
         }
-
     }
+
 }

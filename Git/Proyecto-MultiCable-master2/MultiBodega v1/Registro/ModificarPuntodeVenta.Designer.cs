@@ -43,18 +43,18 @@ namespace MultiBodega_v1.Registro
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.ModificarPV = new System.Windows.Forms.Button();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.lugar_ZonaTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.notasTextBox = new System.Windows.Forms.TextBox();
-            this.num_TelefonoTextBox = new System.Windows.Forms.TextBox();
+            this.direccionPVTextBox = new System.Windows.Forms.TextBox();
+            this.fechaPVDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.lugar_ZonaPVTextBox = new System.Windows.Forms.TextBox();
+            this.nombrePVTextBox = new System.Windows.Forms.TextBox();
+            this.notasPVTextBox = new System.Windows.Forms.TextBox();
+            this.num_TelefonoPVTextBox = new System.Windows.Forms.TextBox();
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.registrarPuntodeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrarPuntodeVentaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarPuntodeVentaTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.iDTextBox = new System.Windows.Forms.TextBox();
+            this.iDPVTextBox = new System.Windows.Forms.TextBox();
             direccionLabel = new System.Windows.Forms.Label();
             fechaRegistroLabel = new System.Windows.Forms.Label();
             lugar_ZonaLabel = new System.Windows.Forms.Label();
@@ -164,7 +164,7 @@ namespace MultiBodega_v1.Registro
             this.BtnRegresar.Location = new System.Drawing.Point(646, 441);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(136, 39);
-            this.BtnRegresar.TabIndex = 88;
+            this.BtnRegresar.TabIndex = 10;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegresar.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@ namespace MultiBodega_v1.Registro
             this.button4.Location = new System.Drawing.Point(694, 368);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 83;
+            this.button4.TabIndex = 9;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -221,67 +221,67 @@ namespace MultiBodega_v1.Registro
             this.ModificarPV.Location = new System.Drawing.Point(694, 310);
             this.ModificarPV.Name = "ModificarPV";
             this.ModificarPV.Size = new System.Drawing.Size(50, 50);
-            this.ModificarPV.TabIndex = 81;
+            this.ModificarPV.TabIndex = 8;
             this.ModificarPV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ModificarPV.UseVisualStyleBackColor = false;
             this.ModificarPV.Click += new System.EventHandler(this.ModificarPV_Click);
             // 
-            // direccionTextBox
+            // direccionPVTextBox
             // 
-            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.Location = new System.Drawing.Point(51, 211);
-            this.direccionTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.direccionTextBox.Multiline = true;
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(597, 53);
-            this.direccionTextBox.TabIndex = 74;
+            this.direccionPVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionPVTextBox.Location = new System.Drawing.Point(51, 211);
+            this.direccionPVTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.direccionPVTextBox.Multiline = true;
+            this.direccionPVTextBox.Name = "direccionPVTextBox";
+            this.direccionPVTextBox.Size = new System.Drawing.Size(597, 53);
+            this.direccionPVTextBox.TabIndex = 3;
             // 
-            // fechaDateTimePicker
+            // fechaPVDateTimePicker
             // 
-            this.fechaDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(494, 168);
-            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(154, 23);
-            this.fechaDateTimePicker.TabIndex = 72;
+            this.fechaPVDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaPVDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaPVDateTimePicker.Location = new System.Drawing.Point(494, 168);
+            this.fechaPVDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.fechaPVDateTimePicker.Name = "fechaPVDateTimePicker";
+            this.fechaPVDateTimePicker.Size = new System.Drawing.Size(154, 23);
+            this.fechaPVDateTimePicker.TabIndex = 2;
             // 
-            // lugar_ZonaTextBox
+            // lugar_ZonaPVTextBox
             // 
-            this.lugar_ZonaTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lugar_ZonaTextBox.Location = new System.Drawing.Point(348, 285);
-            this.lugar_ZonaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.lugar_ZonaTextBox.Name = "lugar_ZonaTextBox";
-            this.lugar_ZonaTextBox.Size = new System.Drawing.Size(300, 23);
-            this.lugar_ZonaTextBox.TabIndex = 76;
+            this.lugar_ZonaPVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lugar_ZonaPVTextBox.Location = new System.Drawing.Point(348, 285);
+            this.lugar_ZonaPVTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lugar_ZonaPVTextBox.Name = "lugar_ZonaPVTextBox";
+            this.lugar_ZonaPVTextBox.Size = new System.Drawing.Size(300, 23);
+            this.lugar_ZonaPVTextBox.TabIndex = 5;
             // 
-            // nombreTextBox
+            // nombrePVTextBox
             // 
-            this.nombreTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(54, 168);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(378, 23);
-            this.nombreTextBox.TabIndex = 70;
+            this.nombrePVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrePVTextBox.Location = new System.Drawing.Point(54, 168);
+            this.nombrePVTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nombrePVTextBox.Name = "nombrePVTextBox";
+            this.nombrePVTextBox.Size = new System.Drawing.Size(378, 23);
+            this.nombrePVTextBox.TabIndex = 1;
             // 
-            // notasTextBox
+            // notasPVTextBox
             // 
-            this.notasTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notasTextBox.Location = new System.Drawing.Point(51, 328);
-            this.notasTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.notasTextBox.Multiline = true;
-            this.notasTextBox.Name = "notasTextBox";
-            this.notasTextBox.Size = new System.Drawing.Size(597, 108);
-            this.notasTextBox.TabIndex = 77;
+            this.notasPVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notasPVTextBox.Location = new System.Drawing.Point(51, 328);
+            this.notasPVTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.notasPVTextBox.Multiline = true;
+            this.notasPVTextBox.Name = "notasPVTextBox";
+            this.notasPVTextBox.Size = new System.Drawing.Size(597, 108);
+            this.notasPVTextBox.TabIndex = 6;
             // 
-            // num_TelefonoTextBox
+            // num_TelefonoPVTextBox
             // 
-            this.num_TelefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_TelefonoTextBox.Location = new System.Drawing.Point(51, 285);
-            this.num_TelefonoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.num_TelefonoTextBox.Name = "num_TelefonoTextBox";
-            this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
-            this.num_TelefonoTextBox.TabIndex = 75;
+            this.num_TelefonoPVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_TelefonoPVTextBox.Location = new System.Drawing.Point(51, 285);
+            this.num_TelefonoPVTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.num_TelefonoPVTextBox.Name = "num_TelefonoPVTextBox";
+            this.num_TelefonoPVTextBox.Size = new System.Drawing.Size(265, 23);
+            this.num_TelefonoPVTextBox.TabIndex = 4;
             // 
             // _CATELSA_MULTICABLE
             // 
@@ -318,6 +318,7 @@ namespace MultiBodega_v1.Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = this.registrarPuntodeVentaTableAdapter;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
@@ -337,18 +338,19 @@ namespace MultiBodega_v1.Registro
             this.activoCheckBox.Location = new System.Drawing.Point(655, 166);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.activoCheckBox.TabIndex = 90;
+            this.activoCheckBox.TabIndex = 7;
             this.activoCheckBox.Text = "Activo";
             this.activoCheckBox.UseVisualStyleBackColor = false;
+            this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged_1);
             // 
-            // iDTextBox
+            // iDPVTextBox
             // 
-            this.iDTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iDTextBox.Location = new System.Drawing.Point(56, 123);
-            this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.ReadOnly = true;
-            this.iDTextBox.Size = new System.Drawing.Size(100, 23);
-            this.iDTextBox.TabIndex = 91;
+            this.iDPVTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iDPVTextBox.Location = new System.Drawing.Point(56, 123);
+            this.iDPVTextBox.Name = "iDPVTextBox";
+            this.iDPVTextBox.ReadOnly = true;
+            this.iDPVTextBox.Size = new System.Drawing.Size(100, 23);
+            this.iDPVTextBox.TabIndex = 0;
             // 
             // ModificarPuntodeVenta
             // 
@@ -359,7 +361,7 @@ namespace MultiBodega_v1.Registro
             this.ClientSize = new System.Drawing.Size(802, 500);
             this.ControlBox = false;
             this.Controls.Add(iDSolicitanteLabel);
-            this.Controls.Add(this.iDTextBox);
+            this.Controls.Add(this.iDPVTextBox);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.label2);
@@ -367,17 +369,17 @@ namespace MultiBodega_v1.Registro
             this.Controls.Add(this.button4);
             this.Controls.Add(this.ModificarPV);
             this.Controls.Add(direccionLabel);
-            this.Controls.Add(this.direccionTextBox);
+            this.Controls.Add(this.direccionPVTextBox);
             this.Controls.Add(fechaRegistroLabel);
-            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(this.fechaPVDateTimePicker);
             this.Controls.Add(lugar_ZonaLabel);
-            this.Controls.Add(this.lugar_ZonaTextBox);
+            this.Controls.Add(this.lugar_ZonaPVTextBox);
             this.Controls.Add(nombreLabel);
-            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(this.nombrePVTextBox);
             this.Controls.Add(notasLabel);
-            this.Controls.Add(this.notasTextBox);
+            this.Controls.Add(this.notasPVTextBox);
             this.Controls.Add(num_TelefonoLabel);
-            this.Controls.Add(this.num_TelefonoTextBox);
+            this.Controls.Add(this.num_TelefonoPVTextBox);
             this.DoubleBuffered = true;
             this.Name = "ModificarPuntodeVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -398,17 +400,17 @@ namespace MultiBodega_v1.Registro
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button ModificarPV;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
-        private System.Windows.Forms.TextBox lugar_ZonaTextBox;
-        private System.Windows.Forms.TextBox notasTextBox;
-        private System.Windows.Forms.TextBox num_TelefonoTextBox;
+        private System.Windows.Forms.TextBox direccionPVTextBox;
+        private System.Windows.Forms.DateTimePicker fechaPVDateTimePicker;
+        private System.Windows.Forms.TextBox lugar_ZonaPVTextBox;
+        private System.Windows.Forms.TextBox notasPVTextBox;
+        private System.Windows.Forms.TextBox num_TelefonoPVTextBox;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
         private System.Windows.Forms.BindingSource registrarPuntodeVentaBindingSource;
         private _CATELSA_MULTICABLETableAdapters.RegistrarPuntodeVentaTableAdapter registrarPuntodeVentaTableAdapter;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.CheckBox activoCheckBox;
-        public System.Windows.Forms.TextBox nombreTextBox;
-        public System.Windows.Forms.TextBox iDTextBox;
+        public System.Windows.Forms.TextBox nombrePVTextBox;
+        public System.Windows.Forms.TextBox iDPVTextBox;
     }
 }

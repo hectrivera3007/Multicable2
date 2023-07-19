@@ -20,7 +20,7 @@ namespace MultiBodega_v1.Botonera
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             var Botonera = new LoginBodega();
-            Botonera.Show();
+            Botonera.ShowDialog();
             //BtnEntrar.Visible = false;
         }
 

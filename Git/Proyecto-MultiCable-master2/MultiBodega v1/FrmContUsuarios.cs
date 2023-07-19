@@ -36,7 +36,7 @@ namespace MultiBodega_v1
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             Botonera_APP Volver = new Botonera_APP(cUsuario);
-            Volver.Show();
+            Volver.ShowDialog();
             this.Close();
         }
     }

@@ -37,6 +37,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             System.Windows.Forms.Label notasLabel;
             System.Windows.Forms.Label num_TelefonoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarPuntodeVenta));
+            System.Windows.Forms.Label iDSolicitanteLabel;
             this.registro_RegistrarPuntodeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.fechaRegistroDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -47,18 +48,20 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.num_TelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
             this.registrarPuntodeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.num_TelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
             this.registrarPuntodeVentaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.RegistrarPuntodeVentaTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
+            this.iDSolicitanteTextBox = new System.Windows.Forms.TextBox();
             direccionLabel = new System.Windows.Forms.Label();
             fechaRegistroLabel = new System.Windows.Forms.Label();
             lugar_ZonaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
             num_TelefonoLabel = new System.Windows.Forms.Label();
+            iDSolicitanteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.registro_RegistrarPuntodeVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrarPuntodeVentaBindingSource)).BeginInit();
@@ -246,6 +249,16 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.activoCheckBox.Text = "Activo";
             this.activoCheckBox.UseVisualStyleBackColor = false;
             // 
+            // registrarPuntodeVentaBindingSource
+            // 
+            this.registrarPuntodeVentaBindingSource.DataMember = "RegistrarPuntodeVenta";
+            this.registrarPuntodeVentaBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -272,16 +285,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.num_TelefonoTextBox.Size = new System.Drawing.Size(265, 23);
             this.num_TelefonoTextBox.TabIndex = 4;
             // 
-            // registrarPuntodeVentaBindingSource
-            // 
-            this.registrarPuntodeVentaBindingSource.DataMember = "RegistrarPuntodeVenta";
-            this.registrarPuntodeVentaBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // _CATELSA_MULTICABLE
-            // 
-            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
-            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // registrarPuntodeVentaTableAdapter
             // 
             this.registrarPuntodeVentaTableAdapter.ClearBeforeFill = true;
@@ -292,6 +295,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
@@ -306,11 +310,32 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = this.registrarPuntodeVentaTableAdapter;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // iDSolicitanteLabel
+            // 
+            iDSolicitanteLabel.AutoSize = true;
+            iDSolicitanteLabel.BackColor = System.Drawing.Color.Transparent;
+            iDSolicitanteLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iDSolicitanteLabel.Location = new System.Drawing.Point(50, 95);
+            iDSolicitanteLabel.Name = "iDSolicitanteLabel";
+            iDSolicitanteLabel.Size = new System.Drawing.Size(25, 16);
+            iDSolicitanteLabel.TabIndex = 68;
+            iDSolicitanteLabel.Text = "ID:";
+            // 
+            // iDSolicitanteTextBox
+            // 
+            this.iDSolicitanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registrarPuntodeVentaBindingSource, "IDSolicitante", true));
+            this.iDSolicitanteTextBox.Location = new System.Drawing.Point(53, 114);
+            this.iDSolicitanteTextBox.Name = "iDSolicitanteTextBox";
+            this.iDSolicitanteTextBox.ReadOnly = true;
+            this.iDSolicitanteTextBox.Size = new System.Drawing.Size(100, 23);
+            this.iDSolicitanteTextBox.TabIndex = 69;
             // 
             // FrmRegistrarPuntodeVenta
             // 
@@ -321,6 +346,8 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(794, 492);
             this.ControlBox = false;
+            this.Controls.Add(iDSolicitanteLabel);
+            this.Controls.Add(this.iDSolicitanteTextBox);
             this.Controls.Add(this.num_TelefonoTextBox);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.activoCheckBox);
@@ -374,5 +401,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
+        private System.Windows.Forms.TextBox iDSolicitanteTextBox;
     }
 }

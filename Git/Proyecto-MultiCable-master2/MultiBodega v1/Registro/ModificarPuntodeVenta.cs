@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,12 @@ namespace MultiBodega_v1.Registro
 {
     public partial class ModificarPuntodeVenta : Form
     {
+
+        SqlConnection Conexion = new SqlConnection("Server = (localdb)\\CATELSA; database=CATELSA-MULTICABLE; Integrated Security = true;");
+
+
         private string iD;
-        private string FechaRegistro;
+        private DateTime FechaRegistro;
         private string Nombre;
         private string Lugar_Zona;
         private string Direccion;
@@ -22,7 +27,7 @@ namespace MultiBodega_v1.Registro
         private string Notas;
         private bool Activo;
 
-        public ModificarPuntodeVenta(string iD,  string FechaRegistro, string Nombre, string Lugar_Zona, string Direccion, string Num_Telefono, string Notas, bool Activo)
+        public ModificarPuntodeVenta(string iD, DateTime FechaRegistro, string Nombre, string Lugar_Zona, string Direccion, string Num_Telefono, string Notas, bool Activo)
         {
             InitializeComponent();
 
@@ -36,13 +41,13 @@ namespace MultiBodega_v1.Registro
             this.Activo = Activo;
 
             
-            iDTextBox.Text = iD;
-            fechaDateTimePicker.Text = FechaRegistro;
-            nombreTextBox.Text = Nombre;
-            lugar_ZonaTextBox.Text = Lugar_Zona;
-            direccionTextBox.Text = Direccion;
-            num_TelefonoTextBox.Text = Num_Telefono;
-            notasTextBox.Text = Notas;
+            iDPVTextBox.Text = iD;
+            fechaPVDateTimePicker.Value = DateTime.Parse(FechaRegistro.ToString("dd-MM-yyyy"));
+            nombrePVTextBox.Text = Nombre;
+            lugar_ZonaPVTextBox.Text = Lugar_Zona;
+            direccionPVTextBox.Text = Direccion;
+            num_TelefonoPVTextBox.Text = Num_Telefono;
+            notasPVTextBox.Text = Notas;
             activoCheckBox.Checked = Activo;
 
         }
@@ -51,32 +56,45 @@ namespace MultiBodega_v1.Registro
         {
             // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarPuntodeVenta' Puede moverla o quitarla según sea necesario.
             this.registrarPuntodeVentaTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarPuntodeVenta);
-
+            
         }
 
         private void ModificarPV_Click(object sender, EventArgs e)
         {
-            DateTime FechaRegistro;
+            try
+            {
+                DateTime FechaRegistro;
 
-            if (DateTime.TryParse(fechaDateTimePicker.Value.ToString(), out FechaRegistro))
-            {
-                this.registrarPuntodeVentaTableAdapter.ActualizarPV( FechaRegistro.ToString(), @nombreTextBox.Text, lugar_ZonaTextBox.Text, @direccionTextBox.Text, @num_TelefonoTextBox.Text, 
-                    @notasTextBox.Text, @activoCheckBox.Checked, Int32.Parse(@iDTextBox.Text));
-                registrarPuntodeVentaTableAdapter.Fill(_CATELSA_MULTICABLE.RegistrarPuntodeVenta);
-                MessageBox.Show("Se ha actualizado el registro");
-                iDTextBox.Clear();
-                fechaDateTimePicker.Value = DateTime.Now;
-                nombreTextBox.Clear();
-                lugar_ZonaTextBox.Clear();
-                direccionTextBox.Clear();
-                num_TelefonoTextBox.Clear();
-                notasTextBox.Clear();
-                activoCheckBox.Checked = false;
+                if (DateTime.TryParse(fechaPVDateTimePicker.Value.ToString(), out FechaRegistro))
+                {
+                    this.registrarPuntodeVentaTableAdapter.ActualizarPV(FechaRegistro.ToString(), nombrePVTextBox.Text, lugar_ZonaPVTextBox.Text, direccionPVTextBox.Text, num_TelefonoPVTextBox.Text,
+                        notasPVTextBox.Text, @activoCheckBox.Checked, Int32.Parse(iDPVTextBox.Text));
+                    registrarPuntodeVentaTableAdapter.Fill(_CATELSA_MULTICABLE.RegistrarPuntodeVenta);
+                    MessageBox.Show("Se ha actualizado el registro");
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Fecha Invalida");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Fecha Invalida");
+                MessageBox.Show(" "+ex.ToString());
             }
+            
+        }
+
+        private void Limpiar()
+        {
+            iDPVTextBox.Clear();
+            fechaPVDateTimePicker.Value = DateTime.Now;
+            nombrePVTextBox.Clear();
+            lugar_ZonaPVTextBox.Clear();
+            direccionPVTextBox.Clear();
+            num_TelefonoPVTextBox.Clear();
+            notasPVTextBox.Clear();
+            activoCheckBox.Checked = false;
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -86,7 +104,7 @@ namespace MultiBodega_v1.Registro
             this.Close();
         }
 
-        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void activoCheckBox_CheckedChanged_1(object sender, EventArgs e)
         {
             if (activoCheckBox.Checked)
             {

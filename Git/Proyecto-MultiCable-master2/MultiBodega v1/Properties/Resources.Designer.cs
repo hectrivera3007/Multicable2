@@ -283,6 +283,26 @@ namespace MultiBodega_v1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stock_exchange {
+            get {
+                object obj = ResourceManager.GetObject("stock-exchange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Usuario {
+            get {
+                object obj = ResourceManager.GetObject("Usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Verificar_ {
             get {
                 object obj = ResourceManager.GetObject("Verificar_", resourceCulture);

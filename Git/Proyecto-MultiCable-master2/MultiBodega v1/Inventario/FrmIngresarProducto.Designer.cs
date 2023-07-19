@@ -44,12 +44,10 @@ namespace MultiBodega_v1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtCodigoGen = new System.Windows.Forms.TextBox();
-            this.CmbNombreTipo = new System.Windows.Forms.ComboBox();
-            this.tipoMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.DtFechaIngreso = new System.Windows.Forms.DateTimePicker();
-            this.BtnNuevo = new System.Windows.Forms.Button();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
@@ -60,24 +58,29 @@ namespace MultiBodega_v1
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.iDProductoTextBox = new System.Windows.Forms.TextBox();
             this.bodegaIDComboBox = new System.Windows.Forms.ComboBox();
+            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodegaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.NombreTipoComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.ProductosTableAdapter();
             this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
-            this.tipoMaterialTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter();
             this.bodegaTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.BodegaTableAdapter();
-            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoMaterialTableAdapter = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter();
+            this.tipoMaterialDataGridView = new System.Windows.Forms.DataGridView();
+            this.bodegaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bodegaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoGenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label3 = new System.Windows.Forms.Label();
             lblStockMin = new System.Windows.Forms.Label();
             codigoProdLabel = new System.Windows.Forms.Label();
@@ -86,11 +89,13 @@ namespace MultiBodega_v1
             iDProductoLabel = new System.Windows.Forms.Label();
             bodegaIDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -179,18 +184,18 @@ namespace MultiBodega_v1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(479, 80);
+            this.label1.Location = new System.Drawing.Point(415, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 32);
+            this.label1.Size = new System.Drawing.Size(315, 32);
             this.label1.TabIndex = 17;
-            this.label1.Text = " PRODUCTO";
+            this.label1.Text = " REGISTRAR PRODUCTO";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(436, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(445, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 71);
@@ -201,12 +206,14 @@ namespace MultiBodega_v1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(100, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 16);
             this.label2.TabIndex = 63;
             this.label2.Text = "-";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox2
             // 
@@ -238,30 +245,8 @@ namespace MultiBodega_v1
             this.TxtCodigoGen.Location = new System.Drawing.Point(115, 145);
             this.TxtCodigoGen.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigoGen.Name = "TxtCodigoGen";
-            this.TxtCodigoGen.Size = new System.Drawing.Size(103, 23);
+            this.TxtCodigoGen.Size = new System.Drawing.Size(98, 23);
             this.TxtCodigoGen.TabIndex = 1;
-            // 
-            // CmbNombreTipo
-            // 
-            this.CmbNombreTipo.DataSource = this.tipoMaterialBindingSource;
-            this.CmbNombreTipo.DisplayMember = "TipoMaterial";
-            this.CmbNombreTipo.FormattingEnabled = true;
-            this.CmbNombreTipo.Location = new System.Drawing.Point(19, 145);
-            this.CmbNombreTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.CmbNombreTipo.Name = "CmbNombreTipo";
-            this.CmbNombreTipo.Size = new System.Drawing.Size(76, 25);
-            this.CmbNombreTipo.TabIndex = 0;
-            this.CmbNombreTipo.ValueMember = "IDTipo";
-            // 
-            // tipoMaterialBindingSource
-            // 
-            this.tipoMaterialBindingSource.DataMember = "TipoMaterial";
-            this.tipoMaterialBindingSource.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // _CATELSA_MULTICABLE
-            // 
-            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
-            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TxtDescripcion
             // 
@@ -276,30 +261,23 @@ namespace MultiBodega_v1
             // 
             this.DtFechaIngreso.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFechaIngreso.CustomFormat = "";
-            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtFechaIngreso.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productosBindingSource, "FechaIngreso", true));
+            this.DtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtFechaIngreso.Location = new System.Drawing.Point(19, 192);
             this.DtFechaIngreso.Name = "DtFechaIngreso";
-            this.DtFechaIngreso.Size = new System.Drawing.Size(199, 23);
+            this.DtFechaIngreso.Size = new System.Drawing.Size(194, 23);
             this.DtFechaIngreso.TabIndex = 2;
-            this.DtFechaIngreso.Value = new System.DateTime(2023, 6, 22, 15, 15, 58, 0);
+            this.DtFechaIngreso.Value = new System.DateTime(2023, 7, 14, 0, 0, 0, 0);
             // 
-            // BtnNuevo
+            // productosBindingSource
             // 
-            this.BtnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.Image")));
-            this.BtnNuevo.Location = new System.Drawing.Point(19, 368);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(95, 26);
-            this.BtnNuevo.TabIndex = 6;
-            this.BtnNuevo.Text = "&Nuevo";
-            this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnNuevo.UseVisualStyleBackColor = false;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BtnSalir
             // 
@@ -441,56 +419,104 @@ namespace MultiBodega_v1
             // bodegaIDComboBox
             // 
             this.bodegaIDComboBox.DataSource = this.bodegaBindingSource;
+            this.bodegaIDComboBox.DisplayMember = "Nombre";
             this.bodegaIDComboBox.FormattingEnabled = true;
             this.bodegaIDComboBox.Location = new System.Drawing.Point(19, 283);
             this.bodegaIDComboBox.Name = "bodegaIDComboBox";
             this.bodegaIDComboBox.Size = new System.Drawing.Size(191, 25);
             this.bodegaIDComboBox.TabIndex = 4;
-            this.bodegaIDComboBox.ValueMember = "BodegaID";
+            this.bodegaIDComboBox.ValueMember = "Nombre";
+            // 
+            // bodegaBindingSource
+            // 
+            this.bodegaBindingSource.DataMember = "Bodega";
+            this.bodegaBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
             // productoDataGridView
             // 
+            this.productoDataGridView.AutoGenerateColumns = false;
             this.productoDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.productoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSeleccionar,
-            this.TipoMaterial,
-            this.IDTipo,
             this.iDProductoDataGridViewTextBoxColumn,
             this.fechaIngresoDataGridViewTextBoxColumn,
-            this.codigoProdDataGridViewTextBoxColumn,
-            this.codigoGenDataGridViewTextBoxColumn,
+            this.tipoMaterialDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
             this.bodegaIDDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
             this.activoDataGridViewCheckBoxColumn});
-            this.productoDataGridView.Location = new System.Drawing.Point(236, 125);
+            this.productoDataGridView.DataSource = this.productosBindingSource;
+            this.productoDataGridView.Location = new System.Drawing.Point(235, 112);
             this.productoDataGridView.Name = "productoDataGridView";
-            this.productoDataGridView.Size = new System.Drawing.Size(749, 337);
-            this.productoDataGridView.TabIndex = 69;
-            this.productoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productoDataGridView_CellContentClick);
+            this.productoDataGridView.ReadOnly = true;
+            this.productoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productoDataGridView.Size = new System.Drawing.Size(758, 350);
+            this.productoDataGridView.TabIndex = 68;
             // 
-            // btnSeleccionar
+            // iDProductoDataGridViewTextBoxColumn
             // 
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnSeleccionar.Width = 35;
+            this.iDProductoDataGridViewTextBoxColumn.DataPropertyName = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
+            this.iDProductoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // TipoMaterial
+            // fechaIngresoDataGridViewTextBoxColumn
             // 
-            this.TipoMaterial.DataPropertyName = "TipoMaterial";
-            this.TipoMaterial.HeaderText = "Tipo de Material";
-            this.TipoMaterial.Name = "TipoMaterial";
-            this.TipoMaterial.Visible = false;
+            this.fechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "FechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.HeaderText = "FechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.Name = "fechaIngresoDataGridViewTextBoxColumn";
+            this.fechaIngresoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // IDTipo
+            // tipoMaterialDataGridViewTextBoxColumn
             // 
-            this.IDTipo.DataPropertyName = "IDTipo";
-            this.IDTipo.HeaderText = "IDTipo";
-            this.IDTipo.Name = "IDTipo";
-            this.IDTipo.Visible = false;
+            this.tipoMaterialDataGridViewTextBoxColumn.DataPropertyName = "TipoMaterial";
+            this.tipoMaterialDataGridViewTextBoxColumn.HeaderText = "TipoMaterial";
+            this.tipoMaterialDataGridViewTextBoxColumn.Name = "tipoMaterialDataGridViewTextBoxColumn";
+            this.tipoMaterialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bodegaIDDataGridViewTextBoxColumn
+            // 
+            this.bodegaIDDataGridViewTextBoxColumn.DataPropertyName = "BodegaID";
+            this.bodegaIDDataGridViewTextBoxColumn.HeaderText = "BodegaID";
+            this.bodegaIDDataGridViewTextBoxColumn.Name = "bodegaIDDataGridViewTextBoxColumn";
+            this.bodegaIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // NombreTipoComboBox
+            // 
+            this.NombreTipoComboBox.DataSource = this.tipoMaterialBindingSource;
+            this.NombreTipoComboBox.DisplayMember = "TipoMaterial";
+            this.NombreTipoComboBox.FormattingEnabled = true;
+            this.NombreTipoComboBox.Location = new System.Drawing.Point(19, 145);
+            this.NombreTipoComboBox.Name = "NombreTipoComboBox";
+            this.NombreTipoComboBox.Size = new System.Drawing.Size(76, 25);
+            this.NombreTipoComboBox.TabIndex = 69;
+            this.NombreTipoComboBox.ValueMember = "TipoMaterial";
+            // 
+            // tipoMaterialBindingSource
+            // 
+            this.tipoMaterialBindingSource.DataMember = "TipoMaterial";
+            this.tipoMaterialBindingSource.DataSource = this._CATELSA_MULTICABLE;
             // 
             // productosTableAdapter
             // 
@@ -501,7 +527,7 @@ namespace MultiBodega_v1
             this.tableAdapterManager.AjusteInventarioTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
-            this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.BodegaTableAdapter = this.bodegaTableAdapter;
             this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
@@ -524,72 +550,80 @@ namespace MultiBodega_v1
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
-            // tipoMaterialTableAdapter
-            // 
-            this.tipoMaterialTableAdapter.ClearBeforeFill = true;
-            // 
             // bodegaTableAdapter
             // 
             this.bodegaTableAdapter.ClearBeforeFill = true;
             // 
-            // bodegaBindingSource
+            // tipoMaterialTableAdapter
             // 
-            this.bodegaBindingSource.DataMember = "Bodega";
-            this.bodegaBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            this.tipoMaterialTableAdapter.ClearBeforeFill = true;
             // 
-            // productoBindingSource
+            // tipoMaterialDataGridView
             // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this._CATELSA_MULTICABLE;
+            this.tipoMaterialDataGridView.AutoGenerateColumns = false;
+            this.tipoMaterialDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipoMaterialDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.tipoMaterialDataGridView.DataSource = this.tipoMaterialBindingSource;
+            this.tipoMaterialDataGridView.Location = new System.Drawing.Point(235, 242);
+            this.tipoMaterialDataGridView.Name = "tipoMaterialDataGridView";
+            this.tipoMaterialDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.tipoMaterialDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.tipoMaterialDataGridView.TabIndex = 69;
             // 
-            // activoDataGridViewCheckBoxColumn
+            // bodegaDataGridView
             // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.bodegaDataGridView.AutoGenerateColumns = false;
+            this.bodegaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bodegaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewCheckBoxColumn1});
+            this.bodegaDataGridView.DataSource = this.bodegaBindingSource;
+            this.bodegaDataGridView.Location = new System.Drawing.Point(541, 242);
+            this.bodegaDataGridView.Name = "bodegaDataGridView";
+            this.bodegaDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.bodegaDataGridView.TabIndex = 69;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "BodegaID";
+            this.dataGridViewTextBoxColumn4.HeaderText = "BodegaID";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NombreTipo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NombreTipo";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDTipo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // bodegaIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.bodegaIDDataGridViewTextBoxColumn.DataPropertyName = "BodegaID";
-            this.bodegaIDDataGridViewTextBoxColumn.HeaderText = "BodegaID";
-            this.bodegaIDDataGridViewTextBoxColumn.Name = "bodegaIDDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TipoMaterial";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo Material";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // descripcionDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
-            // codigoGenDataGridViewTextBoxColumn
-            // 
-            this.codigoGenDataGridViewTextBoxColumn.DataPropertyName = "CodigoGen";
-            this.codigoGenDataGridViewTextBoxColumn.HeaderText = "CodigoGen";
-            this.codigoGenDataGridViewTextBoxColumn.Name = "codigoGenDataGridViewTextBoxColumn";
-            // 
-            // codigoProdDataGridViewTextBoxColumn
-            // 
-            this.codigoProdDataGridViewTextBoxColumn.DataPropertyName = "CodigoProd";
-            this.codigoProdDataGridViewTextBoxColumn.HeaderText = "CodigoProd";
-            this.codigoProdDataGridViewTextBoxColumn.Name = "codigoProdDataGridViewTextBoxColumn";
-            // 
-            // fechaIngresoDataGridViewTextBoxColumn
-            // 
-            this.fechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "FechaIngreso";
-            this.fechaIngresoDataGridViewTextBoxColumn.HeaderText = "FechaIngreso";
-            this.fechaIngresoDataGridViewTextBoxColumn.Name = "fechaIngresoDataGridViewTextBoxColumn";
-            // 
-            // iDProductoDataGridViewTextBoxColumn
-            // 
-            this.iDProductoDataGridViewTextBoxColumn.DataPropertyName = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
-            this.iDProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Numeracion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Numeracion";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // FrmIngresarProducto
             // 
@@ -601,8 +635,11 @@ namespace MultiBodega_v1
             this.BackgroundImage = global::MultiBodega_v1.Properties.Resources._Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1145, 540);
-            this.Controls.Add(this.DtFechaIngreso);
+            this.Controls.Add(this.bodegaDataGridView);
+            this.Controls.Add(this.tipoMaterialDataGridView);
+            this.Controls.Add(this.NombreTipoComboBox);
             this.Controls.Add(this.productoDataGridView);
+            this.Controls.Add(this.DtFechaIngreso);
             this.Controls.Add(bodegaIDLabel);
             this.Controls.Add(this.bodegaIDComboBox);
             this.Controls.Add(iDProductoLabel);
@@ -611,7 +648,6 @@ namespace MultiBodega_v1
             this.Controls.Add(this.BtnQuitar);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnRegresar);
-            this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnGuardar);
@@ -625,7 +661,6 @@ namespace MultiBodega_v1
             this.Controls.Add(label3);
             this.Controls.Add(lblStockMin);
             this.Controls.Add(this.TxtCodigoGen);
-            this.Controls.Add(this.CmbNombreTipo);
             this.Controls.Add(codigoProdLabel);
             this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(descripcionLabel);
@@ -640,11 +675,13 @@ namespace MultiBodega_v1
             this.Text = "Registro de Nuevo Producto";
             this.Load += new System.EventHandler(this.FrmIngresarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoMaterialDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,10 +694,8 @@ namespace MultiBodega_v1
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox TxtCodigoGen;
-        private System.Windows.Forms.ComboBox CmbNombreTipo;
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.DateTimePicker DtFechaIngreso;
-        private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnGuardar;
@@ -672,26 +707,32 @@ namespace MultiBodega_v1
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.TextBox iDProductoTextBox;
         private System.Windows.Forms.ComboBox bodegaIDComboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreTipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView productoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.ComboBox NombreTipoComboBox;
         private _CATELSA_MULTICABLE _CATELSA_MULTICABLE;
+        private System.Windows.Forms.BindingSource productosBindingSource;
         private _CATELSA_MULTICABLETableAdapters.ProductosTableAdapter productosTableAdapter;
         private _CATELSA_MULTICABLETableAdapters.TableAdapterManager tableAdapterManager;
         private _CATELSA_MULTICABLETableAdapters.TipoMaterialTableAdapter tipoMaterialTableAdapter;
         private System.Windows.Forms.BindingSource tipoMaterialBindingSource;
-        private _CATELSA_MULTICABLETableAdapters.BodegaTableAdapter bodegaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreTipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMaterial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDTipo;
-        private System.Windows.Forms.BindingSource bodegaBindingSource;
+        private System.Windows.Forms.DataGridView tipoMaterialDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaIngresoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoProdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoGenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoMaterialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bodegaIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.BindingSource productoBindingSource;
+        private _CATELSA_MULTICABLETableAdapters.BodegaTableAdapter bodegaTableAdapter;
+        private System.Windows.Forms.BindingSource bodegaBindingSource;
+        private System.Windows.Forms.DataGridView bodegaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

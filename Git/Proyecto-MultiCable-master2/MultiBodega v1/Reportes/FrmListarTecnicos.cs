@@ -26,33 +26,66 @@ namespace MultiBodega_v1.Formularios_de_Registro
             
         }
 
-
-
         private void FrmListarTecnicos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
-            this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
-            // TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
-            this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
+            //// TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLE.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
+            //this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
+            //// TODO: esta línea de código carga datos en la tabla '_CATELSA_MULTICABLEDataSet.RegistrarTecnicos' Puede moverla o quitarla según sea necesario.
+            //this.registrarTecnicosTableAdapter.Fill(this._CATELSA_MULTICABLE.RegistrarTecnicos);
+            string consulta = "Exec LISTARTECNICOS";
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            ListarTecnicosDataGridView.DataSource = dt;
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            ToolTip toolTip1 = new ToolTip();
-            toolTip1.SetToolTip(BuscarTecnico, "Ingresa un Nombre, Apellido, o DNI");
+            try
+            {
+                conexion.Open();
 
+                SqlCommand cmd = conexion.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * From RegistrarTecnicos Where Nombres like ('%" + BuscarTecnico.Text + "%') OR Apellidos LIKE ('%" + BuscarTecnico.Text + "%') OR DNI LIKE ('%" + BuscarTecnico.Text + "%')";
 
-            conexion.Open();
-            SqlCommand cmd = conexion.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * From RegistrarTecnicos Where Nombres like ('%" + BuscarTecnico.Text + "%') OR Apellidos LIKE ('%" + BuscarTecnico.Text + "%') OR DNI LIKE ('%" + BuscarTecnico.Text + "%')";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            ListarTecnicosDataGridView.DataSource = dt;
-            conexion.Close();
+                DataTable dt = new DataTable();
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+
+                if (dt.Rows.Count > 0)
+                {
+                    ListarTecnicosDataGridView.DataSource = dt;
+                    if (!string.IsNullOrEmpty(BuscarTecnico.Text))
+                    {
+                        ListarTecnicosDataGridView.Rows[0].DefaultCellStyle.BackColor = Color.CornflowerBlue;
+                        ListarTecnicosDataGridView.Rows[0].DefaultCellStyle.ForeColor = Color.White;
+                        ListarTecnicosDataGridView.RowsDefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Regular); // Establecer la fuente regular para todas las filas
+                        ListarTecnicosDataGridView.Rows[0].DefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Bold); // Establecer la fuente negrita solo para la primera fila
+                    }
+                    else
+                    {
+                        ListarTecnicosDataGridView.RowsDefaultCellStyle.BackColor = Color.Empty;
+                        ListarTecnicosDataGridView.RowsDefaultCellStyle.ForeColor = Color.Empty;
+                        ListarTecnicosDataGridView.RowsDefaultCellStyle.Font = new Font("Century Gothic", 10, FontStyle.Regular); // Establecer la fuente regular para todas las filas
+                    }
+                }
+                else
+                {
+                    ListarTecnicosDataGridView.DataSource = null; // Limpiar el DataGridView si no hay resultados
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al realizar la búsqueda de Bases Foráneas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
         }
 
         private void Limpiar_Click(object sender, EventArgs e)
@@ -67,31 +100,12 @@ namespace MultiBodega_v1.Formularios_de_Registro
             Volver.Show();
         }
 
-        private void ListarTecnicosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                // Obtener la fila seleccionada
-                DataGridViewRow selectedRow = ListarTecnicosDataGridView.Rows[e.RowIndex];
-
-                // Seleccionar la fila completa
-                selectedRow.Selected = true;
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
         private void ListarTecnicosDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             // Obtener la fila seleccionada
             DataGridViewRow selectedRow = ListarTecnicosDataGridView.Rows[e.RowIndex];
-            string idSolicitante = selectedRow.Cells[0].Value.ToString();
-            string fecha = selectedRow.Cells[1].Value.ToString();
+            int idSolicitante = Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
+            DateTime fecha = DateTime.Parse(selectedRow.Cells[1].Value.ToString());
             string nombres = selectedRow.Cells[2].Value.ToString();
             string apellido = selectedRow.Cells[3].Value.ToString();
             string dni = selectedRow.Cells[4].Value.ToString();
@@ -103,9 +117,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             // Abrir el formulario de modificación y pasar el registro seleccionado
             ModificarTecnico formModificar = new ModificarTecnico(idSolicitante, fecha, nombres, apellido, dni, direccion, numTelefono, notas, activo);
             formModificar.ShowDialog();
-            this.Close();
-            
-
         }
     }
 }

@@ -29,7 +29,6 @@ namespace MultiBodega_v1.Botonera
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Botonera_APP));
             this.BtnRegistrar = new System.Windows.Forms.Button();
             this.BtnConfig = new System.Windows.Forms.Button();
@@ -42,14 +41,7 @@ namespace MultiBodega_v1.Botonera
             this.Btn_Inventario = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnReportes = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.NombredeUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.UsuariolblStat = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Fecha_Hora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Fecha = new System.Windows.Forms.ToolStripStatusLabel();
-            this.RelojSistema = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnRegistrar
@@ -255,56 +247,6 @@ namespace MultiBodega_v1.Botonera
             this.BtnReportes.UseVisualStyleBackColor = false;
             this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.statusStrip1.BackColor = System.Drawing.Color.White;
-            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statusStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NombredeUsuario,
-            this.UsuariolblStat,
-            this.Fecha_Hora,
-            this.Fecha});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 0);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(941, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 31;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // NombredeUsuario
-            // 
-            this.NombredeUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombredeUsuario.ForeColor = System.Drawing.Color.Black;
-            this.NombredeUsuario.Name = "NombredeUsuario";
-            this.NombredeUsuario.Size = new System.Drawing.Size(60, 17);
-            this.NombredeUsuario.Text = "Usuario:";
-            // 
-            // UsuariolblStat
-            // 
-            this.UsuariolblStat.Name = "UsuariolblStat";
-            this.UsuariolblStat.Size = new System.Drawing.Size(0, 17);
-            // 
-            // Fecha_Hora
-            // 
-            this.Fecha_Hora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fecha_Hora.Name = "Fecha_Hora";
-            this.Fecha_Hora.Size = new System.Drawing.Size(88, 17);
-            this.Fecha_Hora.Text = "Fecha/Hora:";
-            // 
-            // Fecha
-            // 
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(141, 17);
-            this.Fecha.Text = "toolStripStatusLabel1";
-            // 
-            // RelojSistema
-            // 
-            this.RelojSistema.Enabled = true;
-            this.RelojSistema.Tick += new System.EventHandler(this.RelojSistema_Tick);
-            // 
             // Botonera_APP
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
@@ -316,7 +258,6 @@ namespace MultiBodega_v1.Botonera
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(941, 517);
             this.ControlBox = false;
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnReportes);
@@ -338,13 +279,11 @@ namespace MultiBodega_v1.Botonera
             this.Name = "Botonera_APP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = ":::Inicio:::";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Botonera_APP_Load);
             this.Move += new System.EventHandler(this.Botonera_APP_Move);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -360,11 +299,5 @@ namespace MultiBodega_v1.Botonera
         private System.Windows.Forms.Button BtnConfig;
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Button BtnReportes;
-        private System.Windows.Forms.ToolStripStatusLabel NombredeUsuario;
-        private System.Windows.Forms.ToolStripStatusLabel Fecha_Hora;
-        private System.Windows.Forms.ToolStripStatusLabel Fecha;
-        public System.Windows.Forms.Timer RelojSistema;
-        public System.Windows.Forms.ToolStripStatusLabel UsuariolblStat;
-        public System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
