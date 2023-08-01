@@ -278,7 +278,7 @@ namespace MultiBodega_v1.Botonera
             this.MinimizeBox = false;
             this.Name = "Botonera_APP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ":::Inicio:::";
+            this.Text = "҉     Inicio ҉";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Botonera_APP_Load);
             this.Move += new System.EventHandler(this.Botonera_APP_Move);

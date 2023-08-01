@@ -112,11 +112,11 @@ namespace MultiBodega_v1
             this.RelojSistema = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator29 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.LblUser = new System.Windows.Forms.ToolStripLabel();
             this.SeparadorHora = new System.Windows.Forms.ToolStripSeparator();
             this.LblFecha = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.permisosBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -782,6 +782,15 @@ namespace MultiBodega_v1
             this.toolStripSeparator29.Name = "toolStripSeparator29";
             this.toolStripSeparator29.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::MultiBodega_v1.Properties.Resources.Usuario;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
@@ -806,15 +815,6 @@ namespace MultiBodega_v1
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(0, 24);
             this.LblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::MultiBodega_v1.Properties.Resources.Usuario;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FrmMenuPrincipal
             // 

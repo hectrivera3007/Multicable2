@@ -39,7 +39,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             System.Windows.Forms.Label pais_ZonaLabel;
             System.Windows.Forms.Label personaContactoLabel;
             System.Windows.Forms.Label rTNLabel;
-            System.Windows.Forms.Label iDProveedorLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarProveedores));
             this.label2 = new System.Windows.Forms.Label();
             this.tipo_ProveedorComboBox = new System.Windows.Forms.ComboBox();
@@ -53,7 +52,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.rTNTextBox = new System.Windows.Forms.TextBox();
-            this.iDProveedorTextBox = new System.Windows.Forms.TextBox();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
@@ -69,7 +67,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             pais_ZonaLabel = new System.Windows.Forms.Label();
             personaContactoLabel = new System.Windows.Forms.Label();
             rTNLabel = new System.Windows.Forms.Label();
-            iDProveedorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
@@ -181,17 +178,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             rTNLabel.Size = new System.Drawing.Size(36, 16);
             rTNLabel.TabIndex = 82;
             rTNLabel.Text = "RTN:";
-            // 
-            // iDProveedorLabel
-            // 
-            iDProveedorLabel.AutoSize = true;
-            iDProveedorLabel.BackColor = System.Drawing.Color.Transparent;
-            iDProveedorLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iDProveedorLabel.Location = new System.Drawing.Point(46, 124);
-            iDProveedorLabel.Name = "iDProveedorLabel";
-            iDProveedorLabel.Size = new System.Drawing.Size(94, 16);
-            iDProveedorLabel.TabIndex = 93;
-            iDProveedorLabel.Text = "ID Proveedor:";
             // 
             // label2
             // 
@@ -333,15 +319,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.rTNTextBox.Size = new System.Drawing.Size(131, 23);
             this.rTNTextBox.TabIndex = 2;
             // 
-            // iDProveedorTextBox
-            // 
-            this.iDProveedorTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iDProveedorTextBox.Location = new System.Drawing.Point(49, 143);
-            this.iDProveedorTextBox.Name = "iDProveedorTextBox";
-            this.iDProveedorTextBox.ReadOnly = true;
-            this.iDProveedorTextBox.Size = new System.Drawing.Size(100, 23);
-            this.iDProveedorTextBox.TabIndex = 0;
-            // 
             // activoCheckBox
             // 
             this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
@@ -416,8 +393,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
             this.ClientSize = new System.Drawing.Size(794, 471);
             this.Controls.Add(this.num_TelefonoTextBox);
             this.Controls.Add(this.activoCheckBox);
-            this.Controls.Add(iDProveedorLabel);
-            this.Controls.Add(this.iDProveedorTextBox);
             this.Controls.Add(this.rTNTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -472,7 +447,6 @@ namespace MultiBodega_v1.Formularios_de_Registro
         public System.Windows.Forms.TextBox pais_ZonaTextBox;
         public System.Windows.Forms.TextBox personaContactoTextBox;
         public System.Windows.Forms.TextBox rTNTextBox;
-        public System.Windows.Forms.TextBox iDProveedorTextBox;
         public System.Windows.Forms.CheckBox activoCheckBox;
         public System.Windows.Forms.MaskedTextBox num_TelefonoTextBox;
     }

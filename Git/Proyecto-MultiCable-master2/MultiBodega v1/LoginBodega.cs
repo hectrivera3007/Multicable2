@@ -66,10 +66,16 @@ namespace MultiBodega_v1
             string Consulta = "Select * From Usuario Where NombreUsuario = '" + NombreUsuario.Text + "'and Contrasena='" + Passwd.Text + "'";
             SqlCommand comando = new SqlCommand(Consulta, Conexion);
             SqlDataReader lector;
+            
+
             lector = comando.ExecuteReader();
 
             if (lector.HasRows == true)
             {
+                // llamar al procedimiento almacenado pasandole el ID del usuario que acaba de ingresar
+                // meter en otra variables, o la clase UsuarioActual, los valores de rol usuario y permisos de usuario
+
+
                 var MostrarPantalla = new Botonera_APP(cUsuario);
 
                 this.Hide();

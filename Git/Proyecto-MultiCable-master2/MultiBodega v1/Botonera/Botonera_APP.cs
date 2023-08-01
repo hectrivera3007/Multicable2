@@ -73,6 +73,7 @@ namespace MultiBodega_v1.Botonera
 
         private void BtnRequisas_Click(object sender, EventArgs e)
         {
+
             this.Close();
             Botonera_Requisas NuevaRquisa = new Botonera_Requisas();
             NuevaRquisa.Show();
@@ -80,6 +81,11 @@ namespace MultiBodega_v1.Botonera
 
         private void BtnCompras_Click(object sender, EventArgs e)
         {
+            // leer la clase, y comprobar los roles y permisos
+            // si no tiene permiso para abrir esto, muestra mensaje y sale de este metodo
+            // muestra: no puede entrar
+            // return;
+
             this.Close();
             FrmContCompras nuevoComp = new FrmContCompras();
             nuevoComp.Show();
@@ -87,6 +93,7 @@ namespace MultiBodega_v1.Botonera
 
         private void BtnCodigoBarra_Click(object sender, EventArgs e)
         {
+
             this.Close();
             GenerarCodigodeBarra Nuevo = new GenerarCodigodeBarra();
             Nuevo.Show();

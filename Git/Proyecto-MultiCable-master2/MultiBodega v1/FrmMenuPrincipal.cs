@@ -316,4 +316,10 @@ namespace MultiBodega_v1
 public static class UsuarioActual
 { 
     public static string NombreUsuario { get; set; }
+    public static int rolUsuario { get; set; }
+    public static int permisoUsuario { get; set; }
+
+
+    // agregar los campos faltantes para estar verificando los permisos del usuario
+
 }

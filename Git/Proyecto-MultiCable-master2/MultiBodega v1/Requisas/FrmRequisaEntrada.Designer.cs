@@ -57,17 +57,6 @@ namespace MultiBodega_v1
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.requisa_RequisaEntradaDataGridView = new System.Windows.Forms.DataGridView();
-            this.precioCompraTextBox = new System.Windows.Forms.TextBox();
-            this.precioVentaTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
-            this.requisaEntradaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +68,17 @@ namespace MultiBodega_v1
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requisaEntradaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._CATELSA_MULTICABLE = new MultiBodega_v1._CATELSA_MULTICABLE();
+            this.precioCompraTextBox = new System.Windows.Forms.TextBox();
+            this.precioVentaTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.tableAdapterManager = new MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager();
             nOrdenLabel = new System.Windows.Forms.Label();
             provedorLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -87,9 +87,9 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisa_RequisaEntradaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nOrdenLabel
@@ -111,9 +111,9 @@ namespace MultiBodega_v1
             provedorLabel.Location = new System.Drawing.Point(41, 105);
             provedorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             provedorLabel.Name = "provedorLabel";
-            provedorLabel.Size = new System.Drawing.Size(73, 16);
+            provedorLabel.Size = new System.Drawing.Size(54, 16);
             provedorLabel.TabIndex = 3;
-            provedorLabel.Text = "Proveedor";
+            provedorLabel.Text = "Cliente";
             // 
             // fechaLabel
             // 
@@ -366,6 +366,83 @@ namespace MultiBodega_v1
             this.requisa_RequisaEntradaDataGridView.Size = new System.Drawing.Size(959, 360);
             this.requisa_RequisaEntradaDataGridView.TabIndex = 66;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RequisaID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "RequisaID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NumOrden";
+            this.dataGridViewTextBoxColumn4.HeaderText = "NumOrden";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "PrecioCompra";
+            this.dataGridViewTextBoxColumn7.HeaderText = "PrecioCompra";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PrecioVenta";
+            this.dataGridViewTextBoxColumn8.HeaderText = "PrecioVenta";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Subtotal";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Subtotal";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
+            // iDProveedorDataGridViewTextBoxColumn
+            // 
+            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "BodegaID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "BodegaID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // requisaEntradaBindingSource1
+            // 
+            this.requisaEntradaBindingSource1.DataMember = "RequisaEntrada";
+            this.requisaEntradaBindingSource1.DataSource = this._CATELSA_MULTICABLE;
+            // 
+            // _CATELSA_MULTICABLE
+            // 
+            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
+            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // precioCompraTextBox
             // 
             this.precioCompraTextBox.Location = new System.Drawing.Point(497, 168);
@@ -454,26 +531,15 @@ namespace MultiBodega_v1
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // _CATELSA_MULTICABLE
-            // 
-            this._CATELSA_MULTICABLE.DataSetName = "CATELSA-MULTICABLE";
-            this._CATELSA_MULTICABLE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // requisaEntradaBindingSource1
-            // 
-            this.requisaEntradaBindingSource1.DataMember = "RequisaEntrada";
-            this.requisaEntradaBindingSource1.DataSource = this._CATELSA_MULTICABLE;
-            // 
-            // requisaEntradaTableAdapter
-            // 
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AjusteInventarioTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BajosMinimosTableAdapter = null;
             this.tableAdapterManager.BodegaTableAdapter = null;
+            this.tableAdapterManager.ComprasTableAdapter = null;
             this.tableAdapterManager.ComprobanteEntregaTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.InventarioBodega1TableAdapter = null;
             this.tableAdapterManager.InventarioBodega2TableAdapter = null;
@@ -487,78 +553,12 @@ namespace MultiBodega_v1
             this.tableAdapterManager.RegistrarBaseForaneaTableAdapter = null;
             this.tableAdapterManager.RegistrarPuntodeVentaTableAdapter = null;
             this.tableAdapterManager.RegistrarTecnicosTableAdapter = null;
+            this.tableAdapterManager.RequisaEntradaTableAdapter = null;
             this.tableAdapterManager.RequisaSalidaTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoMaterialTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = MultiBodega_v1._CATELSA_MULTICABLETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RequisaID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "RequisaID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NumOrden";
-            this.dataGridViewTextBoxColumn4.HeaderText = "NumOrden";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "PrecioCompra";
-            this.dataGridViewTextBoxColumn7.HeaderText = "PrecioCompra";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "PrecioVenta";
-            this.dataGridViewTextBoxColumn8.HeaderText = "PrecioVenta";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Subtotal";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Subtotal";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            // 
-            // iDProveedorDataGridViewTextBoxColumn
-            // 
-            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
-            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
-            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "BodegaID";
-            this.dataGridViewTextBoxColumn10.HeaderText = "BodegaID";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // FrmRequisaEntrada
             // 
@@ -606,9 +606,9 @@ namespace MultiBodega_v1
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisa_RequisaEntradaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requisaEntradaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CATELSA_MULTICABLE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

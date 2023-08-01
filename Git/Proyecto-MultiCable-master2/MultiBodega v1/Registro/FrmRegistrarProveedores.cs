@@ -23,34 +23,34 @@ namespace MultiBodega_v1.Formularios_de_Registro
             InitializeComponent();
         }
 
-        private int ObtenerUltimoIDPrveedor()
-        {
-            // Realiza la consulta a la base de datos para obtener el último valor de IDProducto
-            // Supongamos que utilizas una conexión a la base de datos llamada "conexion" y una consulta SQL adecuada para tu base de datos específica
-            string consulta = "SELECT MAX(IDProveedor) FROM Proveedores";
-            using (SqlCommand comando = new SqlCommand(consulta, Conexion))
-            {
-                Conexion.Open();
-                // Ejecuta la consulta y obtén el resultado
-                object resultado = comando.ExecuteScalar();
-                if (resultado != null && resultado != DBNull.Value)
-                {
-                    // Parsea el resultado a un entero y devuelve el valor
-                    return Convert.ToInt32(resultado);
-                }
-            }
+        //private int ObtenerUltimoIDPrveedor()
+        //{
+        //    // Realiza la consulta a la base de datos para obtener el último valor de IDProducto
+        //    // Supongamos que utilizas una conexión a la base de datos llamada "conexion" y una consulta SQL adecuada para tu base de datos específica
+        //    string consulta = "SELECT MAX(IDProveedor) FROM Proveedores";
+        //    using (SqlCommand comando = new SqlCommand(consulta, Conexion))
+        //    {
+        //        Conexion.Open();
+        //        // Ejecuta la consulta y obtén el resultado
+        //        object resultado = comando.ExecuteScalar();
+        //        if (resultado != null && resultado != DBNull.Value)
+        //        {
+        //            // Parsea el resultado a un entero y devuelve el valor
+        //            return Convert.ToInt32(resultado);
+        //        }
+        //    }
+        //    Conexion.Close();
+        //    // Si no se encuentra ningún valor, devuelve 0 o algún valor inicial apropiado
+        //    return 0;
             
-            // Si no se encuentra ningún valor, devuelve 0 o algún valor inicial apropiado
-            return 0;
-            //Conexion.Close();
-        }
+        //}
 
-        private void EstablecerValorIDProveedor()
-        {
-            int ultimoIDProducto = ObtenerUltimoIDPrveedor();
-            int siguienteIDProducto = ultimoIDProducto + 1;
-            iDProveedorTextBox.Text = siguienteIDProducto.ToString();
-        }
+        //private void EstablecerValorIDProveedor()
+        //{
+        //    int ultimoIDProducto = ObtenerUltimoIDPrveedor();
+        //    int siguienteIDProducto = ultimoIDProducto + 1;
+        //    iDProveedorTextBox.Text = siguienteIDProducto.ToString();
+        //}
 
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace MultiBodega_v1.Formularios_de_Registro
 
         private void FrmRegistrarProveedores_Load(object sender, EventArgs e)
         {
-            EstablecerValorIDProveedor();
+            //EstablecerValorIDProveedor();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -82,6 +82,11 @@ namespace MultiBodega_v1.Formularios_de_Registro
 
             string connectionString = "Server=(localdb)\\CATELSA;Database=CATELSA-MULTICABLE;Integrated Security=true;";
 
+
+
+            //SqlConnection connection2 = new SqlConnection(connectionString); // linea agregada
+            //SqlTransaction transaction2 = connection2.BeginTransaction(); // linea agregada
+            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -112,17 +117,22 @@ namespace MultiBodega_v1.Formularios_de_Registro
                         }
 
                         transaction.Commit();
+                        //transaction.Dispose(); // linea agregada
+
+
 
                         MessageBox.Show("Los datos se han insertado correctamente.");
 
-                        EstablecerValorIDProveedor();
-                        LimpiarCampos();
+
                     }
                     catch (Exception ex)
                     {
                         //transaction.Rollback();
                         MessageBox.Show("Error: " + ex.Message);
                     }
+
+                    //EstablecerValorIDProveedor();
+                    LimpiarCampos();
                 }
             }
         }

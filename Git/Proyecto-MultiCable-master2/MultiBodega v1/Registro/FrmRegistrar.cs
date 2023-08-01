@@ -27,7 +27,8 @@ namespace MultiBodega_v1.Registro
         {
             Botonera_APP Volver = new Botonera_APP(cUsuario);
             Volver.ShowDialog();
-            this.Close();
+            this.Hide();
+
         }
 
         private void BtnRP_Click(object sender, EventArgs e)
